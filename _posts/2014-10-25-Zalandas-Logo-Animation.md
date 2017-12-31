@@ -15,34 +15,40 @@ Aside from SVG looking sharp, it has another level of functionality through anim
 
 Animating SVG requires that SVG to be use inline, not as a background-image. We chose to style the SVG using an external stylesheet to try and keep markup as clean as possible. With all of SVG's greatness, it leaves your markup a bit messy, even with optimization(). It handles gzip well [compressing at 80% on average](http://www.w3.org/TR/SVG/minimize.html), so page load won't really be affected.
 
-<pre rel="HTML"><code class="language-markup">&lt;svg&gt;
-  &lt;path class="path" fill="#ffffff" stroke="#000000" ... /&gt;
-&lt;/svg&gt;</code></pre>
+```html
+<svg>
+  <path class="path" fill="#ffffff" stroke="#000000" ... />
+</svg>
+```
 
 Classes have been added to the `<path>` to target that particular element in the stylesheet, applying the animation and stroke properties.
 
-<pre><code class="language-css">@keyframes drawfade {
-  50%,53% {
+```css
+@keyframes drawfade {
+  50%,
+  53% {
     stroke-dashoffset: 1000;
     fill: #ffffff;
-    stroke: rbga(0,0,0,1);
+    stroke: rbga(0, 0, 0, 1);
   }
   100% {
     stroke-dashoffset: 0;
-    fill: #6E6F71;
-    stroke: rgba(0,0,0,0);
+    fill: #6e6f71;
+    stroke: rgba(0, 0, 0, 0);
   }
-}</code></pre>
+}
+```
 
 Once targeted you can apply a keyframe animation which reduces the `stroke-dashoffset`, causing the drawing animation.
 
-<pre><code class="language-css">.path {
+```css
+.path {
   stroke-dasharray: 2276;
   stroke-dashoffset: 2276;
   -webkit-animation: drawfade 4s linear forwards;
   animation: drawfade 4s linear forwards;
 }
-</code></pre>
+```
 
 It's important to note the `forwards` value for the `animation-fill-mode`. This causes the animation to remain in it's final state once the animation is completed. Otherwise the `stroke-dashoffset` would return to it's original value, causing the logo to disappear.
 
@@ -50,14 +56,16 @@ It's important to note the `forwards` value for the `animation-fill-mode`. This 
 
 Our fallback method of choice was to use <a href="http://modernizr.com/">Modernizr for feature detection</a>. The problem with this approach that SVG is supported in IE9+, so our Modernizr test will fail and not swap out the SVG with a png fallback. This is only an issue because we chose to use CSS3 animations, instead of using a Javascript SVG library like [Snap.svg](http://snapsvg.io/)
 
-<pre><code class="language-css">  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-     .path {
-       stroke-dasharray: 0; /*reset image back to normal pos*/
-       stroke-dashoffset: 0; /*reset image back to normal pos*/
-       fill: #6E6F71;
-       stroke: rgba(0,0,0,0)
-     }
-  }</code></pre>
+```css
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .path {
+    stroke-dasharray: 0; /*reset image back to normal pos*/
+    stroke-dashoffset: 0; /*reset image back to normal pos*/
+    fill: #6e6f71;
+    stroke: rgba(0, 0, 0, 0);
+  }
+}
+```
 
 Since feature detection is failing us, we can use browser detection through by using `-ms-high-contrast` to target IE versions that support SVG but don't support SVG animation through CSS animations, IE9,10,and 11. [Conditional comments](http://en.wikipedia.org/wiki/Conditional_comment) are not an option for this Internet Explorer related issue because Modernizr will handle the fallback for IE8 and below. This snippet is only needed because of the behavior of the `stroke-dasharray` technique, which essentially remove's the logo from view until the keyframe animation is instantiated.
 
