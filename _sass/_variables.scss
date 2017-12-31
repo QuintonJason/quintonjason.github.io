@@ -1,10 +1,9 @@
-
 //
 // VARIABLES
 //
 
 // Colors
-$blue: #4183C4;
+$green: #41b649;
 
 // Grays
 $black: #000;
@@ -18,10 +17,11 @@ $white: #fff;
 $helvetica: Helvetica, Arial, sans-serif;
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
+$code: Consolas, monaco, monospace;
 
 // Mobile breakpoints
 @mixin mobile {
-  @media screen and (max-width: 640px) {
-    @content;
-  }
+	@media screen and (max-width: 640px) {
+		@content;
+	}
 }

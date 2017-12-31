@@ -69,11 +69,11 @@ p {
 }
 
 a {
-  color: $blue;
+  color: $green;
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $blue;
+    color: $green;
   }
 }
 
@@ -232,7 +232,7 @@ nav {
 
     @include mobile {
       margin: 0 10px;
-      color: $blue;
+      color: $green;
     }
   }
 }
@@ -281,6 +281,11 @@ nav {
 footer {
   padding: 20px 0;
   text-align: center;
+}
+
+.highlighter-rouge{
+  font-family: $code;
+  font-size: 85%;
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
