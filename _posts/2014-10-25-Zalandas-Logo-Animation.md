@@ -3,7 +3,7 @@ layout: post
 title: Zalandas Logo Animation
 ---
 
-Our [Zalandas website](http://zalandas.com) is currently going through a redesign. The vector graphics movement is so strong, you can't help but join the party. We are transitioning to SVG like all the cool kids because of the advantages it contains over raster images: scalability, accessibility, and file-size efficiency. The best place to start would be our logo.
+The Zalandas website is currently going through a redesign. The vector graphics movement is so strong, you can't help but join the party. We are transitioning to SVG like all the cool kids because of the advantages it contains over raster images: scalability, accessibility, and file-size efficiency. The best place to start would be our logo.
 
 ### Why go SVG?
 

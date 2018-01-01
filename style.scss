@@ -146,10 +146,16 @@ img {
 /*********************/
 /* LAYOUT / SECTIONS */
 /*********************/
-
-//
-// .masthead
-//
+#qj-logo{
+  &:hover,
+  &:focus{
+    cursor: pointer;
+  }
+}
+#logo-pic{
+  opacity: 0;
+  visibility: hidden;
+}
 
 .wrapper-masthead {
   margin-bottom: 50px;
