@@ -37,3 +37,13 @@ $code: Consolas, monaco, monospace;
 		@content;
 	}
 }
+@mixin phone {
+	@media screen and (max-width: 480px) {
+		@content;
+	}
+}
+@mixin desktop {
+	@media screen and (max-width: 960px) {
+		@content;
+	}
+}

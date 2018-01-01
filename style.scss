@@ -8,7 +8,7 @@
 @import "reset";
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,400i');
 @import "variables";
-@import url("css/fa/font-awesome.scss");
+// @import url("css/fa/font-awesome.scss");
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
@@ -246,10 +246,29 @@ nav {
 }
 
 //
+// header and logo
+//
+#qj-logo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  &:hover,
+  &:focus{
+    cursor: pointer;
+  }
+}
+#logo-pic{
+  opacity: 0;
+  visibility: hidden;
+}
+
+//
 // homepage
 //
 
-.landing-button-wrapper {
+footer {
   width: 100%;
   padding-top: 40px;
   ul {
@@ -257,13 +276,15 @@ nav {
     padding-left: 0;
     display: flex;
     width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
   }
   li {
     flex: 1 auto;
     text-align: center;
   }
   .fa {
-    font-size: 3em;
+    font-size: 1.5em;
   }
   a {
     color: #666;
@@ -286,6 +307,23 @@ nav {
       color: #000000;
     }
   }
+}
+.landing-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  resize: both;
+  overflow: auto;
+}
+.svg-wrapper {
+  position: relative;
+  width: 50%;
+  height: 0;
+  padding-top: 34%;
+  margin: 0 auto;
 }
 //
 // .main
@@ -328,9 +366,108 @@ nav {
   background-color: $lightGray;
 }
 
+//
+// footer
+//
+
 footer {
   padding: 20px 0;
   text-align: center;
+}
+
+.social-icons{
+  list-style: none;
+  margin: 0px;
+  padding-left: 0;
+  li{
+    display: inline-block;
+    padding: 3px 5px 0px;
+    &:last-child{
+      padding-right: 0;
+    }
+  }
+}
+[class^="icon-"], [class*=" icon-"] {
+  display: inline-block;
+  /*color: #d3d3d3;
+  fill: currentColor;*/
+  fill: $gray;
+  -webkit-transition: background-color .3s linear, fill .3s ;
+  transition: background-color .3s linear, fill .3s;
+  border-radius: 5px;
+  padding: 0.3em;
+}
+.icon-facebook {
+  width: 32px;
+  height: 32px;
+  &:hover,
+  &:focus{
+    fill: white;
+    background-color: #3b5998;  
+  }
+}
+.icon-twitter {
+  width: 32px;
+  height: 32px;
+  &:hover,
+  &:focus{
+    fill: white;
+    background-color: #4099FF;  
+  }
+}
+.icon-feed2 {
+  width: 32px;
+  height: 32px;
+  &:hover,
+  &:focus{
+    fill: white;
+    background-color: #FF6600;  
+  }
+}
+.icon-dribbble {
+  width: 32px;
+  height: 32px;
+  &:hover,
+  &:focus{
+    fill: white;
+    background-color: #C73B6F;  
+  }
+}
+.icon-github2 {
+  width: 32px;
+  height: 32px;
+  &:hover,
+  &:focus{
+    fill: white;
+    background-color: #171515;  
+  }
+}
+.icon-linkedin {
+  width: 32px;
+  height: 32px;
+  &:hover,
+  &:focus{
+    fill: white;
+    background-color: #0e76a8;  
+  }
+}
+.icon-pinterest {
+  width: 32px;
+  height: 32px;
+  &:hover,
+  &:focus{
+    fill: white;
+    background-color: #c92228;  
+  }
+}
+.icon-codepen-logo {
+  width: 32px;
+  height: 32px;
+  &:hover,
+  &:focus{
+    fill: white;
+    background-color: #000;  
+  }
 }
 
 .highlighter-rouge{
