@@ -1,10 +1,13 @@
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
+    <!-- no show on homepage -->
+    {% if page.title %}
+      <div class="wrapper-footer">
+        <div class="container">
+          <footer class="footer">
+            {% include svg-icons.html %}
+          </footer>
+        </div>
       </div>
-    </div>
+    {% endif %}
     {% include scripts.html %}
     {% include analytics.html %}
   </body>
