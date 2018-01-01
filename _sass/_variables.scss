@@ -21,6 +21,16 @@ $mont: "Montserrat", sans-serif;
 $opensans: "Open Sans", sans-serif;
 $code: Consolas, monaco, monospace;
 
+.hide-text {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	font-size: inherit;
+}
+
 // Mobile breakpoints
 @mixin mobile {
 	@media screen and (max-width: 640px) {

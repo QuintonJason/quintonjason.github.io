@@ -1,18 +1,67 @@
 ---
-layout: default
+layout: base
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+<div class="landing-wrapper">
+    <div class="svg-wrapper">
+        <?xml version="1.0" encoding="utf-8"?>
+        <!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+        <svg version="1.1" id="qj-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             viewBox="0 0 283.9 193.7" xml:space="preserve">
+            <style type="text/css">
+                .st0{display:none;fill:#41B649;}
+                .st1{fill:#41B649;}
+                .st2{display:none;}
+                .st3{display:inline;}
+                .st4{display:inline;fill:#FFFFFF;}
+            </style>
+            <g id="logo-wrapper">
+                <path id="logo-j" d="M142.6,0c17.5,8.3,32.4,21.2,43.1,37.1h60.6v96c0,19.6-10.5,25.1-28.9,25.1h-20.8l32.9,34.8
+                    c30-2.9,54.4-15.6,54.4-65V0H142.6z"/>
+                <g id="logo-q" class="st1">
+                    <!-- <a class="logo-pic-trigger" href=""> -->
+                        <image id="logo-pic" xlink:href="{{ site.url }}/images/Quinton-Jason.jpg" x="30" y="35" height="130px" width="130px"/>
+                    <!-- </a> -->
+                    <path class="st1" d="M215.8,193.7l-39.5-41.8c10.8-15.6,17.2-34.6,17.2-55c0-53.4-43.3-96.7-96.7-96.7S0,43.5,0,96.9
+                        s43.3,96.7,96.7,96.7c19.5,0,37.5-5.8,52.7-15.6l14.9,15.7H215.8z M96.7,155.9c-32.6,0-59-26.4-59-59s26.4-59,59-59s59,26.4,59,59
+                        S129.3,155.9,96.7,155.9z"/>
+                </g>
+            </g>
+        </svg>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+    </div>
+    <div class="landing-button-wrapper">
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/quinton.jason" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                    <span class="hide-text">Facebook</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/quintonjasonjr"  target="_blank">
+                    <i class="fa fa-twitter"></i>
+                    <span class="hide-text">Twitter</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/quintonjason/"  target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                    <span class="hide-text">LinkedIn</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://codepen.io/quintonjason/"  target="_blank">
+                    <i class="fa fa-codepen"></i>
+                    <span class="hide-text">Codepen</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/QuintonJason"  target="_blank">
+                    <i class="fa fa-github"></i>
+                    <span class="hide-text">Github</span>
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>
