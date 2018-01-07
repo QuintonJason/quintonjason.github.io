@@ -1,10 +1,8 @@
-_site
-.DS_Store
-.jekyll
-.jekyll-metadata
-.bundle
-.sass-cache
-Gemfile
-Gemfile.lock
+# Project dependencies
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 node_modules
-package.json
+.cache/
+# Build directory
+public/
+.DS_Store
+yarn-error.log
