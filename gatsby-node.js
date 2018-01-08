@@ -10,6 +10,7 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
       name: `slug`,
       value: slug,
     })
+    console.log(node.frontmatter.external_url);
   }
 }
 
