@@ -1,0 +1,36 @@
+//
+// VARIABLES
+//
+
+// Colors
+$green: #41b649;
+
+// Grays
+$black: #000;
+$darkerGray: #222;
+$darkGray: #333;
+$gray: #666;
+$lightGray: #eee;
+$white: #fff;
+
+// Font stacks
+$mont: "Montserrat", sans-serif;
+$opensans: "Open Sans", sans-serif;
+$code: Consolas, monaco, monospace;
+
+// Mobile breakpoints
+@mixin mobile {
+	@media screen and (max-width: 640px) {
+		@content;
+	}
+}
+@mixin phone {
+	@media screen and (max-width: 480px) {
+		@content;
+	}
+}
+@mixin desktop {
+	@media screen and (max-width: 960px) {
+		@content;
+	}
+}

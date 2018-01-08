@@ -4,7 +4,8 @@ module.exports = {
 	},
   plugins: [
   `gatsby-transformer-remark`,
-  `gatsby-plugin-glamor`,
+  `gatsby-plugin-sass`,
+  // `gatsby-plugin-glamor`,
   {
     resolve: `gatsby-source-filesystem`,
     options: {
@@ -21,11 +22,11 @@ module.exports = {
       ]
     }
   },
-	{
-		resolve: 'gatsby-plugin-typography',
-		options: {
-			pathToConfigModule: 'src/utils/typography.js'
-		}
-	}
+	// {
+	// 	resolve: 'gatsby-plugin-typography',
+	// 	options: {
+	// 		pathToConfigModule: 'src/utils/typography.js'
+	// 	}
+	// }
   ]
 };
