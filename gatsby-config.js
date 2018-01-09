@@ -1,6 +1,7 @@
 module.exports = {
 	siteMetadata: {
 		title: `Q's Fake Site`,
+    description: `My Portfolio Site`
 	},
   plugins: [
   `gatsby-transformer-remark`,
