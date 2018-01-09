@@ -8,20 +8,20 @@ export default ({ data }) => {
   console.log(data);
   return (
     <div>
-      <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+      {/*<h4>{data.allMarkdownRemark.totalCount} Posts</h4>*/}
       {data.allMarkdownRemark.edges.map(({ node }) => (
-        <div key={node.id}>	
-        	<h3>
+        <div key={node.id} className="post-landing-single">	
+        	<h3 className="h1 headline">
         	  {node.frontmatter.title}{" "}
         	</h3>
         	<span>Posted on {node.frontmatter.date}</span>
         	<p>{node.excerpt}</p>
-          if(node.frontmatter.external_url != null){
+          {/*if(node.frontmatter.external_url != null){*/}
             <Link
               to={node.frontmatter.external_url}
               target="_blank"
             >Read More</Link>  
-          } else 
+          {/*} else  */}
           <Link
               to={node.fields.slug}
             >Read More</Link>

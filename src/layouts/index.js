@@ -5,6 +5,8 @@ import Helmet from 'react-helmet'
 
 import Logo from '../images/Logo'
 
+require("../css/prismjs.scss");
+
 import './index.css'
 
 const Header = () => (
