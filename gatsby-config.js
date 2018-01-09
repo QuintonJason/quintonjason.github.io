@@ -4,9 +4,21 @@ module.exports = {
     description: `My Portfolio Site`
 	},
   plugins: [
-  `gatsby-transformer-remark`,
   `gatsby-plugin-sass`,
   // `gatsby-plugin-glamor`,
+  {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [
+        {
+          resolve: `gatsby-remark-prismjs`,
+          options: {
+            classPrefix: "language-",
+          }
+        }
+      ]
+    }
+  },
   {
     resolve: `gatsby-source-filesystem`,
     options: {
