@@ -4,6 +4,11 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
 import Logo from '../images/Logo'
+import FacebookIcon from '../images/Facebook'
+import CodepenIcon from '../images/Codepen'
+import GithubIcon from '../images/Github'
+import TwitterIcon from '../images/Twitter'
+import LinkedInIcon from '../images/LinkedIn'
 
 require("../css/prismjs.scss");
 
@@ -35,6 +40,46 @@ const Header = () => (
   </header>
 )
 
+const Footer = () => (
+  <footer>
+    <div 
+      className=""
+      style={{
+        margin: '0 auto',
+        maxWidth: 960,
+        padding: '1.45rem 1.0875rem',
+      }}>
+        <ul className="footer-social-nav">
+          <li>
+            <a href="https://www.facebook.com/quinton.jason" target="_blank">
+              <FacebookIcon className="facebook-icon"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/quintonjasonjr" target="_blank">
+              <TwitterIcon className="twitter-icon" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/quintonjason/" target="_blank">
+              <LinkedInIcon className="linkedin-icon"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://codepen.io/quintonjason/" target="_blank">
+              <CodepenIcon className="codepen-icon"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/QuintonJason/" target="_blank">
+              <GithubIcon className="github-icon"/>
+            </a>
+          </li>
+        </ul>
+    </div>
+  </footer>
+)
+
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
@@ -64,6 +109,7 @@ const TemplateWrapper = ({ children }) => (
     >
       {children()}
     </div>
+    <Footer />
   </div>
 )
 

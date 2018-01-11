@@ -1,11 +1,12 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "quintonjason.github.io",
+  "description": "quintonjason.com",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Quinton Jason <quinton.jason@gmail.com>",
   "dependencies": {
     "gatsby": "^1.9.145",
     "gatsby-link": "^1.6.32",
+    "gatsby-paginate": "^1.0.9",
     "gatsby-plugin-glamor": "^1.6.10",
     "gatsby-plugin-google-fonts": "0.0.3",
     "gatsby-plugin-react-helmet": "^1.0.8",
@@ -15,6 +16,7 @@
     "gatsby-source-filesystem": "^1.5.11",
     "gatsby-transformer-remark": "^1.7.26",
     "glamorous": "^4.11.2",
+    "react-fontawesome": "^1.6.1",
     "typography-theme-kirkham": "^0.16.3"
   },
   "keywords": [

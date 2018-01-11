@@ -17,10 +17,10 @@ export default ({ data }) => {
         	<span>Posted on {node.frontmatter.date}</span>
         	<p>{node.excerpt}</p>
           {/*if(node.frontmatter.external_url != null){*/}
-            <Link
+            {/*<Link
               to={node.frontmatter.external_url}
               target="_blank"
-            >Read More</Link>  
+            >Read More</Link>  */}
           {/*} else  */}
           <Link
               to={node.fields.slug}

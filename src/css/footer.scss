@@ -1,0 +1,29 @@
+// ICONS
+footer{
+	background: $lightGray;
+}
+
+.footer-social-nav{
+	svg{
+		width: 24px;
+	}
+	path{
+		fill: $gray;
+		transition: fill .2s ease;
+	}
+	.facebook-icon:hover path{
+		fill: $facebookColor;
+	}
+	.twitter-icon:hover path{
+		fill: $twitterColor;
+	}
+	.linkedin-icon:hover path{
+		fill: $linkedinColor;
+	}
+	.codepen-icon:hover path{
+		fill: $codepenColor;
+	}
+	.github-icon:hover path{
+		fill: $githubColor;
+	}	
+}
