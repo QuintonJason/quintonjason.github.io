@@ -6,10 +6,19 @@ module.exports = {
   plugins: [
   `gatsby-plugin-sass`,
   // `gatsby-plugin-glamor`,
+  `gatsby-plugin-sharp`,
+  `gatsby-transformer-sharp`,
   {
     resolve: `gatsby-transformer-remark`,
     options: {
       plugins: [
+        {
+          resolve: 'gatsby-remark-images',
+          pathPrefix: '/pages',
+          options: {
+            maxWidth: 590,
+          },
+        },
         {
           resolve: `gatsby-remark-prismjs`,
           options: {
@@ -20,10 +29,24 @@ module.exports = {
     }
   },
   {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [
+        {
+          resolve: `gatsby-remark-responsive-image`,
+          options: {
+            maxWidth: 590,
+          },
+        },
+        `gatsby-remark-copy-linked-files`
+      ]
+    }
+  },
+  {
     resolve: `gatsby-source-filesystem`,
     options: {
-      name: `src`,
-      path: `${__dirname}/src/`,
+      name: `pages`,
+      path: `${__dirname}/src/pages`,
     },
   },
   {
