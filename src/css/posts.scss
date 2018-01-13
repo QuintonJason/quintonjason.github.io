@@ -9,7 +9,8 @@
 	}
 }
 
-.blog_single{
+.blog_single,
+.post-landing-single{
 	a{
 		@extend .hvr-underline-from-center;
 	}
