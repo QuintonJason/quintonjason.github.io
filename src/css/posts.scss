@@ -8,3 +8,9 @@
 		color: #999;		
 	}
 }
+
+.blog_single{
+	a{
+		@extend .hvr-underline-from-center;
+	}
+}

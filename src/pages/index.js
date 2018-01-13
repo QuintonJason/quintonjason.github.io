@@ -1,5 +1,4 @@
 import React from "react";
-// import g from "glamorous";
 import Link from "gatsby-link";
 
 import styles from "../css/styles.scss";
