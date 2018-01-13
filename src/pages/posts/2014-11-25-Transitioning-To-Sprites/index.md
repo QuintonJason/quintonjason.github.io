@@ -19,7 +19,7 @@ Positioning icon fonts is an absolute nightmare. Much of this has to do with imp
 
 Whether you prefer GUI or command-line, there are a number of tools at your disposal for creating sprites. We chose to use Icomoon for this procedure. This is a great app to use if you’re just getting started with SVG, because they provide starter vectors if you don’t have any handy. If you have vectors already at your disposal, you can import icons into Icomoon. This makes selecting between custom and standard icons seamless.
 
-![alt text]({{ site.url }}/images/svgIcomoonSelection1.gif "Icomoon")
+![](svgIcomoonSelection1.gif)
 
 Once downloaded the directory contains a svgdefs.svg file which contains all icons wrapped in a `symbol` tag, with corresponding id’s provided by Icomoon. There is also a demo.html file which contains examples of how to implement icons using the `use` tag. The demo file embeds the contents of the svgdefs.svg with within the HTML, which could make your file lengthy if you’ve got tons of icons. You can reference the actual svgdefs.svg file as an external link, but this is not supported in Internet Explorer. SVG 4 Everybody takes care of the IE issue, so we can start using this now without worry.
 
