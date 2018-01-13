@@ -12,6 +12,13 @@ module.exports = {
     resolve: `gatsby-transformer-remark`,
     options: {
       plugins: [
+        `gatsby-remark-copy-linked-files`,
+        {
+          resolve: `gatsby-remark-responsive-image`,
+          options: {
+            maxWidth: 590,
+          },
+        },
         {
           resolve: 'gatsby-remark-images',
           pathPrefix: '/pages',
@@ -24,21 +31,7 @@ module.exports = {
           options: {
             classPrefix: "language-",
           }
-        }
-      ]
-    }
-  },
-  {
-    resolve: `gatsby-transformer-remark`,
-    options: {
-      plugins: [
-        {
-          resolve: `gatsby-remark-responsive-image`,
-          options: {
-            maxWidth: 590,
-          },
         },
-        `gatsby-remark-copy-linked-files`
       ]
     }
   },
