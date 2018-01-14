@@ -20,6 +20,10 @@ module.exports = {
           },
         },
         {
+          resolve: 'gatsby-remark-responsive-iframe',
+          options: {},
+        },
+        {
           resolve: 'gatsby-remark-images',
           pathPrefix: '/pages',
           options: {
@@ -57,6 +61,7 @@ module.exports = {
       trackingId: 'UA-57117612-1',
     },
   },
+  'gatsby-plugin-offline'
 	// {
 	// 	resolve: 'gatsby-plugin-typography',
 	// 	options: {
