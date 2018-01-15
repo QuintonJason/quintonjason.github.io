@@ -69,5 +69,5 @@ Our fallback method of choice was to use <a href="http://modernizr.com/">Moderni
 
 Since feature detection is failing us, we can use browser detection through by using `-ms-high-contrast` to target IE versions that support SVG but don't support SVG animation through CSS animations, IE9,10,and 11. [Conditional comments](http://en.wikipedia.org/wiki/Conditional_comment) are not an option for this Internet Explorer related issue because Modernizr will handle the fallback for IE8 and below. This snippet is only needed because of the behavior of the `stroke-dasharray` technique, which essentially remove's the logo from view until the keyframe animation is instantiated.
 
-<p data-height="405" data-theme-id="9329" data-slug-hash="ImGeo" data-default-tab="result" data-user="qjason35" class='codepen'>See the Pen <a href='http://codepen.io/qjason35/pen/ImGeo/'>Company SVG Logo</a> by Quinton Jason (<a href='http://codepen.io/qjason35'>@qjason35</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<p><script async src="//codepen.io/assets/embed/ei.js"></script></p>
+<iframe height='300' scrolling='no' title='SVG SMIL Logo' src='//codepen.io/quintonjason/embed/NPKBNJ/?height=300&theme-id=9329&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/quintonjason/pen/NPKBNJ/'>SVG SMIL Logo</a> by Quinton Jason (<a href='https://codepen.io/quintonjason'>@quintonjason</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
