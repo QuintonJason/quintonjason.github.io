@@ -1,12 +1,14 @@
+const path = require(`path`)
+
 module.exports = {
 	siteMetadata: {
-		title: `Q's Fake Site`,
+		title: `quintonjason.com `,
     description: `My Portfolio Site`
 	},
   plugins: [
   `gatsby-plugin-sass`,
-  // `gatsby-plugin-glamor`,
   `gatsby-plugin-sharp`,
+  `gatsby-transformer-json`,
   `gatsby-transformer-sharp`,
   {
     resolve: `gatsby-transformer-remark`,
@@ -38,6 +40,13 @@ module.exports = {
         },
       ]
     }
+  },
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `data`,
+      path: `${__dirname}/data`,
+    },
   },
   {
     resolve: `gatsby-source-filesystem`,

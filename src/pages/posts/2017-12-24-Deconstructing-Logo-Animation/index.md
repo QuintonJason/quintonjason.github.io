@@ -80,7 +80,3 @@ This demo focuses on animating properties that are very performant: `opacity` an
 
 <p data-height="405" data-theme-id="9329" data-slug-hash="JMWdMM" data-default-tab="result" data-user="qjason35" class='codepen'>See the Pen <a href='http://codepen.io/qjason35/pen/JMWdMM/'>Company SVG Logo</a> by Quinton Jason (<a href='http://codepen.io/qjason35'>@qjason35</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <p><script async src="//codepen.io/assets/embed/ei.js"></script></p>
-
-<iframe height='400' scrolling='no' title='JMWdMM' src='//codepen.io/quintonjason/embed/JMWdMM/?height=400&theme-id=9329&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/quintonjason/pen/JMWdMM/'>JMWdMM</a> by Quinton Jason (<a href='https://codepen.io/quintonjason'>@quintonjason</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
-

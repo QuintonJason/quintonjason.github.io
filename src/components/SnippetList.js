@@ -1,17 +1,17 @@
 import React from 'react';
-import Snippet from './Snippet'
+
+
+import snippets from '../../data/gists.json';
+import Snippet from './Snippet';
 
 const SnippetList = props => {
 
-	const fetchedList = props.data;
-	let snippets = fetchedList.map(snippet => 
-		<Snippet url={snippet.url} description={snippet.description} key={snippet.id}/>
-	);
+	const snippetsList = snippets.map(item => <Snippet key={item.index} {...item} />);
 	return(
 		<ul className="snippet-list">
-			{snippets}
+			{snippetsList}
 		</ul>
 	)
 }
 
-export default SnippetList
+export default SnippetList;
