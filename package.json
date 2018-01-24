@@ -4,6 +4,8 @@
   "version": "1.0.0",
   "author": "Quinton Jason <quinton.jason@gmail.com>",
   "dependencies": {
+    "es6-promise": "^4.2.2",
+    "fs": "0.0.1-security",
     "gatsby": "^1.9.145",
     "gatsby-link": "^1.6.32",
     "gatsby-paginate": "^1.0.9",
@@ -21,10 +23,17 @@
     "gatsby-remark-responsive-iframe": "^1.4.16",
     "gatsby-remark-responsive-image": "^1.0.0-alpha13-alpha.435e0178",
     "gatsby-source-filesystem": "^1.5.11",
+    "gatsby-transformer-json": "^1.0.14",
     "gatsby-transformer-remark": "^1.7.26",
     "gatsby-transformer-sharp": "^1.6.16",
     "glamorous": "^4.11.2",
+    "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.4",
+    "mkdirp": "^0.5.1",
+    "progress": "^2.0.0",
     "react-fontawesome": "^1.6.1",
+    "react-gist": "^1.2.1",
+    "slash": "^1.0.0",
     "typography-theme-kirkham": "^0.16.3"
   },
   "keywords": [
