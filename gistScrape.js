@@ -3,15 +3,13 @@ const request = require("request")
 const mkdirp = require("mkdirp")
 const ProgressBar = require("progress")
 const { get } = require("lodash")
-// const download = require("./utils/download-file")
 
-// const username = process.argv[2]
-const username = 'QuintonJason'
+const username = process.argv[2]
 
 if (!username) {
   console.log(
     `
-You didn't supply an Instagram username!
+You didn't supply a Github username!
 Run this command like:
 
 node gistScrape.js GITHUB_USERNAME
@@ -32,14 +30,11 @@ const bar = new ProgressBar(
   }
 )
 
-// Create the images directory
-mkdirp.sync(`./data/images`)
-
 let gists = []
 
 // Write json
 const saveJSON = _ =>
-  fs.writeFileSync(`./data/gists.json`, JSON.stringify(gists, "", 2))
+  fs.writeFileSync(`./data/gists.json`, JSON.stringify(gists, "", 2));
 
 const getGists = maxId => {
   let options = {
@@ -55,7 +50,6 @@ const getGists = maxId => {
 
   request(options, (err, res, body) => {
     if (err) console.log(`error: ${err}`)
-      console.log(`what the : ${err}`)
     body = JSON.parse(body)
     // Parse gists
     let lastId
@@ -72,6 +66,9 @@ const getGists = maxId => {
       })
       .forEach(item => {
         if (gists.length >= 100) return
+
+        bar.total++
+        bar.tick();
         // Add item to gists
         gists.push(item)
         // Save lastId for next request
