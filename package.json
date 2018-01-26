@@ -16,6 +16,7 @@
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-sass": "^1.0.15",
     "gatsby-plugin-sharp": "^1.6.24",
+    "gatsby-plugin-styled-components": "^2.0.5",
     "gatsby-plugin-typography": "^1.7.10",
     "gatsby-remark-copy-linked-files": "^1.5.25",
     "gatsby-remark-images": "^1.5.36",
@@ -34,6 +35,7 @@
     "react-fontawesome": "^1.6.1",
     "react-gist": "^1.2.1",
     "slash": "^1.0.0",
+    "styled-components": "^3.0.2",
     "typography-theme-kirkham": "^0.16.3"
   },
   "keywords": [
