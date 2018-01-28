@@ -16,7 +16,7 @@ const IgPost = (props) => {
 	return(
 		<IgPostLi className="snippet-wrapper">
 			<a data-id={props.id} href={`/calligraphy/${props.id}`}>
-				<img src={`./${props.media}`} alt={props.caption}/>
+				<img src={`${props.image}`} alt={props.caption}/>
 				<p>{props.caption}</p>
 			</a>
 		</IgPostLi>
