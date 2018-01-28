@@ -1,7 +1,9 @@
 const fs = require("fs")
 const request = require("request")
 const ProgressBar = require("progress")
+const mkdirp = require("mkdirp")
 const { get } = require("lodash")
+const download = require(`./utils/download-file`)
 
 const username = process.argv[2]
 
@@ -29,6 +31,9 @@ const bar = new ProgressBar(
   }
 )
 
+// Create the images directory
+mkdirp.sync(`./data/images`)
+
 let igPosts = []
 
 // Write json
@@ -36,10 +41,13 @@ const saveJSON = _ =>
   fs.writeFileSync(`./data/igPosts.json`, JSON.stringify(igPosts, "", 2));
 
 const getIGPosts = () => {
-  request(`https://www.instagram.com/${username}/?__a=1`, function (error, response, body) {
+  let url = `https://www.instagram.com/${username}/?__a=1`
+  request(url, function (error, response, body) {
     if (error) console.log(`erroror: ${error}`)
     body = JSON.parse(body)
     const nodes = body.user.media.nodes;
+
+    //filter posts based on matching substring
     const filteredNodes = nodes.filter(item => item.caption.includes('leftycalligraphy'));
     filteredNodes.map(item => {
       return {
@@ -48,6 +56,7 @@ const getIGPosts = () => {
         date: get(item, `date`),
         likes: get(item, `likes`),
         image: get(item, `display_src`),
+        media: `image/${item.id}.jpg`
       }
     })
     .forEach(item => {
@@ -56,6 +65,7 @@ const getIGPosts = () => {
       bar.total++
       bar.tick();
       // Add item to IGposts
+      download(item.image, `./data/images/${item.id}.jpg`, _ => bar.tick())
       igPosts.push(item)
       // Save lastId for next request
       lastId = item.id
