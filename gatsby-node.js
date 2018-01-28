@@ -6,6 +6,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators
   let slug;
+  // console.log('node: ', node.internal.type);
 
   if (node.internal.type === 'MarkdownRemark') {
     const fileNode = getNode(node.parent);
@@ -24,7 +25,12 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
     slug = `/snippets/${node.id}`
     // Add slug as a field on the node.
     createNodeField({ node, name: 'slug', value: slug });
-  }
+  } else if( node.internal.type === 'IgPostsJson' ){
+    const igPostNode = getNode(node);
+    slug = `/calligraphy/${node.id}`
+    // Add slug as a field on the node.
+    createNodeField({ node, name: 'slug', value: slug });
+  } 
 }
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
@@ -53,6 +59,15 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 }
               }
             }
+            allIgPostsJson {
+              edges {
+                node {
+                  fields{
+                    slug
+                  }
+                }
+              }
+            }
           }
         `
       ).then(result => {
@@ -70,6 +85,16 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           createPage({
             path: `${edge.node.fields.slug}`,
             component: path.resolve(`./src/templates/gist-page.js`),
+            context: {
+              slug: edge.node.fields.slug,
+            },
+          })
+        })
+        // Create igPosts pages.
+        result.data.allIgPostsJson.edges.forEach(edge => {
+          createPage({
+            path: `${edge.node.fields.slug}`,
+            component: path.resolve(`./src/templates/instagram-page.js`),
             context: {
               slug: edge.node.fields.slug,
             },
