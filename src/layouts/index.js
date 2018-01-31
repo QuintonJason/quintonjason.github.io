@@ -3,13 +3,14 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
+import Header from '../components/Header'
+
 // favicons
 import favicon16 from '../images/favicon-16x16.png'
 import favicon32 from '../images/favicon-32x32.png'
 import faviconApple from '../images/apple-touch-icon.png'
 
 // images
-import Logo from '../images/Logo'
 import FacebookIcon from '../images/Facebook'
 import CodepenIcon from '../images/Codepen'
 import GithubIcon from '../images/Github'
@@ -19,32 +20,6 @@ import LinkedInIcon from '../images/LinkedIn'
 require("../css/prismjs.scss");
 
 import './index.css'
-
-const Header = () => (
-  <header>
-    <div
-      className="header-wrapper"
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    > 
-
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          <Logo className="header-logo"/>
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
 
 const Footer = () => (
   <footer>
