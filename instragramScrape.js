@@ -56,7 +56,7 @@ const getIGPosts = () => {
         date: get(item, `date`),
         likes: get(item, `likes`),
         image: get(item, `display_src`),
-        media: `image/${item.id}.jpg`
+        media: `images/${item.id}.jpg`
       }
     })
     .forEach(item => {

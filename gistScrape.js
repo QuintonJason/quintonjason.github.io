@@ -1,6 +1,5 @@
 const fs = require("fs")
 const request = require("request")
-const mkdirp = require("mkdirp")
 const ProgressBar = require("progress")
 const { get } = require("lodash")
 
@@ -56,12 +55,13 @@ const getGists = maxId => {
     body
       .map(item => {
         // Parse item to a simple object
+        let testdate = new Date(item.created_at)
         return {
           id: get(item, `id`),
           description: get(item, `description`),
           username: get(item, `owner.login`),
           avatar: get(item, `owner.avatar_url`),
-          time: toISO8601(get(item, `created_at`)),
+          time: (get(item, `created_at`)),
         }
       })
       .forEach(item => {
