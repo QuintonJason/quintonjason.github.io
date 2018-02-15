@@ -6,7 +6,7 @@ export default ({ data }) => {
   return (
     <div className="gist_single">
       
-      <p>{igPostsgist.description}</p>
+      <p>{igPosts.description}</p>
       <Gist id={igPosts.id} />
     </div>
   );
@@ -22,7 +22,9 @@ export const query = graphql`
         count
       }
       image
-      media
+      media {
+        id
+      }
     }
   }
 `;

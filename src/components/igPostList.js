@@ -17,7 +17,7 @@ const IgPostUl = styled(Ul)`
 
 const IgPostList = (props) => {
 
-	const igPostList = posts.map(item => <IgPost key={item.index} {...item} />);
+	const igPostList = posts.map(item => <IgPost key={item.id} {...item} />);
 	return(
 		
 		<IgPostUl className="snippet-list">
