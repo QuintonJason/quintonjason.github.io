@@ -1,4 +1,6 @@
+const Shell = require('child_process');
 const path = require(`path`)
+const fs = require(`fs-extra`)
 const _ = require(`lodash`)
 const slash = require(`slash`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
@@ -105,3 +107,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     )
   })
 }
+
+// Copy redirects on build
+exports.onPostBuild = function () {
+  fs.copySync(`./data/images`, `./static/images`)
+};
