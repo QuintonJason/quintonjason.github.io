@@ -10,7 +10,7 @@ export default class Header extends Component {
 	// define props
 	constructor(props) {
 		// propTypes = {}
-	// fires before component is mounted
+		// fires before component is mounted
 		super(props); // makes this refer to this component
 		this.state = {date: new Date()}; // set state
 	}
@@ -23,6 +23,9 @@ export default class Header extends Component {
 			      margin: '0 auto',
 			      maxWidth: 960,
 			      padding: '1.45rem 1.0875rem',
+			      display: 'grid',
+			      'gridTemplateColumns': '1fr',
+        		  'gridAutoFlow': 'column'
 			    }}
 			  > 
 
@@ -62,9 +65,9 @@ export default class Header extends Component {
 	componentWillReceiveProps() {
 	// fires when component is receiving new props
 	}
-	shouldComponentUpdate() {
-	// fires before rendering with new props or state
-	}
+	// shouldComponentUpdate() {
+	// // fires before rendering with new props or state
+	// }
 	componentWillUpdate() {
 	// fires immediately before rendering
 	// with new props or state

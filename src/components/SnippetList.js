@@ -16,8 +16,7 @@ const SnippetUl = styled(Ul)`
 `;
 
 const SnippetList = (props) => {
-
-	const snippetsList = snippets.map(item => <Snippet key={item.index} {...item} />);
+	const snippetsList = snippets.map(item => <Snippet key={item.id} {...item} />);
 	return(
 		
 		<SnippetUl className="snippet-list">

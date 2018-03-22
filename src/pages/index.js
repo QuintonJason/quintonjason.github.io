@@ -1,45 +1,28 @@
-import React from "react";
-import Link from "gatsby-link";
-import BlogLink from "../components/BlogLink";
+import React from 'react';
+import Link from 'gatsby-link';
+import Helmet from 'react-helmet';
 
-import styles from "../css/styles.scss";
+// import RightArrow from '../images/RightArrow';
 
-export default ({ data }) => {
-  return (
-    <div>
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        <div key={node.id} className="post-landing-single">	
-        	<h3 className="h1 headline">
-        	  {node.frontmatter.title}{" "}
-        	</h3>
-        	<span>Posted on {node.frontmatter.date}</span>
-        	<p>{node.excerpt}</p>
-	        
-          <BlogLink url={node.fields.slug} external_url={node.frontmatter.external_url} />
-        </div>
-      ))}
+const Index = () => (
+  <div className="container flex flex-hor-center" style={{
+    display: 'grid',
+    alignItems: 'center',
+    height: '100%'
+  }}>
+    <Helmet
+      title="quintonjason.com"
+      meta={[
+        { name: 'description', content: '' },
+      ]}
+    />
+    <div className="hero">
+      <span className="hero__label">Hello, my name is</span>
+      <h1 className="hero__title">Quinton Jason</h1>
+      {/*<p className="hero__bio">I am a front-end web developer, speaker, and occasional writer living in the beautiful city of Denver, Colorado.</p>*/}
+      <Link to="/posts/" className="hero__link">Check out my articles </Link>
     </div>
-  );
-};
+  </div>
+);
 
-export const query = graphql`
-  query IndexQuery {
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "MMMM DD, YYYY")
-            external_url
-          }
-          fields{
-          	slug
-          }
-          excerpt
-        }
-      }
-    }
-  }
-`;
+export default Index;
