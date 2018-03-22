@@ -36,6 +36,10 @@ after@0.8.2:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/after/-/after-0.8.2.tgz#fedb394f9f0e02aa9768e702bda23b505fae7e1f"
 
+ajv-keywords@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-3.1.0.tgz#ac2b27939c543e95d2c06e7f7f5c27be4aa543be"
+
 ajv@^4.9.1:
   version "4.11.8"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-4.11.8.tgz#82ffb02b29e662ae53bdc20af15947706739c536"
@@ -48,6 +52,14 @@ ajv@^5.1.0:
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-5.5.2.tgz#73b5eeca3fab653e3d3f9422b341ad42205dc965"
   dependencies:
     co "^4.6.0"
+    fast-deep-equal "^1.0.0"
+    fast-json-stable-stringify "^2.0.0"
+    json-schema-traverse "^0.3.0"
+
+ajv@^6.1.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.3.0.tgz#1650a41114ef00574cac10b8032d8f4c14812da7"
+  dependencies:
     fast-deep-equal "^1.0.0"
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.3.0"
@@ -3110,7 +3122,7 @@ es6-promise@^3.0.2:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-3.3.1.tgz#a08cdde84ccdbf34d027a1451bc91d4bcd28a613"
 
-es6-promise@^4.0.5, es6-promise@^4.2.2:
+es6-promise@^4.0.5, es6-promise@^4.2.4:
   version "4.2.4"
   resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.4.tgz#dc4221c2b16518760bd8c39a52d8f356fc00ed29"
 
@@ -3903,20 +3915,20 @@ gatsby-module-loader@^1.0.9:
     babel-runtime "^6.26.0"
     loader-utils "^0.2.16"
 
-gatsby-paginate@^1.0.9:
+gatsby-paginate@^1.0.13:
   version "1.0.13"
   resolved "https://registry.yarnpkg.com/gatsby-paginate/-/gatsby-paginate-1.0.13.tgz#5bad4fbe406351e1954b29b1dccff9edbbfd09e9"
   dependencies:
     path "^0.12.7"
 
-gatsby-plugin-glamor@^1.6.10:
+gatsby-plugin-glamor@^1.6.13:
   version "1.6.13"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-glamor/-/gatsby-plugin-glamor-1.6.13.tgz#3e47fc78f7a86e68ebc6a9f4697db29a5681cc22"
   dependencies:
     babel-runtime "^6.26.0"
     glamor "^2.20.29"
 
-gatsby-plugin-google-analytics@^1.0.15:
+gatsby-plugin-google-analytics@^1.0.24:
   version "1.0.24"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-1.0.24.tgz#13469eac4e35a1a3e73e8b2c3bfcf17fa73d28fb"
   dependencies:
@@ -3926,7 +3938,7 @@ gatsby-plugin-google-fonts@0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-fonts/-/gatsby-plugin-google-fonts-0.0.3.tgz#36a09e7ed3b795b0a81e9404b4c487e0fdfa46ab"
 
-gatsby-plugin-offline@^1.0.12:
+gatsby-plugin-offline@^1.0.15:
   version "1.0.15"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-1.0.15.tgz#26af0e1d1c8ed0c31f92bc6a75484b583550ef5b"
   dependencies:
@@ -3940,7 +3952,7 @@ gatsby-plugin-react-helmet@^1.0.8:
     babel-runtime "^6.26.0"
     react-helmet "^5.1.3"
 
-gatsby-plugin-sass@^1.0.15:
+gatsby-plugin-sass@^1.0.19:
   version "1.0.23"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-1.0.23.tgz#bc2039b87d76b996346db8a0ed53ab131d533a8f"
   dependencies:
@@ -3951,7 +3963,7 @@ gatsby-plugin-sass@^1.0.15:
     sass-loader "^4.1.1"
     webpack "^1.13.3"
 
-gatsby-plugin-sharp@^1.6.24, gatsby-plugin-sharp@^1.6.39:
+gatsby-plugin-sharp@^1.6.39, gatsby-plugin-sharp@^1.6.41:
   version "1.6.41"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-1.6.41.tgz#87dc28d226d70e63408bf31983268efdf10e8b1d"
   dependencies:
@@ -3968,13 +3980,13 @@ gatsby-plugin-sharp@^1.6.24, gatsby-plugin-sharp@^1.6.39:
     sharp "^0.20.0"
     svgo "^0.7.2"
 
-gatsby-plugin-styled-components@^2.0.5:
+gatsby-plugin-styled-components@^2.0.9:
   version "2.0.9"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-2.0.9.tgz#040bc188a366bc2a2a582027d6b1a507b4a15021"
   dependencies:
     babel-runtime "^6.26.0"
 
-gatsby-plugin-typography@^1.7.10:
+gatsby-plugin-typography@^1.7.18:
   version "1.7.18"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-typography/-/gatsby-plugin-typography-1.7.18.tgz#391f300afae465d3aa384d6630ce9df172eba3b8"
   dependencies:
@@ -3990,7 +4002,7 @@ gatsby-react-router-scroll@^1.0.7:
     scroll-behavior "^0.9.1"
     warning "^3.0.0"
 
-gatsby-remark-copy-linked-files@^1.5.25:
+gatsby-remark-copy-linked-files@^1.5.30:
   version "1.5.30"
   resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-1.5.30.tgz#5834fb6d4a8a50c58e7e91309bd0af396474dd29"
   dependencies:
@@ -4003,7 +4015,7 @@ gatsby-remark-copy-linked-files@^1.5.25:
     probe-image-size "^3.2.0"
     unist-util-visit "^1.1.1"
 
-gatsby-remark-images@^1.5.36:
+gatsby-remark-images@^1.5.56:
   version "1.5.56"
   resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-1.5.56.tgz#f3dd9323b6eed803d5388a3a688ae22c82578d97"
   dependencies:
@@ -4015,7 +4027,7 @@ gatsby-remark-images@^1.5.36:
     slash "^1.0.0"
     unist-util-select "^1.5.0"
 
-gatsby-remark-prismjs@^1.2.11:
+gatsby-remark-prismjs@^1.2.20:
   version "1.2.20"
   resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs/-/gatsby-remark-prismjs-1.2.20.tgz#2ec4d014a44c7eea05ea3727decc095804a8fc75"
   dependencies:
@@ -4024,7 +4036,7 @@ gatsby-remark-prismjs@^1.2.11:
     prismjs "^1.12.2"
     unist-util-visit "^1.3.0"
 
-gatsby-remark-responsive-iframe@^1.4.16:
+gatsby-remark-responsive-iframe@^1.4.18:
   version "1.4.18"
   resolved "https://registry.yarnpkg.com/gatsby-remark-responsive-iframe/-/gatsby-remark-responsive-iframe-1.4.18.tgz#2c8eb174c3db8ab75f8769ae1d30c5af2e27df22"
   dependencies:
@@ -4043,7 +4055,7 @@ gatsby-remark-responsive-image@^1.0.0-alpha13-alpha.435e0178:
     lodash "^4.17.4"
     unist-util-select "^1.5.0"
 
-gatsby-source-filesystem@^1.5.11:
+gatsby-source-filesystem@^1.5.27:
   version "1.5.27"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-1.5.27.tgz#0063e9e4c87f9172a1a08296d1c4c27d03f97d01"
   dependencies:
@@ -4059,14 +4071,14 @@ gatsby-source-filesystem@^1.5.11:
     slash "^1.0.0"
     valid-url "^1.0.9"
 
-gatsby-transformer-json@^1.0.14:
+gatsby-transformer-json@^1.0.16:
   version "1.0.16"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-json/-/gatsby-transformer-json-1.0.16.tgz#e25c19d9f59fbe69034eb3695eecddf0da4710b3"
   dependencies:
     babel-runtime "^6.26.0"
     bluebird "^3.5.0"
 
-gatsby-transformer-remark@^1.7.26:
+gatsby-transformer-remark@^1.7.37:
   version "1.7.37"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-1.7.37.tgz#30ad37403a7dd647e69fc7696e024dade526a12f"
   dependencies:
@@ -4091,7 +4103,7 @@ gatsby-transformer-remark@^1.7.26:
     unist-util-select "^1.5.0"
     unist-util-visit "^1.1.1"
 
-gatsby-transformer-sharp@^1.6.16:
+gatsby-transformer-sharp@^1.6.22:
   version "1.6.22"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-1.6.22.tgz#120baf195dcf60f452604c84df02d09362ded423"
   dependencies:
@@ -4313,7 +4325,7 @@ glamor@^2.20.29:
     prop-types "^15.5.10"
     through "^2.3.8"
 
-glamorous@^4.11.2:
+glamorous@^4.12.1:
   version "4.12.1"
   resolved "https://registry.yarnpkg.com/glamorous/-/glamorous-4.12.1.tgz#bcfa00f3d24c9232da33bc2b415e0d3ca7b10f68"
   dependencies:
@@ -4571,7 +4583,7 @@ gray-percentage@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/gray-percentage/-/gray-percentage-2.0.0.tgz#b72a274d1b1379104a0050b63b207dc53fe56f99"
 
-gsap@^1.20.3:
+gsap@^1.20.4:
   version "1.20.4"
   resolved "https://registry.yarnpkg.com/gsap/-/gsap-1.20.4.tgz#005fba2a7bfbb3b9d27bd77e1634d2bad365a86a"
 
@@ -5980,7 +5992,7 @@ loader-utils@^0.2.11, loader-utils@^0.2.15, loader-utils@^0.2.16, loader-utils@^
     json5 "^0.5.0"
     object-assign "^4.0.1"
 
-loader-utils@^1.0.2:
+loader-utils@^1.0.2, loader-utils@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-1.1.0.tgz#c98aef488bcceda2ffb5e2de646d6a754429f5cd"
   dependencies:
@@ -6573,6 +6585,10 @@ mime@1.4.1:
 mime@^1.3.4, mime@^1.3.6, mime@^1.5.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/mime/-/mime-1.6.0.tgz#32cd9e5c64553bd58d19a568af452acff04981b1"
+
+mime@^2.0.3:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/mime/-/mime-2.2.0.tgz#161e541965551d3b549fa1114391e3a3d55b923b"
 
 mimic-fn@^1.0.0:
   version "1.1.0"
@@ -9258,6 +9274,13 @@ sc-formatter@~3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/sc-formatter/-/sc-formatter-3.0.2.tgz#9abdb14e71873ce7157714d3002477bbdb33c4e6"
 
+schema-utils@^0.4.3:
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-0.4.5.tgz#21836f0608aac17b78f9e3e24daff14a5ca13a3e"
+  dependencies:
+    ajv "^6.1.0"
+    ajv-keywords "^3.1.0"
+
 scroll-behavior@^0.9.1:
   version "0.9.5"
   resolved "https://registry.yarnpkg.com/scroll-behavior/-/scroll-behavior-0.9.5.tgz#41da30b559da004eb48450f6cff6068c7696ff23"
@@ -10028,7 +10051,7 @@ style-loader@^0.13.0:
   dependencies:
     loader-utils "^1.0.2"
 
-styled-components@^3.0.2:
+styled-components@^3.2.3:
   version "3.2.3"
   resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-3.2.3.tgz#50f71207320eeb1ef539dec4637f21f5e3c936b4"
   dependencies:
@@ -10700,6 +10723,14 @@ url-loader@^0.5.7:
   dependencies:
     loader-utils "^1.0.2"
     mime "1.3.x"
+
+url-loader@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/url-loader/-/url-loader-1.0.1.tgz#61bc53f1f184d7343da2728a1289ef8722ea45ee"
+  dependencies:
+    loader-utils "^1.1.0"
+    mime "^2.0.3"
+    schema-utils "^0.4.3"
 
 url-parse-lax@^1.0.0:
   version "1.0.0"
