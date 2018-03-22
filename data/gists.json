@@ -1,5 +1,19 @@
 [
   {
+    "id": "b79e37d7b333b21e3ae78169d03d9f08",
+    "description": "Animation Concept - combining services into a company logo",
+    "username": "QuintonJason",
+    "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
+    "time": "2018-03-08T16:03:43Z"
+  },
+  {
+    "id": "b0c9b05f049988f84df8a47625a78c21",
+    "description": "Native browser smooth scrolling",
+    "username": "QuintonJason",
+    "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
+    "time": "2018-03-05T14:00:39Z"
+  },
+  {
     "id": "8ddb75f8b29b8d39ed8f2479e2dd800f",
     "description": "Debounce function to limit rate at which a function fires.",
     "username": "QuintonJason",
