@@ -6,16 +6,17 @@ import styles from "../css/styles.scss";
 
 export default ({ data }) => {
   return (
-    <div>
+    <div className="container">
       {data.allMarkdownRemark.edges.map(({ node }) => (
-        <div key={node.id} className="post-landing-single">	
-        	<h3 className="h1 headline">
-        	  {node.frontmatter.title}{" "}
-        	</h3>
-        	<span>Posted on {node.frontmatter.date}</span>
-        	<p>{node.excerpt}</p>
-	        
-          <BlogLink url={node.fields.slug} external_url={node.frontmatter.external_url} />
+        <div key={node.id} className="post-landing-single">
+          <h3 className="h1 headline">{node.frontmatter.title} </h3>
+          <span>Posted on {node.frontmatter.date}</span>
+          <p>{node.excerpt}</p>
+
+          <BlogLink
+            url={node.fields.slug}
+            external_url={node.frontmatter.external_url}
+          />
         </div>
       ))}
     </div>
@@ -24,7 +25,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   query PostsQuery {
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       totalCount
       edges {
         node {
@@ -34,8 +35,8 @@ export const query = graphql`
             date(formatString: "MMMM DD, YYYY")
             external_url
           }
-          fields{
-          	slug
+          fields {
+            slug
           }
           excerpt
         }

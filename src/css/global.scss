@@ -14,12 +14,17 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 740px;
+  max-width: 1100px;
   padding: 0 10px;
   width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $mont;
   color: $darkerGray;
   font-weight: bold;
@@ -33,22 +38,26 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-h1,.h1 {
+h1,
+.h1 {
   font-size: 30px;
   a {
     color: inherit;
   }
 }
 
-h2,.h2 {
+h2,
+.h2 {
   font-size: 24px;
 }
 
-h3,.h3 {
+h3,
+.h3 {
   font-size: 20px;
 }
 
-h4,.h4 {
+h4,
+.h4 {
   font-size: 18px;
   color: $gray;
 }
@@ -61,12 +70,14 @@ a {
   color: $green;
   text-decoration: none;
   cursor: pointer;
-  &:hover, &:active {
+  &:hover,
+  &:active {
     color: $green;
   }
 }
 
-ul, ol {
+ul,
+ol {
   margin: 15px 0;
   padding-left: 30px;
 }
@@ -79,19 +90,25 @@ ol {
   list-style-type: decimal;
 }
 
-ol ul, ul ol, ul ul, ol ol {
+ol ul,
+ul ol,
+ul ul,
+ol ol {
   margin: 0;
 }
 
-ul ul, ol ul {
+ul ul,
+ol ul {
   list-style-type: circle;
 }
 
-em, i {
+em,
+i {
   font-style: italic;
 }
 
-strong, b {
+strong,
+b {
   font-weight: bold;
 }
 
@@ -123,24 +140,24 @@ img {
 // http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 /*********************/
 /* LAYOUT / SECTIONS */
 /*********************/
-#qj-logo{
+#qj-logo {
   &:hover,
-  &:focus{
+  &:focus {
     cursor: pointer;
   }
 }
-#logo-pic{
+#logo-pic {
   opacity: 0;
   visibility: hidden;
 }
@@ -235,18 +252,18 @@ nav {
 //
 // header and logo
 //
-#qj-logo{
+#qj-logo {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   &:hover,
-  &:focus{
+  &:focus {
     cursor: pointer;
   }
 }
-#logo-pic{
+#logo-pic {
   opacity: 0;
   visibility: hidden;
 }
@@ -328,7 +345,7 @@ footer {
 
 .post {
   blockquote {
-    margin: 1.8em .8em;
+    margin: 1.8em 0.8em;
     border-left: 2px solid $gray;
     padding: 0.1em 1em;
     color: $gray;
@@ -344,7 +361,7 @@ footer {
     text-transform: uppercase;
     font-size: 15px;
     &:hover,
-    &:focus{
+    &:focus {
       text-decoration: underline;
     }
   }
@@ -366,25 +383,26 @@ footer {
   text-align: center;
 }
 
-.social-icons{
+.social-icons {
   list-style: none;
   margin: 0px;
   padding-left: 0;
-  li{
+  li {
     display: inline-block;
     padding: 3px 5px 0px;
-    &:last-child{
+    &:last-child {
       padding-right: 0;
     }
   }
 }
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   display: inline-block;
   /*color: #d3d3d3;
   fill: currentColor;*/
   fill: $gray;
-  -webkit-transition: background-color .3s linear, fill .3s ;
-  transition: background-color .3s linear, fill .3s;
+  -webkit-transition: background-color 0.3s linear, fill 0.3s;
+  transition: background-color 0.3s linear, fill 0.3s;
   border-radius: 5px;
   padding: 0.3em;
 }
@@ -392,86 +410,86 @@ footer {
   width: 32px;
   height: 32px;
   &:hover,
-  &:focus{
+  &:focus {
     fill: white;
-    background-color: #3b5998;  
+    background-color: #3b5998;
   }
 }
 .icon-twitter {
   width: 32px;
   height: 32px;
   &:hover,
-  &:focus{
+  &:focus {
     fill: white;
-    background-color: #4099FF;  
+    background-color: #4099ff;
   }
 }
 .icon-feed2 {
   width: 32px;
   height: 32px;
   &:hover,
-  &:focus{
+  &:focus {
     fill: white;
-    background-color: #FF6600;  
+    background-color: #ff6600;
   }
 }
 .icon-dribbble {
   width: 32px;
   height: 32px;
   &:hover,
-  &:focus{
+  &:focus {
     fill: white;
-    background-color: #C73B6F;  
+    background-color: #c73b6f;
   }
 }
 .icon-github2 {
   width: 32px;
   height: 32px;
   &:hover,
-  &:focus{
+  &:focus {
     fill: white;
-    background-color: #171515;  
+    background-color: #171515;
   }
 }
 .icon-linkedin {
   width: 32px;
   height: 32px;
   &:hover,
-  &:focus{
+  &:focus {
     fill: white;
-    background-color: #0e76a8;  
+    background-color: #0e76a8;
   }
 }
 .icon-pinterest {
   width: 32px;
   height: 32px;
   &:hover,
-  &:focus{
+  &:focus {
     fill: white;
-    background-color: #c92228;  
+    background-color: #c92228;
   }
 }
 .icon-codepen-logo {
   width: 32px;
   height: 32px;
   &:hover,
-  &:focus{
+  &:focus {
     fill: white;
-    background-color: #000;  
+    background-color: #000;
   }
 }
 
-.highlighter-rouge{
+.highlighter-rouge {
   font-family: $code;
   font-size: 85%;
   color: $gray;
-  pre{
+  pre {
     white-space: pre-wrap;
   }
-  & > .highlight{
+  & > .highlight {
     padding: 1.5rem;
   }
-  &:not([class*=lang]){
+  &:not([class*="lang"]) {
     padding: 0 2px;
   }
 }
