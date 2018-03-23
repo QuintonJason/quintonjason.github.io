@@ -32,7 +32,7 @@ export default class Contact extends React.Component {
 
   render() {
     return (
-      <div clasName="container">
+      <div className="container">
         <h1>Contact</h1>
         <form
           name="contact"
@@ -48,15 +48,26 @@ export default class Contact extends React.Component {
             </label>
           </p>
           <p>
-            <label>
+            <label htmlFor="name">
               Your name:<br />
-              <input type="text" name="name" onChange={this.handleChange} />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                onChange={this.handleChange}
+              />
             </label>
           </p>
           <p>
             <label>
               Your email:<br />
-              <input type="email" name="email" onChange={this.handleChange} />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                onChange={this.handleChange}
+              />
             </label>
           </p>
           <p>
