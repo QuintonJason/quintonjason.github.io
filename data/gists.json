@@ -1,170 +1,177 @@
 [
   {
+    "id": "c9cabb443137af706a501154243dc553",
+    "description": "Parallax background without affecting the foreground",
+    "username": "QuintonJason",
+    "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
+    "time": "March 20, 2018"
+  },
+  {
     "id": "b79e37d7b333b21e3ae78169d03d9f08",
     "description": "Animation Concept - combining services into a company logo",
     "username": "QuintonJason",
     "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
-    "time": "2018-03-08T16:03:43Z"
+    "time": "March 8, 2018"
   },
   {
     "id": "b0c9b05f049988f84df8a47625a78c21",
     "description": "Native browser smooth scrolling",
     "username": "QuintonJason",
     "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
-    "time": "2018-03-05T14:00:39Z"
+    "time": "March 5, 2018"
   },
   {
     "id": "8ddb75f8b29b8d39ed8f2479e2dd800f",
     "description": "Debounce function to limit rate at which a function fires.",
     "username": "QuintonJason",
     "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
-    "time": "2018-02-13T23:25:15Z"
+    "time": "February 13, 2018"
   },
   {
     "id": "15aaed42c03234641d593b7aae958aef",
     "description": "Add, remove, toggle classes from multiple elements",
     "username": "QuintonJason",
     "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
-    "time": "2018-02-07T15:38:02Z"
+    "time": "February 7, 2018"
   },
   {
     "id": "d47c2c01707846b69b8c6e008613dbe4",
     "description": "GatsbyJS - Stateless Component Skeleton",
     "username": "QuintonJason",
     "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
-    "time": "2018-01-31T20:25:36Z"
+    "time": "January 31, 2018"
   },
   {
     "id": "06a4241992720fef3067bb258dd21159",
     "description": "GatsbyJS - Component Skeleton",
     "username": "QuintonJason",
     "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
-    "time": "2018-01-31T20:14:22Z"
+    "time": "January 31, 2018"
   },
   {
     "id": "18bc0497461658d58aba6bae373a4f3b",
     "description": "Create JSON file from Gists API",
     "username": "QuintonJason",
     "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
-    "time": "2018-01-24T22:57:39Z"
+    "time": "January 24, 2018"
   },
   {
     "id": "fc950c5b999abd2569978f8a679823d0",
     "description": "Utility Function - swap class on element",
     "username": "QuintonJason",
     "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
-    "time": "2018-01-24T17:05:28Z"
+    "time": "January 24, 2018"
   },
   {
     "id": "bd19ba069875db89bf8cc3ff4174d905",
     "description": "Utility Function - toggle text on element",
     "username": "QuintonJason",
     "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
-    "time": "2018-01-24T17:04:36Z"
+    "time": "January 24, 2018"
   },
   {
     "id": "879ae88d2f1bf5624eafb47756f8bb7e",
     "description": "Barba JS sample animation - fade old page out, scroll to page top, fade in new page",
     "username": "QuintonJason",
     "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
-    "time": "2018-01-05T15:58:23Z"
+    "time": "January 5, 2018"
   },
   {
     "id": "a7f6068042f161c298f8edc81e766f70",
     "description": "Using scrollmagic and gsap to reveal div and child elements.",
     "username": "QuintonJason",
     "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
-    "time": "2017-12-20T03:05:32Z"
+    "time": "December 19, 2017"
   },
   {
     "id": "aef45f7fe2b8640c14b576849760bea7",
     "description": "Open link in new tab onclick",
     "username": "QuintonJason",
     "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
-    "time": "2017-12-19T16:21:44Z"
+    "time": "December 19, 2017"
   },
   {
     "id": "b3cb9b6380cff8969b31bf0858c1c3e5",
     "description": "Filter through a list of elements. The one that matches a particular string, open that link destination in a new tab",
     "username": "QuintonJason",
     "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
-    "time": "2017-12-07T14:52:07Z"
+    "time": "December 7, 2017"
   },
   {
     "id": "df961489e7836658d874bfb3d23e64a0",
     "description": "Pulls in gists from a specified username",
     "username": "QuintonJason",
     "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
-    "time": "2017-05-26T19:54:46Z"
+    "time": "May 26, 2017"
   },
   {
     "id": "06c0c8f9e6991681cc36ceb98a217ef1",
     "description": "Google map demo: Removes points of interest styles, Custom marker image, Offsets the map center",
     "username": "QuintonJason",
     "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
-    "time": "2017-05-25T19:00:09Z"
+    "time": "May 25, 2017"
   },
   {
     "id": "98916432491dba153703fefbcb9c9ed7",
     "description": "Dashboard-demo",
     "username": "QuintonJason",
     "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
-    "time": "2016-10-09T00:36:16Z"
+    "time": "October 8, 2016"
   },
   {
     "id": "85e8162495e108e1f0ab",
     "description": "ExpressionEngine ajax contact form",
     "username": "QuintonJason",
     "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
-    "time": "2015-08-07T14:20:21Z"
+    "time": "August 7, 2015"
   },
   {
     "id": "916a20fc580850cb3063",
     "description": "facebook and twitter - will update for linkedin",
     "username": "QuintonJason",
     "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
-    "time": "2015-07-28T14:02:29Z"
+    "time": "July 28, 2015"
   },
   {
     "id": "a592235b01aaa8d2bf61",
     "description": "",
     "username": "QuintonJason",
     "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
-    "time": "2015-07-16T18:46:24Z"
+    "time": "July 16, 2015"
   },
   {
     "id": "654e7fd4a144fc3b20bc",
     "description": "Gist to give all specified objects the same height",
     "username": "QuintonJason",
     "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
-    "time": "2015-06-29T21:46:07Z"
+    "time": "June 29, 2015"
   },
   {
     "id": "1ccc01012443d8f05113",
     "description": "Social Share",
     "username": "QuintonJason",
     "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
-    "time": "2015-06-24T19:55:43Z"
+    "time": "June 24, 2015"
   },
   {
     "id": "ebb2ddbfdd69b2143d96",
     "description": "A Pen by Quinton Jason.",
     "username": "QuintonJason",
     "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
-    "time": "2014-05-19T18:55:32Z"
+    "time": "May 19, 2014"
   },
   {
     "id": "f8a677fb422e84afa2f6",
     "description": "A Pen by Quinton Jason.",
     "username": "QuintonJason",
     "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
-    "time": "2014-05-12T20:52:53Z"
+    "time": "May 12, 2014"
   },
   {
     "id": "c277a294b1b365662a52",
     "description": "A Pen by Quinton Jason.",
     "username": "QuintonJason",
     "avatar": "https://avatars1.githubusercontent.com/u/1241836?v=4",
-    "time": "2014-05-08T15:05:19Z"
+    "time": "May 8, 2014"
   }
 ]
