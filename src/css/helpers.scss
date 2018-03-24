@@ -1,17 +1,35 @@
 // SINGLE LINE HELPERS
 
-
 // MULTILINE HELPERS
 .hide-text {
-	position: absolute;
-	left: -10000px;
-	top: auto;
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
-	font-size: inherit;
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  font-size: inherit;
 }
 
+.btn {
+  font-family: $opensans;
+  text-decoration: none;
+  background: transparent;
+  position: relative;
+  text-transform: uppercase;
+  padding: 0.7em 3.25em;
+  overflow: hidden;
+  display: inline-block;
+  letter-spacing: 2px;
+  border-radius: 3px;
+  font-size: 90%;
+  transition: all 0.35s ease-out;
+  &:hover,
+  &:focus {
+    background: $green;
+    color: $white;
+  }
+}
 
 /* https://github.com/IanLunn/Hover/blob/master/css/hover.css - Underline From Center */
 .hvr-underline-from-center {
@@ -40,7 +58,9 @@
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+.hvr-underline-from-center:hover:before,
+.hvr-underline-from-center:focus:before,
+.hvr-underline-from-center:active:before {
   left: 50%;
   right: 50%;
 }

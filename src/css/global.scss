@@ -1,6 +1,11 @@
 /**************/
 /* BASE RULES */
 /**************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 html {
   font-size: 100%;
@@ -114,6 +119,19 @@ b {
 
 img {
   max-width: 100%;
+}
+
+input,
+textarea {
+  color: $gray;
+  display: block;
+  width: 100%;
+  font-size: 1em;
+  padding: 1em;
+  margin-bottom: 1.3em;
+  border-radius: 3px;
+  border: 1px solid $gray;
+  background: $lightGray;
 }
 
 // Fixes images in popup boxes from Google Translate
