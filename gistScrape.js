@@ -1,9 +1,9 @@
-const fs = require("fs")
-const request = require("request")
-const ProgressBar = require("progress")
-const { get } = require("lodash")
+const fs = require("fs");
+const request = require("request");
+const ProgressBar = require("progress");
+const { get } = require("lodash");
 
-const username = process.argv[2]
+const username = process.argv[2];
 
 if (!username) {
   console.log(
@@ -13,23 +13,29 @@ Run this command like:
 
 node gistScrape.js GITHUB_USERNAME
               `
-  )
-  process.exit()
+  );
+  process.exit();
 }
 
 // Convert timestamp to ISO 8601.
-const toISO8601 = timestamp => new Date(timestamp * 1000).toJSON()
+const toISO8601 = timestamp => new Date(timestamp * 1000).toJSON();
+
+const dateOptions = {
+  year: "numeric",
+  month: "long",
+  day: "numeric"
+};
 
 // Create the progress bar
 const bar = new ProgressBar(
   `Downloading Github Gists [:bar] :current/:total :elapsed secs :percent`,
   {
     total: 0,
-    width: 30,
+    width: 30
   }
-)
+);
 
-let gists = []
+let gists = [];
 
 // Write json
 const saveJSON = _ =>
@@ -38,46 +44,49 @@ const saveJSON = _ =>
 const getGists = maxId => {
   let options = {
     url: `https://api.github.com/users/${username}/gists`,
-    method: 'GET',
+    method: "GET",
     headers: {
-      'Accept': 'application/json',
-      'Accept-Charset': 'utf-8',
-      'User-Agent': 'Quinton Jason Portfolio',
+      Accept: "application/json",
+      "Accept-Charset": "utf-8",
+      "User-Agent": "Quinton Jason Portfolio"
     }
-  }
-  let url = `https://api.github.com/users/${username}/gists`
+  };
+  let url = `https://api.github.com/users/${username}/gists`;
 
   request(options, (err, res, body) => {
-    if (err) console.log(`error: ${err}`)
-    body = JSON.parse(body)
+    if (err) console.log(`error: ${err}`);
+    body = JSON.parse(body);
     // Parse gists
-    let lastId
+    let lastId;
     body
       .map(item => {
         // Parse item to a simple object
-        let testdate = new Date(item.created_at)
+        let testdate = new Date(item.created_at);
         return {
           id: get(item, `id`),
           description: get(item, `description`),
           username: get(item, `owner.login`),
           avatar: get(item, `owner.avatar_url`),
-          time: (get(item, `created_at`)),
-        }
+          time: new Date(get(item, `created_at`)).toLocaleDateString(
+            "en-US",
+            dateOptions
+          )
+        };
       })
       .forEach(item => {
-        if (gists.length >= 100) return
+        if (gists.length >= 100) return;
 
-        bar.total++
+        bar.total++;
         bar.tick();
         // Add item to gists
-        gists.push(item)
+        gists.push(item);
         // Save lastId for next request
-        lastId = item.id
-      })
+        lastId = item.id;
+      });
 
-    if (gists.length < 100 && get(body, `more_available`)) getGists(lastId)
-    else saveJSON()
-  })
-}
+    if (gists.length < 100 && get(body, `more_available`)) getGists(lastId);
+    else saveJSON();
+  });
+};
 
-getGists()
+getGists();
