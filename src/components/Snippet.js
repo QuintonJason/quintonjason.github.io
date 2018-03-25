@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { media } from "../utils/styled-components-media-queries";
 
 const Li = ({ className, children }) => (
   <li className={className}>{children}</li>
@@ -12,11 +13,17 @@ const SnippetLi = styled(Li)`
   justify-content: space-between;
   border-bottom: 1px solid #efefef;
   margin-bottom: 1rem;
+  ${media.phone`
+		display: block;
+	`};
 `;
 const SnippetDate = styled(P)`
   font-style: italic;
   color: #999;
   margin-top: 0;
+  ${media.phone`
+			margin-top: .15rem;
+	`};
 `;
 
 const Snippet = props => {
