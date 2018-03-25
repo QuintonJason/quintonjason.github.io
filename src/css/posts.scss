@@ -1,17 +1,17 @@
-.post-landing-single{
-	margin-bottom: 2.65rem;
-	.headline{
-		margin-bottom: .5rem;
-	}
-	span{
-		font-style: italic;
-		color: #999;		
-	}
+.post-landing-single {
+  margin-bottom: 2.65rem;
+  .headline {
+    margin-bottom: 0rem;
+  }
+  span {
+    font-style: italic;
+    color: #999;
+  }
 }
 
 .blog_single,
-.post-landing-single{
-	a{
-		@extend .hvr-underline-from-center;
-	}
+.post-landing-single {
+  a {
+    @extend .hvr-underline-from-center;
+  }
 }

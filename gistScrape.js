@@ -17,9 +17,7 @@ node gistScrape.js GITHUB_USERNAME
   process.exit();
 }
 
-// Convert timestamp to ISO 8601.
-const toISO8601 = timestamp => new Date(timestamp * 1000).toJSON();
-
+// Configure date options
 const dateOptions = {
   year: "numeric",
   month: "long",
