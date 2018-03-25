@@ -11,26 +11,35 @@ function encode(data) {
 export default class Contact extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      formSubmitted: false
+    };
+    this.handleThanks = this.handleThanks.bind(this);
   }
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
-
+  handleThanks = e => {
+    this.setState({
+      formSubmitted: true
+    });
+  };
   handleSubmit = e => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state })
     })
-      .then(() => alert("Success!"))
+      .then(() => this.handleThanks())
       .catch(error => alert(error));
 
     e.preventDefault();
   };
 
   render() {
+    const formSubmittedClass = this.state.formSubmitted ? "submitted" : "";
+    const showThanks = this.state.formSubmitted ? "show" : "";
     return (
       <div className="container">
         <h1>Contact</h1>
@@ -38,10 +47,12 @@ export default class Contact extends React.Component {
           name="contact"
           id="contact__form"
           method="post"
+          className={`${formSubmittedClass}`}
           action="/thanks/"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           onSubmit={this.handleSubmit}
+          style={{ maxWidth: "500px" }}
         >
           <p hidden>
             <label>
@@ -55,13 +66,19 @@ export default class Contact extends React.Component {
               type="text"
               id="name"
               name="name"
+              required
               onChange={this.handleChange}
             />
           </p>
           <p>
             <label>Your email:</label>
             <br />
-            <input type="email" name="email" onChange={this.handleChange} />
+            <input
+              type="email"
+              name="email"
+              required
+              onChange={this.handleChange}
+            />
           </p>
           <p>
             <label htmlFor>
@@ -69,16 +86,20 @@ export default class Contact extends React.Component {
               <textarea
                 name="message"
                 id="message"
+                required
                 onChange={this.handleChange}
               />
             </label>
           </p>
           <p>
-            <button className="btn" type="submit">
+            <button className="btn btn__submit" type="submit">
               Send
             </button>
           </p>
         </form>
+        <div className={`form__thanks ${showThanks}`}>
+          <p>Thanks for your submission!</p>
+        </div>
       </div>
     );
   }
