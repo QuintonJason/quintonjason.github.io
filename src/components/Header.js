@@ -8,12 +8,26 @@ import Logo from "../images/Logo";
 export default class Header extends Component {
   // define props
   constructor(props) {
-    // propTypes = {}
-    // fires before component is mounted
-    super(props); // makes this refer to this component
-    this.state = { date: new Date() }; // set state
+    super(props);
+    this.state = {
+      mobileNavOpen: false
+    };
+    this.toggleMobileNav = this.toggleMobileNav.bind(this);
+    this.closeMobileNav = this.closeMobileNav.bind(this);
   }
+  toggleMobileNav = e => {
+    this.setState({
+      mobileNavOpen: !this.state.mobileNavOpen
+    });
+  };
+  closeMobileNav = e => {
+    this.setState({
+      mobileNavOpen: false
+    });
+  };
   render() {
+    const menuClass = this.state.mobileNavOpen ? "active" : "";
+
     return (
       <header>
         <div
@@ -38,6 +52,17 @@ export default class Header extends Component {
               <Logo className="header-logo" />
             </Link>
           </h1>
+          <button
+            id="mobile-toggle"
+            className={`toggle-icon ${menuClass}`}
+            aria-label="Mobile menu"
+            onClick={this.toggleMobileNav}
+          >
+            <span className="hide-text">Menu</span>
+            <span className="line line-1" />
+            <span className="line line-2" />
+            <span className="line line-3" />
+          </button>
           <nav id="main-nav" className="header-nav">
             <NavLink to="/posts/" className="header-link">
               Blog
