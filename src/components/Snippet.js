@@ -7,7 +7,6 @@ const Li = ({ className, children }) => (
 );
 
 const P = ({ className, children }) => <p className={className}>{children}</p>;
-
 const SnippetLi = styled(Li)`
   display: flex;
   justify-content: space-between;

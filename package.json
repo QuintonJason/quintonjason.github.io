@@ -36,6 +36,7 @@
     "progress": "^2.0.0",
     "react-fontawesome": "^1.6.1",
     "react-gist": "^1.2.1",
+    "react-transition-group": "^2.3.0",
     "sharp": "^0.20.1",
     "slash": "^1.0.0",
     "spotify-web-api-node": "^2.5.0",

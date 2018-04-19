@@ -2,8 +2,27 @@ import * as PropTypes from "prop-types";
 import React, { Component } from "react";
 import Link from "gatsby-link";
 import { NavLink } from "react-router-dom";
+import styled from "styled-components";
+import { media } from "../utils/styled-components-media-queries";
 
 import Logo from "../images/Logo";
+
+const HeaderWrapper = ({ className, children }) => (
+  <div className={className}>{children}</div>
+);
+
+const HeaderDiv = styled(HeaderWrapper)`
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 1.45rem 1.0875rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-flow: column;
+  ${media.phone`
+		grid-template-columns: repeat(2,auto);
+		grid-auto-flow: unset;
+	`};
+`;
 
 export default class Header extends Component {
   // define props
@@ -30,17 +49,7 @@ export default class Header extends Component {
 
     return (
       <header>
-        <div
-          className="header-wrapper"
-          style={{
-            margin: "0 auto",
-            maxWidth: 1100,
-            padding: "1.45rem 1.0875rem",
-            display: "grid",
-            gridTemplateColumns: "1fr",
-            gridAutoFlow: "column"
-          }}
-        >
+        <HeaderDiv className="header-wrapper">
           <h1 style={{ margin: 0 }}>
             <Link
               to="/"
@@ -74,7 +83,7 @@ export default class Header extends Component {
               Contact
             </NavLink>
           </nav>
-        </div>
+        </HeaderDiv>
       </header>
     );
   }
@@ -83,7 +92,18 @@ export default class Header extends Component {
     // fires immediately before the initial render
   }
   componentDidMount() {
-    // fires immediately after the initial render
+    let knob, rotation; 
+      console.log('loaded');
+      knob = document.querySelector('#rotation');
+      console.log('knob: ', knob);
+
+      Draggable.create(knob, {
+        type: "rotation",
+        throwProps: true,
+        onDrag: function() {
+          console.log(this.rotation)
+        }
+      });     
   }
   componentWillReceiveProps() {
     // fires when component is receiving new props

@@ -22,12 +22,12 @@ module.exports = {
               maxWidth: 590
             }
           },
-          {
-            resolve: `gatsby-plugin-postcss-sass`,
-            options: {
-              postCssPlugins: [lost()]
-            }
-          },
+          // {
+          //   resolve: `gatsby-plugin-postcss-sass`,
+          //   options: {
+          //     postCssPlugins: [lost()]
+          //   }
+          // },
           {
             resolve: "gatsby-remark-responsive-iframe",
             options: {}
