@@ -44,7 +44,9 @@ const getIGPosts = () => {
   let url = `https://www.instagram.com/${username}/?__a=1`
   request(url, function (error, response, body) {
     if (error) console.log(`erroror: ${error}`)
-    body = JSON.parse(body)
+    console.log("response:", response);
+    console.log("body:", body);
+    body = JSON.parse(response)
     const nodes = body.user.media.nodes;
 
     //filter posts based on matching substring
