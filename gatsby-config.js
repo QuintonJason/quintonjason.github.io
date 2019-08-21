@@ -77,6 +77,19 @@ module.exports = {
         trackingId: "UA-57117612-1"
       }
     },
+    /*{
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Quinton Jason Personal Site",
+        short_name: "Quinton Jason",
+        start_url: "/",
+        background_color: "#00c200",
+        theme_color: "#00c200",
+        display: "standalone",
+        icon: "src/images/icon.png",
+        crossOrigin: `use-credentials`,
+      },
+    },*/
     "gatsby-plugin-offline"
     // {
     // 	resolve: 'gatsby-plugin-typography',
