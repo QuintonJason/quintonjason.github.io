@@ -23,7 +23,7 @@ import './index.css'
 
 const Footer = () => (
   <footer>
-    <div 
+    <div
       className=""
       style={{
         margin: '0 auto',
@@ -62,15 +62,15 @@ const Footer = () => (
 )
 
 const TemplateWrapper = ({ children }) => (
-  <div className="hey" 
+  <div className="hey"
       style={{
         display: 'grid',
-        height: '100vh', 
+        height: '100vh',
         display: 'grid',
         'gridTemplateRows': 'auto 1fr auto',
 
     // grid-template-columns: 1fr;
-    
+
       }}>
     <Helmet
       title="quintonjason.com"
@@ -85,7 +85,6 @@ const TemplateWrapper = ({ children }) => (
         <link rel="apple-touch-icon" sizes="180x180" href={faviconApple} />
         <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
         <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
-        <link rel="manifest" href="../../manifest.json" />
         <meta name="theme-color" content="#00c200" />
       </Helmet>
     <Header />
