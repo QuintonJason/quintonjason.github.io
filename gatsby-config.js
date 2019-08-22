@@ -91,7 +91,7 @@ module.exports = {
       },
     },*/
     `gatsby-plugin-styled-components`,
-    "gatsby-plugin-offline"
+    /* "gatsby-plugin-offline"*/
     // {
     // 	resolve: 'gatsby-plugin-typography',
     // 	options: {
