@@ -1,7 +1,6 @@
 import * as PropTypes from "prop-types";
 import React, { Component } from "react";
 import Link from "gatsby-link";
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { media } from "../utils/styled-components-media-queries";
 
@@ -41,15 +40,15 @@ export default class Header extends Component {
             </Link>
           </h1>
           <nav id="main-nav" className="header-nav">
-            <NavLink to="/posts/" className="header-link">
+            <Link to="/posts/" className="header-link">
               Blog
-            </NavLink>
-            <NavLink to="/snippets/" className="header-link">
+            </Link>
+            <Link to="/snippets/" className="header-link">
               Snippets
-            </NavLink>
-            <NavLink to="/contact/" className="header-link">
+            </Link>
+            <Link to="/contact/" className="header-link">
               Contact
-            </NavLink>
+            </Link>
           </nav>
         </HeaderDiv>
       </header>
