@@ -9,7 +9,7 @@ export default ({ data }) => {
       <div className="container">
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id} className="post-landing-single">
-            <h3 className="h1 headline">{node.frontmatter.title} </h3>
+            <h2 className="h1 headline">{node.frontmatter.title} </h2>
             <span>Posted on {node.frontmatter.date}</span>
             <p>{node.excerpt}</p>
 

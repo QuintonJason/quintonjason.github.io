@@ -1,6 +1,20 @@
+// Q TODO - move the l-header class to the layouts file
+.l-header {
+  @include center;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $midGray;
+}
+
 .header-logo{
 	width: 70px;
 }
 .header-wrapper{
 	border-bottom: 1px solid #eee;
+}
+
+.header__logo {
+  width: 70px;
 }

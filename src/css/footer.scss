@@ -1,29 +1,92 @@
-// ICONS
-footer{
+.l-footer {
+
+}
+
+footer {
+  width: 100%;
+  padding-top: 40px;
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  li {
+    flex: 1 auto;
+    text-align: center;
+  }
+
+
+  .fa {
+    font-size: 1.5em;
+  }
+
+  a {
+    color: #666;
+    transition: all 0.25s ease;
+  }
+
+  a:hover {
+    [class*="facebook"] {
+      color: #3b5998;
+    }
+    [class*="twitter"] {
+      color: #4099ff;
+    }
+    [class*="linkedin"] {
+      color: #0e76a8;
+    }
+    [class*="codepen"] {
+      color: #171515;
+    }
+    [class*="github"] {
+      color: #000000;
+    }
+  }
+}
+
+footer {
 	background: $lightGray;
 }
 
 .footer-social-nav{
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+
 	svg{
 		width: 24px;
-	}
+  }
+
 	path{
 		fill: $gray;
 		transition: fill .2s ease;
-	}
+  }
+
 	.facebook-icon:hover path{
 		fill: $facebookColor;
-	}
+  }
+
 	.twitter-icon:hover path{
 		fill: $twitterColor;
-	}
+  }
+
 	.linkedin-icon:hover path{
 		fill: $linkedinColor;
-	}
+  }
+
 	.codepen-icon:hover path{
 		fill: $codepenColor;
-	}
+  }
+
 	.github-icon:hover path{
 		fill: $githubColor;
-	}	
+	}
 }

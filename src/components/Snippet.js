@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { media } from "../utils/styled-components-media-queries";
 
+import '../css/modules/snippets.scss'
+
 const Li = ({ className, children }) => (
   <li className={className}>{children}</li>
 );

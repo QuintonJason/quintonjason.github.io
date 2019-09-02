@@ -28,9 +28,9 @@ const Layout = ({ children }) => (
       {/*<link rel="icon" href={favicon} type="x-icon/image" />*/}
       <link rel="manifest" href="/manifest.json" />
     </Helmet>
-    <div className="site">
+    <div className="l-body">
       <Header />
-      <main className="site-content">{children}</main>
+      <main className="site-content l-main">{children}</main>
       <Footer />
     </div>
   </div>
