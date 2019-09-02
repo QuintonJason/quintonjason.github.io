@@ -1,25 +1,26 @@
 import React from "react";
-import Link from "gatsby-link";
 import BlogLink from "../components/BlogLink";
 
-import styles from "../css/styles.scss";
+import Layout from "../layouts/index";
 
 export default ({ data }) => {
   return (
-    <div className="container">
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        <div key={node.id} className="post-landing-single">
-          <h3 className="h1 headline">{node.frontmatter.title} </h3>
-          <span>Posted on {node.frontmatter.date}</span>
-          <p>{node.excerpt}</p>
+    <Layout>
+      <div className="container">
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <div key={node.id} className="post-landing-single">
+            <h2 className="h1 headline">{node.frontmatter.title} </h2>
+            <span>Posted on {node.frontmatter.date}</span>
+            <p>{node.excerpt}</p>
 
-          <BlogLink
-            url={node.fields.slug}
-            external_url={node.frontmatter.external_url}
-          />
-        </div>
-      ))}
-    </div>
+            <BlogLink
+              url={node.fields.slug}
+              external_url={node.frontmatter.external_url}
+            />
+          </div>
+        ))}
+      </div>
+    </Layout>
   );
 };
 

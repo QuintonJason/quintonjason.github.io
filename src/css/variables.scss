@@ -3,13 +3,15 @@
 //
 
 // Colors
-$green: #41b649;
+$green: #308636;
+$greenInteractive: #28702d;
 
 // Grays
 $black: #000;
 $darkerGray: #222;
 $darkGray: #333;
 $gray: #666;
+$midGray: #666;
 $lightGray: #eee;
 $white: #fff;
 
@@ -19,6 +21,15 @@ $twitterColor :#4099ff;
 $linkedinColor :#0e76a8;
 $codepenColor :#171515;
 $githubColor :#000000;
+
+$color-social: (
+  'facebook': #3b5998,
+  'twitter': #4099ff,
+  'linkedin': #0e76a8,
+  'codepen': #171515l,
+  'github': #000000,
+
+);
 
 // Font stacks
 $mont: "Montserrat", sans-serif;

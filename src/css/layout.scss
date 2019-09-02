@@ -1,0 +1,10 @@
+.l-body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+.l-main {
+  @include center;
+  padding: 1.45rem 1.0875rem;
+}
