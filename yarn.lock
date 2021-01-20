@@ -1871,7 +1871,7 @@ caniuse-lite@^1.0.30000784:
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
-  resolved "http://registry.npmjs.org/capture-stack-trace/-/capture-stack-trace-1.0.0.tgz#4a6fa07399c26bba47f0b2496b4d0fb408c5550d"
+  resolved "https://registry.npmjs.org/capture-stack-trace/-/capture-stack-trace-1.0.0.tgz#4a6fa07399c26bba47f0b2496b4d0fb408c5550d"
 
 caseless@~0.11.0:
   version "0.11.0"
@@ -2512,7 +2512,7 @@ create-ecdh@^4.0.0:
 
 create-error-class@^3.0.0, create-error-class@^3.0.1:
   version "3.0.2"
-  resolved "http://registry.npmjs.org/create-error-class/-/create-error-class-3.0.2.tgz#06be7abef947a3f14a30fd610671d401bca8b7b6"
+  resolved "https://registry.npmjs.org/create-error-class/-/create-error-class-3.0.2.tgz#06be7abef947a3f14a30fd610671d401bca8b7b6"
   dependencies:
     capture-stack-trace "^1.0.0"
 
@@ -5064,9 +5064,10 @@ gray-percentage@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/gray-percentage/-/gray-percentage-2.0.0.tgz#b72a274d1b1379104a0050b63b207dc53fe56f99"
 
-gsap@^1.20.4:
-  version "1.20.4"
-  resolved "https://registry.yarnpkg.com/gsap/-/gsap-1.20.4.tgz#005fba2a7bfbb3b9d27bd77e1634d2bad365a86a"
+gsap@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.6.0.tgz#925f25370c698ce0f6ea563522da8f6b5ed21b0a"
+  integrity sha512-0P3syv1TmYr+A/VZ8UMFzw+s0XoaKSzzDFs8NqkXiJTXI4E/VTi0zRjPgxaPBpiUPPycgRnFjLDe0Tb4dRRf+w==
 
 gulp-decompress@^1.2.0:
   version "1.2.0"
@@ -7831,7 +7832,7 @@ onecolor@~2.4.0:
 
 onetime@^1.0.0:
   version "1.1.0"
-  resolved "http://registry.npmjs.org/onetime/-/onetime-1.1.0.tgz#a1f7838f8314c516f05ecefcbc4ccfe04b4ed789"
+  resolved "https://registry.npmjs.org/onetime/-/onetime-1.1.0.tgz#a1f7838f8314c516f05ecefcbc4ccfe04b4ed789"
 
 onetime@^2.0.0:
   version "2.0.1"
