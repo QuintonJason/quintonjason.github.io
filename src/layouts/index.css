@@ -1,0 +1,33 @@
+.blog_single {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog_single iframe {
+  display: block;
+  width: 100% !important;
+  max-width: 100%;
+  min-width: 0 !important;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.blog_single {
+  overflow-x: hidden;
+}
+
+.blog_single .codepen-embed-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.blog_single .codepen-embed-wrapper .codepen-embed {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
