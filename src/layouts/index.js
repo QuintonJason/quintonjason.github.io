@@ -17,7 +17,7 @@ import GithubIcon from '../images/Github'
 import TwitterIcon from '../images/Twitter'
 import LinkedInIcon from '../images/LinkedIn'
 
-require("../css/prismjs.scss");
+require("../css/prismjs.css");
 
 import './index.css'
 

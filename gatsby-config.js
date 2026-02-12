@@ -7,7 +7,6 @@ module.exports = {
     description: `My Portfolio Site`
   },
   plugins: [
-    `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-json`,
     `gatsby-transformer-sharp`,

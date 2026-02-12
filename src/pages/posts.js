@@ -2,7 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import BlogLink from "../components/BlogLink";
 
-import styles from "../css/styles.scss";
+import "../css/styles.css";
 
 export default ({ data }) => {
   return (

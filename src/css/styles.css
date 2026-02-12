@@ -1,0 +1,628 @@
+.hide-text {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  font-size: inherit;
+}
+
+.btn {
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  background: transparent;
+  position: relative;
+  text-transform: uppercase;
+  padding: 0.7em 3.25em;
+  overflow: hidden;
+  display: inline-block;
+  letter-spacing: 2px;
+  border-radius: 3px;
+  font-size: 90%;
+  transition: all 0.35s ease-out;
+}
+.btn:hover, .btn:focus {
+  background: #41b649;
+  color: #fff;
+}
+
+.btn__submit {
+  margin-top: 1em;
+}
+
+/* https://github.com/IanLunn/Hover/blob/master/css/hover.css - Underline From Center */
+.hvr-underline-from-center, .blog_single a,
+.post-landing-single a {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  top: -2px;
+  overflow: hidden;
+}
+
+.hvr-underline-from-center:before, .blog_single a:before,
+.post-landing-single a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #41b649;
+  height: 2px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-underline-from-center:hover:before, .blog_single a:hover:before,
+.post-landing-single a:hover:before,
+.hvr-underline-from-center:focus:before,
+.blog_single a:focus:before,
+.post-landing-single a:focus:before,
+.hvr-underline-from-center:active:before,
+.blog_single a:active:before,
+.post-landing-single a:active:before {
+  left: 50%;
+  right: 50%;
+}
+
+.header-logo {
+  width: 70px;
+}
+
+.header-wrapper {
+  border-bottom: 1px solid #eee;
+}
+
+footer {
+  background: #eee;
+}
+
+.footer-social-nav svg {
+  width: 24px;
+}
+.footer-social-nav path {
+  fill: #666;
+  transition: fill 0.2s ease;
+}
+.footer-social-nav .facebook-icon:hover path {
+  fill: #3b5998;
+}
+.footer-social-nav .twitter-icon:hover path {
+  fill: #4099ff;
+}
+.footer-social-nav .linkedin-icon:hover path {
+  fill: #0e76a8;
+}
+.footer-social-nav .codepen-icon:hover path {
+  fill: #171515;
+}
+.footer-social-nav .github-icon:hover path {
+  fill: #000000;
+}
+
+.post-landing-single {
+  margin-bottom: 2.65rem;
+}
+.post-landing-single .headline {
+  margin-bottom: 0rem;
+}
+.post-landing-single span {
+  font-style: italic;
+  color: #999;
+}
+
+/**************/
+/* BASE RULES */
+/**************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background: #fff;
+  font: 18px/1.4 "Open Sans", sans-serif;
+  color: #333;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0 10px;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  color: #222;
+  font-weight: bold;
+  line-height: 1.7;
+  margin: 1em 0 15px;
+  padding: 0;
+}
+@media screen and (max-width: 640px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.4;
+  }
+}
+
+h1,
+.h1 {
+  font-size: 30px;
+}
+h1 a,
+.h1 a {
+  color: inherit;
+}
+
+h2,
+.h2 {
+  font-size: 24px;
+}
+
+h3,
+.h3 {
+  font-size: 20px;
+}
+
+h4,
+.h4 {
+  font-size: 18px;
+  color: #666;
+}
+
+p {
+  margin: 15px 0;
+}
+
+a {
+  color: #41b649;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover, a:active {
+  color: #41b649;
+}
+
+ul,
+ol {
+  margin: 15px 0;
+  padding-left: 30px;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ol ul,
+ul ol,
+ul ul,
+ol ol {
+  margin: 0;
+}
+
+ul ul,
+ol ul {
+  list-style-type: circle;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+}
+
+input,
+textarea {
+  color: #666;
+  display: block;
+  width: 100%;
+  font-size: 0.8em;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1.3em;
+  border-radius: 3px;
+  border: 1px solid #666;
+  background: #eee;
+}
+
+.gmnoprint img {
+  max-width: none;
+}
+
+.date {
+  font-style: italic;
+  color: #666;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #41b649;
+}
+
+::selection {
+  color: #fff;
+  background: #41b649;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/*********************/
+/* LAYOUT / SECTIONS */
+/*********************/
+#qj-logo:hover, #qj-logo:focus {
+  cursor: pointer;
+}
+
+#logo-pic {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.wrapper-masthead {
+  margin-bottom: 50px;
+}
+
+.masthead {
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+@media screen and (max-width: 640px) {
+  .masthead {
+    text-align: center;
+  }
+}
+
+.site-avatar {
+  float: left;
+  width: 70px;
+  height: 70px;
+  margin-right: 15px;
+}
+@media screen and (max-width: 640px) {
+  .site-avatar {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+}
+.site-info {
+  float: left;
+}
+@media screen and (max-width: 640px) {
+  .site-info {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.site-name {
+  margin: 0;
+  color: #333;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.site-description {
+  margin: -5px 0 0 0;
+  color: #666;
+  font-size: 16px;
+}
+@media screen and (max-width: 640px) {
+  .site-description {
+    margin: 3px 0;
+  }
+}
+
+nav {
+  float: right;
+  margin-top: 23px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+@media screen and (max-width: 640px) {
+  nav {
+    float: none;
+    margin-top: 9px;
+    display: block;
+    font-size: 16px;
+  }
+}
+nav a {
+  margin-left: 20px;
+  color: #333;
+  text-align: right;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+@media screen and (max-width: 640px) {
+  nav a {
+    margin: 0 10px;
+    color: #41b649;
+  }
+}
+
+#qj-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#qj-logo:hover, #qj-logo:focus {
+  cursor: pointer;
+}
+
+#logo-pic {
+  opacity: 0;
+  visibility: hidden;
+}
+
+footer {
+  width: 100%;
+  padding-top: 40px;
+}
+footer ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+footer li {
+  flex: 1 auto;
+  text-align: center;
+}
+footer .fa {
+  font-size: 1.5em;
+}
+footer a {
+  color: #666;
+  transition: all 0.25s ease;
+}
+footer a:hover [class*=facebook] {
+  color: #3b5998;
+}
+footer a:hover [class*=twitter] {
+  color: #4099ff;
+}
+footer a:hover [class*=linkedin] {
+  color: #0e76a8;
+}
+footer a:hover [class*=codepen] {
+  color: #171515;
+}
+footer a:hover [class*=github] {
+  color: #000000;
+}
+
+.landing-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  resize: both;
+  overflow: auto;
+}
+
+.svg-wrapper {
+  position: relative;
+  width: 50%;
+  height: 0;
+  padding-top: 34%;
+  margin: 0 auto;
+}
+
+.posts > .post {
+  padding-bottom: 2em;
+  border-bottom: 1px solid #eee;
+}
+
+.posts > .post:last-child {
+  padding-bottom: 1em;
+  border-bottom: none;
+}
+
+.post blockquote {
+  margin: 1.8em 0.8em;
+  border-left: 2px solid #666;
+  padding: 0.1em 1em;
+  color: #666;
+  font-size: 22px;
+  font-style: italic;
+}
+.post .comments {
+  margin-top: 10px;
+}
+.post .read-more {
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.post .read-more:hover, .post .read-more:focus {
+  text-decoration: underline;
+}
+
+.wrapper-footer {
+  margin-top: 50px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #eee;
+}
+
+footer {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.social-icons {
+  list-style: none;
+  margin: 0px;
+  padding-left: 0;
+}
+.social-icons li {
+  display: inline-block;
+  padding: 3px 5px 0px;
+}
+.social-icons li:last-child {
+  padding-right: 0;
+}
+
+[class^=icon-],
+[class*=" icon-"] {
+  display: inline-block;
+  /*color: #d3d3d3;
+  fill: currentColor;*/
+  fill: #666;
+  -webkit-transition: background-color 0.3s linear, fill 0.3s;
+  transition: background-color 0.3s linear, fill 0.3s;
+  border-radius: 5px;
+  padding: 0.3em;
+}
+
+.icon-facebook {
+  width: 32px;
+  height: 32px;
+}
+.icon-facebook:hover, .icon-facebook:focus {
+  fill: white;
+  background-color: #3b5998;
+}
+
+.icon-twitter {
+  width: 32px;
+  height: 32px;
+}
+.icon-twitter:hover, .icon-twitter:focus {
+  fill: white;
+  background-color: #4099ff;
+}
+
+.icon-feed2 {
+  width: 32px;
+  height: 32px;
+}
+.icon-feed2:hover, .icon-feed2:focus {
+  fill: white;
+  background-color: #ff6600;
+}
+
+.icon-dribbble {
+  width: 32px;
+  height: 32px;
+}
+.icon-dribbble:hover, .icon-dribbble:focus {
+  fill: white;
+  background-color: #c73b6f;
+}
+
+.icon-github2 {
+  width: 32px;
+  height: 32px;
+}
+.icon-github2:hover, .icon-github2:focus {
+  fill: white;
+  background-color: #171515;
+}
+
+.icon-linkedin {
+  width: 32px;
+  height: 32px;
+}
+.icon-linkedin:hover, .icon-linkedin:focus {
+  fill: white;
+  background-color: #0e76a8;
+}
+
+.icon-pinterest {
+  width: 32px;
+  height: 32px;
+}
+.icon-pinterest:hover, .icon-pinterest:focus {
+  fill: white;
+  background-color: #c92228;
+}
+
+.icon-codepen-logo {
+  width: 32px;
+  height: 32px;
+}
+.icon-codepen-logo:hover, .icon-codepen-logo:focus {
+  fill: white;
+  background-color: #000;
+}
+
+.highlighter-rouge {
+  font-family: Consolas, monaco, monospace;
+  font-size: 85%;
+  color: #666;
+}
+.highlighter-rouge pre {
+  white-space: pre-wrap;
+}
+.highlighter-rouge > .highlight {
+  padding: 1.5rem;
+}
+.highlighter-rouge:not([class*=lang]) {
+  padding: 0 2px;
+}
+
+form.submitted {
+  display: none;
+}
+
+.form__thanks {
+  display: none;
+}
+.form__thanks.show {
+  display: block;
+}

@@ -17,10 +17,8 @@
     "gatsby-plugin-glamor": "^1.6.13",
     "gatsby-plugin-google-analytics": "^1.0.24",
     "gatsby-plugin-google-fonts": "0.0.3",
-    "gatsby-plugin-manifest": "^2.2.6",
     "gatsby-plugin-offline": "^1.0.15",
     "gatsby-plugin-react-helmet": "^1.0.8",
-    "gatsby-plugin-sass": "^1.0.19",
     "gatsby-plugin-sharp": "^1.6.41",
     "gatsby-plugin-styled-components": "^2.0.11",
     "gatsby-plugin-typography": "^1.7.18",
@@ -46,7 +44,7 @@
     "react-reconciler": "^0.21.0",
     "react-transition-group": "^2.3.0",
     "schema-utils": "^2.1.0",
-    "sharp": "^0.20.8",
+    "sharp": "^0.33.5",
     "slash": "^1.0.0",
     "spotify-web-api-node": "^2.5.0",
     "styled-components": "^3.4.10",
@@ -65,15 +63,12 @@
   },
   "devDependencies": {
     "css-loader": "^0.28.11",
-    "gatsby-plugin-postcss-sass": "^1.0.18",
     "lost": "^8.2.1",
     "prettier": "^1.9.2",
+    "sass": "^1.97.3",
     "url-loader": "^1.1.2"
   },
-  "peerDependencies": {
-    "ajv": "^6.9.1",
-    "gatsby": "2.4.0",
-    "react": "16.8.2",
-    "webpack": "3.0.0"
+  "overrides": {
+    "sharp": "^0.33.5"
   }
 }
