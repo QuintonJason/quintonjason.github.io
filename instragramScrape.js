@@ -1,81 +1,151 @@
-const fs = require("fs")
-const request = require("request")
-const ProgressBar = require("progress")
-const mkdirp = require("mkdirp")
-const { get } = require("lodash")
-const download = require(`./utils/download-file`)
+const fs = require("fs");
+const request = require("request");
+const ProgressBar = require("progress");
+const mkdirp = require("mkdirp");
+const { get } = require("lodash");
+const download = require("./utils/download-file");
 
-const username = process.argv[2]
+const username = process.argv[2];
+const maxPosts = Number(process.env.IG_MAX_POSTS || 100);
+const captionFilterArg = process.argv[3];
+const captionFilterEnv = process.env.IG_CAPTION_FILTER;
+const captionFilter =
+  captionFilterArg !== undefined
+    ? captionFilterArg
+    : captionFilterEnv !== undefined
+    ? captionFilterEnv
+    : "leftycalligraphy";
 
 if (!username) {
-  console.log(
-    `
-You didn't supply a Instagram username!
+  console.log(`
+You didn't supply an Instagram username!
 Run this command like:
 
 node instagramScrape.js INSTAGRAM_USERNAME
-              `
-  )
-  process.exit()
+or
+node instragramScrape.js INSTAGRAM_USERNAME
+
+Optional:
+node instagramScrape.js INSTAGRAM_USERNAME ""
+or set IG_CAPTION_FILTER="*"
+  `);
+  process.exit(1);
 }
 
-// Convert timestamp to ISO 8601.
-const toISO8601 = timestamp => new Date(timestamp * 1000).toJSON()
+const PROFILE_URL = `https://i.instagram.com/api/v1/users/web_profile_info/?username=${encodeURIComponent(
+  username
+)}`;
 
-// Create the progress bar
-const bar = new ProgressBar(
-  `Downloading Instagram Posts [:bar] :current/:total :elapsed secs :percent`,
-  {
-    total: 0,
-    width: 30,
-  }
-)
+const REQUEST_HEADERS = {
+  "x-ig-app-id": "936619743392459",
+  "user-agent":
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
+    "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+  accept: "application/json"
+};
 
-// Create the images directory
-mkdirp.sync(`./data/images`)
+const getCaption = edge =>
+  get(edge, "node.edge_media_to_caption.edges[0].node.text", "");
 
-let igPosts = []
+const toIgPost = edge => {
+  const id = String(get(edge, "node.id", ""));
+  const likesCount =
+    get(edge, "node.edge_liked_by.count", null) ||
+    get(edge, "node.edge_media_preview_like.count", 0);
 
-// Write json
-const saveJSON = _ =>
-  fs.writeFileSync(`./data/igPosts.json`, JSON.stringify(igPosts, "", 2));
+  return {
+    id,
+    caption: getCaption(edge),
+    date: get(edge, "node.taken_at_timestamp", 0),
+    likes: {
+      count: likesCount
+    },
+    image: get(edge, "node.display_url", ""),
+    media: `images/${id}.jpg`
+  };
+};
 
-const getIGPosts = () => {
-  let url = `https://www.instagram.com/${username}/?__a=1`
-  request(url, function (error, response, body) {
-    if (error) console.log(`erroror: ${error}`)
-    console.log("response:", response);
-    console.log("body:", body);
-    body = JSON.parse(response)
-    const nodes = body.user.media.nodes;
+const matchesCaptionFilter = post => {
+  if (captionFilter === "" || captionFilter === "*") return true;
+  return post.caption.toLowerCase().includes(captionFilter.toLowerCase());
+};
 
-    //filter posts based on matching substring
-    const filteredNodes = nodes.filter(item => item.caption.includes('leftycalligraphy'));
-    filteredNodes.map(item => {
-      return {
-        id: get(item, `id`),
-        caption: get(item, `caption`),
-        date: get(item, `date`),
-        likes: get(item, `likes`),
-        image: get(item, `display_src`),
-        media: `images/${item.id}.jpg`
+const fetchProfilePosts = async () => {
+  const payload = await new Promise((resolve, reject) => {
+    request(
+      {
+        url: PROFILE_URL,
+        method: "GET",
+        headers: REQUEST_HEADERS,
+        json: true
+      },
+      (error, response, body) => {
+        if (error) return reject(error);
+        if (response.statusCode !== 200) {
+          return reject(
+            new Error(
+              `Instagram request failed with status ${response.statusCode}`
+            )
+          );
+        }
+        resolve(body);
       }
-    })
-    .forEach(item => {
-      if (igPosts.length >= 100) return
+    );
+  });
 
-      bar.total++
-      bar.tick();
-      // Add item to IGposts
-      download(item.image, `./data/images/${item.id}.jpg`, _ => bar.tick())
-      igPosts.push(item)
-      // Save lastId for next request
-      lastId = item.id
-    })
-    if (igPosts.length < 100 && get(body, `more_available`)) getIGPosts(lastId)
-    else saveJSON()
-  })
+  const edges = get(payload, "data.user.edge_owner_to_timeline_media.edges", []);
 
-}
+  if (!Array.isArray(edges)) {
+    throw new Error("Unexpected Instagram response shape: missing media edges");
+  }
 
-getIGPosts();
+  return edges.map(toIgPost).filter(matchesCaptionFilter).slice(0, maxPosts);
+};
+
+const downloadPostImage = (url, filePath) =>
+  new Promise(resolve => {
+    download(url, filePath, err => {
+      if (err) {
+        console.log(`Image download failed for ${filePath}: ${err}`);
+      }
+      resolve();
+    });
+  });
+
+const saveJSON = posts =>
+  fs.writeFileSync("./data/igPosts.json", JSON.stringify(posts, null, 2));
+
+const run = async () => {
+  mkdirp.sync("./data/images");
+  const igPosts = await fetchProfilePosts();
+
+  if (igPosts.length === 0) {
+    console.log(
+      `No posts found for @${username} with filter "${captionFilter}". ` +
+        `Set IG_CAPTION_FILTER="*" to include all posts.`
+    );
+    saveJSON([]);
+    return;
+  }
+
+  const bar = new ProgressBar(
+    "Downloading Instagram Posts [:bar] :current/:total :elapsed secs :percent",
+    {
+      total: igPosts.length,
+      width: 30
+    }
+  );
+
+  for (const post of igPosts) {
+    await downloadPostImage(post.image, `./data/images/${post.id}.jpg`);
+    bar.tick();
+  }
+
+  saveJSON(igPosts);
+  console.log(`Saved ${igPosts.length} post(s) to ./data/igPosts.json`);
+};
+
+run().catch(error => {
+  console.log(`Instagram scrape failed: ${error.message}`);
+  process.exit(1);
+});

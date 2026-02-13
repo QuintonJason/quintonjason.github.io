@@ -47,6 +47,9 @@ export default class Header extends Component {
             <NavLink to="/snippets/" className="header-link">
               Snippets
             </NavLink>
+            <NavLink to="/calligraphy/" className="header-link">
+              Calligraphy
+            </NavLink>
             <NavLink to="/contact/" className="header-link">
               Contact
             </NavLink>
