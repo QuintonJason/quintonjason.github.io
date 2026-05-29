@@ -1,14 +1,40 @@
 import React from "react";
-var Gist = require('react-gist')
+import Link from "gatsby-link";
+import Helmet from "react-helmet";
+
+const formatDate = timestamp =>
+  new Date(timestamp * 1000).toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric"
+  });
 
 export default ({ data }) => {
-  const igPosts = data.igPostsJson;
+  const post = data.igPostsJson;
+  const imageUrl = `/images/${post.id}.jpg`;
+
   return (
-    <div className="gist_single">
-      
-      <p>{igPosts.description}</p>
-      <Gist id={igPosts.id} />
-    </div>
+    <main className="container calligraphy-single">
+      <Helmet
+        title={`Calligraphy | Quinton Jason`}
+        meta={[
+          {
+            name: "description",
+            content: post.caption
+          }
+        ]}
+      />
+      <Link to="/calligraphy/" className="text-link">
+        Back to calligraphy
+      </Link>
+      <figure>
+        <img src={imageUrl} alt={post.caption} />
+        <figcaption>
+          <span>{formatDate(post.date)}</span>
+          <p>{post.caption}</p>
+        </figcaption>
+      </figure>
+    </main>
   );
 };
 
@@ -18,13 +44,7 @@ export const query = graphql`
       id
       caption
       date
-      likes {
-        count
-      }
       image
-      media {
-        id
-      }
     }
   }
 `;

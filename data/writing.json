@@ -1,0 +1,83 @@
+[
+  {
+    "title": "Teaching AI Our Design System",
+    "source": "Medium",
+    "type": "Article",
+    "date": "2026-02-11",
+    "url": "https://medium.com/@quintonjasonjr/teaching-ai-our-design-system-d9788fe96c8e",
+    "summary": "A practical look at making a design system queryable and enforceable in AI-assisted product workflows.",
+    "topics": ["AI", "Design Systems", "UX Development"]
+  },
+  {
+    "title": "The Design System Team Did Real Work. Nobody Could See It.",
+    "source": "Medium",
+    "type": "Article",
+    "date": "2026-02-27",
+    "url": "https://medium.com/@quintonjasonjr",
+    "summary": "A reflection on the hidden labor of design systems work and why invisible infrastructure still needs visible proof.",
+    "topics": ["Design Systems", "Teamwork", "Product"]
+  },
+  {
+    "title": "Context Matters (Even When You Think It Doesn't)",
+    "source": "Medium",
+    "type": "Article",
+    "date": "2025-10-31",
+    "url": "https://medium.com/@quintonjasonjr/context-matters-even-when-you-think-it-doesnt-4fd6dd815807",
+    "summary": "A short argument for preserving hard-earned product and system context in faster AI-assisted workflows.",
+    "topics": ["AI", "Design Systems", "Context"]
+  },
+  {
+    "title": "Systematically Not Following the Design System Is a System",
+    "source": "DEV",
+    "type": "Article",
+    "date": "2025-09-17",
+    "url": "https://dev.to/quintonjason/systematically-not-following-the-design-system-is-a-system-31dn",
+    "summary": "An argument that repeated exceptions become their own design system, whether a team names them or not.",
+    "topics": ["Design Systems", "Culture", "UX"]
+  },
+  {
+    "title": "Figma Variables vs Tokens Studio: Why Both Matter",
+    "source": "DEV",
+    "type": "Article",
+    "date": "2025-09-10",
+    "url": "https://dev.to/quintonjason/figma-variables-vs-tokens-studio-why-both-matter-2md7",
+    "summary": "A practical comparison of Figma Variables and Tokens Studio as complementary parts of a token workflow.",
+    "topics": ["Design Tokens", "Figma", "Design Systems"]
+  },
+  {
+    "title": "The Plight of the UXD",
+    "source": "DEV",
+    "type": "Article",
+    "date": "2024-09-20",
+    "url": "https://dev.to/quintonjason/the-plight-of-the-uxd-59a9",
+    "summary": "A candid explanation of the UX developer role, its ambiguity, and the value of HTML, CSS, and product judgment.",
+    "topics": ["UX Development", "HTML", "CSS"]
+  },
+  {
+    "title": "CSS and Sub-Pixel Rendering: The Case of the Clipped Border",
+    "source": "Medium / Kajabi UX",
+    "type": "Article",
+    "date": "2021-07-30",
+    "url": "https://medium.com/kajabi-ux/css-and-sub-pixel-rendering-the-case-of-the-clipped-border-4652c5a1b5ab",
+    "summary": "A technical walkthrough of a clipped border rendering bug caused by transforms, browser rounding, and painting behavior.",
+    "topics": ["CSS", "Rendering", "Performance"]
+  },
+  {
+    "title": "Quinton Turned His Love of The Web Into a Life-Changing Career",
+    "source": "Treehouse",
+    "type": "Feature",
+    "date": "2015-10-09",
+    "url": "https://blog.teamtreehouse.com/quinton-turned-his-love-of-the-web-into-a-life-changing-career",
+    "summary": "A Treehouse feature about returning to the web, building a career, and growing into speaking and leadership.",
+    "topics": ["Career", "Learning", "Web"]
+  },
+  {
+    "title": "LSU College of Art & Design Faculty Profile",
+    "source": "LSU",
+    "type": "Teaching",
+    "date": "2026-01-01",
+    "url": "https://design.lsu.edu/faculty/jason-quinton/",
+    "summary": "Faculty profile for teaching web UX foundations as a part-time instructor in the LSU School of Art.",
+    "topics": ["Teaching", "UX", "Web"]
+  }
+]

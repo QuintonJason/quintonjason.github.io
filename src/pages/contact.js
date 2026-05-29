@@ -41,8 +41,38 @@ export default class Contact extends React.Component {
     const formSubmittedClass = this.state.formSubmitted ? "submitted" : "";
     const showThanks = this.state.formSubmitted ? "show" : "";
     return (
-      <div className="container">
-        <h1>Contact</h1>
+      <main className="container contact-page">
+        <Helmet
+          title="Contact | Quinton Jason"
+          meta={[
+            {
+              name: "description",
+              content:
+                "Contact Quinton Jason about design systems, frontend architecture, accessibility, teaching, writing, and web work."
+            }
+          ]}
+        />
+        <div className="archive-intro">
+          <p className="section-heading__eyebrow">Contact</p>
+          <h1>Get in touch</h1>
+          <p>
+            For design systems, frontend architecture, accessibility, teaching,
+            writing, or web work, email is the most reliable place to start.
+          </p>
+          <p>
+            <a className="button button--primary" href="mailto:quinton.jason@gmail.com">
+              Email Quinton
+            </a>
+            <a
+              className="button button--secondary button--spaced"
+              href="https://www.linkedin.com/in/quintonjason/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </p>
+        </div>
         <form
           name="contact"
           id="contact__form"
@@ -56,7 +86,7 @@ export default class Contact extends React.Component {
         >
           <p hidden>
             <label>
-              Don’t fill this out: <input name="bot-field" />
+              Don't fill this out: <input name="bot-field" />
             </label>
           </p>
           <p>
@@ -100,7 +130,7 @@ export default class Contact extends React.Component {
         <div className={`form__thanks ${showThanks}`}>
           <p>Thanks for your submission!</p>
         </div>
-      </div>
+      </main>
     );
   }
 }

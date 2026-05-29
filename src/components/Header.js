@@ -41,14 +41,17 @@ export default class Header extends Component {
             </Link>
           </h1>
           <nav id="main-nav" className="header-nav">
-            <NavLink to="/posts/" className="header-link">
-              Blog
+            <NavLink exact to="/" className="header-link">
+              Home
             </NavLink>
-            <NavLink to="/snippets/" className="header-link">
-              Snippets
+            <NavLink to="/work/" className="header-link">
+              Work
             </NavLink>
-            <NavLink to="/calligraphy/" className="header-link">
-              Calligraphy
+            <NavLink to="/writing/" className="header-link">
+              Writing
+            </NavLink>
+            <NavLink to="/about/" className="header-link">
+              About
             </NavLink>
             <NavLink to="/contact/" className="header-link">
               Contact

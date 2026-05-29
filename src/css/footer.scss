@@ -1,10 +1,70 @@
-// ICONS
 footer{
 	background: $lightGray;
+	text-align: left;
+}
+
+.footer-primary{
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	gap: 2rem;
+	align-items: start;
+	margin-bottom: 1.5rem;
+}
+
+.footer-primary strong{
+	color: $ink;
+	font-family: $mont;
+}
+
+.footer-primary p{
+	color: $gray;
+	font-size: .9rem;
+	margin: .35rem 0 0;
+}
+
+.footer-nav{
+	display: flex;
+	flex-wrap: wrap;
+	gap: .6rem 1rem;
+	font-size: .82rem;
+	font-weight: 700;
+	letter-spacing: .02em;
+	margin-top: 0;
+	text-transform: uppercase;
+}
+
+.footer-nav a{
+	color: $darkGray;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus{
+	color: $green;
 }
 
 .footer-social-nav{
+	align-items: center;
+	display: flex;
+	gap: .75rem;
+	justify-content: flex-start;
+	list-style: none;
+	margin: 0;
+	margin-left: 0;
+	padding-left: 0;
+	li{
+		flex: 0 0 auto;
+		line-height: 0;
+	}
+	a{
+		align-items: center;
+		display: inline-flex;
+		height: 32px;
+		justify-content: center;
+		width: 32px;
+	}
 	svg{
+		display: block;
+		height: 24px;
 		width: 24px;
 	}
 	path{
@@ -26,4 +86,10 @@ footer{
 	.github-icon:hover path{
 		fill: $githubColor;
 	}	
+}
+
+@include phone {
+	.footer-primary{
+		grid-template-columns: 1fr;
+	}
 }

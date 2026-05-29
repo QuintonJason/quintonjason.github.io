@@ -1,6 +1,35 @@
 .header-logo{
-	width: 70px;
+	width: 64px;
 }
 .header-wrapper{
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid rgba(23, 32, 27, .08);
+	align-items: center;
+}
+.header-nav{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	gap: .75rem 1.25rem;
+	margin-top: 0;
+}
+.header-nav .header-link{
+	margin-left: 0;
+	color: $darkGray;
+	font-size: .85rem;
+	font-weight: 700;
+	letter-spacing: .02em;
+	text-transform: uppercase;
+}
+.header-nav .header-link:hover,
+.header-nav .header-link.active{
+	color: $green;
+}
+
+@include phone {
+	.header-wrapper{
+		gap: 1rem;
+	}
+	.header-nav{
+		justify-content: flex-start;
+	}
 }

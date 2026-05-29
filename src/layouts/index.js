@@ -10,49 +10,44 @@ import favicon16 from '../images/favicon-16x16.png'
 import favicon32 from '../images/favicon-32x32.png'
 import faviconApple from '../images/apple-touch-icon.png'
 
-// images
-import FacebookIcon from '../images/Facebook'
-import CodepenIcon from '../images/Codepen'
 import GithubIcon from '../images/Github'
-import TwitterIcon from '../images/Twitter'
 import LinkedInIcon from '../images/LinkedIn'
 
 require("../css/prismjs.css");
+import '../css/styles.css'
 
 import './index.css'
 
 const Footer = () => (
   <footer>
     <div
-      className=""
+      className="footer-inner"
       style={{
         margin: '0 auto',
-        maxWidth: 960,
+        maxWidth: 1100,
         padding: '1.45rem 1.0875rem',
       }}>
+        <div className="footer-primary">
+          <div>
+            <strong>Quinton Jason</strong>
+            <p>Senior design engineering, design systems, writing, and teaching.</p>
+          </div>
+          <nav className="footer-nav" aria-label="Footer">
+            <Link to="/work/">Work</Link>
+            <Link to="/writing/">Writing</Link>
+            <Link to="/about/">About</Link>
+            <Link to="/contact/">Contact</Link>
+            <Link to="/calligraphy/">Calligraphy</Link>
+          </nav>
+        </div>
         <ul className="footer-social-nav">
           <li>
-            <a href="https://www.facebook.com/quinton.jason" target="_blank">
-              <FacebookIcon className="facebook-icon"/>
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/quintonjasonjr" target="_blank">
-              <TwitterIcon className="twitter-icon" />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/quintonjason/" target="_blank">
+            <a href="https://www.linkedin.com/in/quintonjason/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <LinkedInIcon className="linkedin-icon"/>
             </a>
           </li>
           <li>
-            <a href="https://codepen.io/quintonjason/" target="_blank">
-              <CodepenIcon className="codepen-icon"/>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/QuintonJason/" target="_blank">
+            <a href="https://github.com/QuintonJason/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <GithubIcon className="github-icon"/>
             </a>
           </li>
@@ -65,21 +60,18 @@ const TemplateWrapper = ({ children }) => (
   <div className="hey"
       style={{
         display: 'grid',
-        height: '100vh',
-        display: 'grid',
-        'gridTemplateRows': 'auto 1fr auto',
-
-    // grid-template-columns: 1fr;
+        minHeight: '100vh',
+        gridTemplateRows: 'auto 1fr auto',
 
       }}>
     <Helmet
-      title="quintonjason.com"
+      title="Quinton Jason"
       meta={[
-        { name: 'description', content: 'My portfolio site' },
+        { name: 'description', content: 'Senior Design Engineer focused on design systems, frontend architecture, accessibility, design tokens, teaching, and AI-native product workflows.' },
         { property: 'og:locale', content: 'en-US' },
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'Quinton Jason' },
-        { property: 'og:description', content: 'My portfolio site' },
+        { property: 'og:description', content: 'Senior Design Engineer focused on design systems, frontend architecture, accessibility, design tokens, teaching, and AI-native product workflows.' },
       ]} >
 
         <link rel="apple-touch-icon" sizes="180x180" href={faviconApple} />
@@ -90,9 +82,7 @@ const TemplateWrapper = ({ children }) => (
     <Header />
     <div
       style={{
-        // margin: '0 auto',
-        // maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
+        padding: '0',
         paddingTop: 0,
       }}
     >

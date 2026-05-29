@@ -8,7 +8,7 @@ import Helmet from "react-helmet";
 
 const Snippets = props => {
   return (
-    <div className="container">
+    <main className="container archive-page">
       {/*<button id="rotation">console.log() rotation</button>
       <br />
       <img
@@ -17,9 +17,25 @@ const Snippets = props => {
         width="410"
         height="410"
   />*/}
-      <h1>Snippets</h1>
+      <Helmet
+        title="Snippets | Quinton Jason"
+        meta={[
+          {
+            name: "description",
+            content:
+              "A small archive of code snippets and front-end experiments by Quinton Jason."
+          }
+        ]}
+      />
+      <div className="archive-intro">
+        <p className="section-heading__eyebrow">Snippets</p>
+        <h1>Small code experiments and utilities</h1>
+        <p>
+          A historical collection of gists, demos, and reusable front-end notes.
+        </p>
+      </div>
       <SnippetList />
-    </div>
+    </main>
   );
 };
 

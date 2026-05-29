@@ -3,8 +3,8 @@ const lost = require(`lost`);
 
 module.exports = {
   siteMetadata: {
-    title: `quintonjason.com `,
-    description: `My Portfolio Site`
+    title: `Quinton Jason`,
+    description: `Senior Design Engineer focused on design systems, frontend architecture, accessibility, design tokens, teaching, and AI-native product workflows.`
   },
   plugins: [
     `gatsby-plugin-sharp`,
