@@ -1,0 +1,2 @@
+webpackJsonp([0x633af7c53ccc],{422:function(t,c){t.exports={data:{gistsJson:{id:"916a20fc580850cb3063",description:"facebook and twitter - will update for linkedin"}},pathContext:{slug:"/snippets/916a20fc580850cb3063"}}}});
+//# sourceMappingURL=path---snippets-916-a-20-fc-580850-cb-3063-635baa8210b359ab6e62.js.map

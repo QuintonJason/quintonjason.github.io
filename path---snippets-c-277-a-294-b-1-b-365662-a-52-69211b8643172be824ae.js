@@ -1,0 +1,2 @@
+webpackJsonp([0xd359bed0ad27],{431:function(n,a){n.exports={data:{gistsJson:{id:"c277a294b1b365662a52",description:"A Pen by Quinton Jason."}},pathContext:{slug:"/snippets/c277a294b1b365662a52"}}}});
+//# sourceMappingURL=path---snippets-c-277-a-294-b-1-b-365662-a-52-69211b8643172be824ae.js.map

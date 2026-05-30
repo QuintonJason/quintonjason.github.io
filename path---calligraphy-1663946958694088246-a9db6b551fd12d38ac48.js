@@ -1,0 +1,2 @@
+webpackJsonp([33251988136929],{391:function(t,a){t.exports={data:{igPostsJson:{id:"1663946958694088246",caption:"Fooling around with tooltip.js. #programmingcalligrapher #leftycalligraphy",date:1512577956,image:"https://scontent-dft4-3.cdninstagram.com/vp/c364c1f76bf7b6f4ceb7037a6ed029ca/5AFFC98B/t51.2885-15/e35/25007716_944743162356512_5389366602728734720_n.jpg"}},pathContext:{slug:"/calligraphy/1663946958694088246"}}}});
+//# sourceMappingURL=path---calligraphy-1663946958694088246-a9db6b551fd12d38ac48.js.map

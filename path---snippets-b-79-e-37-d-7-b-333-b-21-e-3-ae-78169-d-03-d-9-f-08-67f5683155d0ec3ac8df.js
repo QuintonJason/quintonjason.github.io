@@ -1,0 +1,2 @@
+webpackJsonp([51375398361998],{429:function(e,n){e.exports={data:{gistsJson:{id:"b79e37d7b333b21e3ae78169d03d9f08",description:"Animation Concept - combining services into a company logo"}},pathContext:{slug:"/snippets/b79e37d7b333b21e3ae78169d03d9f08"}}}});
+//# sourceMappingURL=path---snippets-b-79-e-37-d-7-b-333-b-21-e-3-ae-78169-d-03-d-9-f-08-67f5683155d0ec3ac8df.js.map

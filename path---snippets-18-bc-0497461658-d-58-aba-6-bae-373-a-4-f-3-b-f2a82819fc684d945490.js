@@ -1,0 +1,2 @@
+webpackJsonp([0x6f7a89395be8],{417:function(a,e){a.exports={data:{gistsJson:{id:"18bc0497461658d58aba6bae373a4f3b",description:"Create JSON file from Gists API"}},pathContext:{slug:"/snippets/18bc0497461658d58aba6bae373a4f3b"}}}});
+//# sourceMappingURL=path---snippets-18-bc-0497461658-d-58-aba-6-bae-373-a-4-f-3-b-f2a82819fc684d945490.js.map

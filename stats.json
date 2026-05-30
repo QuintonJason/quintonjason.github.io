@@ -1,0 +1,304 @@
+{
+  "assetsByChunkName": {
+    "path---posts-2014-11-26-lets-us-svg": [
+      "path---posts-2014-11-26-lets-us-svg-2c0299b992832c4e12cf.js",
+      "path---posts-2014-11-26-lets-us-svg-2c0299b992832c4e12cf.js.map"
+    ],
+    "path---snippets-98916432491-dba-153703-fefbcb-9-c-9-ed-7": [
+      "path---snippets-98916432491-dba-153703-fefbcb-9-c-9-ed-7-73729a280898c09c27b5.js",
+      "path---snippets-98916432491-dba-153703-fefbcb-9-c-9-ed-7-73729a280898c09c27b5.js.map"
+    ],
+    "path---snippets-fc-950-c-5-b-999-abd-2569978-f-8-a-679823-d-0": [
+      "path---snippets-fc-950-c-5-b-999-abd-2569978-f-8-a-679823-d-0-3109b08e2225ffd3f292.js",
+      "path---snippets-fc-950-c-5-b-999-abd-2569978-f-8-a-679823-d-0-3109b08e2225ffd3f292.js.map"
+    ],
+    "path---posts-2014-10-25-zalandas-logo-animation": [
+      "path---posts-2014-10-25-zalandas-logo-animation-ac55bbad9bbe42b94e54.js",
+      "path---posts-2014-10-25-zalandas-logo-animation-ac55bbad9bbe42b94e54.js.map"
+    ],
+    "path---snippets-f-8-a-677-fb-422-e-84-afa-2-f-6": [
+      "path---snippets-f-8-a-677-fb-422-e-84-afa-2-f-6-c15488e7a5146cdbb256.js",
+      "path---snippets-f-8-a-677-fb-422-e-84-afa-2-f-6-c15488e7a5146cdbb256.js.map"
+    ],
+    "component---src-templates-instagram-page-js": [
+      "component---src-templates-instagram-page-js-d41f9dff3a6c93a8c5a4.js",
+      "component---src-templates-instagram-page-js-d41f9dff3a6c93a8c5a4.js.map"
+    ],
+    "path---snippets-c-9-cabb-443137-af-706-a-501154243-dc-553": [
+      "path---snippets-c-9-cabb-443137-af-706-a-501154243-dc-553-869597ffe29bb14fe09b.js",
+      "path---snippets-c-9-cabb-443137-af-706-a-501154243-dc-553-869597ffe29bb14fe09b.js.map"
+    ],
+    "component---src-pages-work-js": [
+      "component---src-pages-work-js-c7d253a280fcb43bac39.js",
+      "component---src-pages-work-js-c7d253a280fcb43bac39.js.map"
+    ],
+    "path---snippets-d-47-c-2-c-01707846-b-69-b-8-c-6-e-008613-dbe-4": [
+      "path---snippets-d-47-c-2-c-01707846-b-69-b-8-c-6-e-008613-dbe-4-4c7595bbb181c1b72e6c.js",
+      "path---snippets-d-47-c-2-c-01707846-b-69-b-8-c-6-e-008613-dbe-4-4c7595bbb181c1b72e6c.js.map"
+    ],
+    "path---work": [
+      "path---work-a0e39f21c11f6a62c5ab.js",
+      "path---work-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---calligraphy-1663946958694088246": [
+      "path---calligraphy-1663946958694088246-a9db6b551fd12d38ac48.js",
+      "path---calligraphy-1663946958694088246-a9db6b551fd12d38ac48.js.map"
+    ],
+    "component---src-pages-index-js": [
+      "component---src-pages-index-js-a0920a16b83409e120ef.js",
+      "component---src-pages-index-js-a0920a16b83409e120ef.js.map"
+    ],
+    "component---src-pages-snippets-js": [
+      "component---src-pages-snippets-js-ddf0103b81dae67940c5.js",
+      "component---src-pages-snippets-js-ddf0103b81dae67940c5.js.map"
+    ],
+    "path---snippets": [
+      "path---snippets-a0e39f21c11f6a62c5ab.js",
+      "path---snippets-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---snippets-85-e-8162495-e-108-e-1-f-0-ab": [
+      "path---snippets-85-e-8162495-e-108-e-1-f-0-ab-3d753beb11cd8d7050e5.js",
+      "path---snippets-85-e-8162495-e-108-e-1-f-0-ab-3d753beb11cd8d7050e5.js.map"
+    ],
+    "path---snippets-b-79-e-37-d-7-b-333-b-21-e-3-ae-78169-d-03-d-9-f-08": [
+      "path---snippets-b-79-e-37-d-7-b-333-b-21-e-3-ae-78169-d-03-d-9-f-08-67f5683155d0ec3ac8df.js",
+      "path---snippets-b-79-e-37-d-7-b-333-b-21-e-3-ae-78169-d-03-d-9-f-08-67f5683155d0ec3ac8df.js.map"
+    ],
+    "path---calligraphy-1486397539401853802": [
+      "path---calligraphy-1486397539401853802-989edc5fb5a9067816c1.js",
+      "path---calligraphy-1486397539401853802-989edc5fb5a9067816c1.js.map"
+    ],
+    "path---": [
+      "path----557518bd178906f8d58a.js",
+      "path----557518bd178906f8d58a.js.map"
+    ],
+    "path---posts-2014-11-25-transitioning-to-sprites": [
+      "path---posts-2014-11-25-transitioning-to-sprites-c7512b4d231a29c87093.js",
+      "path---posts-2014-11-25-transitioning-to-sprites-c7512b4d231a29c87093.js.map"
+    ],
+    "component---src-pages-contact-js": [
+      "component---src-pages-contact-js-a11c7ff89f05d8c7f41f.js",
+      "component---src-pages-contact-js-a11c7ff89f05d8c7f41f.js.map"
+    ],
+    "path---posts-2017-11-01-future-of-responsive-design": [
+      "path---posts-2017-11-01-future-of-responsive-design-6844ae7b4901299df0a0.js",
+      "path---posts-2017-11-01-future-of-responsive-design-6844ae7b4901299df0a0.js.map"
+    ],
+    "path---calligraphy-1667764085888889064": [
+      "path---calligraphy-1667764085888889064-db5b91bd3715f9f779a7.js",
+      "path---calligraphy-1667764085888889064-db5b91bd3715f9f779a7.js.map"
+    ],
+    "path---snippets-654-e-7-fd-4-a-144-fc-3-b-20-bc": [
+      "path---snippets-654-e-7-fd-4-a-144-fc-3-b-20-bc-7e17e04bb9ab68378390.js",
+      "path---snippets-654-e-7-fd-4-a-144-fc-3-b-20-bc-7e17e04bb9ab68378390.js.map"
+    ],
+    "path---calligraphy-1364758293410845038": [
+      "path---calligraphy-1364758293410845038-c6f90e6ffce667c11abf.js",
+      "path---calligraphy-1364758293410845038-c6f90e6ffce667c11abf.js.map"
+    ],
+    "path---calligraphy-1476156261950981675": [
+      "path---calligraphy-1476156261950981675-ecf61d55bbc1b723263b.js",
+      "path---calligraphy-1476156261950981675-ecf61d55bbc1b723263b.js.map"
+    ],
+    "component---src-templates-blog-post-js": [
+      "component---src-templates-blog-post-js-47bf0a09c46c9bcebbee.js",
+      "component---src-templates-blog-post-js-47bf0a09c46c9bcebbee.js.map"
+    ],
+    "path---snippets-916-a-20-fc-580850-cb-3063": [
+      "path---snippets-916-a-20-fc-580850-cb-3063-635baa8210b359ab6e62.js",
+      "path---snippets-916-a-20-fc-580850-cb-3063-635baa8210b359ab6e62.js.map"
+    ],
+    "path---calligraphy-1764054297527445641": [
+      "path---calligraphy-1764054297527445641-1a48559528b633e9a392.js",
+      "path---calligraphy-1764054297527445641-1a48559528b633e9a392.js.map"
+    ],
+    "path---posts-2017-12-24-deconstructing-logo-animation": [
+      "path---posts-2017-12-24-deconstructing-logo-animation-db7c711df8d1d26b7d83.js",
+      "path---posts-2017-12-24-deconstructing-logo-animation-db7c711df8d1d26b7d83.js.map"
+    ],
+    "component---src-layouts-index-js": [
+      "component---src-layouts-index-js-a6704e242887ed0baaa0.js",
+      "component---src-layouts-index-js-a6704e242887ed0baaa0.js.map"
+    ],
+    "path---snippets-18-bc-0497461658-d-58-aba-6-bae-373-a-4-f-3-b": [
+      "path---snippets-18-bc-0497461658-d-58-aba-6-bae-373-a-4-f-3-b-f2a82819fc684d945490.js",
+      "path---snippets-18-bc-0497461658-d-58-aba-6-bae-373-a-4-f-3-b-f2a82819fc684d945490.js.map"
+    ],
+    "path---posts-2017-10-09-form-optimization": [
+      "path---posts-2017-10-09-form-optimization-52dd6d7fb8678e30bcec.js",
+      "path---posts-2017-10-09-form-optimization-52dd6d7fb8678e30bcec.js.map"
+    ],
+    "path---snippets-df-961489-e-7836658-d-874-bfb-3-d-23-e-64-a-0": [
+      "path---snippets-df-961489-e-7836658-d-874-bfb-3-d-23-e-64-a-0-e1127623522479588df3.js",
+      "path---snippets-df-961489-e-7836658-d-874-bfb-3-d-23-e-64-a-0-e1127623522479588df3.js.map"
+    ],
+    "component---src-pages-calligraphy-js": [
+      "component---src-pages-calligraphy-js-9df4c99f2ed8b97ca4b5.js",
+      "component---src-pages-calligraphy-js-9df4c99f2ed8b97ca4b5.js.map"
+    ],
+    "path---posts": [
+      "path---posts-bb2305b5c1dd4c631b97.js",
+      "path---posts-bb2305b5c1dd4c631b97.js.map"
+    ],
+    "path---index": [
+      "path---index-a0e39f21c11f6a62c5ab.js",
+      "path---index-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---posts-2015-02-10-friday-at-four-lets-use-svg": [
+      "path---posts-2015-02-10-friday-at-four-lets-use-svg-cc322bc08b5742040638.js",
+      "path---posts-2015-02-10-friday-at-four-lets-use-svg-cc322bc08b5742040638.js.map"
+    ],
+    "path---snippets-1-ccc-01012443-d-8-f-05113": [
+      "path---snippets-1-ccc-01012443-d-8-f-05113-c6c138cc6b434df3c38b.js",
+      "path---snippets-1-ccc-01012443-d-8-f-05113-c6c138cc6b434df3c38b.js.map"
+    ],
+    "path---snippets-b-0-c-9-b-05-f-049988-f-84-df-8-a-47625-a-78-c-21": [
+      "path---snippets-b-0-c-9-b-05-f-049988-f-84-df-8-a-47625-a-78-c-21-6b923c2d0d3518532899.js",
+      "path---snippets-b-0-c-9-b-05-f-049988-f-84-df-8-a-47625-a-78-c-21-6b923c2d0d3518532899.js.map"
+    ],
+    "path---snippets-15-aaed-42-c-03234641-d-593-b-7-aae-958-aef": [
+      "path---snippets-15-aaed-42-c-03234641-d-593-b-7-aae-958-aef-c3e86017acb1eef5432c.js",
+      "path---snippets-15-aaed-42-c-03234641-d-593-b-7-aae-958-aef-c3e86017acb1eef5432c.js.map"
+    ],
+    "path---snippets-a-592235-b-01-aaa-8-d-2-bf-61": [
+      "path---snippets-a-592235-b-01-aaa-8-d-2-bf-61-4608c126e00bfa249f8f.js",
+      "path---snippets-a-592235-b-01-aaa-8-d-2-bf-61-4608c126e00bfa249f8f.js.map"
+    ],
+    "path---snippets-b-3-cb-9-b-6380-cff-8969-b-31-bf-0858-c-1-c-3-e-5": [
+      "path---snippets-b-3-cb-9-b-6380-cff-8969-b-31-bf-0858-c-1-c-3-e-5-e11db42579d5a039d474.js",
+      "path---snippets-b-3-cb-9-b-6380-cff-8969-b-31-bf-0858-c-1-c-3-e-5-e11db42579d5a039d474.js.map"
+    ],
+    "path---snippets-06-a-4241992720-fef-3067-bb-258-dd-21159": [
+      "path---snippets-06-a-4241992720-fef-3067-bb-258-dd-21159-c20ef8a8d7500f632cb1.js",
+      "path---snippets-06-a-4241992720-fef-3067-bb-258-dd-21159-c20ef8a8d7500f632cb1.js.map"
+    ],
+    "path---writing": [
+      "path---writing-9b608efff3c0397ef42a.js",
+      "path---writing-9b608efff3c0397ef42a.js.map"
+    ],
+    "path---calligraphy-1756881407266534717": [
+      "path---calligraphy-1756881407266534717-a40bfc415c97ade49796.js",
+      "path---calligraphy-1756881407266534717-a40bfc415c97ade49796.js.map"
+    ],
+    "component---src-pages-404-js": [
+      "component---src-pages-404-js-74de261402c9e24405d0.js",
+      "component---src-pages-404-js-74de261402c9e24405d0.js.map"
+    ],
+    "path---snippets-06-c-0-c-8-f-9-e-6991681-cc-36-ceb-98-a-217-ef-1": [
+      "path---snippets-06-c-0-c-8-f-9-e-6991681-cc-36-ceb-98-a-217-ef-1-b6bfcb459a377fcb0af4.js",
+      "path---snippets-06-c-0-c-8-f-9-e-6991681-cc-36-ceb-98-a-217-ef-1-b6bfcb459a377fcb0af4.js.map"
+    ],
+    "path---snippets-a-7-f-6068042-f-161-c-298-f-8-edc-81-e-766-f-70": [
+      "path---snippets-a-7-f-6068042-f-161-c-298-f-8-edc-81-e-766-f-70-244d03bdddf988d5a4e9.js",
+      "path---snippets-a-7-f-6068042-f-161-c-298-f-8-edc-81-e-766-f-70-244d03bdddf988d5a4e9.js.map"
+    ],
+    "commons": [
+      "commons-d3302e421308ce2e6f28.js",
+      "build-js-styles.css",
+      "commons-d3302e421308ce2e6f28.js.map",
+      "build-js-styles.css.map"
+    ],
+    "path---snippets-aef-45-f-7-fe-2-b-8640-c-14-b-576849760-bea-7": [
+      "path---snippets-aef-45-f-7-fe-2-b-8640-c-14-b-576849760-bea-7-c96f81757b2430cebf1a.js",
+      "path---snippets-aef-45-f-7-fe-2-b-8640-c-14-b-576849760-bea-7-c96f81757b2430cebf1a.js.map"
+    ],
+    "path---snippets-879-ae-88-d-2-f-1-bf-5624-eafb-47756-f-8-bb-7-e": [
+      "path---snippets-879-ae-88-d-2-f-1-bf-5624-eafb-47756-f-8-bb-7-e-80d0306283b90641295f.js",
+      "path---snippets-879-ae-88-d-2-f-1-bf-5624-eafb-47756-f-8-bb-7-e-80d0306283b90641295f.js.map"
+    ],
+    "path---posts-2017-11-15-future-exploring-augmented-reality": [
+      "path---posts-2017-11-15-future-exploring-augmented-reality-50052ab32cc936caf5db.js",
+      "path---posts-2017-11-15-future-exploring-augmented-reality-50052ab32cc936caf5db.js.map"
+    ],
+    "component---src-pages-writing-js": [
+      "component---src-pages-writing-js-1bf7ab5208234515ac1d.js",
+      "component---src-pages-writing-js-1bf7ab5208234515ac1d.js.map"
+    ],
+    "path---404-html": [
+      "path---404-html-a0e39f21c11f6a62c5ab.js",
+      "path---404-html-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---contact": [
+      "path---contact-a0e39f21c11f6a62c5ab.js",
+      "path---contact-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---snippets-8-ddb-75-f-8-b-29-b-8-d-39-ed-8-f-2479-e-2-dd-800-f": [
+      "path---snippets-8-ddb-75-f-8-b-29-b-8-d-39-ed-8-f-2479-e-2-dd-800-f-1dc4bbdf44da94747040.js",
+      "path---snippets-8-ddb-75-f-8-b-29-b-8-d-39-ed-8-f-2479-e-2-dd-800-f-1dc4bbdf44da94747040.js.map"
+    ],
+    "path---posts-2017-08-25-build-fully-customized-website": [
+      "path---posts-2017-08-25-build-fully-customized-website-adb39e8fe79baafa4a2b.js",
+      "path---posts-2017-08-25-build-fully-customized-website-adb39e8fe79baafa4a2b.js.map"
+    ],
+    "component---src-templates-gist-page-js": [
+      "component---src-templates-gist-page-js-dd6b20166972c85aa3f2.js",
+      "component---src-templates-gist-page-js-dd6b20166972c85aa3f2.js.map"
+    ],
+    "path---snippets-ebb-2-ddbfdd-69-b-2143-d-96": [
+      "path---snippets-ebb-2-ddbfdd-69-b-2143-d-96-25d29a2d240c9c9ce616.js",
+      "path---snippets-ebb-2-ddbfdd-69-b-2143-d-96-25d29a2d240c9c9ce616.js.map"
+    ],
+    "path---calligraphy": [
+      "path---calligraphy-a0e39f21c11f6a62c5ab.js",
+      "path---calligraphy-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---posts-2017-11-16-web-prototyping": [
+      "path---posts-2017-11-16-web-prototyping-7961d66d859e00a69903.js",
+      "path---posts-2017-11-16-web-prototyping-7961d66d859e00a69903.js.map"
+    ],
+    "app": [
+      "app-e9f489a4a934edea51b3.js",
+      "build-js-styles.css",
+      "app-e9f489a4a934edea51b3.js.map",
+      "build-js-styles.css.map"
+    ],
+    "path---snippets-c-277-a-294-b-1-b-365662-a-52": [
+      "path---snippets-c-277-a-294-b-1-b-365662-a-52-69211b8643172be824ae.js",
+      "path---snippets-c-277-a-294-b-1-b-365662-a-52-69211b8643172be824ae.js.map"
+    ],
+    "path---calligraphy-1467489866874824924": [
+      "path---calligraphy-1467489866874824924-95760f57ee15050b464f.js",
+      "path---calligraphy-1467489866874824924-95760f57ee15050b464f.js.map"
+    ],
+    "path---calligraphy-1721207391062363312": [
+      "path---calligraphy-1721207391062363312-81a923ae29be514ba246.js",
+      "path---calligraphy-1721207391062363312-81a923ae29be514ba246.js.map"
+    ],
+    "path---posts-2016-08-09-join-the-coding-crusade": [
+      "path---posts-2016-08-09-join-the-coding-crusade-36f422170b41ccc90512.js",
+      "path---posts-2016-08-09-join-the-coding-crusade-36f422170b41ccc90512.js.map"
+    ],
+    "path---posts-2015-04-16-how-i-became-a-presenter": [
+      "path---posts-2015-04-16-how-i-became-a-presenter-827c0230c580e663f3ca.js",
+      "path---posts-2015-04-16-how-i-became-a-presenter-827c0230c580e663f3ca.js.map"
+    ],
+    "path---404": [
+      "path---404-a0e39f21c11f6a62c5ab.js",
+      "path---404-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---calligraphy-1429078921466786180": [
+      "path---calligraphy-1429078921466786180-9d6a30064ed5589dc439.js",
+      "path---calligraphy-1429078921466786180-9d6a30064ed5589dc439.js.map"
+    ],
+    "component---src-pages-posts-js": [
+      "component---src-pages-posts-js-1a7bd092f35f62612dbd.js",
+      "component---src-pages-posts-js-1a7bd092f35f62612dbd.js.map"
+    ],
+    "component---src-pages-about-js": [
+      "component---src-pages-about-js-89365ed30a7908ffc272.js",
+      "component---src-pages-about-js-89365ed30a7908ffc272.js.map"
+    ],
+    "path---snippets-bd-19-ba-069875-db-89-bf-8-cc-3-ff-4174-d-905": [
+      "path---snippets-bd-19-ba-069875-db-89-bf-8-cc-3-ff-4174-d-905-926dd48da25c8989366f.js",
+      "path---snippets-bd-19-ba-069875-db-89-bf-8-cc-3-ff-4174-d-905-926dd48da25c8989366f.js.map"
+    ],
+    "path---about": [
+      "path---about-a0e39f21c11f6a62c5ab.js",
+      "path---about-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---posts-2017-10-08-life-after-launch": [
+      "path---posts-2017-10-08-life-after-launch-b1c6c064535afb6a15a0.js",
+      "path---posts-2017-10-08-life-after-launch-b1c6c064535afb6a15a0.js.map"
+    ]
+  }
+}

@@ -1,0 +1,2 @@
+webpackJsonp([0x82c04ed6ce2d],{415:function(c,s){c.exports={data:{gistsJson:{id:"1ccc01012443d8f05113",description:"Social Share"}},pathContext:{slug:"/snippets/1ccc01012443d8f05113"}}}});
+//# sourceMappingURL=path---snippets-1-ccc-01012443-d-8-f-05113-c6c138cc6b434df3c38b.js.map

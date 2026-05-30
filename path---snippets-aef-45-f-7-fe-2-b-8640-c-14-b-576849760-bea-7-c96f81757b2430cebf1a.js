@@ -1,0 +1,2 @@
+webpackJsonp([0x9ba5d8eb35eb],{426:function(e,n){e.exports={data:{gistsJson:{id:"aef45f7fe2b8640c14b576849760bea7",description:"Open link in new tab onclick"}},pathContext:{slug:"/snippets/aef45f7fe2b8640c14b576849760bea7"}}}});
+//# sourceMappingURL=path---snippets-aef-45-f-7-fe-2-b-8640-c-14-b-576849760-bea-7-c96f81757b2430cebf1a.js.map

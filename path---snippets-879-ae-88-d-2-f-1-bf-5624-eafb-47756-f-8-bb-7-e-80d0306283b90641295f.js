@@ -1,0 +1,2 @@
+webpackJsonp([0x9c4e585cd1bc],{421:function(e,a){e.exports={data:{gistsJson:{id:"879ae88d2f1bf5624eafb47756f8bb7e",description:"Barba JS sample animation - fade old page out, scroll to page top, fade in new page"}},pathContext:{slug:"/snippets/879ae88d2f1bf5624eafb47756f8bb7e"}}}});
+//# sourceMappingURL=path---snippets-879-ae-88-d-2-f-1-bf-5624-eafb-47756-f-8-bb-7-e-80d0306283b90641295f.js.map

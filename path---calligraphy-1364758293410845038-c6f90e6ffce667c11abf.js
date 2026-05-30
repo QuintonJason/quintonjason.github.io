@@ -1,0 +1,2 @@
+webpackJsonp([99195088797568],{386:function(t,a){t.exports={data:{igPostsJson:{id:"1364758293410845038",caption:"Word cloud based on today's coding lesson! @thefuturesfund  #leftycalligraphy",date:1476911888,image:"https://scontent-dft4-3.cdninstagram.com/vp/1f326e8bfb1344ff11bacc4b8d6ba0da/5B1947FA/t51.2885-15/e35/14717449_667482876743324_2699147453864607744_n.jpg"}},pathContext:{slug:"/calligraphy/1364758293410845038"}}}});
+//# sourceMappingURL=path---calligraphy-1364758293410845038-c6f90e6ffce667c11abf.js.map

@@ -1,0 +1,2 @@
+webpackJsonp([30312137757433],{433:function(e,t){e.exports={data:{gistsJson:{id:"d47c2c01707846b69b8c6e008613dbe4",description:"GatsbyJS - Stateless Component Skeleton"}},pathContext:{slug:"/snippets/d47c2c01707846b69b8c6e008613dbe4"}}}});
+//# sourceMappingURL=path---snippets-d-47-c-2-c-01707846-b-69-b-8-c-6-e-008613-dbe-4-4c7595bbb181c1b72e6c.js.map

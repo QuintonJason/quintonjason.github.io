@@ -1,0 +1,2 @@
+webpackJsonp([0x84919b2b753d],{427:function(s,t){s.exports={data:{gistsJson:{id:"b0c9b05f049988f84df8a47625a78c21",description:"Native browser smooth scrolling"}},pathContext:{slug:"/snippets/b0c9b05f049988f84df8a47625a78c21"}}}});
+//# sourceMappingURL=path---snippets-b-0-c-9-b-05-f-049988-f-84-df-8-a-47625-a-78-c-21-6b923c2d0d3518532899.js.map

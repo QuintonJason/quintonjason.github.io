@@ -1,0 +1,2 @@
+webpackJsonp([0x5feb9fd06977],{389:function(a,t){a.exports={data:{igPostsJson:{id:"1476156261950981675",caption:"You ain't using SVG yet?!? #leftycalligraphy #programmingcalligrapher #svg",date:1490191560,image:"https://scontent-dft4-3.cdninstagram.com/vp/22410dda77881c025e1bcca101028df5/5B14B736/t51.2885-15/e35/17333700_231544247315072_1676089100110659584_n.jpg"}},pathContext:{slug:"/calligraphy/1476156261950981675"}}}});
+//# sourceMappingURL=path---calligraphy-1476156261950981675-ecf61d55bbc1b723263b.js.map

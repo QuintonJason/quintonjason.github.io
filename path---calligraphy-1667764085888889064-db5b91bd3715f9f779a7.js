@@ -1,0 +1,2 @@
+webpackJsonp([80633911251986],{392:function(t,a){t.exports={data:{igPostsJson:{id:"1667764085888889064",caption:"Pretty pretty please!!!!! #leftycalligraphy #programmingcalligrapher #savetheinternet",date:1513032993,image:"https://scontent-dft4-3.cdninstagram.com/vp/022ac502902ca9d940a8e930e2ec911a/5B234B8F/t51.2885-15/e35/24838206_134453903908049_5233904935690567680_n.jpg"}},pathContext:{slug:"/calligraphy/1667764085888889064"}}}});
+//# sourceMappingURL=path---calligraphy-1667764085888889064-db5b91bd3715f9f779a7.js.map

@@ -1,0 +1,2 @@
+webpackJsonp([7946606234668],{423:function(e,s){e.exports={data:{gistsJson:{id:"98916432491dba153703fefbcb9c9ed7",description:"Dashboard-demo"}},pathContext:{slug:"/snippets/98916432491dba153703fefbcb9c9ed7"}}}});
+//# sourceMappingURL=path---snippets-98916432491-dba-153703-fefbcb-9-c-9-ed-7-73729a280898c09c27b5.js.map

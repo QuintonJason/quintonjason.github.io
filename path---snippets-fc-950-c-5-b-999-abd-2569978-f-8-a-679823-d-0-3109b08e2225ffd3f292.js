@@ -1,0 +1,2 @@
+webpackJsonp([9611605571954],{437:function(t,s){t.exports={data:{gistsJson:{id:"fc950c5b999abd2569978f8a679823d0",description:"Utility Function - swap class on element"}},pathContext:{slug:"/snippets/fc950c5b999abd2569978f8a679823d0"}}}});
+//# sourceMappingURL=path---snippets-fc-950-c-5-b-999-abd-2569978-f-8-a-679823-d-0-3109b08e2225ffd3f292.js.map

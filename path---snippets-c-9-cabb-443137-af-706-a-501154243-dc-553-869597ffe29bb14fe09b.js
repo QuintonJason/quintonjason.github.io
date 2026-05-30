@@ -1,0 +1,2 @@
+webpackJsonp([0xd980a983b14],{432:function(a,t){a.exports={data:{gistsJson:{id:"c9cabb443137af706a501154243dc553",description:"Parallax background without affecting the foreground"}},pathContext:{slug:"/snippets/c9cabb443137af706a501154243dc553"}}}});
+//# sourceMappingURL=path---snippets-c-9-cabb-443137-af-706-a-501154243-dc-553-869597ffe29bb14fe09b.js.map

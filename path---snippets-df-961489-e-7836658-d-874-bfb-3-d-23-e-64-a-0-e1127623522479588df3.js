@@ -1,0 +1,2 @@
+webpackJsonp([0x76616106f8e0],{434:function(e,s){e.exports={data:{gistsJson:{id:"df961489e7836658d874bfb3d23e64a0",description:"Pulls in gists from a specified username"}},pathContext:{slug:"/snippets/df961489e7836658d874bfb3d23e64a0"}}}});
+//# sourceMappingURL=path---snippets-df-961489-e-7836658-d-874-bfb-3-d-23-e-64-a-0-e1127623522479588df3.js.map

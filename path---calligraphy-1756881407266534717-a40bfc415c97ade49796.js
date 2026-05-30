@@ -1,0 +1,2 @@
+webpackJsonp([0x8e600c29db4a],{394:function(t,a){t.exports={data:{igPostsJson:{id:"1756881407266534717",caption:"You know what it is. #leftycalligraphy",date:1523656606,image:"https://scontent-hou1-1.cdninstagram.com/v/t51.82787-15/618681588_18307663840258296_3863164756040242388_n.jpg"}},pathContext:{slug:"/calligraphy/1756881407266534717"}}}});
+//# sourceMappingURL=path---calligraphy-1756881407266534717-a40bfc415c97ade49796.js.map
