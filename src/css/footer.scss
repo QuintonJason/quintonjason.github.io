@@ -44,23 +44,25 @@ footer{
 
 .footer-social-nav{
 	align-items: center;
-	display: flex;
-	gap: .75rem;
-	justify-content: flex-start;
+	border-top: 1px solid rgba(29, 38, 33, .12);
+	display: grid;
+	gap: 0;
+	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	justify-content: stretch;
 	list-style: none;
 	margin: 0;
 	margin-left: 0;
 	padding-left: 0;
+	width: 100%;
 	li{
-		flex: 0 0 auto;
 		line-height: 0;
 	}
 	a{
 		align-items: center;
 		display: inline-flex;
-		height: 32px;
+		height: 52px;
 		justify-content: center;
-		width: 32px;
+		width: 100%;
 	}
 	svg{
 		display: block;

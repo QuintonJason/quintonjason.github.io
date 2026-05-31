@@ -299,6 +299,10 @@ body,
   fill: #a9b8ad;
 }
 
+.theme-dark .footer-social-nav {
+  border-top-color: rgba(220, 231, 223, 0.12);
+}
+
 .theme-dark input,
 .theme-dark textarea {
   background: #17221b;
