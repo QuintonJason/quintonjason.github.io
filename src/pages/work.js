@@ -3,7 +3,6 @@ import Link from "gatsby-link";
 import Helmet from "react-helmet";
 
 import work from "../../data/work.json";
-import "../css/styles.css";
 
 const isExternal = url => /^https?:\/\//.test(url);
 

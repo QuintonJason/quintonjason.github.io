@@ -29,8 +29,8 @@
       "path---snippets-c-9-cabb-443137-af-706-a-501154243-dc-553-869597ffe29bb14fe09b.js.map"
     ],
     "component---src-pages-work-js": [
-      "component---src-pages-work-js-c7d253a280fcb43bac39.js",
-      "component---src-pages-work-js-c7d253a280fcb43bac39.js.map"
+      "component---src-pages-work-js-9ef08801ba2c882de8f9.js",
+      "component---src-pages-work-js-9ef08801ba2c882de8f9.js.map"
     ],
     "path---snippets-d-47-c-2-c-01707846-b-69-b-8-c-6-e-008613-dbe-4": [
       "path---snippets-d-47-c-2-c-01707846-b-69-b-8-c-6-e-008613-dbe-4-4c7595bbb181c1b72e6c.js",
@@ -45,8 +45,8 @@
       "path---calligraphy-1663946958694088246-a9db6b551fd12d38ac48.js.map"
     ],
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-a0920a16b83409e120ef.js",
-      "component---src-pages-index-js-a0920a16b83409e120ef.js.map"
+      "component---src-pages-index-js-2b3e3767277f7c33b3d2.js",
+      "component---src-pages-index-js-2b3e3767277f7c33b3d2.js.map"
     ],
     "component---src-pages-snippets-js": [
       "component---src-pages-snippets-js-ddf0103b81dae67940c5.js",
@@ -77,8 +77,8 @@
       "path---posts-2014-11-25-transitioning-to-sprites-c7512b4d231a29c87093.js.map"
     ],
     "component---src-pages-contact-js": [
-      "component---src-pages-contact-js-c43a9cfa9ac567c9d062.js",
-      "component---src-pages-contact-js-c43a9cfa9ac567c9d062.js.map"
+      "component---src-pages-contact-js-0d3d3602447f44a63e60.js",
+      "component---src-pages-contact-js-0d3d3602447f44a63e60.js.map"
     ],
     "path---posts-2017-11-01-future-of-responsive-design": [
       "path---posts-2017-11-01-future-of-responsive-design-6844ae7b4901299df0a0.js",
@@ -117,8 +117,8 @@
       "path---posts-2017-12-24-deconstructing-logo-animation-db7c711df8d1d26b7d83.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-32db587ba88cd531e21f.js",
-      "component---src-layouts-index-js-32db587ba88cd531e21f.js.map"
+      "component---src-layouts-index-js-4a93c50164cf0bc238aa.js",
+      "component---src-layouts-index-js-4a93c50164cf0bc238aa.js.map"
     ],
     "path---snippets-18-bc-0497461658-d-58-aba-6-bae-373-a-4-f-3-b": [
       "path---snippets-18-bc-0497461658-d-58-aba-6-bae-373-a-4-f-3-b-f2a82819fc684d945490.js",
@@ -193,10 +193,8 @@
       "path---snippets-a-7-f-6068042-f-161-c-298-f-8-edc-81-e-766-f-70-244d03bdddf988d5a4e9.js.map"
     ],
     "commons": [
-      "commons-d3302e421308ce2e6f28.js",
-      "build-js-styles.css",
-      "commons-d3302e421308ce2e6f28.js.map",
-      "build-js-styles.css.map"
+      "commons-9c9533ca269fb207ca16.js",
+      "commons-9c9533ca269fb207ca16.js.map"
     ],
     "path---snippets-aef-45-f-7-fe-2-b-8640-c-14-b-576849760-bea-7": [
       "path---snippets-aef-45-f-7-fe-2-b-8640-c-14-b-576849760-bea-7-c96f81757b2430cebf1a.js",
@@ -211,8 +209,8 @@
       "path---posts-2017-11-15-future-exploring-augmented-reality-50052ab32cc936caf5db.js.map"
     ],
     "component---src-pages-writing-js": [
-      "component---src-pages-writing-js-1bf7ab5208234515ac1d.js",
-      "component---src-pages-writing-js-1bf7ab5208234515ac1d.js.map"
+      "component---src-pages-writing-js-a3fcb561176a0efeb109.js",
+      "component---src-pages-writing-js-a3fcb561176a0efeb109.js.map"
     ],
     "path---404-html": [
       "path---404-html-a0e39f21c11f6a62c5ab.js",
@@ -247,9 +245,9 @@
       "path---posts-2017-11-16-web-prototyping-7961d66d859e00a69903.js.map"
     ],
     "app": [
-      "app-b61fe64d2f799aabe308.js",
+      "app-3e2a21b26760b52db1f0.js",
       "build-js-styles.css",
-      "app-b61fe64d2f799aabe308.js.map",
+      "app-3e2a21b26760b52db1f0.js.map",
       "build-js-styles.css.map"
     ],
     "path---snippets-c-277-a-294-b-1-b-365662-a-52": [
@@ -281,12 +279,12 @@
       "path---calligraphy-1429078921466786180-9d6a30064ed5589dc439.js.map"
     ],
     "component---src-pages-posts-js": [
-      "component---src-pages-posts-js-1a7bd092f35f62612dbd.js",
-      "component---src-pages-posts-js-1a7bd092f35f62612dbd.js.map"
+      "component---src-pages-posts-js-1b56e41f47ced5a2f098.js",
+      "component---src-pages-posts-js-1b56e41f47ced5a2f098.js.map"
     ],
     "component---src-pages-about-js": [
-      "component---src-pages-about-js-89365ed30a7908ffc272.js",
-      "component---src-pages-about-js-89365ed30a7908ffc272.js.map"
+      "component---src-pages-about-js-523f8d03416841b2c35a.js",
+      "component---src-pages-about-js-523f8d03416841b2c35a.js.map"
     ],
     "path---snippets-bd-19-ba-069875-db-89-bf-8-cc-3-ff-4174-d-905": [
       "path---snippets-bd-19-ba-069875-db-89-bf-8-cc-3-ff-4174-d-905-926dd48da25c8989366f.js",

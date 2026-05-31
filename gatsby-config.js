@@ -1,6 +1,3 @@
-const path = require(`path`);
-const lost = require(`lost`);
-
 module.exports = {
   siteMetadata: {
     title: `Quinton Jason`,
@@ -21,12 +18,6 @@ module.exports = {
               maxWidth: 590
             }
           },
-          // {
-          //   resolve: `gatsby-plugin-postcss-sass`,
-          //   options: {
-          //     postCssPlugins: [lost()]
-          //   }
-          // },
           {
             resolve: "gatsby-remark-responsive-iframe",
             options: {}
@@ -68,12 +59,6 @@ module.exports = {
           `Montserrat`,
           `Open+Sans\:400,400i` // you can also specify font weights and styles
         ]
-      }
-    },
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "UA-57117612-1"
       }
     },
     /*{

@@ -717,17 +717,6 @@ footer {
   padding: 0 2px;
 }
 
-form.submitted {
-  display: none;
-}
-
-.form__thanks {
-  display: none;
-}
-.form__thanks.show {
-  display: block;
-}
-
 .home {
   color: #17201b;
 }

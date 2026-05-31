@@ -3,8 +3,6 @@ import Link from "gatsby-link";
 import Helmet from "react-helmet";
 import BlogLink from "../components/BlogLink";
 
-import "../css/styles.css";
-
 export default ({ data }) => {
   return (
     <main className="container archive-page">

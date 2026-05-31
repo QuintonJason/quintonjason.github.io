@@ -1,8 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
 
-import "../css/styles.css";
-
 const About = () => (
   <main className="about-page">
     <Helmet

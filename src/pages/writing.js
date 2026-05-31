@@ -3,7 +3,6 @@ import Link from "gatsby-link";
 import Helmet from "react-helmet";
 
 import writing from "../../data/writing.json";
-import "../css/styles.css";
 
 const dateLabel = value =>
   new Date(`${value}T00:00:00`).toLocaleDateString("en-US", {

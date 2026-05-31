@@ -21,6 +21,9 @@ import './index.css'
 const THEME_STORAGE_KEY = 'qj-theme'
 const LIGHT_THEME = 'light'
 const DARK_THEME = 'dark'
+const SITE_URL = 'https://quintonjason.com/'
+const SITE_DESCRIPTION = 'Senior Design Engineer focused on design systems, frontend architecture, accessibility, design tokens, teaching, and AI-native product workflows.'
+const SOCIAL_IMAGE_URL = `${SITE_URL}apple-touch-icon.png`
 
 const getStoredTheme = () => {
   try {
@@ -129,13 +132,21 @@ class TemplateWrapper extends Component {
         <Helmet
           title="Quinton Jason"
           meta={[
-            { name: 'description', content: 'Senior Design Engineer focused on design systems, frontend architecture, accessibility, design tokens, teaching, and AI-native product workflows.' },
+            { name: 'description', content: SITE_DESCRIPTION },
             { property: 'og:locale', content: 'en-US' },
             { property: 'og:type', content: 'website' },
+            { property: 'og:title', content: 'Quinton Jason | Senior Design Engineer' },
             { property: 'og:site_name', content: 'Quinton Jason' },
-            { property: 'og:description', content: 'Senior Design Engineer focused on design systems, frontend architecture, accessibility, design tokens, teaching, and AI-native product workflows.' },
+            { property: 'og:url', content: SITE_URL },
+            { property: 'og:description', content: SITE_DESCRIPTION },
+            { property: 'og:image', content: SOCIAL_IMAGE_URL },
+            { name: 'twitter:card', content: 'summary_large_image' },
+            { name: 'twitter:title', content: 'Quinton Jason | Senior Design Engineer' },
+            { name: 'twitter:description', content: SITE_DESCRIPTION },
+            { name: 'twitter:image', content: SOCIAL_IMAGE_URL },
           ]} >
 
+            <link rel="canonical" href={SITE_URL} />
             <link rel="apple-touch-icon" sizes="180x180" href={faviconApple} />
             <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
             <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />

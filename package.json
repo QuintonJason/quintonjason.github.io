@@ -15,7 +15,6 @@
     "gatsby-link": "^1.6.32",
     "gatsby-paginate": "^1.0.13",
     "gatsby-plugin-glamor": "^1.6.13",
-    "gatsby-plugin-google-analytics": "^1.0.24",
     "gatsby-plugin-google-fonts": "0.0.3",
     "gatsby-plugin-offline": "^1.0.15",
     "gatsby-plugin-react-helmet": "^1.0.8",
