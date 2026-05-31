@@ -475,6 +475,36 @@
   gap: 1rem;
 }
 
+.signal-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0;
+}
+
+.signal-card {
+  background: $white;
+  border: 1px solid rgba(23, 32, 27, .12);
+  border-radius: 6px;
+  padding: 1.25rem;
+}
+
+.signal-card dt {
+  color: $ink;
+  font-family: $mont;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.signal-card dd {
+  color: $darkGray;
+  font-size: .9rem;
+  line-height: 1.45;
+  margin: .45rem 0 0;
+}
+
 .work-entry {
   background: $white;
   border: 1px solid rgba(23, 32, 27, .12);
@@ -539,6 +569,186 @@
   text-transform: uppercase;
 }
 
+.case-study-layout {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
+}
+
+.case-study-sidebar {
+  align-self: start;
+  background: $softGray;
+  border: 1px solid rgba(23, 32, 27, .12);
+  border-radius: 6px;
+  padding: 1.25rem;
+}
+
+.case-study-sidebar dl {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+}
+
+.case-study-sidebar dt {
+  color: $gold;
+  font-family: $mont;
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.case-study-sidebar dd {
+  color: $darkGray;
+  line-height: 1.45;
+  margin: .25rem 0 0;
+}
+
+.case-study-content {
+  display: grid;
+  gap: 3rem;
+}
+
+.case-study-content section {
+  max-width: 780px;
+}
+
+.case-study-content h2 {
+  color: $ink;
+  line-height: 1.18;
+  margin: 0 0 1rem;
+}
+
+.case-study-content p {
+  line-height: 1.75;
+}
+
+.tool-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  list-style: none;
+  margin: 1rem 0 0;
+  padding-left: 0;
+}
+
+.tool-list li {
+  background: $mint;
+  border-radius: 3px;
+  color: $ink;
+  font-size: .85rem;
+  padding: .35rem .5rem;
+}
+
+.workflow-diagram {
+  counter-reset: none;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding-left: 0;
+}
+
+.workflow-diagram li {
+  background: $white;
+  border: 1px solid rgba(23, 32, 27, .12);
+  border-radius: 6px;
+  padding: 1rem;
+  position: relative;
+}
+
+.workflow-diagram span {
+  align-items: center;
+  background: $green;
+  border-radius: 50%;
+  color: $white;
+  display: inline-flex;
+  font-family: $mont;
+  font-size: .78rem;
+  font-weight: 700;
+  height: 1.75rem;
+  justify-content: center;
+  margin-bottom: .85rem;
+  width: 1.75rem;
+}
+
+.workflow-diagram strong {
+  color: $ink;
+  display: block;
+  font-family: $mont;
+  line-height: 1.2;
+}
+
+.workflow-diagram p {
+  font-size: .9rem;
+  line-height: 1.55;
+  margin: .5rem 0 0;
+}
+
+.outcome-list {
+  display: grid;
+  gap: .75rem;
+  list-style: none;
+  margin: 1rem 0 0;
+  padding-left: 0;
+}
+
+.outcome-list li {
+  border-left: 3px solid $green;
+  line-height: 1.65;
+  padding-left: .85rem;
+}
+
+.code-comparison {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.code-card {
+  background: $white;
+  border: 1px solid rgba(23, 32, 27, .12);
+  border-radius: 6px;
+  padding: 1.25rem;
+}
+
+.code-card h3 {
+  color: $ink;
+  line-height: 1.2;
+  margin: 0 0 .75rem;
+}
+
+.code-card p {
+  margin-top: 0;
+}
+
+.code-card pre {
+  background: $ink;
+  border-radius: 4px;
+  color: $white;
+  font-size: .86rem;
+  line-height: 1.55;
+  margin: 1rem 0 0;
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+.code-card code {
+  font-family: Consolas, Monaco, monospace;
+}
+
+.case-study-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem 1rem;
+  font-family: $mont;
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+
 .btn {
   background: $green;
   border: 0;
@@ -571,6 +781,9 @@
   .writing-grid {
     grid-template-columns: 1fr;
   }
+  .signal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .work-card {
     min-height: 0;
   }
@@ -578,6 +791,11 @@
     grid-template-columns: 1fr;
   }
   .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .case-study-layout,
+  .code-comparison,
+  .workflow-diagram {
     grid-template-columns: 1fr;
   }
   .writing-row {
@@ -625,5 +843,8 @@
   .button--spaced {
     margin-left: 0;
     margin-top: .75rem;
+  }
+  .signal-grid {
+    grid-template-columns: 1fr;
   }
 }

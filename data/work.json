@@ -1,7 +1,7 @@
 [
   {
     "title": "Pine Design System",
-    "summary": "Kajabi's multi-platform design system powering consistent, accessible product experiences across 6 product teams and 40+ engineers. Pine includes web components, design tokens, accessibility standards, governance, documentation, and shared developer workflows.",
+    "summary": "Kajabi's multi-platform design system powering consistent, accessible product experiences across 6 product teams and 40+ engineers. My work helps Pine operate as product infrastructure: web components, semantic tokens, accessibility standards, governance, documentation, and shared developer workflows.",
     "role": "Senior Design Engineer",
     "status": "Design system infrastructure",
     "links": [
@@ -10,8 +10,8 @@
         "url": "https://pine-design-system.netlify.app/"
       },
       {
-        "label": "Read design system writing",
-        "url": "/writing/"
+        "label": "View Pine MCP",
+        "url": "#pine-mcp"
       }
     ],
     "topics": [
@@ -25,12 +25,16 @@
   },
   {
     "title": "Pine MCP",
-    "summary": "An MCP integration that exposes Pine design system knowledge to AI assistants, helping generated code follow established components, tokens, accessibility requirements, and implementation standards.",
+    "summary": "An MCP integration that exposes Pine design system knowledge to AI assistants so generated code can follow established components, tokens, accessibility requirements, and implementation standards. The work extends design system adoption into the moment AI-assisted code is being produced.",
     "role": "AI-Assisted Development",
     "status": "Design system knowledge workflow",
     "links": [
       {
-        "label": "Teaching AI Our Design System",
+        "label": "View Pine MCP case study",
+        "url": "/work/pine-mcp/"
+      },
+      {
+        "label": "Read the article",
         "url": "https://medium.com/@quintonjasonjr/teaching-ai-our-design-system-d9788fe96c8e"
       }
     ],
@@ -44,7 +48,7 @@
   },
   {
     "title": "Design tokens and theming",
-    "summary": "Defined and operationalized semantic tokens for color, typography, spacing, and motion so design decisions could travel cleanly from Figma into production code. The goal: fewer one-off choices, clearer system contracts, and less design-to-code drift.",
+    "summary": "Defined and operationalized semantic tokens for color, typography, spacing, and motion so design decisions could travel cleanly from Figma into production code. The goal is fewer one-off choices, clearer system contracts, and less design-to-code drift.",
     "role": "Frontend Architecture",
     "status": "System infrastructure",
     "links": [
@@ -57,7 +61,7 @@
   },
   {
     "title": "Accessible component standards",
-    "summary": "Established accessibility and semantic standards at the system level, improving the baseline quality of new and existing features. This included accessible patterns, HTML semantics, WCAG-minded defaults, and guidance for engineers and designers using the system.",
+    "summary": "Established accessibility and semantic standards at the system level so new product work starts from a stronger baseline. This includes accessible patterns, HTML semantics, WCAG-minded defaults, and guidance for engineers and designers using the system.",
     "role": "Accessibility / UI Engineering",
     "status": "Quality foundation",
     "links": [
@@ -70,7 +74,7 @@
   },
   {
     "title": "Developer experience and system adoption",
-    "summary": "Improved component ergonomics, documentation, handoff workflows, and contribution paths so design system work was easier to trust and use. The focus was not just documenting the system, but making it adoptable inside busy product teams.",
+    "summary": "Improved component ergonomics, documentation, handoff workflows, and contribution paths so design system work is easier to trust and use. The focus is not just documenting the system, but making it adoptable inside busy product teams.",
     "role": "Developer Tooling",
     "status": "Adoption work",
     "links": [

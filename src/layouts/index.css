@@ -122,6 +122,10 @@
   .writing-card,
   .proof-card,
   .experiment-card,
+  .signal-card,
+  .case-study-sidebar,
+  .code-card,
+  .workflow-diagram li,
   .work-entry,
   .writing-row {
     animation: qj-content-reveal linear both;
@@ -314,6 +318,10 @@ body,
 .theme-dark .writing-card,
 .theme-dark .proof-card,
 .theme-dark .experiment-card,
+.theme-dark .signal-card,
+.theme-dark .case-study-sidebar,
+.theme-dark .code-card,
+.theme-dark .workflow-diagram li,
 .theme-dark .work-entry,
 .theme-dark .calligraphy-single figcaption,
 .theme-dark .footer-primary p,
@@ -339,6 +347,10 @@ body,
 .theme-dark .work-card h3,
 .theme-dark .writing-card h2,
 .theme-dark .experiment-card h3,
+.theme-dark .signal-card dt,
+.theme-dark .case-study-content h2,
+.theme-dark .code-card h3,
+.theme-dark .workflow-diagram strong,
 .theme-dark .writing-row h3,
 .theme-dark .work-entry h2,
 .theme-dark .proof-card h3,
@@ -368,6 +380,7 @@ body,
 .theme-dark .writing-row__date,
 .theme-dark .proof-card span,
 .theme-dark .experiment-card span,
+.theme-dark .case-study-sidebar dt,
 .theme-dark .work-entry__meta,
 .theme-dark .calligraphy-single figcaption span {
   color: var(--qj-color-accent-dark);
@@ -377,6 +390,10 @@ body,
 .theme-dark .writing-card,
 .theme-dark .proof-card,
 .theme-dark .experiment-card,
+.theme-dark .signal-card,
+.theme-dark .case-study-sidebar,
+.theme-dark .code-card,
+.theme-dark .workflow-diagram li,
 .theme-dark .work-entry {
   background: var(--qj-color-surface-dark-raised);
   border-color: var(--qj-border-dark);
@@ -390,6 +407,29 @@ body,
   border-color: var(--qj-color-brand-active);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.26);
   color: var(--qj-color-text-dark);
+}
+
+.theme-dark .signal-card dd {
+  color: var(--qj-color-text-dark);
+}
+
+.theme-dark .case-study-sidebar dd,
+.theme-dark .case-study-content p,
+.theme-dark .code-card p,
+.theme-dark .workflow-diagram p,
+.theme-dark .outcome-list li {
+  color: var(--qj-color-text-dark);
+}
+
+.theme-dark .tool-list li {
+  background: rgba(102, 211, 109, 0.14);
+  color: var(--qj-color-text-dark);
+}
+
+.theme-dark .code-card pre {
+  background: var(--qj-color-surface-dark);
+  border: 1px solid var(--qj-border-dark-strong);
+  color: var(--qj-color-heading-dark);
 }
 
 .theme-dark .button--primary {

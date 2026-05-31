@@ -25,7 +25,7 @@ const featuredWork = [
     description:
       "An MCP integration that exposes Pine design system knowledge to AI assistants, helping generated code follow established components, tokens, accessibility requirements, and implementation standards.",
     meta: "AI-Assisted Development",
-    url: "https://medium.com/@quintonjasonjr/teaching-ai-our-design-system-d9788fe96c8e",
+    url: "/work/pine-mcp/",
     tags: [
       "AI-Assisted Development",
       "MCP",

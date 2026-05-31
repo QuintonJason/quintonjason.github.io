@@ -1199,6 +1199,36 @@ footer {
   gap: 1rem;
 }
 
+.signal-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0;
+}
+
+.signal-card {
+  background: #fff;
+  border: 1px solid rgba(23, 32, 27, 0.12);
+  border-radius: 6px;
+  padding: 1.25rem;
+}
+
+.signal-card dt {
+  color: #17201b;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.signal-card dd {
+  color: #333;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  margin: 0.45rem 0 0;
+}
+
 .work-entry {
   background: #fff;
   border: 1px solid rgba(23, 32, 27, 0.12);
@@ -1260,6 +1290,186 @@ footer {
   text-transform: uppercase;
 }
 
+.case-study-layout {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
+}
+
+.case-study-sidebar {
+  align-self: start;
+  background: #f7f8f7;
+  border: 1px solid rgba(23, 32, 27, 0.12);
+  border-radius: 6px;
+  padding: 1.25rem;
+}
+
+.case-study-sidebar dl {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+}
+
+.case-study-sidebar dt {
+  color: #d69f28;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.case-study-sidebar dd {
+  color: #333;
+  line-height: 1.45;
+  margin: 0.25rem 0 0;
+}
+
+.case-study-content {
+  display: grid;
+  gap: 3rem;
+}
+
+.case-study-content section {
+  max-width: 780px;
+}
+
+.case-study-content h2 {
+  color: #17201b;
+  line-height: 1.18;
+  margin: 0 0 1rem;
+}
+
+.case-study-content p {
+  line-height: 1.75;
+}
+
+.tool-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 1rem 0 0;
+  padding-left: 0;
+}
+
+.tool-list li {
+  background: #e7f6ea;
+  border-radius: 3px;
+  color: #17201b;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.5rem;
+}
+
+.workflow-diagram {
+  counter-reset: none;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding-left: 0;
+}
+
+.workflow-diagram li {
+  background: #fff;
+  border: 1px solid rgba(23, 32, 27, 0.12);
+  border-radius: 6px;
+  padding: 1rem;
+  position: relative;
+}
+
+.workflow-diagram span {
+  align-items: center;
+  background: #41b649;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-flex;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  height: 1.75rem;
+  justify-content: center;
+  margin-bottom: 0.85rem;
+  width: 1.75rem;
+}
+
+.workflow-diagram strong {
+  color: #17201b;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.2;
+}
+
+.workflow-diagram p {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin: 0.5rem 0 0;
+}
+
+.outcome-list {
+  display: grid;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 1rem 0 0;
+  padding-left: 0;
+}
+
+.outcome-list li {
+  border-left: 3px solid #41b649;
+  line-height: 1.65;
+  padding-left: 0.85rem;
+}
+
+.code-comparison {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.code-card {
+  background: #fff;
+  border: 1px solid rgba(23, 32, 27, 0.12);
+  border-radius: 6px;
+  padding: 1.25rem;
+}
+
+.code-card h3 {
+  color: #17201b;
+  line-height: 1.2;
+  margin: 0 0 0.75rem;
+}
+
+.code-card p {
+  margin-top: 0;
+}
+
+.code-card pre {
+  background: #17201b;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  margin: 1rem 0 0;
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+.code-card code {
+  font-family: Consolas, Monaco, monospace;
+}
+
+.case-study-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
 .btn {
   background: #41b649;
   border: 0;
@@ -1292,6 +1502,9 @@ footer {
   .writing-grid {
     grid-template-columns: 1fr;
   }
+  .signal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .work-card {
     min-height: 0;
   }
@@ -1299,6 +1512,11 @@ footer {
     grid-template-columns: 1fr;
   }
   .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .case-study-layout,
+  .code-comparison,
+  .workflow-diagram {
     grid-template-columns: 1fr;
   }
   .writing-row {
@@ -1345,5 +1563,8 @@ footer {
   .button--spaced {
     margin-left: 0;
     margin-top: 0.75rem;
+  }
+  .signal-grid {
+    grid-template-columns: 1fr;
   }
 }
