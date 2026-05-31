@@ -25,6 +25,48 @@
   --qj-focus-ring: rgba(65, 182, 73, 0.22);
 }
 
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.34s;
+  animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+}
+
+::view-transition-old(root) {
+  animation-name: qj-page-exit;
+}
+
+::view-transition-new(root) {
+  animation-name: qj-page-enter;
+}
+
+@keyframes qj-page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes qj-page-exit {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
 .blog_single iframe {
   display: block;
   width: 100% !important;
@@ -61,6 +103,18 @@ body,
 
 .header-nav {
   align-items: center;
+}
+
+.header-logo {
+  view-transition-name: qj-logo;
+}
+
+.home-hero__title,
+.page-hero h1,
+.archive-intro h1,
+.writing-hero h1,
+.blog_single > h1 {
+  view-transition-name: qj-page-title;
 }
 
 .header-logo .logo-accent,
@@ -344,4 +398,11 @@ body,
 .theme-dark ::selection {
   background: var(--qj-color-brand-active);
   color: var(--qj-color-surface-dark);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
 }
