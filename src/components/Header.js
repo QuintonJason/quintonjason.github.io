@@ -19,9 +19,9 @@ const HeaderDiv = styled(HeaderWrapper)`
   grid-template-columns: 1fr;
   grid-auto-flow: column;
   ${media.phone`
-		grid-template-columns: repeat(2,auto);
-		grid-auto-flow: unset;
-	`};
+    grid-template-columns: repeat(2,auto);
+    grid-auto-flow: unset;
+  `};
 `;
 
 export default class Header extends Component {
@@ -67,10 +67,10 @@ export default class Header extends Component {
               title={isDarkMode ? "Use light mode" : "Use dark mode"}
             >
               <span className="theme-toggle__icon theme-toggle__sun" aria-hidden="true">
-                ☀
+                {"\u2600"}
               </span>
               <span className="theme-toggle__icon theme-toggle__moon" aria-hidden="true">
-                ◐
+                {"\u25D0"}
               </span>
             </button>
           </nav>
