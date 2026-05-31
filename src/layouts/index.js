@@ -18,6 +18,26 @@ import '../css/styles.css'
 
 import './index.css'
 
+const THEME_STORAGE_KEY = 'qj-theme'
+const LIGHT_THEME = 'light'
+const DARK_THEME = 'dark'
+
+const getStoredTheme = () => {
+  try {
+    return window.localStorage.getItem(THEME_STORAGE_KEY)
+  } catch (error) {
+    return null
+  }
+}
+
+const saveTheme = theme => {
+  try {
+    window.localStorage.setItem(THEME_STORAGE_KEY, theme)
+  } catch (error) {
+    // Browsers can block localStorage; theme still works for the current page.
+  }
+}
+
 const Footer = () => (
   <footer>
     <div
@@ -61,40 +81,42 @@ class TemplateWrapper extends Component {
     super(props)
 
     this.state = {
-      theme: 'light',
+      theme: LIGHT_THEME,
     }
   }
 
   componentDidMount() {
-    const savedTheme = window.localStorage.getItem('qj-theme')
+    const savedTheme = getStoredTheme()
     const prefersDark =
       window.matchMedia &&
       window.matchMedia('(prefers-color-scheme: dark)').matches
-    const theme = savedTheme || (prefersDark ? 'dark' : 'light')
+    const theme = savedTheme || (prefersDark ? DARK_THEME : LIGHT_THEME)
 
     this.setTheme(theme)
   }
 
   setTheme = theme => {
-    this.setState({ theme })
+    const nextTheme = theme === DARK_THEME ? DARK_THEME : LIGHT_THEME
+
+    this.setState({ theme: nextTheme })
 
     if (typeof document !== 'undefined') {
-      document.documentElement.setAttribute('data-theme', theme)
-      document.body.classList.toggle('theme-dark-body', theme === 'dark')
+      document.documentElement.setAttribute('data-theme', nextTheme)
+      document.body.classList.toggle('theme-dark-body', nextTheme === DARK_THEME)
     }
 
     if (typeof window !== 'undefined') {
-      window.localStorage.setItem('qj-theme', theme)
+      saveTheme(nextTheme)
     }
   }
 
   toggleTheme = () => {
-    this.setTheme(this.state.theme === 'dark' ? 'light' : 'dark')
+    this.setTheme(this.state.theme === DARK_THEME ? LIGHT_THEME : DARK_THEME)
   }
 
   render() {
     const { children } = this.props
-    const isDarkMode = this.state.theme === 'dark'
+    const isDarkMode = this.state.theme === DARK_THEME
 
     return (
       <div className={`hey theme-${this.state.theme}`}
