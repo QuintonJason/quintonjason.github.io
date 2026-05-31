@@ -441,9 +441,14 @@ body,
 
 .theme-dark .writing-list,
 .theme-dark .writing-row,
+.theme-dark .snippet-wrapper,
 .theme-dark .posts > .post,
 .theme-dark .wrapper-footer {
   border-color: var(--qj-border-dark-subtle);
+}
+
+.theme-dark .snippet-wrapper p {
+  color: var(--qj-color-muted-dark);
 }
 
 .theme-dark .post blockquote {
