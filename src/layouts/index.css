@@ -4,6 +4,26 @@
   margin-right: auto;
 }
 
+.skip-link {
+  background: var(--qj-color-brand);
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  left: 1rem;
+  padding: 0.65rem 0.85rem;
+  position: fixed;
+  top: 1rem;
+  transform: translateY(-150%);
+  transition: transform 0.2s ease;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  color: #fff;
+  outline: 3px solid var(--qj-focus-ring);
+  transform: translateY(0);
+}
+
 :root {
   --qj-color-brand: #41b649;
   --qj-color-brand-active: #66d36d;

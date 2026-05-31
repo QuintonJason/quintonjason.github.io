@@ -141,8 +141,11 @@ class TemplateWrapper extends Component {
             <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
             <meta name="theme-color" content={isDarkMode ? '#0f1712' : '#00c200'} />
           </Helmet>
+        <a className="skip-link" href="#main-content">Skip to main content</a>
         <Header isDarkMode={isDarkMode} onToggleTheme={this.toggleTheme} />
         <div
+          id="main-content"
+          tabIndex="-1"
           style={{
             padding: '0',
             paddingTop: 0,

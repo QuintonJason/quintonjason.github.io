@@ -101,25 +101,25 @@ export default class Contact extends React.Component {
             />
           </p>
           <p>
-            <label>Your email:</label>
+            <label htmlFor="email">Your email:</label>
             <br />
             <input
               type="email"
+              id="email"
               name="email"
               required
               onChange={this.handleChange}
             />
           </p>
           <p>
-            <label htmlFor>
-              Message:<br />
-              <textarea
-                name="message"
-                id="message"
-                required
-                onChange={this.handleChange}
-              />
-            </label>
+            <label htmlFor="message">Message:</label>
+            <br />
+            <textarea
+              name="message"
+              id="message"
+              required
+              onChange={this.handleChange}
+            />
           </p>
           <p>
             <button className="btn btn__submit" type="submit">
@@ -127,7 +127,7 @@ export default class Contact extends React.Component {
             </button>
           </p>
         </form>
-        <div className={`form__thanks ${showThanks}`}>
+        <div className={`form__thanks ${showThanks}`} role="status" aria-live="polite">
           <p>Thanks for your submission!</p>
         </div>
       </main>

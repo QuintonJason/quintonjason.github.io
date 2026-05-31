@@ -31,9 +31,10 @@ export default class Header extends Component {
     return (
       <header>
         <HeaderDiv className="header-wrapper">
-          <h1 style={{ margin: 0 }}>
+          <div className="site-brand">
             <Link
               to="/"
+              aria-label="Quinton Jason home"
               style={{
                 color: "white",
                 textDecoration: "none"
@@ -41,8 +42,8 @@ export default class Header extends Component {
             >
               <Logo className="header-logo" />
             </Link>
-          </h1>
-          <nav id="main-nav" className="header-nav">
+          </div>
+          <nav id="main-nav" className="header-nav" aria-label="Primary">
             <NavLink exact to="/" className="header-link">
               Home
             </NavLink>
