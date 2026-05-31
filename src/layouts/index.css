@@ -25,6 +25,30 @@
   --qj-focus-ring: rgba(65, 182, 73, 0.22);
 }
 
+@layer enhancements;
+
+@supports (color: oklch(0% 0 0)) {
+  :root {
+    --qj-color-brand: oklch(0.67 0.19 145);
+    --qj-color-brand-active: color-mix(in oklch, var(--qj-color-brand), white 20%);
+    --qj-color-brand-active-strong: color-mix(in oklch, var(--qj-color-brand), white 34%);
+    --qj-color-surface-dark: oklch(0.17 0.02 150);
+    --qj-color-surface-dark-raised: color-mix(in oklch, var(--qj-color-surface-dark), white 6%);
+    --qj-color-surface-dark-muted: color-mix(in oklch, var(--qj-color-surface-dark), white 3%);
+    --qj-color-surface-dark-footer: color-mix(in oklch, var(--qj-color-surface-dark), black 12%);
+    --qj-color-text-dark: oklch(0.91 0.02 150);
+    --qj-color-heading-dark: oklch(0.98 0.01 150);
+    --qj-color-muted-dark: oklch(0.75 0.03 150);
+    --qj-color-blue-dark: oklch(0.78 0.12 260);
+    --qj-color-accent-dark: oklch(0.84 0.13 88);
+    --qj-border-dark-subtle: color-mix(in oklch, var(--qj-color-text-dark), transparent 88%);
+    --qj-border-dark: color-mix(in oklch, var(--qj-color-text-dark), transparent 86%);
+    --qj-border-dark-strong: color-mix(in oklch, var(--qj-color-text-dark), transparent 76%);
+    --qj-border-dark-toggle: color-mix(in oklch, var(--qj-color-text-dark), transparent 68%);
+    --qj-focus-ring: color-mix(in oklch, var(--qj-color-brand), transparent 78%);
+  }
+}
+
 @view-transition {
   navigation: auto;
 }
@@ -93,6 +117,38 @@
   inset: 0;
   width: 100% !important;
   height: 100% !important;
+}
+
+@layer enhancements {
+  .work-card,
+  .writing-card,
+  .proof-card,
+  .work-entry,
+  .writing-row {
+    animation: qj-content-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 8% cover 28%;
+  }
+
+  .work-card:has(:focus-visible),
+  .writing-card:has(:focus-visible),
+  .proof-card:has(:focus-visible),
+  .work-entry:has(:focus-visible) {
+    box-shadow: 0 0 0 3px var(--qj-focus-ring);
+    outline: 0;
+  }
+}
+
+@keyframes qj-content-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 html,
@@ -403,6 +459,14 @@ body,
 @media (prefers-reduced-motion: reduce) {
   ::view-transition-old(root),
   ::view-transition-new(root) {
+    animation: none;
+  }
+
+  .work-card,
+  .writing-card,
+  .proof-card,
+  .work-entry,
+  .writing-row {
     animation: none;
   }
 }

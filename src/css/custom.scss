@@ -98,6 +98,12 @@ form.submitted {
   padding: 4.5rem 0;
 }
 
+.home-section > .container,
+.page-hero > .container,
+.writing-hero > .container {
+  container-type: inline-size;
+}
+
 .home-section--quiet {
   background: $softGray;
   border-top: 1px solid rgba(23, 32, 27, .08);
@@ -127,6 +133,8 @@ form.submitted {
   border: 1px solid rgba(23, 32, 27, .12);
   border-radius: 6px;
   color: $darkGray;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
   min-height: 260px;
   padding: 1.4rem;
   transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
@@ -413,6 +421,7 @@ form.submitted {
 }
 
 .work-list {
+  container-type: inline-size;
   display: grid;
   gap: 1rem;
 }
@@ -425,6 +434,24 @@ form.submitted {
   grid-template-columns: 220px minmax(0, 1fr);
   gap: 2rem;
   padding: 1.5rem;
+}
+
+@container (max-width: 760px) {
+  .work-grid,
+  .proof-grid,
+  .feature-strip,
+  .writing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-card {
+    min-height: 0;
+  }
+
+  .work-entry {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
 
 .work-entry h2 {

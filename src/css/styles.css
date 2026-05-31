@@ -818,6 +818,12 @@ form.submitted {
   padding: 4.5rem 0;
 }
 
+.home-section > .container,
+.page-hero > .container,
+.writing-hero > .container {
+  container-type: inline-size;
+}
+
 .home-section--quiet {
   background: #f7f8f7;
   border-top: 1px solid rgba(23, 32, 27, 0.08);
@@ -847,6 +853,8 @@ form.submitted {
   border: 1px solid rgba(23, 32, 27, 0.12);
   border-radius: 6px;
   color: #333;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
   min-height: 260px;
   padding: 1.4rem;
   transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
@@ -1133,6 +1141,7 @@ form.submitted {
 }
 
 .work-list {
+  container-type: inline-size;
   display: grid;
   gap: 1rem;
 }
@@ -1147,6 +1156,21 @@ form.submitted {
   padding: 1.5rem;
 }
 
+@container (max-width: 760px) {
+  .work-grid,
+  .proof-grid,
+  .feature-strip,
+  .writing-grid {
+    grid-template-columns: 1fr;
+  }
+  .work-card {
+    min-height: 0;
+  }
+  .work-entry {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
 .work-entry h2 {
   color: #17201b;
   line-height: 1.18;
