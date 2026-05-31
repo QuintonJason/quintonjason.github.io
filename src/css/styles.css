@@ -179,6 +179,7 @@ footer {
   display: inline-flex;
   height: 52px;
   justify-content: center;
+  text-decoration: none;
   width: 100%;
 }
 .footer-social-nav svg {
@@ -304,10 +305,13 @@ p {
 a {
   color: #41b649;
   text-decoration: none;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
   cursor: pointer;
 }
-a:hover, a:active {
+a:hover, a:focus, a:active {
   color: #41b649;
+  text-decoration: underline;
 }
 
 ul,
@@ -780,7 +784,14 @@ footer {
   font-weight: 700;
   letter-spacing: 0.02em;
   padding: 0.75rem 1rem;
+  text-decoration: none;
   text-transform: uppercase;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  text-decoration: none;
 }
 
 .button--primary {
@@ -857,15 +868,6 @@ footer {
   grid-template-rows: auto auto 1fr;
   min-height: 260px;
   padding: 1.4rem;
-  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.work-card:hover,
-.work-card:focus {
-  border-color: #41b649;
-  box-shadow: 0 16px 40px rgba(23, 32, 27, 0.08);
-  color: #333;
-  transform: translateY(-3px);
 }
 
 .work-card h3 {
@@ -1021,6 +1023,52 @@ footer {
   gap: 1rem;
 }
 
+.experiment-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.experiment-card {
+  background: #fff;
+  border: 1px solid rgba(23, 32, 27, 0.12);
+  border-radius: 6px;
+  color: #333;
+  display: grid;
+  gap: 0.85rem;
+  grid-template-rows: auto auto 1fr auto;
+  padding: 1.25rem;
+}
+
+.experiment-card span {
+  color: #d69f28;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.experiment-card h3 {
+  color: #17201b;
+  font-size: 1.15rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.experiment-card p {
+  line-height: 1.6;
+  margin: 0;
+}
+
+.experiment-card a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
 .proof-card,
 .writing-card {
   background: #fff;
@@ -1037,6 +1085,7 @@ footer {
 .writing-card:focus {
   border-color: #41b649;
   color: #333;
+  text-decoration: none;
 }
 
 .proof-card span,
@@ -1163,6 +1212,7 @@ footer {
 @container (max-width: 760px) {
   .work-grid,
   .proof-grid,
+  .experiment-grid,
   .feature-strip,
   .writing-grid {
     grid-template-columns: 1fr;
@@ -1237,6 +1287,7 @@ footer {
     grid-template-columns: 1fr;
   }
   .proof-grid,
+  .experiment-grid,
   .feature-strip,
   .writing-grid {
     grid-template-columns: 1fr;

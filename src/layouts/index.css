@@ -47,28 +47,6 @@
 
 @layer enhancements;
 
-@supports (color: oklch(0% 0 0)) {
-  :root {
-    --qj-color-brand: oklch(0.67 0.19 145);
-    --qj-color-brand-active: color-mix(in oklch, var(--qj-color-brand), white 20%);
-    --qj-color-brand-active-strong: color-mix(in oklch, var(--qj-color-brand), white 34%);
-    --qj-color-surface-dark: oklch(0.17 0.02 150);
-    --qj-color-surface-dark-raised: color-mix(in oklch, var(--qj-color-surface-dark), white 6%);
-    --qj-color-surface-dark-muted: color-mix(in oklch, var(--qj-color-surface-dark), white 3%);
-    --qj-color-surface-dark-footer: color-mix(in oklch, var(--qj-color-surface-dark), black 12%);
-    --qj-color-text-dark: oklch(0.91 0.02 150);
-    --qj-color-heading-dark: oklch(0.98 0.01 150);
-    --qj-color-muted-dark: oklch(0.75 0.03 150);
-    --qj-color-blue-dark: oklch(0.78 0.12 260);
-    --qj-color-accent-dark: oklch(0.84 0.13 88);
-    --qj-border-dark-subtle: color-mix(in oklch, var(--qj-color-text-dark), transparent 88%);
-    --qj-border-dark: color-mix(in oklch, var(--qj-color-text-dark), transparent 86%);
-    --qj-border-dark-strong: color-mix(in oklch, var(--qj-color-text-dark), transparent 76%);
-    --qj-border-dark-toggle: color-mix(in oklch, var(--qj-color-text-dark), transparent 68%);
-    --qj-focus-ring: color-mix(in oklch, var(--qj-color-brand), transparent 78%);
-  }
-}
-
 @view-transition {
   navigation: auto;
 }
@@ -143,6 +121,7 @@
   .work-card,
   .writing-card,
   .proof-card,
+  .experiment-card,
   .work-entry,
   .writing-row {
     animation: qj-content-reveal linear both;
@@ -150,9 +129,9 @@
     animation-range: entry 8% cover 28%;
   }
 
-  .work-card:has(:focus-visible),
   .writing-card:has(:focus-visible),
   .proof-card:has(:focus-visible),
+  .experiment-card:has(:focus-visible),
   .work-entry:has(:focus-visible) {
     box-shadow: 0 0 0 3px var(--qj-focus-ring);
     outline: 0;
@@ -334,6 +313,7 @@ body,
 .theme-dark .work-card,
 .theme-dark .writing-card,
 .theme-dark .proof-card,
+.theme-dark .experiment-card,
 .theme-dark .work-entry,
 .theme-dark .calligraphy-single figcaption,
 .theme-dark .footer-primary p,
@@ -358,6 +338,7 @@ body,
 .theme-dark .writing-hero h1,
 .theme-dark .work-card h3,
 .theme-dark .writing-card h2,
+.theme-dark .experiment-card h3,
 .theme-dark .writing-row h3,
 .theme-dark .work-entry h2,
 .theme-dark .proof-card h3,
@@ -386,6 +367,7 @@ body,
 .theme-dark .writing-card__meta,
 .theme-dark .writing-row__date,
 .theme-dark .proof-card span,
+.theme-dark .experiment-card span,
 .theme-dark .work-entry__meta,
 .theme-dark .calligraphy-single figcaption span {
   color: var(--qj-color-accent-dark);
@@ -394,14 +376,13 @@ body,
 .theme-dark .work-card,
 .theme-dark .writing-card,
 .theme-dark .proof-card,
+.theme-dark .experiment-card,
 .theme-dark .work-entry {
   background: var(--qj-color-surface-dark-raised);
   border-color: var(--qj-border-dark);
   box-shadow: none;
 }
 
-.theme-dark .work-card:hover,
-.theme-dark .work-card:focus,
 .theme-dark .writing-card:hover,
 .theme-dark .writing-card:focus,
 .theme-dark .proof-card:hover,

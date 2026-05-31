@@ -74,10 +74,14 @@ p {
 a {
   color: $green;
   text-decoration: none;
+  text-decoration-thickness: .08em;
+  text-underline-offset: .2em;
   cursor: pointer;
   &:hover,
+  &:focus,
   &:active {
     color: $green;
+    text-decoration: underline;
   }
 }
 
