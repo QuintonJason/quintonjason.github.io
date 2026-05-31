@@ -96,6 +96,18 @@ class TemplateWrapper extends Component {
     const theme = savedTheme || (prefersDark ? DARK_THEME : LIGHT_THEME)
 
     this.setTheme(theme)
+
+    if (window.navigator && window.navigator.serviceWorker) {
+      window.navigator.serviceWorker.getRegistrations().then(registrations => {
+        registrations.forEach(registration => registration.unregister())
+      })
+    }
+
+    if (window.caches) {
+      window.caches.keys().then(keys => {
+        keys.forEach(key => window.caches.delete(key))
+      })
+    }
   }
 
   setTheme = theme => {
