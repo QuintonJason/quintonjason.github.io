@@ -199,6 +199,7 @@ body,
 .theme-dark p,
 .theme-dark .home-hero__bio,
 .theme-dark .page-hero p:not(.section-heading__eyebrow),
+.theme-dark .writing-hero p:not(.section-heading__eyebrow),
 .theme-dark .archive-intro p,
 .theme-dark .work-card,
 .theme-dark .writing-card,
@@ -206,6 +207,9 @@ body,
 .theme-dark .work-entry,
 .theme-dark .calligraphy-single figcaption,
 .theme-dark .footer-primary p,
+.theme-dark .date,
+.theme-dark .post-landing-single span,
+.theme-dark .site-description,
 .theme-dark .blog_single {
   color: var(--qj-color-text-dark);
 }
@@ -307,8 +311,14 @@ body,
 
 .theme-dark .writing-list,
 .theme-dark .writing-row,
+.theme-dark .posts > .post,
 .theme-dark .wrapper-footer {
   border-color: var(--qj-border-dark-subtle);
+}
+
+.theme-dark .post blockquote {
+  border-left-color: var(--qj-border-dark-strong);
+  color: var(--qj-color-muted-dark);
 }
 
 .theme-dark footer,
