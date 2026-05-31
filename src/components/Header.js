@@ -26,6 +26,8 @@ const HeaderDiv = styled(HeaderWrapper)`
 
 export default class Header extends Component {
   render() {
+    const { isDarkMode, onToggleTheme } = this.props;
+
     return (
       <header>
         <HeaderDiv className="header-wrapper">
@@ -56,9 +58,34 @@ export default class Header extends Component {
             <NavLink to="/contact/" className="header-link">
               Contact
             </NavLink>
+            <button
+              type="button"
+              className="theme-toggle"
+              aria-label={isDarkMode ? "Use light mode" : "Use dark mode"}
+              aria-pressed={isDarkMode}
+              onClick={onToggleTheme}
+              title={isDarkMode ? "Use light mode" : "Use dark mode"}
+            >
+              <span className="theme-toggle__icon theme-toggle__sun" aria-hidden="true">
+                ☀
+              </span>
+              <span className="theme-toggle__icon theme-toggle__moon" aria-hidden="true">
+                ◐
+              </span>
+            </button>
           </nav>
         </HeaderDiv>
       </header>
     );
   }
 }
+
+Header.propTypes = {
+  isDarkMode: PropTypes.bool,
+  onToggleTheme: PropTypes.func
+};
+
+Header.defaultProps = {
+  isDarkMode: false,
+  onToggleTheme: () => {}
+};

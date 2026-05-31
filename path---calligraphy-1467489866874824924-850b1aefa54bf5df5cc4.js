@@ -1,0 +1,2 @@
+webpackJsonp([0xd999c5cb2bc0],{391:function(a,t){a.exports={data:{igPostsJson:{id:"1467489866874824924",caption:"Compare and contrast. Brush or italics #leftycalligraphy",date:1489158446,image:"https://scontent-dft4-3.cdninstagram.com/vp/049f352b1e38f5355acfc690ed5195d6/5B006A70/t51.2885-15/e35/17126742_721421461366079_3558559663786033152_n.jpg",media:{publicURL:"/static/1467489866874824924-4d1afe23f3fb4b05cb2b2a1ad26c0f33.jpg"}}},pathContext:{slug:"/calligraphy/1467489866874824924"}}}});
+//# sourceMappingURL=path---calligraphy-1467489866874824924-850b1aefa54bf5df5cc4.js.map

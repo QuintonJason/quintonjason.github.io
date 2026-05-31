@@ -1,0 +1,2 @@
+webpackJsonp([0x633af7c53ccc],{416:function(c,p){c.exports={pathContext:{slug:"/snippets/916a20fc580850cb3063"}}}});
+//# sourceMappingURL=path---snippets-916-a-20-fc-580850-cb-3063-396a7673a2887335c3ae.js.map

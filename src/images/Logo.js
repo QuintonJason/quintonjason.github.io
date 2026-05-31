@@ -43,13 +43,15 @@ const Logo = props => {
   return (
     <svg className={className} x="0px" y="0px" viewBox="0 0 283.9 193.7">
       <style type="text/css" />
-      <rect fill="#41B649" x="342" y="-83.2" width="360" height="360" />
+      <rect className="logo-accent" fill="#41B649" x="342" y="-83.2" width="360" height="360" />
       <g id="logo-wrapper">
         <path
+          className="logo-mark"
           id="logo-j_1_"
           d="M142.6,0c17.5,8.3,32.4,21.2,43.1,37.1h60.6v96c0,19.6-10.5,25.1-28.9,25.1h-20.8l32.9,34.8 c30-2.9,54.4-15.6,54.4-65V0H142.6z"
         />
         <path
+          className="logo-accent"
           fill="#41B649"
           id="logo-q"
           d="M215.8,193.7l-39.5-41.8c10.8-15.6,17.2-34.6,17.2-55c0-53.4-43.3-96.7-96.7-96.7S0,43.5,0,96.9 s43.3,96.7,96.7,96.7c19.5,0,37.5-5.8,52.7-15.6l14.9,15.7H215.8z M96.7,155.9c-32.6,0-59-26.4-59-59s26.4-59,59-59s59,26.4,59,59 S129.3,155.9,96.7,155.9z"

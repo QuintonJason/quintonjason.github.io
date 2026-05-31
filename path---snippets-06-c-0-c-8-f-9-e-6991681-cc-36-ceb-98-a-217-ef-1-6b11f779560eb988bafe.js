@@ -1,0 +1,2 @@
+webpackJsonp([0x97921a987550],{408:function(c,e){c.exports={pathContext:{slug:"/snippets/06c0c8f9e6991681cc36ceb98a217ef1"}}}});
+//# sourceMappingURL=path---snippets-06-c-0-c-8-f-9-e-6991681-cc-36-ceb-98-a-217-ef-1-6b11f779560eb988bafe.js.map

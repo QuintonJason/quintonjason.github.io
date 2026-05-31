@@ -1,0 +1,2 @@
+webpackJsonp([0x8217c63638c7],{396:function(t,s){t.exports={pathContext:{slug:"/posts/2015-02-10-Friday-at-Four-Lets-Use-SVG/"}}}});
+//# sourceMappingURL=path---posts-2015-02-10-friday-at-four-lets-use-svg-5ec44063e684e854bd0d.js.map

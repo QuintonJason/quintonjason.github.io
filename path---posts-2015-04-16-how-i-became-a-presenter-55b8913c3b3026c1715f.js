@@ -1,0 +1,2 @@
+webpackJsonp([0xe29fced8f582],{397:function(e,t){e.exports={pathContext:{slug:"/posts/2015-04-16-How-I-Became-A-Presenter/"}}}});
+//# sourceMappingURL=path---posts-2015-04-16-how-i-became-a-presenter-55b8913c3b3026c1715f.js.map

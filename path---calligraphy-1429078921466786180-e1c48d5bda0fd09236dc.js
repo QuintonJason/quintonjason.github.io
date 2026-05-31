@@ -1,0 +1,2 @@
+webpackJsonp([0xea3e41c58799],{390:function(a,t){a.exports={data:{igPostsJson:{id:"1429078921466786180",caption:"My 2016 word cloud #leftycalligraphy",date:1484579504,image:"https://scontent-dft4-3.cdninstagram.com/vp/e73fde66901c5a2ab39db0af24b59834/5B132E8A/t51.2885-15/e35/15875889_1832628527009665_6194134665297657856_n.jpg",media:{publicURL:"/static/1429078921466786180-90e8e151bb7f8dc17ce6500be2231607.jpg"}}},pathContext:{slug:"/calligraphy/1429078921466786180"}}}});
+//# sourceMappingURL=path---calligraphy-1429078921466786180-e1c48d5bda0fd09236dc.js.map

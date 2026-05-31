@@ -1,0 +1,2 @@
+webpackJsonp([0xa082b296919],{393:function(o,a){o.exports={pathContext:{slug:"/posts/2014-10-25-Zalandas-Logo-Animation/"}}}});
+//# sourceMappingURL=path---posts-2014-10-25-zalandas-logo-animation-89ee2ca8cde4ddc5604f.js.map

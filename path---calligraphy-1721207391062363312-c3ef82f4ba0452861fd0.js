@@ -1,0 +1,2 @@
+webpackJsonp([0xdb89e807ae00],{396:function(t,a){t.exports={data:{igPostsJson:{id:"1721207391062363312",caption:"Most creative name badge photo gets 10 free @raisingcanes #activatehackathon #activ8conf #activateourfuture",date:1519403931,image:"https://scontent-hou1-1.cdninstagram.com/v/t51.82787-15/628269124_18510175747074834_2205027858826488668_n.jpg",media:null}},pathContext:{slug:"/calligraphy/1721207391062363312"}}}});
+//# sourceMappingURL=path---calligraphy-1721207391062363312-c3ef82f4ba0452861fd0.js.map

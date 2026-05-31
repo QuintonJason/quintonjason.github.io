@@ -1,0 +1,2 @@
+webpackJsonp([72009234375989],{402:function(s,e){s.exports={pathContext:{slug:"/posts/2017-11-01-Future-of-Responsive-Design/"}}}});
+//# sourceMappingURL=path---posts-2017-11-01-future-of-responsive-design-455d1a3b8ce6dddc46bc.js.map

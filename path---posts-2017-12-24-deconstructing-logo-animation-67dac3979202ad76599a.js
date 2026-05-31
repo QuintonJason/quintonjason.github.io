@@ -1,0 +1,2 @@
+webpackJsonp([0x6697f057a4dc],{405:function(o,t){o.exports={pathContext:{slug:"/posts/2017-12-24-Deconstructing-Logo-Animation/"}}}});
+//# sourceMappingURL=path---posts-2017-12-24-deconstructing-logo-animation-67dac3979202ad76599a.js.map

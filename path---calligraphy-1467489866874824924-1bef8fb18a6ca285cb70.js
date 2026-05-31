@@ -1,0 +1,2 @@
+webpackJsonp([0xd999c5cb2bc0],{385:function(c,p){c.exports={pathContext:{slug:"/calligraphy/1467489866874824924"}}}});
+//# sourceMappingURL=path---calligraphy-1467489866874824924-1bef8fb18a6ca285cb70.js.map

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
@@ -56,41 +56,83 @@ const Footer = () => (
   </footer>
 )
 
-const TemplateWrapper = ({ children }) => (
-  <div className="hey"
-      style={{
-        display: 'grid',
-        minHeight: '100vh',
-        gridTemplateRows: 'auto 1fr auto',
+class TemplateWrapper extends Component {
+  constructor(props) {
+    super(props)
 
-      }}>
-    <Helmet
-      title="Quinton Jason"
-      meta={[
-        { name: 'description', content: 'Senior Design Engineer focused on design systems, frontend architecture, accessibility, design tokens, teaching, and AI-native product workflows.' },
-        { property: 'og:locale', content: 'en-US' },
-        { property: 'og:type', content: 'website' },
-        { property: 'og:site_name', content: 'Quinton Jason' },
-        { property: 'og:description', content: 'Senior Design Engineer focused on design systems, frontend architecture, accessibility, design tokens, teaching, and AI-native product workflows.' },
-      ]} >
+    this.state = {
+      theme: 'light',
+    }
+  }
 
-        <link rel="apple-touch-icon" sizes="180x180" href={faviconApple} />
-        <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
-        <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
-        <meta name="theme-color" content="#00c200" />
-      </Helmet>
-    <Header />
-    <div
-      style={{
-        padding: '0',
-        paddingTop: 0,
-      }}
-    >
-      {children()}
-    </div>
-    <Footer />
-  </div>
-)
+  componentDidMount() {
+    const savedTheme = window.localStorage.getItem('qj-theme')
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+    const theme = savedTheme || (prefersDark ? 'dark' : 'light')
+
+    this.setTheme(theme)
+  }
+
+  setTheme = theme => {
+    this.setState({ theme })
+
+    if (typeof document !== 'undefined') {
+      document.documentElement.setAttribute('data-theme', theme)
+      document.body.classList.toggle('theme-dark-body', theme === 'dark')
+    }
+
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem('qj-theme', theme)
+    }
+  }
+
+  toggleTheme = () => {
+    this.setTheme(this.state.theme === 'dark' ? 'light' : 'dark')
+  }
+
+  render() {
+    const { children } = this.props
+    const isDarkMode = this.state.theme === 'dark'
+
+    return (
+      <div className={`hey theme-${this.state.theme}`}
+          style={{
+            display: 'grid',
+            minHeight: '100vh',
+            gridTemplateRows: 'auto 1fr auto',
+
+          }}>
+        <Helmet
+          title="Quinton Jason"
+          meta={[
+            { name: 'description', content: 'Senior Design Engineer focused on design systems, frontend architecture, accessibility, design tokens, teaching, and AI-native product workflows.' },
+            { property: 'og:locale', content: 'en-US' },
+            { property: 'og:type', content: 'website' },
+            { property: 'og:site_name', content: 'Quinton Jason' },
+            { property: 'og:description', content: 'Senior Design Engineer focused on design systems, frontend architecture, accessibility, design tokens, teaching, and AI-native product workflows.' },
+          ]} >
+
+            <link rel="apple-touch-icon" sizes="180x180" href={faviconApple} />
+            <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
+            <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
+            <meta name="theme-color" content={isDarkMode ? '#0f1712' : '#00c200'} />
+          </Helmet>
+        <Header isDarkMode={isDarkMode} onToggleTheme={this.toggleTheme} />
+        <div
+          style={{
+            padding: '0',
+            paddingTop: 0,
+          }}
+        >
+          {children()}
+        </div>
+        <Footer />
+      </div>
+    )
+  }
+}
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,

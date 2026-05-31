@@ -1,0 +1,2 @@
+webpackJsonp([54110753230210],{393:function(a,t){a.exports={data:{igPostsJson:{id:"1486397539401853802",caption:"Happy birthday self #leftycalligraphy",date:1491412416,image:"https://scontent-dft4-3.cdninstagram.com/vp/d586ef93156f5291ab519449e0d13560/5B1A59B0/t51.2885-15/e35/17662482_243228582812156_5448481055122128896_n.jpg",media:{publicURL:"/static/1486397539401853802-16720a2b6db54f260a43e749d3a1089f.jpg"}}},pathContext:{slug:"/calligraphy/1486397539401853802"}}}});
+//# sourceMappingURL=path---calligraphy-1486397539401853802-57436cf141016e912730.js.map

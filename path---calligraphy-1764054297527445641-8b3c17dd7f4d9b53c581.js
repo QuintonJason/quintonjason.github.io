@@ -1,0 +1,2 @@
+webpackJsonp([0x640f89a11766],{398:function(a,t){a.exports={data:{igPostsJson:{id:"1764054297527445641",caption:"Super excited to be joining Dockyard as a UX Developer today! #leftycalligraphy #programmingcalligrapher",date:1524511681,image:"https://scontent-hou1-1.cdninstagram.com/v/t51.82787-15/640405764_18568473436025869_8122996907001174039_n.jpg",media:null}},pathContext:{slug:"/calligraphy/1764054297527445641"}}}});
+//# sourceMappingURL=path---calligraphy-1764054297527445641-8b3c17dd7f4d9b53c581.js.map
