@@ -1,9 +1,9 @@
 [
   {
-    "title": "Core product design system",
-    "summary": "Led the design, implementation, and evolution of a core design system supporting multiple product surfaces and engineering teams. The work centered on durable component APIs, system constraints, contribution models, and practical adoption across real product flows.",
+    "title": "Pine Design System",
+    "summary": "Kajabi's multi-platform design system powering consistent, accessible product experiences across 6 product teams and 40+ engineers. Pine includes web components, design tokens, accessibility standards, governance, documentation, and shared developer workflows.",
     "role": "Senior Design Engineer",
-    "status": "System leadership",
+    "status": "Design system infrastructure",
     "links": [
       {
         "label": "View Pine Design System",
@@ -14,7 +14,33 @@
         "url": "/writing/"
       }
     ],
-    "topics": ["Design Systems", "Component APIs", "Governance", "Product UI"]
+    "topics": [
+      "Design Systems",
+      "Web Components",
+      "Design Tokens",
+      "Accessibility",
+      "Governance",
+      "Developer Experience"
+    ]
+  },
+  {
+    "title": "Pine MCP",
+    "summary": "An MCP integration that exposes Pine design system knowledge to AI assistants, helping generated code follow established components, tokens, accessibility requirements, and implementation standards.",
+    "role": "AI-Assisted Development",
+    "status": "Design system knowledge workflow",
+    "links": [
+      {
+        "label": "Teaching AI Our Design System",
+        "url": "https://medium.com/@quintonjasonjr/teaching-ai-our-design-system-d9788fe96c8e"
+      }
+    ],
+    "topics": [
+      "AI-Assisted Development",
+      "MCP",
+      "Design Systems",
+      "Developer Experience",
+      "Frontend Architecture"
+    ]
   },
   {
     "title": "Design tokens and theming",
@@ -54,19 +80,6 @@
       }
     ],
     "topics": ["Documentation", "DX", "Contribution Models", "Team Workflows"]
-  },
-  {
-    "title": "AI-native design system workflows",
-    "summary": "Exploring how teams can teach AI tools the language, constraints, decision history, and implementation rules of a design system instead of treating AI as a generic autocomplete layer.",
-    "role": "AI / Systems Thinking",
-    "status": "Recent writing",
-    "links": [
-      {
-        "label": "Teaching AI Our Design System",
-        "url": "https://medium.com/@quintonjasonjr/teaching-ai-our-design-system-d9788fe96c8e"
-      }
-    ],
-    "topics": ["AI", "Design Systems", "Context", "Documentation"]
   },
   {
     "title": "Web UX education",

@@ -11,6 +11,8 @@ const dateLabel = value =>
     year: "numeric"
   });
 
+const articleDate = item => item.displayDate || dateLabel(item.date);
+
 const externalWriting = writing
   .filter(item => item.type === "Article")
   .sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -23,7 +25,7 @@ const ExternalCard = ({ item }) => (
   <article className="writing-card">
     <div className="writing-card__meta">
       <span>{item.source}</span>
-      <span>{dateLabel(item.date)}</span>
+      <span>{articleDate(item)}</span>
     </div>
     <h2>
       <a href={item.url} target="_blank" rel="noopener noreferrer">

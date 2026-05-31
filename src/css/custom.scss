@@ -30,9 +30,10 @@
 
 .home-hero__title {
   color: $ink;
-  font-size: 4.6rem;
-  line-height: .95;
+  font-size: 3.9rem;
+  line-height: 1.02;
   margin: 0;
+  max-width: 980px;
 }
 
 .home-hero__bio {
@@ -104,6 +105,11 @@
   margin-bottom: 2rem;
 }
 
+.section-heading p:not(.section-heading__eyebrow) {
+  color: $darkGray;
+  line-height: 1.7;
+}
+
 .section-heading h2,
 .home-note h2 {
   color: $ink;
@@ -116,6 +122,10 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
+}
+
+.work-grid--featured {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .work-card {
@@ -148,6 +158,10 @@
 .work-card p {
   line-height: 1.6;
   margin-bottom: 0;
+}
+
+.work-card .tag-list {
+  align-self: end;
 }
 
 .work-card__meta {
@@ -502,6 +516,9 @@
   .work-grid {
     grid-template-columns: 1fr;
   }
+  .work-grid--featured {
+    grid-template-columns: 1fr;
+  }
   .proof-grid,
   .feature-strip,
   .writing-grid {
@@ -533,7 +550,7 @@
     padding-bottom: 3rem;
   }
   .home-hero__title {
-    font-size: 2.75rem;
+    font-size: 2.35rem;
   }
   .home-hero__bio {
     font-size: 1.05rem;

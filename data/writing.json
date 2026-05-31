@@ -18,6 +18,26 @@
     "topics": ["Design Systems", "Teamwork", "Product"]
   },
   {
+    "title": "My Job Is a Claude Skill. Now What.",
+    "source": "Medium",
+    "type": "Article",
+    "date": "2026-05-26",
+    "displayDate": "May 2026",
+    "url": "https://medium.com/@quintonjasonjr/my-job-is-a-claude-skill-now-what-ec00daf0de21",
+    "summary": "A practical reflection on what changes when design system work becomes reusable context for AI-assisted development.",
+    "topics": ["AI-Assisted Development", "Design Systems", "Developer Experience"]
+  },
+  {
+    "title": "Bots Be Lying and We're Still Shipping",
+    "source": "Medium",
+    "type": "Article",
+    "date": "2026-05-01",
+    "displayDate": "May 2026",
+    "url": "https://medium.com/@quintonjasonjr/bots-be-lying-and-were-still-shipping-6276468129b8",
+    "summary": "A look at generated-code quality, trust, and the standards teams need when AI assistants move faster than review habits.",
+    "topics": ["AI-Assisted Development", "Frontend Quality", "Design Systems"]
+  },
+  {
     "title": "Context Matters (Even When You Think It Doesn't)",
     "source": "Medium",
     "type": "Article",
