@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 
 import Header from '../components/Header'
@@ -159,6 +159,9 @@ class TemplateWrapper extends Component {
           ]} >
 
             <link rel="canonical" href={SITE_URL} />
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
             <link rel="apple-touch-icon" sizes="180x180" href={faviconApple} />
             <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
             <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
@@ -174,7 +177,7 @@ class TemplateWrapper extends Component {
             paddingTop: 0,
           }}
         >
-          {children()}
+          {children}
         </div>
         <Footer />
       </div>
@@ -183,7 +186,7 @@ class TemplateWrapper extends Component {
 }
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.node,
 }
 
 export default TemplateWrapper

@@ -1,18 +1,18 @@
 var fs = require("fs")
-var request = require("request")
+var https = require("https")
 
 module.exports = function(url, dest, cb) {
   var file = fs.createWriteStream(dest)
-  var sendReq = request.get(url)
-
-  // verify response code
-  sendReq.on("response", function(response) {
+  var sendReq = https.get(url, function(response) {
     if (response.statusCode !== 200) {
+      file.close()
+      fs.unlink(dest, function() {})
       return cb("Response status was " + response.statusCode)
     }
+
+    response.pipe(file)
   })
 
-  // check for request errors
   sendReq.on("error", function(err) {
     fs.unlink(dest)
 
@@ -20,8 +20,6 @@ module.exports = function(url, dest, cb) {
       return cb(err.message)
     }
   })
-
-  sendReq.pipe(file)
 
   file.on("finish", function() {
     file.close(cb) // close() is async, call cb after close completes.

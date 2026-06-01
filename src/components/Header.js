@@ -1,7 +1,6 @@
 import * as PropTypes from "prop-types";
 import React, { Component } from "react";
-import Link from "gatsby-link";
-import { NavLink } from "react-router-dom";
+import { Link } from "gatsby";
 import styled from "styled-components";
 import { media } from "../utils/styled-components-media-queries";
 
@@ -44,21 +43,21 @@ export default class Header extends Component {
             </Link>
           </div>
           <nav id="main-nav" className="header-nav" aria-label="Primary">
-            <NavLink exact to="/" className="header-link">
+            <Link to="/" className="header-link" activeClassName="active">
               Home
-            </NavLink>
-            <NavLink to="/work/" className="header-link">
+            </Link>
+            <Link to="/work/" className="header-link" activeClassName="active" partiallyActive>
               Work
-            </NavLink>
-            <NavLink to="/writing/" className="header-link">
+            </Link>
+            <Link to="/writing/" className="header-link" activeClassName="active" partiallyActive>
               Writing
-            </NavLink>
-            <NavLink to="/about/" className="header-link">
+            </Link>
+            <Link to="/about/" className="header-link" activeClassName="active" partiallyActive>
               About
-            </NavLink>
-            <NavLink to="/contact/" className="header-link">
+            </Link>
+            <Link to="/contact/" className="header-link" activeClassName="active" partiallyActive>
               Contact
-            </NavLink>
+            </Link>
             <button
               type="button"
               className="theme-toggle"

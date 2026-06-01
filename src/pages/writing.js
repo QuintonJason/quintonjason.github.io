@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "gatsby-link";
+import { graphql, Link } from "gatsby";
 import Helmet from "react-helmet";
 
 import writing from "../../data/writing.json";
@@ -128,7 +128,7 @@ export default Writing;
 
 export const query = graphql`
   query WritingArchiveQuery {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       edges {
         node {
           id

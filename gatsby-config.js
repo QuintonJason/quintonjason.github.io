@@ -13,18 +13,11 @@ module.exports = {
         plugins: [
           `gatsby-remark-copy-linked-files`,
           {
-            resolve: `gatsby-remark-responsive-image`,
-            options: {
-              maxWidth: 590
-            }
-          },
-          {
             resolve: "gatsby-remark-responsive-iframe",
             options: {}
           },
           {
             resolve: "gatsby-remark-images",
-            pathPrefix: "/pages",
             options: {
               maxWidth: 590
             }
@@ -53,12 +46,8 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-react-helmet`,
       options: {
-        fonts: [
-          `Montserrat`,
-          `Open+Sans\:400,400i` // you can also specify font weights and styles
-        ]
       }
     },
     /*{

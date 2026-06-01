@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "gatsby-link";
+import { graphql, Link } from "gatsby";
 import Helmet from "react-helmet";
 import BlogLink from "../components/BlogLink";
 
@@ -42,7 +42,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   query PostsQuery {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       totalCount
       edges {
         node {

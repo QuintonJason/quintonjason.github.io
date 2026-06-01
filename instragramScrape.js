@@ -1,5 +1,5 @@
 const fs = require("fs");
-const request = require("request");
+const https = require("https");
 const ProgressBar = require("progress");
 const mkdirp = require("mkdirp");
 const { get } = require("lodash");
@@ -72,25 +72,32 @@ const matchesCaptionFilter = post => {
 
 const fetchProfilePosts = async () => {
   const payload = await new Promise((resolve, reject) => {
-    request(
-      {
-        url: PROFILE_URL,
-        method: "GET",
-        headers: REQUEST_HEADERS,
-        json: true
-      },
-      (error, response, body) => {
-        if (error) return reject(error);
+    const req = https.get(PROFILE_URL, { headers: REQUEST_HEADERS }, response => {
+      let body = "";
+
+      response.setEncoding("utf8");
+      response.on("data", chunk => {
+        body += chunk;
+      });
+      response.on("end", () => {
         if (response.statusCode !== 200) {
-          return reject(
+          reject(
             new Error(
               `Instagram request failed with status ${response.statusCode}`
             )
           );
+          return;
         }
-        resolve(body);
-      }
-    );
+
+        try {
+          resolve(JSON.parse(body));
+        } catch (error) {
+          reject(error);
+        }
+      });
+    });
+
+    req.on("error", reject);
   });
 
   const edges = get(payload, "data.user.edge_owner_to_timeline_media.edges", []);

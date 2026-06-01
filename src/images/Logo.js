@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import TransitionGroup from "react-transition-group/TransitionGroup";
 // import ReactDOM from 'react-dom';
 // import { TimelineLite, Draggable, CSSPlugin, Power2, Power3 } from 'gsap';
 
