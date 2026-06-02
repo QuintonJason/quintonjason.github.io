@@ -13,9 +13,8 @@ import faviconApple from '../images/apple-touch-icon.png'
 import GithubIcon from '../images/Github'
 import LinkedInIcon from '../images/LinkedIn'
 
-require("../css/prismjs.css");
+import "../css/prismjs.css";
 import '../css/styles.css'
-
 import './index.css'
 
 const THEME_STORAGE_KEY = 'qj-theme'

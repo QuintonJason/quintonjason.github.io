@@ -1,6 +1,45 @@
 import React from "react";
 import Helmet from "react-helmet";
 
+const featuredExperiments = [
+  {
+    title: "Understanding transform-box",
+    meta: "CSS / SVG Debugging",
+    description:
+      "A focused demo explaining how SVG transform origins behave and how transform-box fixes browser behavior that feels broken.",
+    url: "https://codepen.io/quintonjason/pen/GwqOGQ"
+  },
+  {
+    title: "Animated Playing Card",
+    meta: "SVG Animation",
+    description:
+      "An interactive motion study using SVG and CSS animation to turn a small visual detail into a polished interface moment. Hover the card to trigger the animation.",
+    url: "https://codepen.io/quintonjason/pen/wJZXpE"
+  },
+  {
+    title: "Hack Night Logo",
+    meta: "Logo Motion",
+    description:
+      "A logo animation demo exploring transforms, timing, and expressive SVG motion for an event identity. Use the dropdown to switch logo states. The real version used the WeatherBug API to respond to local weather.",
+    url:
+      "https://codepen.io/quintonjason/pen/GrVqJJ/5b71f773f045cd2029fda20dba88a595"
+  },
+  {
+    title: "CSS Animated Cuddly Bear",
+    meta: "SVG Character Motion",
+    description:
+      "My first SVG animation, later used in an SVG teaching session to make shape animation feel tangible.",
+    url: "https://codepen.io/quintonjason/pen/mybarZ"
+  },
+  {
+    title: "Sunset Vegas",
+    meta: "SVG Talk Demo",
+    description:
+      "A slide-deck demo from an SVG talk showing how expressive vector illustration and motion can support teaching. Click the Vegas sign to play the animation.",
+    url: "https://quintonjason.com/svg-talk-v2/#/52"
+  }
+];
+
 const About = () => (
   <main className="about-page">
     <Helmet
@@ -45,6 +84,32 @@ const About = () => (
             practice as an archive of the same throughline: craft, constraints,
             and curiosity.
           </p>
+        </div>
+      </div>
+    </section>
+
+    <section className="home-section home-section--quiet">
+      <div className="container">
+        <div className="section-heading">
+          <p className="section-heading__eyebrow">CSS and SVG Experiments</p>
+          <h2>Small demos from talks, teaching, and frontend play.</h2>
+          <p>
+            These experiments show the craft side of my work: explaining browser
+            behavior, prototyping interaction ideas, and using CSS and SVG to
+            make technical concepts easier to see.
+          </p>
+        </div>
+        <div className="experiment-grid">
+          {featuredExperiments.map(item => (
+            <article className="experiment-card" key={item.title}>
+              <span>{item.meta}</span>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <a href={item.url} target="_blank" rel="noopener noreferrer">
+                View demo
+              </a>
+            </article>
+          ))}
         </div>
       </div>
     </section>

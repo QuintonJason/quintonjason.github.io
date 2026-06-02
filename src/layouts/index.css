@@ -314,10 +314,16 @@ body,
 .theme-dark .page-hero p:not(.section-heading__eyebrow),
 .theme-dark .writing-hero p:not(.section-heading__eyebrow),
 .theme-dark .archive-intro p,
+.theme-dark .about-copy p,
+.theme-dark .section-heading p:not(.section-heading__eyebrow),
 .theme-dark .work-card,
+.theme-dark .work-card p,
 .theme-dark .writing-card,
+.theme-dark .writing-card p,
 .theme-dark .proof-card,
+.theme-dark .proof-card p,
 .theme-dark .experiment-card,
+.theme-dark .experiment-card p,
 .theme-dark .signal-card,
 .theme-dark .case-study-sidebar,
 .theme-dark .code-card,
@@ -403,10 +409,46 @@ body,
 .theme-dark .writing-card:hover,
 .theme-dark .writing-card:focus,
 .theme-dark .proof-card:hover,
-.theme-dark .proof-card:focus {
+.theme-dark .proof-card:focus,
+.theme-dark .experiment-card:hover,
+.theme-dark .experiment-card:focus {
   border-color: var(--qj-color-brand-active);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.26);
   color: var(--qj-color-text-dark);
+}
+
+.theme-dark .writing-card:hover h2,
+.theme-dark .writing-card:focus h2,
+.theme-dark .proof-card:hover h3,
+.theme-dark .proof-card:focus h3,
+.theme-dark .experiment-card:hover h3,
+.theme-dark .experiment-card:focus h3 {
+  color: var(--qj-color-heading-dark);
+}
+
+.theme-dark .writing-card:hover p,
+.theme-dark .writing-card:focus p,
+.theme-dark .proof-card:hover p,
+.theme-dark .proof-card:focus p,
+.theme-dark .experiment-card:hover p,
+.theme-dark .experiment-card:focus p {
+  color: var(--qj-color-text-dark);
+}
+
+.theme-dark .experiment-card a,
+.theme-dark .work-entry__links a,
+.theme-dark .case-study-actions a {
+  color: var(--qj-color-brand-active-strong);
+  text-decoration-color: currentColor;
+}
+
+.theme-dark .experiment-card a:hover,
+.theme-dark .experiment-card a:focus,
+.theme-dark .work-entry__links a:hover,
+.theme-dark .work-entry__links a:focus,
+.theme-dark .case-study-actions a:hover,
+.theme-dark .case-study-actions a:focus {
+  color: var(--qj-color-brand-active);
 }
 
 .theme-dark .signal-card dd {
