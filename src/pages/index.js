@@ -7,9 +7,9 @@ const featuredWork = [
     id: "pine-design-system",
     title: "Pine Design System",
     description:
-      "Kajabi's multi-platform design system powering consistent, accessible product experiences across 6 product teams and 40+ engineers. Pine includes web components, design tokens, accessibility standards, governance, documentation, and shared developer workflows.",
+      "Kajabi's multi-platform design system powering consistent, accessible product experiences across 6 product teams and 40+ engineers. Pine includes web components, design tokens, accessibility standards, governance, migration tooling, documentation, and shared developer workflows.",
     meta: "Kajabi Design System",
-    url: "https://pine-design-system.netlify.app/",
+    url: "/work/pine-design-system/",
     tags: [
       "Design Systems",
       "Web Components",
@@ -33,6 +33,33 @@ const featuredWork = [
       "Developer Experience",
       "Frontend Architecture"
     ]
+  }
+];
+
+const proofSignals = [
+  {
+    value: "40+",
+    label: "engineers supported"
+  },
+  {
+    value: "6",
+    label: "product teams"
+  },
+  {
+    value: "40",
+    label: "components"
+  },
+  {
+    value: "4-repo",
+    label: "design system architecture"
+  },
+  {
+    value: "MCP",
+    label: "enabled AI workflow"
+  },
+  {
+    value: "Diff-gated",
+    label: "migration enforcement"
   }
 ];
 
@@ -104,7 +131,7 @@ const Index = () => (
         </p>
         <div className="home-hero__actions">
           <ActionLink
-            to="https://pine-design-system.netlify.app/"
+            to="/work/pine-design-system/"
             className="button button--primary"
           >
             View Pine Design System
@@ -119,6 +146,19 @@ const Index = () => (
             Contact
           </Link>
         </div>
+      </div>
+    </section>
+
+    <section className="home-proof" aria-label="Design system proof points">
+      <div className="container">
+        <dl className="proof-strip">
+          {proofSignals.map(item => (
+            <div className="proof-strip__item" key={item.label}>
+              <dt>{item.value}</dt>
+              <dd>{item.label}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </section>
 
@@ -145,7 +185,7 @@ const Index = () => (
               </ul>
               <div className="work-entry__links">
                 <ActionLink to={item.url}>
-                  {item.title === "Pine MCP" ? "Read about Pine MCP" : "View Pine"}
+                  {item.title === "Pine MCP" ? "Read about Pine MCP" : "View Pine case study"}
                 </ActionLink>
               </div>
             </article>

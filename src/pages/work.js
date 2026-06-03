@@ -88,7 +88,13 @@ const Work = () => (
         {work.map(item => (
           <article
             className="work-entry"
-            id={item.title === "Pine MCP" ? "pine-mcp" : undefined}
+            id={
+              item.title === "Pine MCP"
+                ? "pine-mcp"
+                : item.title === "Pine Design System"
+                ? "pine-design-system"
+                : undefined
+            }
             key={item.title}
           >
             <div className="work-entry__meta">

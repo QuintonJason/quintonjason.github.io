@@ -6,8 +6,8 @@
     "status": "Design system infrastructure",
     "links": [
       {
-        "label": "View Pine Design System",
-        "url": "https://pine-design-system.netlify.app/"
+        "label": "View Pine case study",
+        "url": "/work/pine-design-system/"
       },
       {
         "label": "View Pine MCP",
@@ -25,7 +25,7 @@
   },
   {
     "title": "Pine MCP",
-    "summary": "An MCP integration that exposes Pine design system knowledge to AI assistants so generated code can follow established components, tokens, accessibility requirements, and implementation standards. The work extends design system adoption into the moment AI-assisted code is being produced.",
+    "summary": "An MCP workflow gate that helps AI assistants detect when Pine is needed, retrieve the right component and token context, and validate generated UI against design system rules. The work extends design system adoption into the moment AI-assisted code is being produced.",
     "role": "AI-Assisted Development",
     "status": "Design system knowledge workflow",
     "links": [
@@ -44,6 +44,26 @@
       "Design Systems",
       "Developer Experience",
       "Frontend Architecture"
+    ]
+  },
+  {
+    "title": "Dark Mode for Kajabi Admin",
+    "summary": "A theming architecture project that helped dark mode scale across Kajabi Admin, including Rails views, React applications, Pine components, Sage legacy surfaces, TinyMCE iframes, semantic tokens, feature flags, and persistent user preferences.",
+    "role": "Senior UX Developer",
+    "status": "Platform theming infrastructure",
+    "links": [
+      {
+        "label": "View dark mode case study",
+        "url": "/work/kajabi-admin-dark-mode/"
+      }
+    ],
+    "topics": [
+      "Theming",
+      "Design Tokens",
+      "Design Systems",
+      "Frontend Architecture",
+      "Legacy Migration",
+      "Accessibility"
     ]
   },
   {

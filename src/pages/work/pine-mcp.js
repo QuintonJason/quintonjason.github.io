@@ -12,6 +12,24 @@ const mcpTools = [
   "fix_layout_issues"
 ];
 
+const mcpGate = [
+  {
+    title: "Detect",
+    description:
+      "Recognize when generated UI should use Pine components, tokens, accessibility rules, or composition patterns."
+  },
+  {
+    title: "Context",
+    description:
+      "Retrieve the right Pine component docs, token guidance, icon options, design docs, and implementation advice."
+  },
+  {
+    title: "Validate",
+    description:
+      "Review generated UI against Pine rules, layout expectations, accessibility requirements, and known anti-patterns."
+  }
+];
+
 const PineMcpCaseStudy = () => (
   <main className="case-study-page">
     <Helmet
@@ -28,13 +46,12 @@ const PineMcpCaseStudy = () => (
     <section className="page-hero">
       <div className="container">
         <p className="section-heading__eyebrow">Pine MCP</p>
-        <h1>Teaching AI assistants to use the design system.</h1>
+        <h1>A workflow gate for AI-assisted design system adoption.</h1>
         <p>
-          Engineers were reaching for AI to build faster, but the generated
-          code often ignored Pine and defaulted to generic UI patterns. Pine MCP
-          gives AI-assisted workflows access to the same components, tokens,
-          accessibility guidance, and governance rules that product teams are
-          expected to use.
+          Pine MCP helps AI assistants detect when Pine is needed, retrieve the
+          right component and token context, and validate generated UI against
+          design system rules. The goal is generated code that starts closer to
+          Pine components, accessibility standards, and implementation patterns.
         </p>
       </div>
     </section>
@@ -49,7 +66,7 @@ const PineMcpCaseStudy = () => (
             </div>
             <div>
               <dt>Focus</dt>
-              <dd>AI-assisted design system workflows</dd>
+              <dd>MCP workflow gate for generated UI quality</dd>
             </div>
             <div>
               <dt>System</dt>
@@ -82,6 +99,26 @@ const PineMcpCaseStudy = () => (
           </section>
 
           <section>
+            <p className="section-heading__eyebrow">Workflow Gate</p>
+            <h2>Detect Pine need, retrieve context, validate generated UI.</h2>
+            <p>
+              Pine MCP is not machine learning engineering. It is design system
+              architecture for AI-assisted development workflows. The MCP layer
+              helps assistants work from Pine knowledge instead of guessing from
+              generic UI examples.
+            </p>
+            <ol className="system-diagram system-diagram--gate" aria-label="Pine MCP workflow gate">
+              {mcpGate.map((item, index) => (
+                <li key={item.title}>
+                  <span>{index + 1}</span>
+                  <strong>{item.title}</strong>
+                  <p>{item.description}</p>
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          <section>
             <p className="section-heading__eyebrow">Approach</p>
             <h2>Expose design system knowledge where generation happens.</h2>
             <p>
@@ -105,8 +142,8 @@ const PineMcpCaseStudy = () => (
               </li>
               <li>
                 <span>2</span>
-                <strong>Pine MCP</strong>
-                <p>Components, tokens, rules, docs, and patterns.</p>
+                <strong>Context retrieval</strong>
+                <p>Components, tokens, icons, docs, rules, and patterns.</p>
               </li>
               <li>
                 <span>3</span>
@@ -115,8 +152,8 @@ const PineMcpCaseStudy = () => (
               </li>
               <li>
                 <span>4</span>
-                <strong>Review and repair</strong>
-                <p>Layout issues can be reviewed and corrected.</p>
+                <strong>Validate and repair</strong>
+                <p>Generated layouts can be reviewed against Pine rules and corrected.</p>
               </li>
             </ol>
           </section>
