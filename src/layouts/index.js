@@ -13,7 +13,7 @@ import faviconApple from '../images/apple-touch-icon.png'
 import GithubIcon from '../images/Github'
 import LinkedInIcon from '../images/LinkedIn'
 
-import "../css/prismjs.css";
+import '../css/prismjs.css'
 import '../css/styles.css'
 import './index.css'
 
@@ -42,13 +42,7 @@ const saveTheme = theme => {
 
 const Footer = () => (
   <footer>
-    <div
-      className="footer-inner"
-      style={{
-        margin: '0 auto',
-        maxWidth: 1100,
-        padding: '1.45rem 1.0875rem',
-      }}>
+    <div className="footer-inner">
         <div className="footer-primary">
           <div>
             <strong>Quinton Jason</strong>
@@ -133,13 +127,7 @@ class TemplateWrapper extends Component {
     const isDarkMode = this.state.theme === DARK_THEME
 
     return (
-      <div className={`hey theme-${this.state.theme}`}
-          style={{
-            display: 'grid',
-            minHeight: '100vh',
-            gridTemplateRows: 'auto 1fr auto',
-
-          }}>
+      <div className={`hey layout-shell theme-${this.state.theme}`}>
         <Helmet
           title="Quinton Jason"
           meta={[
@@ -171,10 +159,7 @@ class TemplateWrapper extends Component {
         <div
           id="main-content"
           tabIndex="-1"
-          style={{
-            padding: '0',
-            paddingTop: 0,
-          }}
+          className="layout-main"
         >
           {children}
         </div>

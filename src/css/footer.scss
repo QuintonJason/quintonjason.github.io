@@ -1,5 +1,5 @@
 footer{
-	background: $lightGray;
+	background: var(--qj-color-footer);
 	text-align: left;
 }
 
@@ -12,12 +12,12 @@ footer{
 }
 
 .footer-primary strong{
-	color: $ink;
+	color: var(--qj-color-heading);
 	font-family: $mont;
 }
 
 .footer-primary p{
-	color: $gray;
+	color: var(--qj-color-muted);
 	font-size: .9rem;
 	margin: .35rem 0 0;
 }
@@ -34,17 +34,17 @@ footer{
 }
 
 .footer-nav a{
-	color: $darkGray;
+	color: var(--qj-color-text);
 }
 
 .footer-nav a:hover,
 .footer-nav a:focus{
-	color: $green;
+	color: var(--qj-color-link-hover);
 }
 
 .footer-social-nav{
 	align-items: center;
-	border-top: 1px solid rgba(29, 38, 33, .12);
+	border-top: 1px solid var(--qj-border);
 	display: grid;
 	gap: .75rem;
 	grid-template-columns: repeat(auto-fit, minmax(52px, 72px));
@@ -72,22 +72,27 @@ footer{
 		width: 24px;
 	}
 	path{
-		fill: $gray;
+		fill: var(--qj-color-muted);
 		transition: fill .2s ease;
 	}
-	.facebook-icon:hover path{
+	.facebook-icon:hover path,
+	.facebook-icon:focus path{
 		fill: $facebookColor;
 	}
-	.twitter-icon:hover path{
+	.twitter-icon:hover path,
+	.twitter-icon:focus path{
 		fill: $twitterColor;
 	}
-	.linkedin-icon:hover path{
+	.linkedin-icon:hover path,
+	.linkedin-icon:focus path{
 		fill: $linkedinColor;
 	}
-	.codepen-icon:hover path{
+	.codepen-icon:hover path,
+	.codepen-icon:focus path{
 		fill: $codepenColor;
 	}
-	.github-icon:hover path{
+	.github-icon:hover path,
+	.github-icon:focus path{
 		fill: $githubColor;
 	}	
 }

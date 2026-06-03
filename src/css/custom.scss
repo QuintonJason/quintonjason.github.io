@@ -1,10 +1,10 @@
 .home {
-  color: $ink;
+  color: var(--qj-color-heading);
 }
 
 .home-hero {
-  background: linear-gradient(135deg, $softGray 0%, $white 48%, $mint 100%);
-  border-bottom: 1px solid rgba(23, 32, 27, .08);
+  background: linear-gradient(135deg, var(--qj-color-surface-muted) 0%, var(--qj-color-surface) 48%, var(--qj-color-brand-tint) 100%);
+  border-bottom: 1px solid var(--qj-border-subtle);
 }
 
 .home-hero__inner {
@@ -19,7 +19,7 @@
 .home-hero__eyebrow,
 .section-heading__eyebrow,
 .work-card__meta {
-  color: $blue;
+  color: var(--qj-color-eyebrow);
   font-family: $mont;
   font-size: .78rem;
   font-weight: 700;
@@ -29,7 +29,7 @@
 }
 
 .home-hero__title {
-  color: $ink;
+  color: var(--qj-color-heading);
   font-size: 3.9rem;
   line-height: 1.02;
   margin: 0;
@@ -37,7 +37,7 @@
 }
 
 .home-hero__bio {
-  color: $darkGray;
+  color: var(--qj-color-text);
   font-size: 1.25rem;
   line-height: 1.65;
   max-width: 700px;
@@ -52,7 +52,7 @@
 }
 
 .button {
-  border: 2px solid $green;
+  border: 2px solid var(--qj-color-brand);
   border-radius: 4px;
   display: inline-block;
   font-family: $mont;
@@ -71,25 +71,25 @@
 }
 
 .button--primary {
-  background: $green;
+  background: var(--qj-color-brand);
   color: $white;
 }
 
 .button--primary:hover,
 .button--primary:active {
   color: $white;
-  background: $greenDark;
-  border-color: $greenDark;
+  background: var(--qj-color-brand-hover);
+  border-color: var(--qj-color-brand-hover);
 }
 
 .button--secondary {
   background: transparent;
-  color: $green;
+  color: var(--qj-color-link);
 }
 
 .button--secondary:hover,
 .button--secondary:active {
-  background: $mint;
+  background: var(--qj-color-brand-tint);
 }
 
 .home-section {
@@ -103,8 +103,8 @@
 }
 
 .home-section--quiet {
-  background: $softGray;
-  border-top: 1px solid rgba(23, 32, 27, .08);
+  background: var(--qj-color-surface-muted);
+  border-top: 1px solid var(--qj-border-subtle);
 }
 
 .section-heading {
@@ -113,13 +113,13 @@
 }
 
 .section-heading p:not(.section-heading__eyebrow) {
-  color: $darkGray;
+  color: var(--qj-color-text);
   line-height: 1.7;
 }
 
 .section-heading h2,
 .home-note h2 {
-  color: $ink;
+  color: var(--qj-color-heading);
   font-size: 2rem;
   line-height: 1.2;
   margin: 0;
@@ -135,11 +135,22 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.work-card {
-  background: $white;
-  border: 1px solid rgba(23, 32, 27, .12);
+.work-card,
+.writing-card,
+.proof-card,
+.experiment-card,
+.signal-card,
+.case-study-sidebar,
+.code-card,
+.workflow-diagram li,
+.work-entry {
+  background: var(--qj-color-surface-raised);
+  border: 1px solid var(--qj-border);
   border-radius: 6px;
-  color: $darkGray;
+  color: var(--qj-color-text);
+}
+
+.work-card {
   display: grid;
   grid-template-rows: auto auto 1fr;
   min-height: 260px;
@@ -147,7 +158,7 @@
 }
 
 .work-card h3 {
-  color: $ink;
+  color: var(--qj-color-heading);
   font-size: 1.35rem;
   line-height: 1.2;
   margin: .5rem 0 .85rem;
@@ -163,7 +174,7 @@
 }
 
 .work-card__meta {
-  color: $gold;
+  color: var(--qj-color-accent);
   display: block;
   margin-bottom: 1rem;
 }
@@ -182,11 +193,17 @@
 
 .text-link {
   align-self: end;
+  color: var(--qj-color-link);
   font-family: $mont;
   font-size: .85rem;
   font-weight: 700;
   letter-spacing: .02em;
   text-transform: uppercase;
+}
+
+.text-link:hover,
+.text-link:focus {
+  color: var(--qj-color-link-hover);
 }
 
 .button--spaced {
@@ -202,13 +219,13 @@
 }
 
 .page-hero {
-  background: $softGray;
-  border-bottom: 1px solid rgba(23, 32, 27, .08);
+  background: var(--qj-color-surface-muted);
+  border-bottom: 1px solid var(--qj-border-subtle);
 }
 
 .page-hero h1,
 .archive-intro h1 {
-  color: $ink;
+  color: var(--qj-color-heading);
   font-size: 3rem;
   line-height: 1.08;
   margin: 0;
@@ -217,7 +234,7 @@
 
 .page-hero p:not(.section-heading__eyebrow),
 .archive-intro p {
-  color: $darkGray;
+  color: var(--qj-color-text);
   font-size: 1.1rem;
   line-height: 1.65;
   max-width: 720px;
@@ -234,7 +251,7 @@
 }
 
 .about-grid h2 {
-  color: $ink;
+  color: var(--qj-color-heading);
   line-height: 1.18;
   margin-top: 0;
 }
@@ -265,7 +282,7 @@
 }
 
 .snippet-list .snippet-wrapper a {
-  background: $softGray;
+  background: var(--qj-color-surface-muted);
   display: block;
 }
 
@@ -277,13 +294,13 @@
 }
 
 .calligraphy-single figcaption {
-  color: $darkGray;
+  color: var(--qj-color-text);
   line-height: 1.65;
   margin-top: 1rem;
 }
 
 .calligraphy-single figcaption span {
-  color: $gold;
+  color: var(--qj-color-accent);
   display: block;
   font-family: $mont;
   font-size: .76rem;
@@ -306,10 +323,6 @@
 }
 
 .experiment-card {
-  background: $white;
-  border: 1px solid rgba(23, 32, 27, .12);
-  border-radius: 6px;
-  color: $darkGray;
   display: grid;
   gap: .85rem;
   grid-template-rows: auto auto 1fr auto;
@@ -317,7 +330,7 @@
 }
 
 .experiment-card span {
-  color: $gold;
+  color: var(--qj-color-accent);
   font-family: $mont;
   font-size: .76rem;
   font-weight: 700;
@@ -326,7 +339,7 @@
 }
 
 .experiment-card h3 {
-  color: $ink;
+  color: var(--qj-color-heading);
   font-size: 1.15rem;
   line-height: 1.2;
   margin: 0;
@@ -338,6 +351,7 @@
 }
 
 .experiment-card a {
+  color: var(--qj-color-link);
   font-family: $mont;
   font-size: .82rem;
   font-weight: 700;
@@ -347,27 +361,21 @@
 
 .proof-card,
 .writing-card {
-  background: $white;
-  border: 1px solid rgba(23, 32, 27, .12);
-  border-radius: 6px;
-  color: $darkGray;
   display: block;
   padding: 1.4rem;
 }
 
 .proof-card:hover,
-.proof-card:focus,
-.writing-card:hover,
-.writing-card:focus {
-  border-color: $green;
-  color: $darkGray;
+.proof-card:focus {
+  border-color: var(--qj-color-link-hover);
+  color: var(--qj-color-text);
   text-decoration: none;
 }
 
 .proof-card span,
 .writing-card__meta,
 .writing-row__date {
-  color: $gold;
+  color: var(--qj-color-accent);
   font-family: $mont;
   font-size: .76rem;
   font-weight: 700;
@@ -378,7 +386,7 @@
 .proof-card h3,
 .writing-card h2,
 .writing-row h3 {
-  color: $ink;
+  color: var(--qj-color-heading);
   line-height: 1.2;
   margin: .65rem 0 .75rem;
 }
@@ -391,13 +399,13 @@
 }
 
 .writing-hero {
-  background: $softGray;
-  border-bottom: 1px solid rgba(23, 32, 27, .08);
+  background: var(--qj-color-surface-muted);
+  border-bottom: 1px solid var(--qj-border-subtle);
   padding: 4rem 0;
 }
 
 .writing-hero h1 {
-  color: $ink;
+  color: var(--qj-color-heading);
   font-size: 3rem;
   line-height: 1.05;
   margin: 0;
@@ -405,7 +413,7 @@
 }
 
 .writing-hero p:not(.section-heading__eyebrow) {
-  color: $darkGray;
+  color: var(--qj-color-text);
   font-size: 1.15rem;
   line-height: 1.65;
   max-width: 680px;
@@ -430,7 +438,14 @@
 
 .writing-card h2 a,
 .writing-row h3 a {
-  color: inherit;
+  color: var(--qj-color-link);
+}
+
+.writing-card h2 a:hover,
+.writing-card h2 a:focus,
+.writing-row h3 a:hover,
+.writing-row h3 a:focus {
+  color: var(--qj-color-link-hover);
 }
 
 .tag-list {
@@ -443,9 +458,9 @@
 }
 
 .tag-list li {
-  background: $mint;
+  background: var(--qj-color-brand-tint);
   border-radius: 3px;
-  color: $ink;
+  color: var(--qj-color-heading);
   font-family: $mont;
   font-size: .72rem;
   font-weight: 700;
@@ -453,7 +468,7 @@
 }
 
 .writing-list {
-  border-top: 1px solid rgba(23, 32, 27, .1);
+  border-top: 1px solid var(--qj-border-subtle);
 }
 
 .writing-row {
@@ -461,7 +476,7 @@
   grid-template-columns: 180px minmax(0, 1fr);
   gap: 1.5rem;
   padding: 1.35rem 0;
-  border-bottom: 1px solid rgba(23, 32, 27, .1);
+  border-bottom: 1px solid var(--qj-border-subtle);
 }
 
 .writing-row h3 {
@@ -483,14 +498,11 @@
 }
 
 .signal-card {
-  background: $white;
-  border: 1px solid rgba(23, 32, 27, .12);
-  border-radius: 6px;
   padding: 1.25rem;
 }
 
 .signal-card dt {
-  color: $ink;
+  color: var(--qj-color-heading);
   font-family: $mont;
   font-size: 1.45rem;
   font-weight: 700;
@@ -499,16 +511,13 @@
 }
 
 .signal-card dd {
-  color: $darkGray;
+  color: var(--qj-color-text);
   font-size: .9rem;
   line-height: 1.45;
   margin: .45rem 0 0;
 }
 
 .work-entry {
-  background: $white;
-  border: 1px solid rgba(23, 32, 27, .12);
-  border-radius: 6px;
   display: grid;
   grid-template-columns: 220px minmax(0, 1fr);
   gap: 2rem;
@@ -535,7 +544,7 @@
 }
 
 .work-entry h2 {
-  color: $ink;
+  color: var(--qj-color-heading);
   line-height: 1.18;
   margin: 0 0 .75rem;
 }
@@ -546,7 +555,7 @@
 }
 
 .work-entry__meta {
-  color: $gold;
+  color: var(--qj-color-accent);
   display: flex;
   flex-direction: column;
   gap: .4rem;
@@ -569,6 +578,18 @@
   text-transform: uppercase;
 }
 
+.work-entry__links a,
+.case-study-actions a {
+  color: var(--qj-color-link);
+}
+
+.work-entry__links a:hover,
+.work-entry__links a:focus,
+.case-study-actions a:hover,
+.case-study-actions a:focus {
+  color: var(--qj-color-link-hover);
+}
+
 .case-study-layout {
   display: grid;
   gap: 2rem;
@@ -577,9 +598,6 @@
 
 .case-study-sidebar {
   align-self: start;
-  background: $softGray;
-  border: 1px solid rgba(23, 32, 27, .12);
-  border-radius: 6px;
   padding: 1.25rem;
 }
 
@@ -590,7 +608,7 @@
 }
 
 .case-study-sidebar dt {
-  color: $gold;
+  color: var(--qj-color-accent);
   font-family: $mont;
   font-size: .76rem;
   font-weight: 700;
@@ -599,7 +617,7 @@
 }
 
 .case-study-sidebar dd {
-  color: $darkGray;
+  color: var(--qj-color-text);
   line-height: 1.45;
   margin: .25rem 0 0;
 }
@@ -614,7 +632,7 @@
 }
 
 .case-study-content h2 {
-  color: $ink;
+  color: var(--qj-color-heading);
   line-height: 1.18;
   margin: 0 0 1rem;
 }
@@ -633,9 +651,9 @@
 }
 
 .tool-list li {
-  background: $mint;
+  background: var(--qj-color-brand-tint);
   border-radius: 3px;
-  color: $ink;
+  color: var(--qj-color-heading);
   font-size: .85rem;
   padding: .35rem .5rem;
 }
@@ -651,16 +669,13 @@
 }
 
 .workflow-diagram li {
-  background: $white;
-  border: 1px solid rgba(23, 32, 27, .12);
-  border-radius: 6px;
   padding: 1rem;
   position: relative;
 }
 
 .workflow-diagram span {
   align-items: center;
-  background: $green;
+  background: var(--qj-color-brand);
   border-radius: 50%;
   color: $white;
   display: inline-flex;
@@ -674,7 +689,7 @@
 }
 
 .workflow-diagram strong {
-  color: $ink;
+  color: var(--qj-color-heading);
   display: block;
   font-family: $mont;
   line-height: 1.2;
@@ -695,7 +710,7 @@
 }
 
 .outcome-list li {
-  border-left: 3px solid $green;
+  border-left: 3px solid var(--qj-color-brand);
   line-height: 1.65;
   padding-left: .85rem;
 }
@@ -707,14 +722,11 @@
 }
 
 .code-card {
-  background: $white;
-  border: 1px solid rgba(23, 32, 27, .12);
-  border-radius: 6px;
   padding: 1.25rem;
 }
 
 .code-card h3 {
-  color: $ink;
+  color: var(--qj-color-heading);
   line-height: 1.2;
   margin: 0 0 .75rem;
 }
@@ -724,7 +736,7 @@
 }
 
 .code-card pre {
-  background: $ink;
+  background: var(--qj-color-heading);
   border-radius: 4px;
   color: $white;
   font-size: .86rem;
@@ -750,7 +762,7 @@
 }
 
 .btn {
-  background: $green;
+  background: var(--qj-color-brand);
   border: 0;
   border-radius: 4px;
   color: $white;
@@ -762,7 +774,7 @@
 
 .btn:hover,
 .btn:focus {
-  background: $greenDark;
+  background: var(--qj-color-brand-hover);
 }
 
 @include desktop {

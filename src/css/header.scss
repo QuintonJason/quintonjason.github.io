@@ -2,7 +2,7 @@
 	width: 64px;
 }
 .header-wrapper{
-	border-bottom: 1px solid rgba(23, 32, 27, .08);
+	border-bottom: 1px solid var(--qj-border-subtle);
 	align-items: center;
 }
 .header-nav{
@@ -14,7 +14,7 @@
 }
 .header-nav .header-link{
 	margin-left: 0;
-	color: $darkGray;
+	color: var(--qj-color-text);
 	font-size: .85rem;
 	font-weight: 700;
 	letter-spacing: .02em;
@@ -22,7 +22,7 @@
 }
 .header-nav .header-link:hover,
 .header-nav .header-link.active{
-	color: $green;
+	color: var(--qj-color-link-hover);
 }
 
 @include phone {
