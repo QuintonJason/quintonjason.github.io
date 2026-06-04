@@ -1,2 +1,2 @@
-webpackJsonp([0xd26752e0a30],{435:function(a,n){a.exports={data:{gistsJson:{id:"f8a677fb422e84afa2f6",description:"A Pen by Quinton Jason."}},pathContext:{slug:"/snippets/f8a677fb422e84afa2f6"}}}});
+webpackJsonp([0xd26752e0a30],{505:function(a,n){a.exports={data:{gistsJson:{id:"f8a677fb422e84afa2f6",description:"A Pen by Quinton Jason."}},pathContext:{slug:"/snippets/f8a677fb422e84afa2f6"}}}});
 //# sourceMappingURL=path---snippets-f-8-a-677-fb-422-e-84-afa-2-f-6-c15488e7a5146cdbb256.js.map
