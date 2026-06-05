@@ -11,7 +11,7 @@ const formatDate = timestamp =>
 
 export default ({ data }) => {
   const post = data.igPostsJson;
-  const imageUrl = `/images/${post.id}.jpg`;
+  const imageUrl = post.media?.publicURL || `/images/${post.jsonId}.jpg`;
 
   return (
     <main className="container calligraphy-single">
@@ -41,10 +41,13 @@ export default ({ data }) => {
 export const query = graphql`
   query IGQuery($slug: String!) {
     igPostsJson(fields: { slug: { eq: $slug } }) {
-      id
+      jsonId
       caption
       date
       image
+      media {
+        publicURL
+      }
     }
   }
 `;

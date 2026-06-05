@@ -33,6 +33,24 @@ const featuredWork = [
       "Developer Experience",
       "Frontend Architecture"
     ]
+  },
+  {
+    id: "learn-quintonjason",
+    title: "Learn.QuintonJason.com",
+    description:
+      "An interactive learning platform built to support university-level web design and frontend development instruction. The site turns course material into a structured online experience covering HTML, CSS, JavaScript, accessibility, responsive design, UX, and modern frontend workflows.",
+    meta: "Teaching and Educational UX",
+    url: "http://learn.quintonjason.com/",
+    tags: [
+      "Teaching",
+      "Frontend Development",
+      "Educational UX",
+      "Accessibility",
+      "Information Architecture",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ]
   }
 ];
 
@@ -169,7 +187,8 @@ const Index = () => (
           <h2>Pine is the center of my current design systems work.</h2>
           <p>
             I spent years building design systems for humans. Now I am helping
-            design systems work for AI-assisted development too.
+            design systems work for AI-assisted development too. My work
+            connects systems, teaching, and adoption.
           </p>
         </div>
         <div className="work-grid work-grid--featured">
@@ -185,7 +204,11 @@ const Index = () => (
               </ul>
               <div className="work-entry__links">
                 <ActionLink to={item.url}>
-                  {item.title === "Pine MCP" ? "Read about Pine MCP" : "View Pine case study"}
+                  {item.title === "Pine MCP"
+                    ? "Read about Pine MCP"
+                    : item.title === "Learn.QuintonJason.com"
+                    ? "View learning platform"
+                    : "View Pine case study"}
                 </ActionLink>
               </div>
             </article>
@@ -201,11 +224,11 @@ const Index = () => (
           <h2>Design system knowledge where product work happens.</h2>
         </div>
         <p>
-          I help evolve Pine, a multi-platform design system used by 40+
-          engineers across 6 product teams. My recent work explores how AI
-          assistants can consume design system knowledge so generated code
-          follows established components, tokens, accessibility standards, and
-          implementation patterns.
+          I build design systems for product teams, create AI workflows that
+          help those systems scale, and teach web design through a learning
+          platform built from my LSU curriculum. At Kajabi, I help evolve Pine,
+          a multi-platform design system used by 40+ engineers across 6 product
+          teams.
         </p>
         <Link to="/work/" className="text-link">
           View more work

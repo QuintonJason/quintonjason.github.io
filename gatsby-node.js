@@ -22,7 +22,8 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     // Add slug as a field on the node.
     createNodeField({ node, name: "slug", value: slug });
   } else if (node.internal.type === "IgPostsJson") {
-    slug = `/calligraphy/${node.id}`;
+    const postId = node.jsonId || node.id;
+    slug = `/calligraphy/${postId}/`;
     // Add slug as a field on the node.
     createNodeField({ node, name: "slug", value: slug });
   }

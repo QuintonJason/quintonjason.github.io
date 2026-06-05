@@ -56,7 +56,9 @@ const Work = () => (
           I build systems that help product teams ship consistent, accessible
           experiences at scale. My work spans component APIs, semantic tokens,
           governance, documentation, developer experience, accessibility, and
-          emerging AI-native design system workflows.
+          emerging AI-native design system workflows. I also teach web design
+          through a learning platform built from my LSU curriculum, which
+          turns technical systems into structured, teachable material.
         </p>
       </div>
     </section>
@@ -93,6 +95,8 @@ const Work = () => (
                 ? "pine-mcp"
                 : item.title === "Pine Design System"
                 ? "pine-design-system"
+                : item.title === "Learn.QuintonJason.com"
+                ? "learn-quintonjason"
                 : undefined
             }
             key={item.title}

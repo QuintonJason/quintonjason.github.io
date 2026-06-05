@@ -84,6 +84,13 @@ const About = () => (
             practice as an archive of the same throughline: craft, constraints,
             and curiosity.
           </p>
+          <p>
+            Outside of product work, I teach web design and frontend development
+            at Louisiana State University. I recently turned my course book into
+            Learn.QuintonJason.com, a learning platform for students building
+            foundations in HTML, CSS, JavaScript, accessibility, responsive
+            design, and UX.
+          </p>
         </div>
       </div>
     </section>
@@ -130,8 +137,23 @@ const About = () => (
             <span>LSU College of Art & Design</span>
             <h3>Part-time instructor</h3>
             <p>
-              Teaching web UX foundations in the LSU School of Art and helping
-              students connect interface decisions to real web constraints.
+              Teaching web UX foundations in the LSU School of Art, including
+              HTML, CSS, JavaScript, accessibility, responsive design, and the
+              systems thinking behind maintainable interfaces.
+            </p>
+          </a>
+          <a
+            href="http://learn.quintonjason.com/"
+            className="proof-card"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>Learning Platform</span>
+            <h3>Learn.QuintonJason.com</h3>
+            <p>
+              A structured course platform that makes frontend concepts easier
+              to teach, practice, and adopt through lessons, projects, demos,
+              and common debugging paths.
             </p>
           </a>
           <a

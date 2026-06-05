@@ -47,6 +47,28 @@
     ]
   },
   {
+    "title": "Learn.QuintonJason.com",
+    "summary": "An online learning platform built from my web design curriculum to help students learn HTML, CSS, JavaScript, accessibility, responsive design, UX foundations, and modern frontend workflows. The project demonstrates educational UX, frontend architecture, technical communication, curriculum design, information architecture, and the ability to make complex technical concepts teachable.",
+    "role": "Instructor / Frontend Architect",
+    "status": "Teaching and adoption platform",
+    "links": [
+      {
+        "label": "Visit learning platform",
+        "url": "http://learn.quintonjason.com/"
+      }
+    ],
+    "topics": [
+      "Teaching",
+      "Frontend Development",
+      "Educational UX",
+      "Accessibility",
+      "Information Architecture",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ]
+  },
+  {
     "title": "Dark Mode for Kajabi Admin",
     "summary": "A theming architecture project that helped dark mode scale across Kajabi Admin, including Rails views, React applications, Pine components, Sage legacy surfaces, TinyMCE iframes, semantic tokens, feature flags, and persistent user preferences.",
     "role": "Senior UX Developer",
@@ -104,18 +126,5 @@
       }
     ],
     "topics": ["Documentation", "DX", "Contribution Models", "Team Workflows"]
-  },
-  {
-    "title": "Web UX education",
-    "summary": "Teaching and mentoring students in web design, interaction design, front-end development, accessibility, responsive design, and systems thinking. Teaching keeps the fundamentals sharp and reinforces the mental models behind strong UI architecture.",
-    "role": "Instructor",
-    "status": "Teaching",
-    "links": [
-      {
-        "label": "LSU faculty profile",
-        "url": "https://design.lsu.edu/faculty/jason-quinton/"
-      }
-    ],
-    "topics": ["Teaching", "UX", "HTML", "CSS", "JavaScript"]
   }
 ]
