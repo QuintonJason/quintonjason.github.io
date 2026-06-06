@@ -10,7 +10,7 @@ After 15 seconds:
 
 - **Who is this person?** A Senior Design Engineer with a design systems and frontend architecture focus.
 - **Specialization:** Design systems, frontend architecture, accessibility, developer workflows, and AI-assisted design system adoption.
-- **Evidence:** Homepage proof strip: `40+ engineers`, `6 product teams`, `40 components`, `4-repo architecture`, `MCP`, `diff-gated migration enforcement`.
+- **Evidence:** Homepage proof strip: `40+ engineers`, `6 product teams`, `40 components`, `4-repo architecture`, `MCP`, `migration enforcement`.
 - **Three strongest things built:** Pine Design System, Pine MCP, Learn.QuintonJason.com. Dark Mode for Kajabi Admin is also strong but feels secondary.
 - **Would I continue?** Yes, for design systems, UX engineering, or frontend platform roles. But I would still want stronger visual proof before feeling confident for design-heavy companies.
 
@@ -115,7 +115,7 @@ Brutal read: the narrative is strong. The proof is promising. The missing piece 
 | 2 | Add Pine MCP before/after generated-code example | Medium | High | Makes the AI workflow believable fast. |
 | 3 | Add a "What I owned" block to each case study | Low | High | Clarifies leadership and avoids "team did this" ambiguity. |
 | 4 | Add component examples from Pine | Medium | High | Proves 40 components and visual/frontend craft. |
-| 5 | Add governance enforcement visual | Low | High | Linting, migration, and diff-gating are strong senior signals. |
+| 5 | Add governance enforcement visual | Low | High | Linting, migration guidance, and policy enforcement are strong senior signals. Keep examples conceptual and public-safe. |
 | 6 | Add accessibility architecture examples | Medium | High | Turns accessibility from value claim into implementation proof. |
 | 7 | Add product/user impact framing | Medium | Medium | Helps non-technical hiring managers understand why it mattered. |
 | 8 | Add Learn site screenshots to the card/case study | Low | Medium | Makes teaching/communication feel real immediately. |

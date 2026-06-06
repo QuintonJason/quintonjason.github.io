@@ -14,6 +14,8 @@ const evidenceSections = [
     layout: "media-right",
     eyebrow: "Architecture",
     title: "Pine is product infrastructure, not only a component library.",
+    lead:
+      "First, Pine had to work across product surfaces, technology stacks, and adoption paths.",
     image: "/images/pine-case-study/getting-started.png",
     alt:
       "Pine documentation getting started page showing install guidance, first component rendering, and token usage.",
@@ -29,9 +31,32 @@ const evidenceSections = [
       "Pine can serve as a cross-platform system for product teams instead of a narrow implementation library."
   },
   {
+    layout: "media-full",
+    spotlight: true,
+    eyebrow: "Migration Strategy",
+    title: "Moving teams to Pine was as important as building Pine.",
+    lead:
+      "A design system only matters when teams can move real product work into it without stopping delivery.",
+    image: "/images/pine-case-study/sage-to-pine-migration.png",
+    alt:
+      "Pine Sage to Pine migration guide showing a mental model shift and quick mapping table from legacy markup to Pine approaches.",
+    caption:
+      "Migration docs map legacy Sage and raw HTML habits to Pine equivalents so teams can modernize incrementally.",
+    problem:
+      "Teams were carrying forward Sage-era layout habits, raw HTML, utility classes, and hardcoded styling into new UI.",
+    decision:
+      "Frame migration as a mental model shift: component-first, semantic content, props for spacing, and tokens for color.",
+    tradeoff:
+      "Gradual migration is slower than a rewrite, but it is safer for a large product surface with active teams.",
+    outcome:
+      "Teams get a practical bridge from legacy UI to Pine without blocking product work on a full rewrite."
+  },
+  {
     layout: "media-left",
     eyebrow: "Design Tokens",
     title: "Tokens turn raw color decisions into semantic product language.",
+    lead:
+      "Once teams had an adoption path, consistency needed to live in the language of the system.",
     image: "/images/pine-case-study/token-naming-convention.png",
     alt:
       "Pine token naming convention documentation showing namespace, base, context, and modifier examples.",
@@ -50,6 +75,8 @@ const evidenceSections = [
     layout: "compact",
     eyebrow: "Token Mapping",
     title: "Mapping references help teams migrate from raw values to semantic tokens.",
+    lead:
+      "Token adoption needed a reference that connected old implementation habits to new product meaning.",
     image: "/images/pine-case-study/token-mapping-reference.png",
     alt:
       "Pine token mapping reference showing core tokens, semantic tokens, and use cases for text and background colors.",
@@ -65,9 +92,31 @@ const evidenceSections = [
       "Token migration becomes a clearer implementation path rather than a scavenger hunt through color names."
   },
   {
+    layout: "media-right",
+    eyebrow: "Developer Experience",
+    title: "Component docs make API decisions visible at the point of use.",
+    lead:
+      "Adoption also depended on docs that helped engineers make the right implementation decision while building.",
+    image: "/images/pine-case-study/button-examples.png",
+    alt:
+      "Pine button documentation showing primary, secondary, tertiary, and accent button examples with React and web component tabs.",
+    caption:
+      "Button examples show variants, disabled states, icon usage, and implementation tabs for React and web components.",
+    problem:
+      "Component adoption slows down when engineers have to infer variants, states, or implementation details from scattered examples.",
+    decision:
+      "Document components with live examples, variants, state guidance, and implementation tabs.",
+    tradeoff:
+      "Better docs require ongoing upkeep, but they reduce repeated design system support requests.",
+    outcome:
+      "Engineers can choose the right component behavior faster and with fewer one-off UI decisions."
+  },
+  {
     layout: "media-full",
     eyebrow: "Accessibility",
     title: "Accessibility guidance is part of the component contract.",
+    lead:
+      "As Pine became the path for product UI, accessibility had to be part of the component contract instead of a late review step.",
     image: "/images/pine-case-study/accessibility-guide-light.png",
     alt:
       "Pine accessibility guide in light mode showing WCAG Level AA guidance, keyboard navigation principles, and ARIA patterns.",
@@ -87,6 +136,8 @@ const evidenceSections = [
     compact: true,
     eyebrow: "Dark Mode + Accessibility",
     title: "The same accessibility guidance has to hold across themes.",
+    lead:
+      "Theme support made the accessibility contract more visible across contrast, focus, and component states.",
     image: "/images/pine-case-study/accessibility-guide-dark.png",
     alt:
       "Pine accessibility guide in dark mode showing the same keyboard navigation and ARIA guidance in a dark theme.",
@@ -101,42 +152,6 @@ const evidenceSections = [
     outcome:
       "Accessibility standards stay connected to real component rendering across themes."
   },
-  {
-    layout: "media-full",
-    eyebrow: "Migration Strategy",
-    title: "Migration guidance translates Sage-era habits into Pine patterns.",
-    image: "/images/pine-case-study/sage-to-pine-migration.png",
-    alt:
-      "Pine Sage to Pine migration guide showing a mental model shift and quick mapping table from legacy markup to Pine approaches.",
-    caption:
-      "Migration docs map legacy Sage and raw HTML habits to Pine equivalents so teams can modernize incrementally.",
-    problem:
-      "Teams were carrying forward Sage-era layout habits, raw HTML, utility classes, and hardcoded styling into new UI.",
-    decision:
-      "Frame migration as a mental model shift: component-first, semantic content, props for spacing, and tokens for color.",
-    tradeoff:
-      "Gradual migration is slower than a rewrite, but it is safer for a large product surface with active teams.",
-    outcome:
-      "Teams get a practical bridge from legacy UI to Pine without blocking product work on a full rewrite."
-  },
-  {
-    layout: "media-right",
-    eyebrow: "Developer Experience",
-    title: "Component docs make API decisions visible at the point of use.",
-    image: "/images/pine-case-study/button-examples.png",
-    alt:
-      "Pine button documentation showing primary, secondary, tertiary, and accent button examples with React and web component tabs.",
-    caption:
-      "Button examples show variants, disabled states, icon usage, and implementation tabs for React and web components.",
-    problem:
-      "Component adoption slows down when engineers have to infer variants, states, or implementation details from scattered examples.",
-    decision:
-      "Document components with live examples, variants, state guidance, and implementation tabs.",
-    tradeoff:
-      "Better docs require ongoing upkeep, but they reduce repeated design system support requests.",
-    outcome:
-      "Engineers can choose the right component behavior faster and with fewer one-off UI decisions."
-  }
 ];
 
 const architectureRepos = [
@@ -158,6 +173,7 @@ const EvidenceSection = ({ section }) => {
   const classes = [
     "evidence-section",
     `evidence-section--${section.layout}`,
+    section.spotlight ? "evidence-section--spotlight" : "",
     section.compact ? "evidence-section--compact" : ""
   ]
     .filter(Boolean)
@@ -168,6 +184,7 @@ const EvidenceSection = ({ section }) => {
     <div className="evidence-section__content">
       <p className="section-heading__eyebrow">{section.eyebrow}</p>
       <h2>{section.title}</h2>
+      {section.lead && <p className="evidence-section__lead">{section.lead}</p>}
       <dl className="decision-list">
         <div>
           <dt>Problem</dt>
@@ -280,6 +297,13 @@ const PineDesignSystemCaseStudy = () => (
                 legacy migration at the same time.
               </p>
             </div>
+            <ol className="architecture-map" aria-label="Pine architecture flow">
+              <li className="architecture-map__tokens">ds-tokens</li>
+              <li className="architecture-map__pine">pine</li>
+              <li className="architecture-map__products">kajabi-products</li>
+              <li className="architecture-map__mcp">pine-mcp</li>
+              <li className="architecture-map__ai">AI assistants</li>
+            </ol>
           </section>
         </div>
 
@@ -292,6 +316,11 @@ const PineDesignSystemCaseStudy = () => (
             <div className="evidence-section__content">
               <p className="section-heading__eyebrow">Pine MCP / AI Workflows</p>
               <h2>Design system knowledge has to reach AI-assisted development tools.</h2>
+              <p className="evidence-section__lead">
+                After Pine had structure, adoption guidance, and standards, the next
+                question was how AI-assisted development could consume the same system
+                knowledge.
+              </p>
               <dl className="decision-list">
                 <div>
                   <dt>Problem</dt>
