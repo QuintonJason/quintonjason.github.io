@@ -1381,6 +1381,11 @@ footer {
 
 .case-study-layout {
   display: grid;
+  gap: clamp(3rem, 7vw, 5.5rem);
+}
+
+.case-study-overview {
+  display: grid;
   gap: 2rem;
   grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
 }
@@ -1413,11 +1418,11 @@ footer {
 
 .case-study-content {
   display: grid;
-  gap: 3rem;
+  gap: clamp(3rem, 7vw, 5.5rem);
 }
 
 .case-study-content section {
-  max-width: 780px;
+  max-width: none;
 }
 
 .case-study-content h2 {
@@ -1428,6 +1433,167 @@ footer {
 
 .case-study-content p {
   line-height: 1.75;
+}
+
+.case-study-proof {
+  background: var(--qj-color-surface-dark);
+  border-bottom: 1px solid var(--qj-border-dark);
+  border-top: 1px solid var(--qj-border-dark);
+  color: var(--qj-color-text-dark);
+  padding: clamp(1.25rem, 3vw, 2rem) 0;
+}
+
+.proof-strip--case-study {
+  margin: 0;
+}
+
+.case-study-proof .proof-strip dt {
+  color: var(--qj-color-heading-dark);
+}
+
+.case-study-proof .proof-strip dd {
+  color: var(--qj-color-text-dark);
+}
+
+.evidence-intro,
+.evidence-section {
+  border-top: 1px solid var(--qj-border);
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  padding-top: clamp(2.25rem, 6vw, 4.5rem);
+}
+
+.evidence-section {
+  align-items: center;
+  grid-template-columns: minmax(20rem, 0.68fr) minmax(34rem, 1.32fr);
+}
+
+.evidence-section--media-left {
+  grid-template-columns: minmax(34rem, 1.32fr) minmax(20rem, 0.68fr);
+}
+
+.evidence-section--media-left .evidence-figure {
+  order: -1;
+}
+
+.evidence-section--media-full {
+  align-items: start;
+  grid-template-columns: 1fr;
+}
+
+.evidence-section--media-full .evidence-section__content {
+  max-width: 760px;
+}
+
+.evidence-section--compact {
+  align-items: start;
+}
+
+.evidence-section--diagram,
+.evidence-section--outcomes {
+  grid-template-columns: minmax(0, 0.84fr) minmax(22rem, 1.16fr);
+}
+
+.evidence-section__content {
+  display: grid;
+  gap: 1rem;
+}
+
+.decision-list {
+  display: grid;
+  gap: 0.85rem 1rem;
+  margin: 0;
+}
+
+.decision-list div {
+  border-left: 3px solid var(--qj-border-strong);
+  padding-left: 0.85rem;
+}
+
+.decision-list dt {
+  color: var(--qj-color-accent);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+}
+
+.decision-list dd {
+  color: var(--qj-color-text);
+  font-size: 0.94rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.evidence-section--media-full .decision-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 920px;
+}
+
+.evidence-section--compact .decision-list {
+  gap: 0.65rem;
+}
+
+.evidence-figure {
+  align-self: start;
+  background: var(--qj-color-surface-raised);
+  border: 1px solid var(--qj-border);
+  border-radius: 10px;
+  box-shadow: var(--qj-shadow-subtle);
+  margin: 0;
+  overflow: hidden;
+}
+
+.evidence-section--media-full .evidence-figure {
+  inline-size: 100%;
+}
+
+.evidence-figure img {
+  background: var(--qj-color-surface);
+  display: block;
+  height: auto;
+  inline-size: 100%;
+}
+
+.evidence-figure figcaption {
+  border-top: 1px solid var(--qj-border);
+  color: var(--qj-color-muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+  padding: 0.85rem 1rem;
+}
+
+.evidence-callout,
+.workflow-feature {
+  background: linear-gradient(135deg, var(--qj-color-surface-raised), var(--qj-color-surface));
+  border: 1px solid var(--qj-border);
+  border-left: 4px solid var(--qj-color-brand);
+  border-radius: 10px;
+  margin-top: 1rem;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.evidence-callout strong {
+  color: var(--qj-color-heading);
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0.35rem;
+}
+
+.evidence-callout p,
+.workflow-feature p {
+  margin-bottom: 0;
+}
+
+.outcome-list--evidence {
+  align-self: start;
+  background: var(--qj-color-surface-raised);
+  border: 1px solid var(--qj-border);
+  border-radius: 8px;
+  margin: 0;
+  padding: 1.25rem 1.25rem 1.25rem 2.5rem;
 }
 
 .tool-list {
@@ -1453,7 +1619,7 @@ footer {
   gap: 1rem;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   list-style: none;
-  margin: 1.5rem 0 0;
+  margin: 1rem 0 0;
   padding-left: 0;
 }
 
@@ -1678,8 +1844,13 @@ footer {
     grid-template-columns: 1fr;
   }
   .case-study-layout,
+  .case-study-overview,
   .code-comparison,
-  .workflow-diagram {
+  .workflow-diagram,
+  .evidence-section--media-full .decision-list,
+  .evidence-section,
+  .evidence-section--diagram,
+  .evidence-section--outcomes {
     grid-template-columns: 1fr;
   }
   .writing-row {
