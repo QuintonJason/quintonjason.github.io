@@ -169,26 +169,73 @@ const outcomeItems = [
   "Extended design system adoption into AI-assisted development workflows through Pine MCP."
 ];
 
-const governanceItems = [
+const systemWorkflows = [
   {
-    title: "Document",
-    description:
-      "Make component, token, accessibility, and migration expectations explicit."
+    title: "Documentation -> Validation -> Enforcement",
+    purpose: "Pine goes beyond documentation.",
+    copy:
+      "Documentation alone does not create consistency. Pine reinforces standards through validation, migration tooling, and AI-assisted workflows that help teams make the right decision at the moment work happens.",
+    steps: [
+      "Documentation",
+      "Lint Rules",
+      "Migration Tooling",
+      "AI Validation",
+      "Adoption"
+    ]
   },
   {
-    title: "Guide",
-    description:
-      "Translate legacy Sage and raw HTML habits into Pine component and token choices."
+    title: "Detect -> Context -> Generate -> Validate",
+    purpose: "Pine MCP changes AI-assisted development.",
+    copy:
+      "Rather than treating AI as a separate workflow, Pine MCP exposes design system knowledge directly to AI assistants so generated code aligns with established components, tokens, accessibility standards, and implementation patterns.",
+    steps: [
+      "User Request",
+      "Detect Pine Context",
+      "Retrieve Design System Guidance",
+      "Generate UI",
+      "Validate Against Pine",
+      "Fix Issues",
+      "Ship"
+    ]
   },
   {
-    title: "Enforce",
-    description:
-      "Move repeatable rules into linting, migration checks, and changed-line validation."
+    title: "Design -> Tokens -> Components -> Product",
+    purpose: "Design decisions travel into production.",
+    copy:
+      "A shared token architecture creates a direct path from design decisions to production implementation.",
+    steps: [
+      "Figma",
+      "Tokens Studio",
+      "Style Dictionary",
+      "Pine Components",
+      "Product Teams"
+    ]
   },
   {
-    title: "Validate",
-    description:
-      "Use Pine MCP to help generated UI follow system rules before product review."
+    title: "Legacy -> Bridge -> Pine",
+    purpose: "Migration works as adoption strategy.",
+    copy:
+      "Migration was treated as a product problem, not a rewrite project. Teams could move incrementally without stopping feature development.",
+    steps: [
+      "Legacy Sage",
+      "Compatibility Layer",
+      "Migration Guidance",
+      "Pine Components",
+      "Shared Standards"
+    ]
+  },
+  {
+    title: "Build -> Teach -> Scale",
+    purpose: "Teaching and systems use the same adoption model.",
+    copy:
+      "Teaching and design systems share the same goal: helping people understand and apply a model consistently.",
+    steps: [
+      "Build Systems",
+      "Teach Systems",
+      "Create Documentation",
+      "Enable Adoption",
+      "Scale Teams"
+    ]
   }
 ];
 
@@ -234,6 +281,21 @@ const EvidenceSection = ({ section }) => {
   </section>
   );
 };
+
+const WorkflowCard = ({ workflow }) => (
+  <article className="system-workflow-card">
+    <div className="system-workflow-card__content">
+      <span>{workflow.purpose}</span>
+      <h3>{workflow.title}</h3>
+      <p>{workflow.copy}</p>
+    </div>
+    <ol className="system-workflow-card__flow" aria-label={`${workflow.title} workflow`}>
+      {workflow.steps.map(step => (
+        <li key={step}>{step}</li>
+      ))}
+    </ol>
+  </article>
+);
 
 const PineDesignSystemCaseStudy = () => (
   <main className="case-study-page">
@@ -342,133 +404,26 @@ const PineDesignSystemCaseStudy = () => (
         </div>
 
         <div className="case-study-content">
+          <section className="system-workflows-section">
+            <div className="section-heading">
+              <p className="section-heading__eyebrow">How Pine Works</p>
+              <h2>Key system workflows behind governance, adoption, and scale.</h2>
+              <p>
+                Pine is not one workflow. It is a set of repeatable paths that
+                connect documentation, validation, migration, tokens, product
+                teams, and AI-assisted development.
+              </p>
+            </div>
+            <div className="system-workflow-grid">
+              {systemWorkflows.map(workflow => (
+                <WorkflowCard workflow={workflow} key={workflow.title} />
+              ))}
+            </div>
+          </section>
+
           {evidenceSections.map(section => (
             <EvidenceSection section={section} key={section.eyebrow} />
           ))}
-
-          <section className="evidence-section evidence-section--diagram evidence-section--media-full">
-            <div className="evidence-section__content">
-              <p className="section-heading__eyebrow">Governance and Enforcement</p>
-              <h2>Rules had to move from documentation into the workflow.</h2>
-              <p className="evidence-section__lead">
-                Instead of relying on documentation alone, Pine needed adoption
-                paths that could guide teams during implementation, migration,
-                review, and AI-assisted code generation.
-              </p>
-              <dl className="decision-list">
-                <div>
-                  <dt>Problem</dt>
-                  <dd>
-                    Documentation explained the system, but teams still needed
-                    help catching hardcoded colors, legacy Sage patterns, and
-                    bypassed component choices during real product work.
-                  </dd>
-                </div>
-                <div>
-                  <dt>Decision</dt>
-                  <dd>
-                    Treat linting, migration guidance, changed-line checks, and
-                    Pine MCP validation as part of the governance model.
-                  </dd>
-                </div>
-                <div>
-                  <dt>Tradeoff</dt>
-                  <dd>
-                    Enforcement adds maintenance cost, but it reduces review
-                    churn and keeps standards closer to implementation.
-                  </dd>
-                </div>
-                <div>
-                  <dt>Outcome</dt>
-                  <dd>
-                    Teams get a system that teaches, guides, and validates
-                    choices where product decisions are made.
-                  </dd>
-                </div>
-              </dl>
-            </div>
-            <div className="workflow-feature workflow-feature--governance">
-              <p className="section-heading__eyebrow">Governance model</p>
-              <ol className="workflow-diagram" aria-label="Pine governance workflow">
-                {governanceItems.map((item, index) => (
-                  <li key={item.title}>
-                    <span>{index + 1}</span>
-                    <strong>{item.title}</strong>
-                    <p>{item.description}</p>
-                  </li>
-                ))}
-              </ol>
-            </div>
-          </section>
-
-          <section className="evidence-section evidence-section--diagram evidence-section--media-full">
-            <div className="evidence-section__content">
-              <p className="section-heading__eyebrow">Pine MCP / AI Workflows</p>
-              <h2>Design system knowledge has to reach AI-assisted development tools.</h2>
-              <p className="evidence-section__lead">
-                After Pine had structure, adoption guidance, and standards, the next
-                question was how AI-assisted development could consume the same system
-                knowledge.
-              </p>
-              <dl className="decision-list">
-                <div>
-                  <dt>Problem</dt>
-                  <dd>
-                    Engineers were using AI assistants to move faster, but generated
-                    UI could drift toward generic markup, Tailwind, or shadcn-style
-                    patterns instead of Pine.
-                  </dd>
-                </div>
-                <div>
-                  <dt>Decision</dt>
-                  <dd>
-                    Pine MCP exposes component, token, icon, design doc,
-                    accessibility, composition, and anti-pattern guidance to
-                    AI-assisted development workflows.
-                  </dd>
-                </div>
-                <div>
-                  <dt>Tradeoff</dt>
-                  <dd>
-                    The work is not machine learning engineering. It is workflow
-                    design, system context, and generated-code quality control.
-                  </dd>
-                </div>
-                <div>
-                  <dt>Outcome</dt>
-                  <dd>
-                    AI-assisted UI work can start from Pine context and be reviewed
-                    against system rules before product review.
-                  </dd>
-                </div>
-              </dl>
-            </div>
-            <div className="workflow-feature">
-              <p className="section-heading__eyebrow">MCP workflow</p>
-              <ol className="workflow-diagram" aria-label="Pine MCP workflow">
-                <li>
-                  <span>1</span>
-                  <strong>Detect</strong>
-                  <p>Identify when generated UI should use Pine.</p>
-                </li>
-                <li>
-                  <span>2</span>
-                  <strong>Retrieve</strong>
-                  <p>Get component, token, icon, doc, accessibility, and pattern context.</p>
-                </li>
-                <li>
-                  <span>3</span>
-                  <strong>Compose</strong>
-                  <p>Use Pine components and tokens instead of generic markup.</p>
-                </li>
-                <li>
-                  <span>4</span>
-                  <strong>Validate</strong>
-                  <p>Review layouts against Pine rules and anti-patterns.</p>
-                </li>
-              </ol>
-            </div>
-          </section>
 
           <section className="evidence-section evidence-section--outcomes">
             <div className="evidence-section__content">

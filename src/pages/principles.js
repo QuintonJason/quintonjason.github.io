@@ -150,9 +150,10 @@ const Principles = () => (
           writing all point at the same problem: systems only matter when people
           and tools can actually use them.
         </p>
-        <Link to="/work/" className="text-link">
-          View work
-        </Link>
+        <div className="case-study-actions">
+          <Link to="/influence-through-systems/">Influence through systems</Link>
+          <Link to="/work/">View work</Link>
+        </div>
       </div>
     </section>
   </main>

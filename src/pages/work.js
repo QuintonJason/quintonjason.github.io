@@ -177,7 +177,12 @@ const Work = () => (
             My projects connect through a simple idea: build systems, teach
             systems, and help AI work with systems.
           </p>
-          <Link to="/principles/">Read Notes From Building Systems</Link>
+          <div className="work-principles-callout__links">
+            <Link to="/principles/">Read Notes From Building Systems</Link>
+            <Link to="/influence-through-systems/">
+              See Influence Through Systems
+            </Link>
+          </div>
         </div>
         <div className="section-heading">
           <p className="section-heading__eyebrow">Current Focus</p>

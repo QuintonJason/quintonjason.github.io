@@ -1492,6 +1492,13 @@ footer {
   justify-content: space-between;
 }
 
+.work-principles-callout__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  justify-content: flex-end;
+}
+
 .work-principles-callout p,
 .principles-intro p {
   color: var(--qj-color-text);
@@ -1580,6 +1587,79 @@ footer {
   flex-wrap: wrap;
   gap: 0.5rem 1rem;
   margin-top: 1rem;
+}
+
+.influence-hero h1 {
+  max-width: 980px;
+}
+
+.influence-layout {
+  display: grid;
+  gap: clamp(3rem, 7vw, 5rem);
+}
+
+.influence-section {
+  border-top: 1px solid var(--qj-border);
+  padding-top: clamp(2.25rem, 6vw, 4rem);
+}
+
+.influence-section:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.influence-example-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.influence-example-card {
+  background: var(--qj-color-surface-raised);
+  border: 1px solid var(--qj-border);
+  border-radius: 8px;
+  box-shadow: var(--qj-shadow-subtle);
+  color: var(--qj-color-text);
+  padding: clamp(1.25rem, 3vw, 1.5rem);
+}
+
+.influence-example-card h3 {
+  color: var(--qj-color-heading);
+  font-size: 1.35rem;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+}
+
+.influence-example-card dl {
+  display: grid;
+  gap: 0.85rem;
+  margin: 0;
+}
+
+.influence-example-card dt {
+  color: var(--qj-color-accent);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+
+.influence-example-card dd {
+  font-size: 0.94rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.influence-example-card dl div {
+  border-left: 3px solid var(--qj-border-strong);
+  padding-left: 0.85rem;
+}
+
+.influence-example-card dl div:nth-child(3),
+.influence-example-card dl div:nth-child(5) {
+  border-left-color: var(--qj-color-brand);
 }
 
 .case-study-layout {
@@ -2310,6 +2390,80 @@ footer {
   margin: 0.5rem 0 0;
 }
 
+.system-workflows-section {
+  border-top: 1px solid var(--qj-border);
+  padding-top: clamp(2.25rem, 6vw, 4.5rem);
+}
+
+.system-workflow-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.system-workflow-card {
+  background: var(--qj-color-surface-raised);
+  border: 1px solid var(--qj-border);
+  border-radius: 10px;
+  box-shadow: var(--qj-shadow-subtle);
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0, 0.86fr) minmax(320px, 1.14fr);
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.system-workflow-card__content span {
+  color: var(--qj-color-accent);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.system-workflow-card h3 {
+  color: var(--qj-color-heading);
+  font-size: clamp(1.35rem, 3vw, 1.9rem);
+  line-height: 1.15;
+  margin: 0.55rem 0 0.85rem;
+}
+
+.system-workflow-card p {
+  line-height: 1.65;
+  margin: 0;
+}
+
+.system-workflow-card__flow {
+  align-self: center;
+  display: grid;
+  gap: 0.65rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.system-workflow-card__flow li {
+  background: var(--qj-color-surface);
+  border: 1px solid var(--qj-border);
+  border-left: 4px solid var(--qj-color-brand);
+  border-radius: 6px;
+  color: var(--qj-color-heading);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.86rem;
+  font-weight: 700;
+  padding: 0.7rem 0.85rem;
+  position: relative;
+}
+
+.system-workflow-card__flow li:not(:last-child)::after {
+  bottom: -0.78rem;
+  color: var(--qj-color-brand);
+  content: "↓";
+  font-size: 0.95rem;
+  left: 1rem;
+  position: absolute;
+  z-index: 1;
+}
+
 .mcp-artifact,
 .change-grid {
   display: grid;
@@ -2570,6 +2724,8 @@ footer {
   .change-grid,
   .mcp-artifact,
   .practice-grid,
+  .influence-example-grid,
+  .system-workflow-card,
   .workflow-diagram,
   .evidence-section--media-full .decision-list,
   .evidence-section,
@@ -2588,6 +2744,9 @@ footer {
   .work-principles-callout {
     align-items: flex-start;
     flex-direction: column;
+  }
+  .work-principles-callout__links {
+    justify-content: flex-start;
   }
 }
 @media screen and (max-width: 480px) {
