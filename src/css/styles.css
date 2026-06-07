@@ -2378,6 +2378,63 @@ footer {
   margin-bottom: 0;
 }
 
+.artifact-flow {
+  display: grid;
+  gap: 0.85rem;
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+}
+
+.artifact-flow--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.artifact-step {
+  background: var(--qj-color-surface-raised);
+  border: 1px solid var(--qj-border);
+  border-radius: 8px;
+  color: var(--qj-color-text);
+  padding: 1.1rem;
+  position: relative;
+}
+
+.artifact-step:not(:last-child)::after {
+  color: var(--qj-color-brand);
+  content: "→";
+  font-size: 1.25rem;
+  font-weight: 700;
+  position: absolute;
+  right: -0.68rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.artifact-step span {
+  color: var(--qj-color-accent);
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.55rem;
+  text-transform: uppercase;
+}
+
+.artifact-step h3 {
+  color: var(--qj-color-heading);
+  font-size: 1.1rem;
+  line-height: 1.2;
+  margin: 0 0 0.65rem;
+}
+
+.artifact-step p {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
 .architecture-map {
   counter-reset: none;
   display: grid;
@@ -2468,6 +2525,11 @@ footer {
   border-radius: 8px;
   margin: 0;
   padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+}
+
+.proof-artifact-section {
+  border-top: 1px solid var(--qj-border);
+  padding-top: clamp(2.25rem, 6vw, 4rem);
 }
 
 .reflection-section {
@@ -2989,6 +3051,16 @@ footer {
   }
   .influence-scale-workflow ol {
     grid-template-columns: 1fr;
+  }
+  .artifact-flow--three {
+    grid-template-columns: 1fr;
+  }
+  .artifact-step:not(:last-child)::after {
+    bottom: -0.98rem;
+    left: 1rem;
+    right: auto;
+    top: auto;
+    transform: rotate(90deg);
   }
   .migration-mapping-table > div {
     grid-template-columns: 1fr;

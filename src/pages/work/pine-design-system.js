@@ -239,6 +239,65 @@ const systemWorkflows = [
   }
 ];
 
+const proofArtifacts = [
+  {
+    eyebrow: "Migration Artifact",
+    title: "FormikPine changed the unit of migration.",
+    lead:
+      "Form migration stalled when teams had to rewrite an entire form state contract just to adopt Pine inputs.",
+    steps: [
+      {
+        label: "Old workflow",
+        title: "Migrate the whole form",
+        body:
+          "Product teams had to replace Sage form components and revisit Formik wiring in one large migration."
+      },
+      {
+        label: "System bridge",
+        title: "FormikPine adapter",
+        body:
+          "FormikPine translated existing Formik state into Pine web component events and prop conventions."
+      },
+      {
+        label: "New workflow",
+        title: "Migrate one field",
+        body:
+          "Teams could move field by field inside normal product work instead of waiting for a dedicated rewrite."
+      }
+    ],
+    impact:
+      "The migration path became small enough for product teams to adopt without pausing feature delivery."
+  },
+  {
+    eyebrow: "UX Artifact",
+    title: "Combobox dropdowns stopped getting clipped in modals.",
+    lead:
+      "This is the product-facing side of design system work: one component fix removes a recurring interaction bug for every consumer.",
+    steps: [
+      {
+        label: "User problem",
+        title: "Options were hidden",
+        body:
+          "Scrollable modals clipped combobox dropdowns, so users could type into the field but could not reliably see or select options."
+      },
+      {
+        label: "Decision",
+        title: "Portal the dropdown",
+        body:
+          "Render the dropdown at the document body so it escapes modal overflow without requiring product teams to restructure their markup."
+      },
+      {
+        label: "Outcome",
+        title: "The bug class disappears",
+        body:
+          "Comboboxes inside current and future modals can show their option lists without one-off modal overrides."
+      }
+    ],
+    impact:
+      "Small component-level craft turned into product-wide interaction consistency."
+  }
+];
+
 const EvidenceSection = ({ section }) => {
   const classes = [
     "evidence-section",
@@ -295,6 +354,29 @@ const WorkflowCard = ({ workflow }) => (
       ))}
     </ol>
   </article>
+);
+
+const ProofArtifact = ({ artifact }) => (
+  <section className="proof-artifact-section">
+    <div className="section-heading">
+      <p className="section-heading__eyebrow">{artifact.eyebrow}</p>
+      <h2>{artifact.title}</h2>
+      <p>{artifact.lead}</p>
+    </div>
+    <div className="artifact-flow artifact-flow--three">
+      {artifact.steps.map(step => (
+        <article className="artifact-step" key={step.label}>
+          <span>{step.label}</span>
+          <h3>{step.title}</h3>
+          <p>{step.body}</p>
+        </article>
+      ))}
+    </div>
+    <div className="evidence-callout">
+      <strong>Why it matters</strong>
+      <p>{artifact.impact}</p>
+    </div>
+  </section>
 );
 
 const PineDesignSystemCaseStudy = () => (
@@ -423,6 +505,10 @@ const PineDesignSystemCaseStudy = () => (
 
           {evidenceSections.map(section => (
             <EvidenceSection section={section} key={section.eyebrow} />
+          ))}
+
+          {proofArtifacts.map(artifact => (
+            <ProofArtifact artifact={artifact} key={artifact.title} />
           ))}
 
           <section className="evidence-section evidence-section--outcomes">

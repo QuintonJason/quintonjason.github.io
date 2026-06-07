@@ -223,6 +223,27 @@ const migrationLoop = [
   "fix_layout_issues"
 ];
 
+const tokenLintArtifact = [
+  {
+    label: "Problem",
+    title: "Hardcoded color",
+    body:
+      "A hex value or core token looks fine in light mode, but it bypasses semantic theme behavior and can break dark mode later."
+  },
+  {
+    label: "Enforcement",
+    title: "Stylelint failure",
+    body:
+      "The lint rule flags hardcoded colors and core token usage at build time, before a reviewer has to catch it by scanning the diff."
+  },
+  {
+    label: "Outcome",
+    title: "Semantic token fix",
+    body:
+      "The implementation moves to a semantic token that describes product intent and resolves correctly across supported themes."
+  }
+];
+
 const InfluenceThroughSystems = () => (
   <main className="influence-page">
     <Helmet
@@ -312,6 +333,27 @@ const InfluenceThroughSystems = () => (
                 </li>
               ))}
             </ol>
+          </div>
+        </article>
+        <article className="influence-artifact" aria-labelledby="token-lint-heading">
+          <div className="influence-artifact__intro">
+            <p className="section-heading__eyebrow">Evidence Artifact</p>
+            <h2 id="token-lint-heading">Semantic token linting moved review to build time</h2>
+            <p>
+              Token enforcement made color quality a workflow property instead
+              of a reviewer memory test. The rule stayed strict where the
+              mapping was deterministic and kept an explicit escape hatch for
+              legitimate alpha values such as shadows and overlays.
+            </p>
+          </div>
+          <div className="artifact-flow artifact-flow--three">
+            {tokenLintArtifact.map(item => (
+              <article className="artifact-step" key={item.label}>
+                <span>{item.label}</span>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </article>
+            ))}
           </div>
         </article>
       </div>

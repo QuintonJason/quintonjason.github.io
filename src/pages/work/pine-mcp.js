@@ -59,6 +59,27 @@ const decisionFlow = [
   "Semantic HTML"
 ];
 
+const validationArtifact = [
+  {
+    label: "Before AI output",
+    title: "Plausible web code",
+    body:
+      'Generated layout used Bootstrap-style columns, raw div wrappers, inline flexbox, and hardcoded spacing that looked reasonable in chat but did not follow Pine layout primitives.'
+  },
+  {
+    label: "Pine MCP guidance",
+    title: "System context at generation time",
+    body:
+      "Pine MCP retrieved the layout rule: start with pds-container, compose with pds-row and pds-box, use mobile-first sizing, and avoid raw layout divs inside Pine UI."
+  },
+  {
+    label: "Correct output",
+    title: "Pine-compliant layout",
+    body:
+      "The final layout used Pine components, system spacing props, semantic tokens, and structure that could pass layout validation before review."
+  }
+];
+
 const PineMcpCaseStudy = () => (
   <main className="case-study-page">
     <Helmet
@@ -174,6 +195,25 @@ const PineMcpCaseStudy = () => (
                       <dd>{example.why}</dd>
                     </div>
                   </dl>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <p className="section-heading__eyebrow">Validation Artifact</p>
+            <h2>Generated UI moves through Pine before it reaches review.</h2>
+            <p>
+              The core shift is timing. Instead of waiting for a design system
+              reviewer to catch generic layout patterns in a PR, Pine MCP moves
+              the correction into the generation loop.
+            </p>
+            <div className="artifact-flow artifact-flow--three">
+              {validationArtifact.map(item => (
+                <article className="artifact-step" key={item.label}>
+                  <span>{item.label}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.body}</p>
                 </article>
               ))}
             </div>
