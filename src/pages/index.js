@@ -237,6 +237,22 @@ const Index = () => (
     </section>
 
     <section className="home-section">
+      <div className="container home-note">
+        <div>
+          <p className="section-heading__eyebrow">Point of View</p>
+          <h2>Notes From Building Systems</h2>
+        </div>
+        <p>
+          A short set of principles shaped by building Pine, teaching frontend
+          development, and exploring AI-assisted design system workflows.
+        </p>
+        <Link to="/principles/" className="text-link">
+          Read principles
+        </Link>
+      </div>
+    </section>
+
+    <section className="home-section">
       <div className="container">
         <div className="section-heading">
           <p className="section-heading__eyebrow">Featured Writing</p>

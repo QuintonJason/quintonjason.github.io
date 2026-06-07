@@ -655,6 +655,114 @@
   color: var(--qj-color-link-hover);
 }
 
+.work-principles-callout,
+.principles-intro {
+  background: var(--qj-color-surface-raised);
+  border: 1px solid var(--qj-border);
+  border-left: 5px solid var(--qj-color-brand);
+  border-radius: 8px;
+  box-shadow: var(--qj-shadow-subtle);
+  margin-bottom: 2rem;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.work-principles-callout {
+  align-items: center;
+  display: flex;
+  gap: 1rem 2rem;
+  justify-content: space-between;
+}
+
+.work-principles-callout p,
+.principles-intro p {
+  color: var(--qj-color-text);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.work-principles-callout a,
+.principle-card__links a {
+  color: var(--qj-color-link);
+  font-family: $mont;
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+
+.work-principles-callout a:hover,
+.work-principles-callout a:focus,
+.principle-card__links a:hover,
+.principle-card__links a:focus {
+  color: var(--qj-color-link-hover);
+}
+
+.principles-hero h1 {
+  max-width: 920px;
+}
+
+.principles-intro {
+  display: grid;
+  gap: .85rem;
+  max-width: 860px;
+}
+
+.principles-intro h2 {
+  color: var(--qj-color-heading);
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.08;
+  margin: 0;
+}
+
+.principles-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.principle-card {
+  background: var(--qj-color-surface-raised);
+  border: 1px solid var(--qj-border);
+  border-radius: 8px;
+  color: var(--qj-color-text);
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 4rem minmax(0, 1fr);
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.principle-card__number {
+  color: var(--qj-color-accent);
+  font-family: $mont;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.principle-card h2 {
+  color: var(--qj-color-heading);
+  font-size: clamp(1.45rem, 3vw, 2.15rem);
+  line-height: 1.15;
+  margin: 0 0 .75rem;
+}
+
+.principle-card p {
+  line-height: 1.7;
+  margin: .75rem 0 0;
+  max-width: 760px;
+}
+
+.principle-card__lead {
+  color: var(--qj-color-heading);
+  font-size: 1.08rem;
+}
+
+.principle-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1rem;
+  margin-top: 1rem;
+}
+
 .case-study-layout {
   display: grid;
   gap: clamp(3rem, 7vw, 5.5rem);
@@ -1529,6 +1637,10 @@
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+  .work-principles-callout {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 
 @include phone {
@@ -1574,6 +1686,9 @@
   .system-diagram--flow,
   .system-diagram--split,
   .system-diagram--gate {
+    grid-template-columns: 1fr;
+  }
+  .principle-card {
     grid-template-columns: 1fr;
   }
 }

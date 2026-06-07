@@ -65,6 +65,13 @@ const Work = () => (
 
     <section className="home-section">
       <div className="container">
+        <div className="work-principles-callout">
+          <p>
+            My projects connect through a simple idea: build systems, teach
+            systems, and help AI work with systems.
+          </p>
+          <Link to="/principles/">Read Notes From Building Systems</Link>
+        </div>
         <div className="section-heading">
           <p className="section-heading__eyebrow">Current Focus</p>
           <h2>Pine is the center of my current design systems work.</h2>
