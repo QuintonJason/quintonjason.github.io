@@ -589,6 +589,96 @@
   padding: 1.5rem;
 }
 
+.work-entry--featured {
+  align-items: start;
+  grid-template-columns: 180px minmax(0, 1fr) minmax(260px, 360px);
+}
+
+.work-entry__visual {
+  align-self: stretch;
+  background: var(--qj-color-surface);
+  border: 1px solid var(--qj-border);
+  border-radius: 6px;
+  display: grid;
+  gap: .75rem;
+  margin: 0;
+  min-height: 220px;
+  overflow: hidden;
+}
+
+.work-entry__visual span,
+.mini-change strong,
+.change-card span,
+.mcp-artifact span {
+  color: var(--qj-color-accent);
+  font-family: $mont;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.work-entry__visual span {
+  display: block;
+  padding: .85rem .85rem 0;
+}
+
+.work-entry__visual img {
+  display: block;
+  height: 100%;
+  inline-size: 100%;
+  object-fit: cover;
+}
+
+.work-entry__visual--diagram {
+  padding: 1rem;
+}
+
+.work-entry__visual--diagram span {
+  padding: 0;
+}
+
+.work-entry__visual--diagram ol {
+  display: grid;
+  gap: .65rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.work-entry__visual--diagram li {
+  background: var(--qj-color-surface-raised);
+  border: 1px solid var(--qj-border);
+  border-left: 4px solid var(--qj-color-brand);
+  border-radius: 4px;
+  color: var(--qj-color-heading);
+  font-family: $mont;
+  font-size: .88rem;
+  font-weight: 700;
+  padding: .75rem;
+}
+
+.mini-change {
+  background: var(--qj-color-brand-tint);
+  border-radius: 6px;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.mini-change p {
+  font-size: .95rem;
+  margin-top: .35rem;
+}
+
+.capability-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.capability-list .work-entry {
+  grid-template-columns: 180px minmax(0, 1fr);
+}
+
 @container (max-width: 760px) {
   .work-grid,
   .proof-grid,
@@ -605,6 +695,10 @@
   .work-entry {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+  .work-entry--featured,
+  .capability-list .work-entry {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1491,6 +1585,132 @@
   margin: .5rem 0 0;
 }
 
+.mcp-artifact,
+.change-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.mcp-artifact article,
+.change-card {
+  background: var(--qj-color-surface-raised);
+  border: 1px solid var(--qj-border);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.mcp-artifact article {
+  border-top: 4px solid var(--qj-color-brand);
+}
+
+.mcp-artifact h3 {
+  color: var(--qj-color-heading);
+  font-size: 1.05rem;
+  line-height: 1.2;
+  margin: .85rem 0 .5rem;
+}
+
+.mcp-artifact p {
+  font-size: .92rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.change-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.change-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.change-card div + div {
+  border-top: 1px solid var(--qj-border);
+  padding-top: 1rem;
+}
+
+.change-card p {
+  font-size: .94rem;
+  line-height: 1.55;
+  margin: .35rem 0 0;
+}
+
+.practice-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1.5rem;
+}
+
+.practice-card {
+  background: var(--qj-color-surface-raised);
+  border: 1px solid var(--qj-border);
+  border-radius: 8px;
+  color: var(--qj-color-text);
+  padding: 1.25rem;
+}
+
+.practice-card h3 {
+  color: var(--qj-color-heading);
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+}
+
+.practice-card dl {
+  display: grid;
+  gap: .85rem;
+  margin: 0;
+}
+
+.practice-card dt {
+  color: var(--qj-color-accent);
+  font-family: $mont;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  margin-bottom: .25rem;
+  text-transform: uppercase;
+}
+
+.practice-card dd {
+  font-size: .92rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.decision-flow {
+  display: grid;
+  gap: .75rem;
+  list-style: none;
+  margin: 1.5rem 0;
+  max-width: 520px;
+  padding: 0;
+}
+
+.decision-flow li {
+  background: var(--qj-color-surface-raised);
+  border: 1px solid var(--qj-border);
+  border-left: 4px solid var(--qj-color-brand);
+  border-radius: 6px;
+  color: var(--qj-color-heading);
+  font-family: $mont;
+  font-weight: 700;
+  padding: .85rem 1rem;
+  position: relative;
+}
+
+.decision-flow li:not(:last-child)::after {
+  bottom: -.9rem;
+  color: var(--qj-color-brand);
+  content: "↓";
+  font-size: 1rem;
+  left: 1.5rem;
+  position: absolute;
+}
+
 .outcome-list {
   display: grid;
   gap: .75rem;
@@ -1622,6 +1842,9 @@
   .code-comparison,
   .evidence-pair__grid,
   .theme-contract-diagram ul,
+  .change-grid,
+  .mcp-artifact,
+  .practice-grid,
   .workflow-diagram,
   .evidence-section--media-full .decision-list,
   .evidence-section,

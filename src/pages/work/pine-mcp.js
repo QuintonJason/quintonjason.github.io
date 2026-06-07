@@ -12,22 +12,51 @@ const mcpTools = [
   "fix_layout_issues"
 ];
 
-const mcpGate = [
+const practiceExamples = [
   {
-    title: "Detect",
-    description:
-      "Recognize when generated UI should use Pine components, tokens, accessibility rules, or composition patterns."
+    title: "Accessibility",
+    developerRequest: "Add an icon-only close button to dismiss a panel.",
+    genericOutput:
+      "The assistant generated a button with only an aria-hidden icon, leaving the control without an accessible name.",
+    guidance:
+      "Icon-only interactive controls need a programmatic label, and decorative icons should stay hidden from assistive technology.",
+    result:
+      "The final output uses the Pine button pattern with a clear accessible name and a decorative icon that does not pollute the screen reader experience.",
+    why:
+      "A screen reader user can understand and operate the close action without guessing."
   },
   {
-    title: "Context",
-    description:
-      "Retrieve the right Pine component docs, token guidance, icon options, design docs, and implementation advice."
+    title: "Layout constraints",
+    developerRequest: "Build a responsive settings layout with a main form and supporting panel.",
+    genericOutput:
+      "The assistant reached for a generic Bootstrap or Tailwind-style grid instead of Pine's layout primitives.",
+    guidance:
+      "Pine layout starts with container, then row, then box, with mobile-first sizing and spacing handled through system props.",
+    result:
+      "The generated layout follows the Pine container, row, and box workflow so spacing, breakpoints, and composition match the system.",
+    why:
+      "Teams get a layout that behaves consistently across product surfaces and screen sizes."
   },
   {
-    title: "Validate",
-    description:
-      "Review generated UI against Pine rules, layout expectations, accessibility requirements, and known anti-patterns."
+    title: "Token usage",
+    developerRequest: "Style a warning message with the right text and background colors.",
+    genericOutput:
+      "The assistant used hardcoded colors or core token names that described values instead of product meaning.",
+    guidance:
+      "Use semantic tokens that map intent to theme-aware values instead of raw colors or low-level primitives.",
+    result:
+      "The final output uses semantic Pine tokens, so the warning adapts across light mode, dark mode, and future themes.",
+    why:
+      "The UI stays readable and theme-compatible without one-off color fixes."
   }
+];
+
+const decisionFlow = [
+  "Accessibility",
+  "Component Selection",
+  "Layout",
+  "Tokens",
+  "Semantic HTML"
 ];
 
 const PineMcpCaseStudy = () => (
@@ -99,26 +128,6 @@ const PineMcpCaseStudy = () => (
           </section>
 
           <section>
-            <p className="section-heading__eyebrow">Workflow Gate</p>
-            <h2>Detect Pine need, retrieve context, validate generated UI.</h2>
-            <p>
-              Pine MCP is not machine learning engineering. It is design system
-              architecture for AI-assisted development workflows. The MCP layer
-              helps assistants work from Pine knowledge instead of guessing from
-              generic UI examples.
-            </p>
-            <ol className="system-diagram system-diagram--gate" aria-label="Pine MCP workflow gate">
-              {mcpGate.map((item, index) => (
-                <li key={item.title}>
-                  <span>{index + 1}</span>
-                  <strong>{item.title}</strong>
-                  <p>{item.description}</p>
-                </li>
-              ))}
-            </ol>
-          </section>
-
-          <section>
             <p className="section-heading__eyebrow">Approach</p>
             <h2>Expose design system knowledge where generation happens.</h2>
             <p>
@@ -128,34 +137,69 @@ const PineMcpCaseStudy = () => (
               requirements, composition advice, and anti-patterns that help
               course-correct generated output.
             </p>
+          </section>
+
+          <section>
+            <p className="section-heading__eyebrow">Pine MCP In Practice</p>
+            <h2>Three places Pine MCP changes generated UI decisions.</h2>
             <p>
-              In practice, a designer or engineer can provide design context,
-              then use design tooling context alongside Pine MCP so the
-              assistant maps an interface to Pine components instead of
-              inventing a generic implementation.
+              Generic AI assistants generate plausible code. Pine MCP changes
+              the decisions being made during generation by injecting design
+              system knowledge, accessibility guidance, layout constraints,
+              token rules, and component recommendations.
             </p>
-            <ol className="workflow-diagram" aria-label="Pine MCP workflow">
-              <li>
-                <span>1</span>
-                <strong>Design context</strong>
-                <p>Designs, screenshots, prompts, or product intent.</p>
-              </li>
-              <li>
-                <span>2</span>
-                <strong>Context retrieval</strong>
-                <p>Components, tokens, icons, docs, rules, and patterns.</p>
-              </li>
-              <li>
-                <span>3</span>
-                <strong>Pine output</strong>
-                <p>Generated code starts with system components.</p>
-              </li>
-              <li>
-                <span>4</span>
-                <strong>Validate and repair</strong>
-                <p>Generated layouts can be reviewed against Pine rules and corrected.</p>
-              </li>
+            <div className="practice-grid">
+              {practiceExamples.map(example => (
+                <article className="practice-card" key={example.title}>
+                  <h3>{example.title}</h3>
+                  <dl>
+                    <div>
+                      <dt>Developer Request</dt>
+                      <dd>{example.developerRequest}</dd>
+                    </div>
+                    <div>
+                      <dt>Generic AI Output</dt>
+                      <dd>{example.genericOutput}</dd>
+                    </div>
+                    <div>
+                      <dt>Pine MCP Guidance</dt>
+                      <dd>{example.guidance}</dd>
+                    </div>
+                    <div>
+                      <dt>Final Pine-Compliant Result</dt>
+                      <dd>{example.result}</dd>
+                    </div>
+                    <div>
+                      <dt>Why It Matters</dt>
+                      <dd>{example.why}</dd>
+                    </div>
+                  </dl>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <p className="section-heading__eyebrow">What Pine MCP Actually Changes</p>
+            <h2>It replaces the most common answer with the system answer.</h2>
+            <div className="evidence-callout">
+              <p>
+                Across all examples, Pine MCP collapses a fork in the road into
+                a single correct answer. Instead of selecting patterns based on
+                what is most common on the web, Pine MCP applies the current
+                design system's rules at generation time.
+              </p>
+            </div>
+            <ol className="decision-flow" aria-label="Design system decisions Pine MCP moves earlier">
+              {decisionFlow.map(item => (
+                <li key={item}>{item}</li>
+              ))}
             </ol>
+            <p>
+              These are the same decisions a senior design system engineer
+              would normally catch during code review. Pine MCP moves them
+              earlier into the generation process.
+            </p>
           </section>
 
           <section>
@@ -167,80 +211,6 @@ const PineMcpCaseStudy = () => (
                   <code>{tool}</code>
                 </li>
               ))}
-            </ul>
-          </section>
-
-          <section>
-            <p className="section-heading__eyebrow">Before and After</p>
-            <h2>Tabs should become Pine tabs, not generic markup.</h2>
-            <div className="code-comparison">
-              <article className="code-card">
-                <h3>Before Pine MCP</h3>
-                <p>
-                  The assistant treated tabs like loose markup and text, missing
-                  the design system component.
-                </p>
-                <pre>
-                  <code>{`<div>
-  <span>Sturdy</span>
-  <div class="panel">...</div>
-</div>`}</code>
-                </pre>
-              </article>
-
-              <article className="code-card">
-                <h3>After Pine MCP</h3>
-                <p>
-                  With Pine context available, the assistant can use the
-                  intended component API.
-                </p>
-                <pre>
-                  <code>{`<pds-tabs>
-  <pds-tab name="sturdy">Sturdy</pds-tab>
-  <pds-tab-panel name="sturdy">...</pds-tab-panel>
-</pds-tabs>`}</code>
-                </pre>
-              </article>
-            </div>
-          </section>
-
-          <section>
-            <p className="section-heading__eyebrow">Why It Matters</p>
-            <h2>Adoption has to happen at the moment decisions are made.</h2>
-            <p>
-              Documentation still matters, but AI-assisted development changes
-              where implementation decisions happen. Pine MCP moves design
-              system guidance into the workflow while code is being generated,
-              reviewed, and repaired.
-            </p>
-            <p>
-              The goal is not to make AI an authority over the system. The goal
-              is to make system knowledge available to the tools teams already
-              use, so generated code starts closer to established components,
-              tokens, accessibility requirements, and implementation patterns.
-            </p>
-          </section>
-
-          <section>
-            <p className="section-heading__eyebrow">What Changed</p>
-            <h2>The review starts from a better place.</h2>
-            <ul className="outcome-list">
-              <li>
-                AI-assisted output can start closer to Pine components and
-                established implementation patterns.
-              </li>
-              <li>
-                Review conversations can focus more on product intent and less
-                on basic system compliance.
-              </li>
-              <li>
-                System rules become available during generation, not only after
-                someone stops to search documentation.
-              </li>
-              <li>
-                Accessibility guidance and anti-patterns can be introduced
-                while layouts are being generated, reviewed, and repaired.
-              </li>
             </ul>
           </section>
 

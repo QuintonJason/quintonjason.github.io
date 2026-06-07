@@ -169,6 +169,29 @@ const outcomeItems = [
   "Extended design system adoption into AI-assisted development workflows through Pine MCP."
 ];
 
+const governanceItems = [
+  {
+    title: "Document",
+    description:
+      "Make component, token, accessibility, and migration expectations explicit."
+  },
+  {
+    title: "Guide",
+    description:
+      "Translate legacy Sage and raw HTML habits into Pine component and token choices."
+  },
+  {
+    title: "Enforce",
+    description:
+      "Move repeatable rules into linting, migration checks, and changed-line validation."
+  },
+  {
+    title: "Validate",
+    description:
+      "Use Pine MCP to help generated UI follow system rules before product review."
+  }
+];
+
 const EvidenceSection = ({ section }) => {
   const classes = [
     "evidence-section",
@@ -297,13 +320,24 @@ const PineDesignSystemCaseStudy = () => (
                 legacy migration at the same time.
               </p>
             </div>
-            <ol className="architecture-map" aria-label="Pine architecture flow">
-              <li className="architecture-map__tokens">ds-tokens</li>
-              <li className="architecture-map__pine">pine</li>
-              <li className="architecture-map__products">kajabi-products</li>
-              <li className="architecture-map__mcp">pine-mcp</li>
-              <li className="architecture-map__ai">AI assistants</li>
-            </ol>
+            <div className="evidence-callout">
+              <strong>Cross-team adoption</strong>
+              <p>
+                The work required more than publishing components. It meant
+                helping engineers, designers, and product teams align on APIs,
+                migration paths, accessibility expectations, documentation, and
+                the moments where standards should become workflow checks.
+              </p>
+            </div>
+            <div className="architecture-feature">
+              <ol className="architecture-map" aria-label="Pine architecture flow">
+                <li className="architecture-map__tokens">ds-tokens</li>
+                <li className="architecture-map__pine">pine</li>
+                <li className="architecture-map__products">kajabi-products</li>
+                <li className="architecture-map__mcp">pine-mcp</li>
+                <li className="architecture-map__ai">AI assistants</li>
+              </ol>
+            </div>
           </section>
         </div>
 
@@ -311,6 +345,61 @@ const PineDesignSystemCaseStudy = () => (
           {evidenceSections.map(section => (
             <EvidenceSection section={section} key={section.eyebrow} />
           ))}
+
+          <section className="evidence-section evidence-section--diagram evidence-section--media-full">
+            <div className="evidence-section__content">
+              <p className="section-heading__eyebrow">Governance and Enforcement</p>
+              <h2>Rules had to move from documentation into the workflow.</h2>
+              <p className="evidence-section__lead">
+                Instead of relying on documentation alone, Pine needed adoption
+                paths that could guide teams during implementation, migration,
+                review, and AI-assisted code generation.
+              </p>
+              <dl className="decision-list">
+                <div>
+                  <dt>Problem</dt>
+                  <dd>
+                    Documentation explained the system, but teams still needed
+                    help catching hardcoded colors, legacy Sage patterns, and
+                    bypassed component choices during real product work.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Decision</dt>
+                  <dd>
+                    Treat linting, migration guidance, changed-line checks, and
+                    Pine MCP validation as part of the governance model.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Tradeoff</dt>
+                  <dd>
+                    Enforcement adds maintenance cost, but it reduces review
+                    churn and keeps standards closer to implementation.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Outcome</dt>
+                  <dd>
+                    Teams get a system that teaches, guides, and validates
+                    choices where product decisions are made.
+                  </dd>
+                </div>
+              </dl>
+            </div>
+            <div className="workflow-feature workflow-feature--governance">
+              <p className="section-heading__eyebrow">Governance model</p>
+              <ol className="workflow-diagram" aria-label="Pine governance workflow">
+                {governanceItems.map((item, index) => (
+                  <li key={item.title}>
+                    <span>{index + 1}</span>
+                    <strong>{item.title}</strong>
+                    <p>{item.description}</p>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </section>
 
           <section className="evidence-section evidence-section--diagram evidence-section--media-full">
             <div className="evidence-section__content">

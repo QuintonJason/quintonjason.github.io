@@ -25,6 +25,40 @@ const workSignals = [
 
 const isExternal = url => /^https?:\/\//.test(url);
 
+const featuredProjectTitles = [
+  "Pine Design System",
+  "Pine MCP",
+  "Learn.QuintonJason.com",
+  "Dark Mode for Kajabi Admin"
+];
+
+const projectVisuals = {
+  "Pine Design System": {
+    type: "image",
+    src: "/images/pine-case-study/sage-to-pine-migration.png",
+    alt: "Pine Sage to Pine migration documentation showing migration guidance and mapping tables.",
+    eyebrow: "Migration and governance"
+  },
+  "Pine MCP": {
+    type: "diagram",
+    eyebrow: "AI workflow gate",
+    steps: ["Detect", "Context", "Generate", "Validate"]
+  },
+  "Learn.QuintonJason.com": {
+    type: "image",
+    src: "/images/work/learn-quintonjason-lessons.png",
+    alt:
+      "Learn.QuintonJason.com lessons page showing course lesson search, filters, and lesson cards.",
+    eyebrow: "Teaching platform"
+  },
+  "Dark Mode for Kajabi Admin": {
+    type: "image",
+    src: "/images/dark-mode-case-study/admin-dark.png",
+    alt: "Kajabi Admin dashboard in dark mode with navigation, analytics cards, and promotional cards.",
+    eyebrow: "Platform theming"
+  }
+};
+
 const WorkLink = ({ link }) =>
   link.url.indexOf("#") === 0 ? (
     <a href={link.url}>{link.label}</a>
@@ -35,6 +69,79 @@ const WorkLink = ({ link }) =>
   ) : (
     <Link to={link.url}>{link.label}</Link>
   );
+
+const ProjectVisual = ({ item }) => {
+  const visual = projectVisuals[item.title];
+
+  if (!visual) {
+    return null;
+  }
+
+  if (visual.type === "image") {
+    return (
+      <figure className="work-entry__visual">
+        <span>{visual.eyebrow}</span>
+        <img src={visual.src} alt={visual.alt} loading="lazy" />
+      </figure>
+    );
+  }
+
+  return (
+    <div className="work-entry__visual work-entry__visual--diagram" aria-label={`${item.title} proof diagram`}>
+      <span>{visual.eyebrow}</span>
+      <ol>
+        {visual.steps.map(step => (
+          <li key={step}>{step}</li>
+        ))}
+      </ol>
+    </div>
+  );
+};
+
+const WorkEntry = ({ item, featured = false }) => (
+  <article
+    className={featured ? "work-entry work-entry--featured" : "work-entry"}
+    id={
+      item.title === "Pine MCP"
+        ? "pine-mcp"
+        : item.title === "Pine Design System"
+        ? "pine-design-system"
+        : item.title === "Learn.QuintonJason.com"
+        ? "learn-quintonjason"
+        : undefined
+    }
+  >
+    <div className="work-entry__meta">
+      <span>{item.status}</span>
+      <span>{item.role}</span>
+    </div>
+    <div>
+      <h2>{item.title}</h2>
+      <p>{item.summary}</p>
+      {item.title === "Learn.QuintonJason.com" && (
+        <div className="mini-change">
+          <strong>What changed</strong>
+          <p>
+            Course material became a structured product experience for teaching
+            HTML, CSS, JavaScript, accessibility, UX, responsive design, and
+            modern frontend workflows.
+          </p>
+        </div>
+      )}
+      <ul className="tag-list">
+        {item.topics.map(topic => (
+          <li key={topic}>{topic}</li>
+        ))}
+      </ul>
+      <div className="work-entry__links">
+        {item.links.map(link => (
+          <WorkLink link={link} key={link.label} />
+        ))}
+      </div>
+    </div>
+    {featured && <ProjectVisual item={item} />}
+  </article>
+);
 
 const Work = () => (
   <main className="work-page">
@@ -94,40 +201,32 @@ const Work = () => (
 
     <section className="home-section home-section--quiet">
       <div className="container work-list">
-        {work.map(item => (
-          <article
-            className="work-entry"
-            id={
-              item.title === "Pine MCP"
-                ? "pine-mcp"
-                : item.title === "Pine Design System"
-                ? "pine-design-system"
-                : item.title === "Learn.QuintonJason.com"
-                ? "learn-quintonjason"
-                : undefined
-            }
-            key={item.title}
-          >
-            <div className="work-entry__meta">
-              <span>{item.status}</span>
-              <span>{item.role}</span>
-            </div>
-            <div>
-              <h2>{item.title}</h2>
-              <p>{item.summary}</p>
-              <ul className="tag-list">
-                {item.topics.map(topic => (
-                  <li key={topic}>{topic}</li>
-                ))}
-              </ul>
-              <div className="work-entry__links">
-                {item.links.map(link => (
-                  <WorkLink link={link} key={link.label} />
-                ))}
-              </div>
-            </div>
-          </article>
-        ))}
+        {work
+          .filter(item => featuredProjectTitles.includes(item.title))
+          .map(item => (
+            <WorkEntry item={item} featured key={item.title} />
+          ))}
+      </div>
+    </section>
+
+    <section className="home-section">
+      <div className="container">
+        <div className="section-heading">
+          <p className="section-heading__eyebrow">Supporting Capabilities</p>
+          <h2>Reusable patterns behind the project work.</h2>
+          <p>
+            These are not separate case studies. They are the capabilities that
+            show up across Pine, Pine MCP, Kajabi Admin Dark Mode, Learn, and my
+            writing.
+          </p>
+        </div>
+        <div className="capability-list">
+          {work
+            .filter(item => !featuredProjectTitles.includes(item.title))
+            .map(item => (
+              <WorkEntry item={item} key={item.title} />
+            ))}
+        </div>
       </div>
     </section>
   </main>
