@@ -80,6 +80,17 @@ const validationArtifact = [
   }
 ];
 
+const tabsBefore = `<div>
+  <span>Sturdy</span>
+  <span>Growth</span>
+  <span>Pro</span>
+  <div class="panel">...</div>
+</div>`;
+
+const tabsAfter = `<pds-tabs>
+  <!-- Pine tab items and panels follow the documented pds-tabs API -->
+</pds-tabs>`;
+
 const PineMcpCaseStudy = () => (
   <main className="case-study-page">
     <Helmet
@@ -216,6 +227,48 @@ const PineMcpCaseStudy = () => (
                   <p>{item.body}</p>
                 </article>
               ))}
+            </div>
+          </section>
+
+          <section>
+            <p className="section-heading__eyebrow">Component Decision Artifact</p>
+            <h2>Pine MCP turns raw tabs into the Pine tabs component.</h2>
+            <p>
+              This is the clearest version of the problem Pine MCP solves:
+              generic AI output can look plausible while missing the actual
+              component, semantics, keyboard behavior, and accessibility
+              contract.
+            </p>
+            <div className="code-comparison">
+              <article className="code-card">
+                <h3>Before: generic AI output</h3>
+                <p>
+                  The assistant generated a tab-like interface from spans and a
+                  panel. It looked like UI, but it was not an interactive tabs
+                  pattern.
+                </p>
+                <pre>
+                  <code>{tabsBefore}</code>
+                </pre>
+              </article>
+              <article className="code-card">
+                <h3>After: Pine-compliant direction</h3>
+                <p>
+                  Pine MCP detects the tab pattern and routes generation toward
+                  the documented Pine component instead of raw markup.
+                </p>
+                <pre>
+                  <code>{tabsAfter}</code>
+                </pre>
+              </article>
+            </div>
+            <div className="evidence-callout">
+              <strong>Why it matters</strong>
+              <p>
+                The important change is the component decision: unstructured
+                spans become a design system component with the expected API,
+                interaction behavior, and accessibility contract.
+              </p>
             </div>
           </section>
 
