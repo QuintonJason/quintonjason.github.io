@@ -1,8 +1,8 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react'
+import { graphql } from 'gatsby'
 
 export default ({ data }) => {
-  const gist = data.gistsJson;
+  const gist = data.gistsJson
   return (
     <div className="gist_single">
       <p>{gist.description}</p>
@@ -19,8 +19,8 @@ export default ({ data }) => {
         </a>
       </p>
     </div>
-  );
-};
+  )
+}
 
 export const query = graphql`
   query GistQuery($slug: String!) {
@@ -30,4 +30,4 @@ export const query = graphql`
       description
     }
   }
-`;
+`

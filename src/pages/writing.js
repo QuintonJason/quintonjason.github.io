@@ -1,25 +1,25 @@
-import React from "react";
-import { graphql, Link } from "gatsby";
-import Helmet from "react-helmet";
+import React from 'react'
+import { graphql, Link } from 'gatsby'
+import Helmet from 'react-helmet'
 
-import writing from "../../data/writing.json";
+import writing from '../../data/writing.json'
 
 const dateLabel = value =>
-  new Date(`${value}T00:00:00`).toLocaleDateString("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric"
-  });
+  new Date(`${value}T00:00:00`).toLocaleDateString('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+  })
 
-const articleDate = item => item.displayDate || dateLabel(item.date);
+const articleDate = item => item.displayDate || dateLabel(item.date)
 
 const externalWriting = writing
-  .filter(item => item.type === "Article")
-  .sort((a, b) => new Date(b.date) - new Date(a.date));
+  .filter(item => item.type === 'Article')
+  .sort((a, b) => new Date(b.date) - new Date(a.date))
 
 const features = writing
-  .filter(item => item.type !== "Article")
-  .sort((a, b) => new Date(b.date) - new Date(a.date));
+  .filter(item => item.type !== 'Article')
+  .sort((a, b) => new Date(b.date) - new Date(a.date))
 
 const ExternalCard = ({ item }) => (
   <article className="writing-card">
@@ -34,12 +34,10 @@ const ExternalCard = ({ item }) => (
     </h2>
     <p>{item.summary}</p>
     <ul className="tag-list">
-      {item.topics.map(topic => (
-        <li key={topic}>{topic}</li>
-      ))}
+      {item.topics.map(topic => <li key={topic}>{topic}</li>)}
     </ul>
   </article>
-);
+)
 
 const LocalPost = ({ post }) => (
   <article className="writing-row">
@@ -51,10 +49,10 @@ const LocalPost = ({ post }) => (
       <p>{post.excerpt}</p>
     </div>
   </article>
-);
+)
 
 const Writing = ({ data }) => {
-  const localPosts = data.allMarkdownRemark.edges.map(({ node }) => node);
+  const localPosts = data.allMarkdownRemark.edges.map(({ node }) => node)
 
   return (
     <main className="writing-page">
@@ -62,10 +60,10 @@ const Writing = ({ data }) => {
         title="Writing | Quinton Jason"
         meta={[
           {
-            name: "description",
+            name: 'description',
             content:
-              "Writing by Quinton Jason on design systems, UX development, frontend architecture, accessibility, CSS, AI workflows, and web craft."
-          }
+              'Writing by Quinton Jason on design systems, UX development, frontend architecture, accessibility, CSS, AI workflows, and web craft.',
+          },
         ]}
       />
       <section className="writing-hero">
@@ -114,17 +112,15 @@ const Writing = ({ data }) => {
             <h2>Older posts from this site</h2>
           </div>
           <div className="writing-list">
-            {localPosts.map(post => (
-              <LocalPost post={post} key={post.id} />
-            ))}
+            {localPosts.map(post => <LocalPost post={post} key={post.id} />)}
           </div>
         </div>
       </section>
     </main>
-  );
-};
+  )
+}
 
-export default Writing;
+export default Writing
 
 export const query = graphql`
   query WritingArchiveQuery {
@@ -144,4 +140,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

@@ -1,17 +1,17 @@
-import React from "react";
-import { graphql, Link } from "gatsby";
-import Helmet from "react-helmet";
+import React from 'react'
+import { graphql, Link } from 'gatsby'
+import Helmet from 'react-helmet'
 
 const formatDate = timestamp =>
-  new Date(timestamp * 1000).toLocaleDateString("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric"
-  });
+  new Date(timestamp * 1000).toLocaleDateString('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+  })
 
 export default ({ data }) => {
-  const post = data.igPostsJson;
-  const imageUrl = post.media?.publicURL || `/images/${post.jsonId}.jpg`;
+  const post = data.igPostsJson
+  const imageUrl = post.media?.publicURL || `/images/${post.jsonId}.jpg`
 
   return (
     <main className="container calligraphy-single">
@@ -19,9 +19,9 @@ export default ({ data }) => {
         title={`Calligraphy | Quinton Jason`}
         meta={[
           {
-            name: "description",
-            content: post.caption
-          }
+            name: 'description',
+            content: post.caption,
+          },
         ]}
       />
       <Link to="/calligraphy/" className="text-link">
@@ -35,8 +35,8 @@ export default ({ data }) => {
         </figcaption>
       </figure>
     </main>
-  );
-};
+  )
+}
 
 export const query = graphql`
   query IGQuery($slug: String!) {
@@ -50,4 +50,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

@@ -1,75 +1,75 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react'
+import { graphql } from 'gatsby'
 
 class BlogPostTemplate extends React.Component {
   componentDidMount() {
-    this.renderCodePenEmbeds();
+    this.renderCodePenEmbeds()
   }
 
   componentDidUpdate() {
-    this.renderCodePenEmbeds();
+    this.renderCodePenEmbeds()
   }
 
   renderCodePenEmbeds() {
-    if (!this.postContent) return;
+    if (!this.postContent) return
 
     const embeds = this.postContent.querySelectorAll(
-      "p.codepen[data-slug-hash][data-user]"
-    );
+      'p.codepen[data-slug-hash][data-user]'
+    )
 
     embeds.forEach(embed => {
-      if (embed.getAttribute("data-codepen-rendered") === "true") return;
+      if (embed.getAttribute('data-codepen-rendered') === 'true') return
 
-      const slug = embed.getAttribute("data-slug-hash");
-      const user = embed.getAttribute("data-user");
+      const slug = embed.getAttribute('data-slug-hash')
+      const user = embed.getAttribute('data-user')
 
-      if (!slug || !user) return;
+      if (!slug || !user) return
 
-      const defaultTab = embed.getAttribute("data-default-tab") || "result";
-      const themeId = embed.getAttribute("data-theme-id") || "default";
-      const penTitle = embed.getAttribute("data-pen-title") || "CodePen Embed";
+      const defaultTab = embed.getAttribute('data-default-tab') || 'result'
+      const themeId = embed.getAttribute('data-theme-id') || 'default'
+      const penTitle = embed.getAttribute('data-pen-title') || 'CodePen Embed'
 
-      const wrapper = document.createElement("div");
-      wrapper.className = "codepen-embed-wrapper";
+      const wrapper = document.createElement('div')
+      wrapper.className = 'codepen-embed-wrapper'
 
-      const iframe = document.createElement("iframe");
-      iframe.className = "codepen-embed";
+      const iframe = document.createElement('iframe')
+      iframe.className = 'codepen-embed'
       iframe.setAttribute(
-        "src",
+        'src',
         `https://codepen.io/${user}/embed/${slug}?default-tab=${encodeURIComponent(
           defaultTab
         )}&theme-id=${encodeURIComponent(themeId)}&embed-version=2`
-      );
-      iframe.setAttribute("title", penTitle);
-      iframe.setAttribute("scrolling", "no");
-      iframe.setAttribute("frameBorder", "no");
-      iframe.setAttribute("loading", "lazy");
-      iframe.setAttribute("allowtransparency", "true");
-      iframe.setAttribute("allowfullscreen", "true");
+      )
+      iframe.setAttribute('title', penTitle)
+      iframe.setAttribute('scrolling', 'no')
+      iframe.setAttribute('frameBorder', 'no')
+      iframe.setAttribute('loading', 'lazy')
+      iframe.setAttribute('allowtransparency', 'true')
+      iframe.setAttribute('allowfullscreen', 'true')
 
-      wrapper.appendChild(iframe);
-      embed.parentNode.replaceChild(wrapper, embed);
-    });
+      wrapper.appendChild(iframe)
+      embed.parentNode.replaceChild(wrapper, embed)
+    })
   }
 
   render() {
-    const post = this.props.data.markdownRemark;
+    const post = this.props.data.markdownRemark
 
     return (
       <div className="blog_single">
         <h1>{post.frontmatter.title}</h1>
         <div
           ref={node => {
-            this.postContent = node;
+            this.postContent = node
           }}
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </div>
-    );
+    )
   }
 }
 
-export default BlogPostTemplate;
+export default BlogPostTemplate
 
 export const query = graphql`
   query BlogPostQuery($slug: String!) {
@@ -80,4 +80,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

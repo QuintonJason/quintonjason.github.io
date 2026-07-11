@@ -2940,6 +2940,221 @@ footer {
   font-family: Consolas, Monaco, monospace;
 }
 
+.mcp-positioning-callout {
+  max-width: 980px;
+}
+
+.mcp-positioning-callout p {
+  color: var(--qj-color-heading-dark);
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.7rem);
+  font-weight: 700;
+  line-height: 1.12;
+  margin: 0;
+}
+
+.mcp-docs-comparison {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.mcp-docs-comparison article,
+.mcp-example,
+.mcp-short-example,
+.mcp-flow-diagram,
+.mcp-review-shift article {
+  background: var(--qj-color-surface-raised);
+  border: 1px solid var(--qj-border);
+  border-radius: 10px;
+  box-shadow: var(--qj-shadow-subtle);
+}
+
+.mcp-docs-comparison article {
+  border-top: 4px solid var(--qj-border-strong);
+  padding: 1.25rem;
+}
+
+.mcp-docs-comparison article:last-child {
+  border-top-color: var(--qj-color-brand);
+}
+
+.mcp-docs-comparison h3,
+.mcp-example h3,
+.mcp-short-example h4,
+.mcp-review-shift h3 {
+  color: var(--qj-color-heading);
+  line-height: 1.2;
+  margin: 0 0 0.9rem;
+}
+
+.mcp-docs-comparison ul,
+.mcp-review-shift ol {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.mcp-docs-comparison li,
+.mcp-review-shift li {
+  color: var(--qj-color-text);
+  line-height: 1.55;
+}
+
+.mcp-flow-diagram {
+  align-self: start;
+  margin: 0;
+  overflow: hidden;
+}
+
+.mcp-flow-diagram figcaption {
+  border-bottom: 1px solid var(--qj-border);
+  color: var(--qj-color-muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+  padding: 1rem;
+}
+
+.mcp-flow-diagram figcaption strong {
+  color: var(--qj-color-heading);
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0.25rem;
+}
+
+.mcp-flow-diagram ol {
+  counter-reset: none;
+  display: grid;
+  gap: 1px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mcp-flow-diagram li {
+  background: var(--qj-color-surface);
+  color: var(--qj-color-heading);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: 1rem 2.25rem 1rem 1rem;
+  position: relative;
+}
+
+.mcp-flow-diagram li:not(:last-child)::after {
+  color: var(--qj-color-brand);
+  content: ">";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.mcp-example-stack {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.mcp-example {
+  display: grid;
+  gap: 1.25rem;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.mcp-example--spotlight {
+  border-left: 5px solid var(--qj-color-brand);
+}
+
+.mcp-example__header span {
+  color: var(--qj-color-accent);
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.45rem;
+  text-transform: uppercase;
+}
+
+.mcp-example__header p {
+  margin: 0;
+}
+
+.code-comparison--mcp {
+  align-items: stretch;
+}
+
+.code-card--pine {
+  border-left: 4px solid var(--qj-color-brand);
+}
+
+.code-card h4,
+.code-card h5 {
+  color: var(--qj-color-heading);
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.code-card pre {
+  max-width: 100%;
+}
+
+.decision-list--mcp {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.mcp-more-examples {
+  background: var(--qj-color-surface-raised);
+  border: 1px solid var(--qj-border);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+
+.mcp-more-examples summary {
+  color: var(--qj-color-heading);
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.mcp-short-example-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.mcp-short-example {
+  box-shadow: none;
+  display: grid;
+  gap: 1rem;
+  padding: 1.25rem;
+}
+
+.mcp-short-example p {
+  margin: 0;
+}
+
+.mcp-review-shift {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 1.5rem;
+}
+
+.mcp-review-shift article {
+  box-shadow: none;
+  padding: 1.25rem;
+}
+
+.mcp-review-shift article:last-child {
+  border-left: 4px solid var(--qj-color-brand);
+}
+
 .case-study-actions {
   display: flex;
   flex-wrap: wrap;
@@ -3019,9 +3234,12 @@ footer {
   .case-study-layout,
   .case-study-overview,
   .code-comparison,
+  .decision-list--mcp,
   .evidence-pair__grid,
   .theme-contract-diagram ul,
   .change-grid,
+  .mcp-docs-comparison,
+  .mcp-review-shift,
   .mcp-artifact,
   .practice-grid,
   .influence-scale-workflow,

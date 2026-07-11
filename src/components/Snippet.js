@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import { media } from "../utils/styled-components-media-queries";
+import React from 'react'
+import styled from 'styled-components'
+import { media } from '../utils/styled-components-media-queries'
 
 const Li = ({ className, children }) => (
   <li className={className}>{children}</li>
-);
+)
 
-const P = ({ className, children }) => <p className={className}>{children}</p>;
+const P = ({ className, children }) => <p className={className}>{children}</p>
 const SnippetLi = styled(Li)`
   display: flex;
   justify-content: space-between;
@@ -15,7 +15,7 @@ const SnippetLi = styled(Li)`
   ${media.phone`
 		display: block;
 	`};
-`;
+`
 const SnippetDate = styled(P)`
   font-style: italic;
   color: #999;
@@ -23,10 +23,10 @@ const SnippetDate = styled(P)`
   ${media.phone`
 			margin-top: .15rem;
 	`};
-`;
+`
 
 const Snippet = props => {
-  const { id, description, username, avatar, time } = props;
+  const { id, description, username, avatar, time } = props
   return (
     <SnippetLi className="snippet-wrapper">
       <a
@@ -38,7 +38,7 @@ const Snippet = props => {
       </a>
       <SnippetDate>{props.time}</SnippetDate>
     </SnippetLi>
-  );
-};
+  )
+}
 
-export default Snippet;
+export default Snippet

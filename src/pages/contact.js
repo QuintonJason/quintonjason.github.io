@@ -1,5 +1,5 @@
-import React from "react";
-import Helmet from "react-helmet";
+import React from 'react'
+import Helmet from 'react-helmet'
 
 const Contact = () => (
   <main className="container contact-page">
@@ -7,10 +7,10 @@ const Contact = () => (
       title="Contact | Quinton Jason"
       meta={[
         {
-          name: "description",
+          name: 'description',
           content:
-            "Contact Quinton Jason about design systems, frontend architecture, accessibility, teaching, writing, and web work."
-        }
+            'Contact Quinton Jason about design systems, frontend architecture, accessibility, teaching, writing, and web work.',
+        },
       ]}
     />
     <div className="archive-intro">
@@ -21,7 +21,10 @@ const Contact = () => (
         writing, or web work, email is the most reliable place to start.
       </p>
       <p>
-        <a className="button button--primary" href="mailto:quinton.jason@gmail.com">
+        <a
+          className="button button--primary"
+          href="mailto:quinton.jason@gmail.com"
+        >
           Email Quinton
         </a>
         <a
@@ -35,6 +38,6 @@ const Contact = () => (
       </p>
     </div>
   </main>
-);
+)
 
-export default Contact;
+export default Contact

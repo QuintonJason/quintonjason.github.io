@@ -1,248 +1,247 @@
-import React from "react";
-import { Link } from "gatsby";
-import Helmet from "react-helmet";
+import React from 'react'
+import { Link } from 'gatsby'
+import Helmet from 'react-helmet'
 
 const sections = [
   {
-    title: "Migration Strategy",
+    title: 'Migration Strategy',
     intro:
-      "Migration is a product adoption problem. The system has to meet teams where they are and still move them toward the standard.",
+      'Migration is a product adoption problem. The system has to meet teams where they are and still move them toward the standard.',
     examples: [
       {
-        name: "No-Sage linting",
+        name: 'No-Sage linting',
         problem:
-          "Legacy Sage patterns continued to appear in new or changed UI, slowing Pine adoption.",
+          'Legacy Sage patterns continued to appear in new or changed UI, slowing Pine adoption.',
         before:
-          "Reviewers had to manually catch old component usage and explain migration expectations repeatedly.",
+          'Reviewers had to manually catch old component usage and explain migration expectations repeatedly.',
         change:
-          "No-Sage linting turned legacy usage into a visible workflow signal.",
+          'No-Sage linting turned legacy usage into a visible workflow signal.',
         after:
-          "Teams could see when new work was carrying old patterns forward and correct it earlier.",
+          'Teams could see when new work was carrying old patterns forward and correct it earlier.',
         impact:
-          "Migration pressure moved closer to implementation and reduced repeated review conversations."
+          'Migration pressure moved closer to implementation and reduced repeated review conversations.',
       },
       {
-        name: "FormikPine",
+        name: 'FormikPine',
         problem:
-          "Form migration required teams to connect product form patterns with Pine components and existing form state conventions.",
+          'Form migration required teams to connect product form patterns with Pine components and existing form state conventions.',
         before:
-          "Teams had to hand-roll bridging patterns or delay migration until form work could be revisited more deeply.",
+          'Teams had to hand-roll bridging patterns or delay migration until form work could be revisited more deeply.',
         change:
-          "FormikPine created a bridge between existing form workflows and Pine component usage.",
+          'FormikPine created a bridge between existing form workflows and Pine component usage.',
         after:
-          "Teams could migrate form UI incrementally while preserving familiar implementation patterns.",
+          'Teams could migrate form UI incrementally while preserving familiar implementation patterns.',
         impact:
-          "Pine adoption became more practical for real product surfaces with active delivery needs."
-      }
-    ]
+          'Pine adoption became more practical for real product surfaces with active delivery needs.',
+      },
+    ],
   },
   {
-    title: "Design System Governance",
+    title: 'Design System Governance',
     intro:
-      "Governance works best when it changes the path teams follow, not when it creates another document people have to remember.",
+      'Governance works best when it changes the path teams follow, not when it creates another document people have to remember.',
     examples: [
       {
-        name: "Semantic token linting",
+        name: 'Semantic token linting',
         problem:
-          "Hardcoded colors and low-level token choices made interfaces harder to theme and maintain.",
+          'Hardcoded colors and low-level token choices made interfaces harder to theme and maintain.',
         before:
-          "Engineers could ship one-off color decisions that looked right locally but drifted from system intent.",
+          'Engineers could ship one-off color decisions that looked right locally but drifted from system intent.',
         change:
-          "Semantic token linting moved color rules into the implementation workflow.",
+          'Semantic token linting moved color rules into the implementation workflow.',
         after:
-          "Teams were guided toward intent-based tokens while building, not only during review.",
+          'Teams were guided toward intent-based tokens while building, not only during review.',
         impact:
-          "Color decisions became more consistent, easier to review, and better prepared for theming."
+          'Color decisions became more consistent, easier to review, and better prepared for theming.',
       },
       {
-        name: "Component lifecycle labels",
+        name: 'Component lifecycle labels',
         problem:
-          "Teams needed clearer signals about which components were stable, changing, deprecated, or preferred.",
+          'Teams needed clearer signals about which components were stable, changing, deprecated, or preferred.',
         before:
-          "Engineers had to infer component maturity from docs, examples, or tribal knowledge.",
+          'Engineers had to infer component maturity from docs, examples, or tribal knowledge.',
         change:
-          "Lifecycle labels made component status visible inside the design system documentation.",
+          'Lifecycle labels made component status visible inside the design system documentation.',
         after:
-          "Teams could choose components with a clearer understanding of stability and migration expectations.",
+          'Teams could choose components with a clearer understanding of stability and migration expectations.',
         impact:
-          "Adoption decisions became less ambiguous and easier to align across teams."
-      }
-    ]
+          'Adoption decisions became less ambiguous and easier to align across teams.',
+      },
+    ],
   },
   {
-    title: "AI-Assisted Development",
+    title: 'AI-Assisted Development',
     intro:
-      "AI-assisted development adds a new design system consumer. The assistant needs access to the same rules a senior reviewer would apply.",
+      'AI-assisted development adds a new design system consumer. The assistant needs access to the same rules a senior reviewer would apply.',
     examples: [
       {
-        name: "Pine MCP",
+        name: 'Pine MCP',
         problem:
-          "Generic AI assistants generated plausible UI that often ignored Pine components, tokens, accessibility rules, and layout expectations.",
+          'Generic AI assistants generated plausible UI that often ignored Pine components, tokens, accessibility rules, and layout expectations.',
         before:
-          "Engineers had to catch design system drift after code had already been generated.",
+          'Engineers had to catch design system drift after code had already been generated.',
         change:
-          "Pine MCP exposed component guidance, token rules, accessibility expectations, and layout review to AI-assisted workflows.",
+          'Pine MCP exposed component guidance, token rules, accessibility expectations, and layout review to AI-assisted workflows.',
         after:
-          "Generated UI could start closer to Pine and be reviewed against system rules earlier.",
+          'Generated UI could start closer to Pine and be reviewed against system rules earlier.',
         impact:
-          "Design system governance moved into the generation process instead of waiting for code review."
-      }
-    ]
+          'Design system governance moved into the generation process instead of waiting for code review.',
+      },
+    ],
   },
   {
-    title: "Build-Time Quality Enforcement",
+    title: 'Build-Time Quality Enforcement',
     intro:
-      "The most useful quality checks happen before review. Build-time enforcement turns repeatable feedback into the system itself.",
+      'The most useful quality checks happen before review. Build-time enforcement turns repeatable feedback into the system itself.',
     examples: [
       {
-        name: "Semantic token linting",
+        name: 'Semantic token linting',
         problem:
-          "The same color and theme issues could reappear after standards were documented.",
+          'The same color and theme issues could reappear after standards were documented.',
         before:
-          "Reviewers had to keep checking whether implementation matched the token guidance.",
+          'Reviewers had to keep checking whether implementation matched the token guidance.',
         change:
-          "Build-time checks reinforced the same token rules introduced through governance.",
-        after:
-          "Engineers got faster feedback before the work reached review.",
+          'Build-time checks reinforced the same token rules introduced through governance.',
+        after: 'Engineers got faster feedback before the work reached review.',
         impact:
-          "Review time shifted away from repeatable corrections and toward higher-value product and UX decisions."
+          'Review time shifted away from repeatable corrections and toward higher-value product and UX decisions.',
       },
       {
-        name: "No-Sage linting",
+        name: 'No-Sage linting',
         problem:
-          "Legacy migration could stall when old patterns depended on human review to catch.",
+          'Legacy migration could stall when old patterns depended on human review to catch.',
         before:
-          "Teams could accidentally preserve Sage-era UI decisions in new product work.",
+          'Teams could accidentally preserve Sage-era UI decisions in new product work.',
         change:
-          "The migration signal from No-Sage linting became part of the development loop.",
+          'The migration signal from No-Sage linting became part of the development loop.',
         after:
-          "Migration feedback became faster, more consistent, and less dependent on one reviewer noticing it.",
+          'Migration feedback became faster, more consistent, and less dependent on one reviewer noticing it.',
         impact:
-          "The system helped teams move forward without relying on memory or manual policing."
-      }
-    ]
+          'The system helped teams move forward without relying on memory or manual policing.',
+      },
+    ],
   },
   {
-    title: "Reducing Decision Overhead",
+    title: 'Reducing Decision Overhead',
     intro:
-      "The best system documentation turns repeated debate into self-service decision making.",
+      'The best system documentation turns repeated debate into self-service decision making.',
     examples: [
       {
-        name: "ADRs",
+        name: 'ADRs',
         problem:
-          "Important system decisions could get lost once implementation moved on.",
+          'Important system decisions could get lost once implementation moved on.',
         before:
-          "Teams had to rediscover context through conversations, old tickets, or scattered history.",
+          'Teams had to rediscover context through conversations, old tickets, or scattered history.',
         change:
-          "Architecture decision records captured the decision, tradeoff, and reasoning behind system choices.",
+          'Architecture decision records captured the decision, tradeoff, and reasoning behind system choices.',
         after:
-          "Teams had a durable reference for why the system worked a certain way.",
+          'Teams had a durable reference for why the system worked a certain way.',
         impact:
-          "Decision velocity improved because the reasoning stayed visible and repeatable."
+          'Decision velocity improved because the reasoning stayed visible and repeatable.',
       },
       {
-        name: "Component lifecycle labels",
+        name: 'Component lifecycle labels',
         problem:
-          "Component docs needed to communicate adoption guidance, not only API details.",
+          'Component docs needed to communicate adoption guidance, not only API details.',
         before:
-          "A component page could show how to use something without making its recommendation status clear.",
+          'A component page could show how to use something without making its recommendation status clear.',
         change:
-          "Lifecycle labels added decision context directly to documentation.",
+          'Lifecycle labels added decision context directly to documentation.',
         after:
-          "Engineers could connect API usage with system direction and migration timing.",
+          'Engineers could connect API usage with system direction and migration timing.',
         impact:
-          "Docs became a self-service adoption surface instead of another place to look up syntax."
-      }
-    ]
-  }
-];
+          'Docs became a self-service adoption surface instead of another place to look up syntax.',
+      },
+    ],
+  },
+]
 
 const proofItems = [
   {
-    value: "40+",
-    label: "Engineers",
-    detail: "Using Pine"
+    value: '40+',
+    label: 'Engineers',
+    detail: 'Using Pine',
   },
   {
-    value: "6",
-    label: "Product Teams",
-    detail: "Supported"
+    value: '6',
+    label: 'Product Teams',
+    detail: 'Supported',
   },
   {
-    value: "40",
-    label: "Components",
-    detail: "Maintained"
+    value: '40',
+    label: 'Components',
+    detail: 'Maintained',
   },
   {
-    value: "Pine MCP",
-    label: "AI Workflow Layer",
-    detail: "Design system context"
+    value: 'Pine MCP',
+    label: 'AI Workflow Layer',
+    detail: 'Design system context',
   },
   {
-    value: "Migration Tooling",
-    label: "Sage -> Pine",
-    detail: "Incremental adoption"
+    value: 'Migration Tooling',
+    label: 'Sage -> Pine',
+    detail: 'Incremental adoption',
   },
   {
-    value: "Lint Enforcement",
-    label: "Build-Time Governance",
-    detail: "Earlier feedback"
-  }
-];
+    value: 'Lint Enforcement',
+    label: 'Build-Time Governance',
+    detail: 'Earlier feedback',
+  },
+]
 
 const workflowSteps = [
-  "Decision",
-  "Docs",
-  "Tooling",
-  "Automation",
-  "Behavior Change"
-];
+  'Decision',
+  'Docs',
+  'Tooling',
+  'Automation',
+  'Behavior Change',
+]
 
 const migrationMappings = [
   {
-    legacy: "Bootstrap row / col-md-* grids",
+    legacy: 'Bootstrap row / col-md-* grids',
     pine: 'pds-row + pds-box size-*',
-    lever: "Migration guide + layout validation"
+    lever: 'Migration guide + layout validation',
   },
   {
-    legacy: "Margin and padding utility classes",
-    pine: "gap, padding, and margin props",
-    lever: "Component API guidance"
+    legacy: 'Margin and padding utility classes',
+    pine: 'gap, padding, and margin props',
+    lever: 'Component API guidance',
   },
   {
-    legacy: "Inline styles and hardcoded hex colors",
-    pine: "Pine props + semantic design tokens",
-    lever: "Token rules + lint enforcement"
-  }
-];
+    legacy: 'Inline styles and hardcoded hex colors',
+    pine: 'Pine props + semantic design tokens',
+    lever: 'Token rules + lint enforcement',
+  },
+]
 
 const migrationLoop = [
-  "get_pine_context_for_generation",
-  "generate",
-  "validate_ui_generation",
-  "fix_layout_issues"
-];
+  'get_pine_context_for_generation',
+  'generate',
+  'validate_ui_generation',
+  'fix_layout_issues',
+]
 
 const tokenLintArtifact = [
   {
-    label: "Problem",
-    title: "Hardcoded color",
+    label: 'Problem',
+    title: 'Hardcoded color',
     body:
-      "A hex value or core token looks fine in light mode, but it bypasses semantic theme behavior and can break dark mode later."
+      'A hex value or core token looks fine in light mode, but it bypasses semantic theme behavior and can break dark mode later.',
   },
   {
-    label: "Enforcement",
-    title: "Stylelint failure",
+    label: 'Enforcement',
+    title: 'Stylelint failure',
     body:
-      "The lint rule flags hardcoded colors and core token usage at build time, before a reviewer has to catch it by scanning the diff."
+      'The lint rule flags hardcoded colors and core token usage at build time, before a reviewer has to catch it by scanning the diff.',
   },
   {
-    label: "Outcome",
-    title: "Semantic token fix",
+    label: 'Outcome',
+    title: 'Semantic token fix',
     body:
-      "The implementation moves to a semantic token that describes product intent and resolves correctly across supported themes."
-  }
-];
+      'The implementation moves to a semantic token that describes product intent and resolves correctly across supported themes.',
+  },
+]
 
 const InfluenceThroughSystems = () => (
   <main className="influence-page">
@@ -250,17 +249,20 @@ const InfluenceThroughSystems = () => (
       title="Influence Through Systems | Quinton Jason"
       meta={[
         {
-          name: "description",
+          name: 'description',
           content:
-            "A portfolio page about design systems leadership through tooling, documentation, linting, migrations, governance, and AI-assisted development workflows."
-        }
+            'A portfolio page about design systems leadership through tooling, documentation, linting, migrations, governance, and AI-assisted development workflows.',
+        },
       ]}
     />
 
     <section className="page-hero influence-hero">
       <div className="container">
         <p className="section-heading__eyebrow">Influence Through Systems</p>
-        <h1>The most scalable way to improve quality is to change the system people work within.</h1>
+        <h1>
+          The most scalable way to improve quality is to change the system
+          people work within.
+        </h1>
         <p>
           My strongest design systems work changes behavior through tooling,
           process, documentation, migration paths, and platform decisions. The
@@ -293,15 +295,18 @@ const InfluenceThroughSystems = () => (
             <h2>Change the workflow and behavior changes with it.</h2>
           </div>
           <ol aria-label="How influence scales from decisions to behavior change">
-            {workflowSteps.map(step => (
-              <li key={step}>{step}</li>
-            ))}
+            {workflowSteps.map(step => <li key={step}>{step}</li>)}
           </ol>
         </div>
-        <article className="influence-artifact" aria-labelledby="migration-guidance-heading">
+        <article
+          className="influence-artifact"
+          aria-labelledby="migration-guidance-heading"
+        >
           <div className="influence-artifact__intro">
             <p className="section-heading__eyebrow">Evidence Artifact</p>
-            <h2 id="migration-guidance-heading">Migration guidance as governance</h2>
+            <h2 id="migration-guidance-heading">
+              Migration guidance as governance
+            </h2>
             <p>
               Sage to Pine guidance translated common legacy habits into Pine
               standards, then connected those standards to tooling and AI
@@ -310,7 +315,11 @@ const InfluenceThroughSystems = () => (
               while converting real product UI.
             </p>
           </div>
-          <div className="migration-mapping-table" role="table" aria-label="Sage to Pine migration examples">
+          <div
+            className="migration-mapping-table"
+            role="table"
+            aria-label="Sage to Pine migration examples"
+          >
             <div role="row" className="migration-mapping-table__header">
               <span role="columnheader">Legacy habit</span>
               <span role="columnheader">Pine standard</span>
@@ -335,10 +344,15 @@ const InfluenceThroughSystems = () => (
             </ol>
           </div>
         </article>
-        <article className="influence-artifact" aria-labelledby="token-lint-heading">
+        <article
+          className="influence-artifact"
+          aria-labelledby="token-lint-heading"
+        >
           <div className="influence-artifact__intro">
             <p className="section-heading__eyebrow">Evidence Artifact</p>
-            <h2 id="token-lint-heading">Semantic token linting moved review to build time</h2>
+            <h2 id="token-lint-heading">
+              Semantic token linting moved review to build time
+            </h2>
             <p>
               Token enforcement made color quality a workflow property instead
               of a reviewer memory test. The rule stayed strict where the
@@ -370,7 +384,10 @@ const InfluenceThroughSystems = () => (
             </div>
             <div className="influence-example-grid">
               {section.examples.map(example => (
-                <article className="influence-example-card" key={`${section.title}-${example.name}`}>
+                <article
+                  className="influence-example-card"
+                  key={`${section.title}-${example.name}`}
+                >
                   <h3>{example.name}</h3>
                   <dl>
                     <div>
@@ -406,7 +423,9 @@ const InfluenceThroughSystems = () => (
       <div className="container home-note">
         <div>
           <p className="section-heading__eyebrow">Related Work</p>
-          <h2>The same pattern shows up across Pine, Pine MCP, and dark mode.</h2>
+          <h2>
+            The same pattern shows up across Pine, Pine MCP, and dark mode.
+          </h2>
         </div>
         <p>
           The work is different, but the leverage is the same: change the
@@ -421,6 +440,6 @@ const InfluenceThroughSystems = () => (
       </div>
     </section>
   </main>
-);
+)
 
-export default InfluenceThroughSystems;
+export default InfluenceThroughSystems

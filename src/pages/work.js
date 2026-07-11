@@ -1,66 +1,68 @@
-import React from "react";
-import { Link } from "gatsby";
-import Helmet from "react-helmet";
+import React from 'react'
+import { Link } from 'gatsby'
+import Helmet from 'react-helmet'
 
-import work from "../../data/work.json";
+import work from '../../data/work.json'
 
 const workSignals = [
   {
-    value: "40+",
-    label: "engineers supported"
+    value: '40+',
+    label: 'engineers supported',
   },
   {
-    value: "6",
-    label: "product teams"
+    value: '6',
+    label: 'product teams',
   },
   {
-    value: "40",
-    label: "components"
+    value: '40',
+    label: 'components',
   },
   {
-    value: "Multi-platform",
-    label: "design system scope"
-  }
-];
+    value: 'Multi-platform',
+    label: 'design system scope',
+  },
+]
 
-const isExternal = url => /^https?:\/\//.test(url);
+const isExternal = url => /^https?:\/\//.test(url)
 
 const featuredProjectTitles = [
-  "Pine Design System",
-  "Pine MCP",
-  "Learn.QuintonJason.com",
-  "Dark Mode for Kajabi Admin"
-];
+  'Pine Design System',
+  'Pine MCP',
+  'Learn.QuintonJason.com',
+  'Dark Mode for Kajabi Admin',
+]
 
 const projectVisuals = {
-  "Pine Design System": {
-    type: "image",
-    src: "/images/pine-case-study/sage-to-pine-migration.png",
-    alt: "Pine Sage to Pine migration documentation showing migration guidance and mapping tables.",
-    eyebrow: "Migration and governance"
-  },
-  "Pine MCP": {
-    type: "diagram",
-    eyebrow: "AI workflow gate",
-    steps: ["Detect", "Context", "Generate", "Validate"]
-  },
-  "Learn.QuintonJason.com": {
-    type: "image",
-    src: "/images/work/learn-quintonjason-lessons.png",
+  'Pine Design System': {
+    type: 'image',
+    src: '/images/pine-case-study/sage-to-pine-migration.png',
     alt:
-      "Learn.QuintonJason.com lessons page showing course lesson search, filters, and lesson cards.",
-    eyebrow: "Teaching platform"
+      'Pine Sage to Pine migration documentation showing migration guidance and mapping tables.',
+    eyebrow: 'Migration and governance',
   },
-  "Dark Mode for Kajabi Admin": {
-    type: "image",
-    src: "/images/dark-mode-case-study/admin-dark.png",
-    alt: "Kajabi Admin dashboard in dark mode with navigation, analytics cards, and promotional cards.",
-    eyebrow: "Platform theming"
-  }
-};
+  'Pine MCP': {
+    type: 'diagram',
+    eyebrow: 'AI workflow gate',
+    steps: ['Detect', 'Context', 'Generate', 'Validate'],
+  },
+  'Learn.QuintonJason.com': {
+    type: 'image',
+    src: '/images/work/learn-quintonjason-lessons.png',
+    alt:
+      'Learn.QuintonJason.com lessons page showing course lesson search, filters, and lesson cards.',
+    eyebrow: 'Teaching platform',
+  },
+  'Dark Mode for Kajabi Admin': {
+    type: 'image',
+    src: '/images/dark-mode-case-study/admin-dark.png',
+    alt:
+      'Kajabi Admin dashboard in dark mode with navigation, analytics cards, and promotional cards.',
+    eyebrow: 'Platform theming',
+  },
+}
 
 const WorkLink = ({ link }) =>
-  link.url.indexOf("#") === 0 ? (
+  link.url.indexOf('#') === 0 ? (
     <a href={link.url}>{link.label}</a>
   ) : isExternal(link.url) ? (
     <a href={link.url} target="_blank" rel="noopener noreferrer">
@@ -68,47 +70,46 @@ const WorkLink = ({ link }) =>
     </a>
   ) : (
     <Link to={link.url}>{link.label}</Link>
-  );
+  )
 
 const ProjectVisual = ({ item }) => {
-  const visual = projectVisuals[item.title];
+  const visual = projectVisuals[item.title]
 
   if (!visual) {
-    return null;
+    return null
   }
 
-  if (visual.type === "image") {
+  if (visual.type === 'image') {
     return (
       <figure className="work-entry__visual">
         <span>{visual.eyebrow}</span>
         <img src={visual.src} alt={visual.alt} loading="lazy" />
       </figure>
-    );
+    )
   }
 
   return (
-    <div className="work-entry__visual work-entry__visual--diagram" aria-label={`${item.title} proof diagram`}>
+    <div
+      className="work-entry__visual work-entry__visual--diagram"
+      aria-label={`${item.title} proof diagram`}
+    >
       <span>{visual.eyebrow}</span>
-      <ol>
-        {visual.steps.map(step => (
-          <li key={step}>{step}</li>
-        ))}
-      </ol>
+      <ol>{visual.steps.map(step => <li key={step}>{step}</li>)}</ol>
     </div>
-  );
-};
+  )
+}
 
 const WorkEntry = ({ item, featured = false }) => (
   <article
-    className={featured ? "work-entry work-entry--featured" : "work-entry"}
+    className={featured ? 'work-entry work-entry--featured' : 'work-entry'}
     id={
-      item.title === "Pine MCP"
-        ? "pine-mcp"
-        : item.title === "Pine Design System"
-        ? "pine-design-system"
-        : item.title === "Learn.QuintonJason.com"
-        ? "learn-quintonjason"
-        : undefined
+      item.title === 'Pine MCP'
+        ? 'pine-mcp'
+        : item.title === 'Pine Design System'
+          ? 'pine-design-system'
+          : item.title === 'Learn.QuintonJason.com'
+            ? 'learn-quintonjason'
+            : undefined
     }
   >
     <div className="work-entry__meta">
@@ -118,7 +119,7 @@ const WorkEntry = ({ item, featured = false }) => (
     <div>
       <h2>{item.title}</h2>
       <p>{item.summary}</p>
-      {item.title === "Learn.QuintonJason.com" && (
+      {item.title === 'Learn.QuintonJason.com' && (
         <div className="mini-change">
           <strong>What changed</strong>
           <p>
@@ -129,19 +130,15 @@ const WorkEntry = ({ item, featured = false }) => (
         </div>
       )}
       <ul className="tag-list">
-        {item.topics.map(topic => (
-          <li key={topic}>{topic}</li>
-        ))}
+        {item.topics.map(topic => <li key={topic}>{topic}</li>)}
       </ul>
       <div className="work-entry__links">
-        {item.links.map(link => (
-          <WorkLink link={link} key={link.label} />
-        ))}
+        {item.links.map(link => <WorkLink link={link} key={link.label} />)}
       </div>
     </div>
     {featured && <ProjectVisual item={item} />}
   </article>
-);
+)
 
 const Work = () => (
   <main className="work-page">
@@ -149,23 +146,25 @@ const Work = () => (
       title="Work | Quinton Jason"
       meta={[
         {
-          name: "description",
+          name: 'description',
           content:
-            "Selected work from Quinton Jason across design systems, frontend architecture, accessibility, developer experience, and AI-assisted design system workflows."
-        }
+            'Selected work from Quinton Jason across design systems, frontend architecture, accessibility, developer experience, and AI-assisted design system workflows.',
+        },
       ]}
     />
     <section className="page-hero">
       <div className="container">
         <p className="section-heading__eyebrow">Work</p>
-        <h1>Design systems, frontend architecture, and AI-assisted workflows.</h1>
+        <h1>
+          Design systems, frontend architecture, and AI-assisted workflows.
+        </h1>
         <p>
           I build systems that help product teams ship consistent, accessible
           experiences at scale. My work spans component APIs, semantic tokens,
           governance, documentation, developer experience, accessibility, and
           emerging AI-native design system workflows. I also teach web design
-          through a learning platform built from my LSU curriculum, which
-          turns technical systems into structured, teachable material.
+          through a learning platform built from my LSU curriculum, which turns
+          technical systems into structured, teachable material.
         </p>
       </div>
     </section>
@@ -208,9 +207,7 @@ const Work = () => (
       <div className="container work-list">
         {work
           .filter(item => featuredProjectTitles.includes(item.title))
-          .map(item => (
-            <WorkEntry item={item} featured key={item.title} />
-          ))}
+          .map(item => <WorkEntry item={item} featured key={item.title} />)}
       </div>
     </section>
 
@@ -228,13 +225,11 @@ const Work = () => (
         <div className="capability-list">
           {work
             .filter(item => !featuredProjectTitles.includes(item.title))
-            .map(item => (
-              <WorkEntry item={item} key={item.title} />
-            ))}
+            .map(item => <WorkEntry item={item} key={item.title} />)}
         </div>
       </div>
     </section>
   </main>
-);
+)
 
-export default Work;
+export default Work

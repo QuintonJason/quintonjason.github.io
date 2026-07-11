@@ -25,7 +25,7 @@
   },
   {
     "title": "Pine MCP",
-    "summary": "An MCP workflow gate that helps AI assistants detect when Pine is needed, retrieve the right component and token context, and validate generated UI against design system rules. The work extends design system adoption into the moment AI-assisted code is being produced.",
+    "summary": "Supplies AI assistants with current Pine component contracts, accessibility rules, semantic tokens, and layout guidance, moving recurring design-system corrections from review time to generation time.",
     "role": "AI-Assisted Development",
     "status": "Design system knowledge workflow",
     "links": [

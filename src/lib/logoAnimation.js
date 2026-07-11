@@ -1,16 +1,16 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import React from 'react'
+import { Link } from 'gatsby'
 
-const BlogLink = (props) => {
+const BlogLink = props => {
   const { url, external_url } = props
-  const link = external_url ? <a href={external_url} target="_blank">Read More</a> : <Link to={url}>Read More</Link>;
-  return (
+  const link = external_url ? (
+    <a href={external_url} target="_blank">
+      Read More
+    </a>
+  ) : (
+    <Link to={url}>Read More</Link>
+  )
+  return <div className="post-landing-link">{link}</div>
+}
 
-    <div className="post-landing-link"> 
-      {link}
-    </div>
-
-  );
-};
-
-export default BlogLink;
+export default BlogLink

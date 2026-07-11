@@ -21,7 +21,8 @@ const THEME_STORAGE_KEY = 'qj-theme'
 const LIGHT_THEME = 'light'
 const DARK_THEME = 'dark'
 const SITE_URL = 'https://quintonjason.com/'
-const SITE_DESCRIPTION = 'Senior Design Engineer focused on design systems, frontend architecture, accessibility, design tokens, teaching, and AI-native product workflows.'
+const SITE_DESCRIPTION =
+  'Senior Design Engineer focused on design systems, frontend architecture, accessibility, design tokens, teaching, and AI-native product workflows.'
 const SOCIAL_IMAGE_URL = `${SITE_URL}apple-touch-icon.png`
 
 const getStoredTheme = () => {
@@ -43,31 +44,43 @@ const saveTheme = theme => {
 const Footer = () => (
   <footer>
     <div className="footer-inner">
-        <div className="footer-primary">
-          <div>
-            <strong>Quinton Jason</strong>
-            <p>Senior design engineering, design systems, writing, and teaching.</p>
-          </div>
-          <nav className="footer-nav" aria-label="Footer">
-            <Link to="/work/">Work</Link>
-            <Link to="/writing/">Writing</Link>
-            <Link to="/about/">About</Link>
-            <Link to="/contact/">Contact</Link>
-            <Link to="/calligraphy/">Calligraphy</Link>
-          </nav>
+      <div className="footer-primary">
+        <div>
+          <strong>Quinton Jason</strong>
+          <p>
+            Senior design engineering, design systems, writing, and teaching.
+          </p>
         </div>
-        <ul className="footer-social-nav">
-          <li>
-            <a href="https://www.linkedin.com/in/quintonjason/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <LinkedInIcon className="linkedin-icon"/>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/QuintonJason/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <GithubIcon className="github-icon"/>
-            </a>
-          </li>
-        </ul>
+        <nav className="footer-nav" aria-label="Footer">
+          <Link to="/work/">Work</Link>
+          <Link to="/writing/">Writing</Link>
+          <Link to="/about/">About</Link>
+          <Link to="/contact/">Contact</Link>
+          <Link to="/calligraphy/">Calligraphy</Link>
+        </nav>
+      </div>
+      <ul className="footer-social-nav">
+        <li>
+          <a
+            href="https://www.linkedin.com/in/quintonjason/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <LinkedInIcon className="linkedin-icon" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/QuintonJason/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <GithubIcon className="github-icon" />
+          </a>
+        </li>
+      </ul>
     </div>
   </footer>
 )
@@ -110,7 +123,10 @@ class TemplateWrapper extends Component {
 
     if (typeof document !== 'undefined') {
       document.documentElement.setAttribute('data-theme', nextTheme)
-      document.body.classList.toggle('theme-dark-body', nextTheme === DARK_THEME)
+      document.body.classList.toggle(
+        'theme-dark-body',
+        nextTheme === DARK_THEME
+      )
     }
 
     if (typeof window !== 'undefined') {
@@ -134,33 +150,47 @@ class TemplateWrapper extends Component {
             { name: 'description', content: SITE_DESCRIPTION },
             { property: 'og:locale', content: 'en-US' },
             { property: 'og:type', content: 'website' },
-            { property: 'og:title', content: 'Quinton Jason | Senior Design Engineer' },
+            {
+              property: 'og:title',
+              content: 'Quinton Jason | Senior Design Engineer',
+            },
             { property: 'og:site_name', content: 'Quinton Jason' },
             { property: 'og:url', content: SITE_URL },
             { property: 'og:description', content: SITE_DESCRIPTION },
             { property: 'og:image', content: SOCIAL_IMAGE_URL },
             { name: 'twitter:card', content: 'summary_large_image' },
-            { name: 'twitter:title', content: 'Quinton Jason | Senior Design Engineer' },
+            {
+              name: 'twitter:title',
+              content: 'Quinton Jason | Senior Design Engineer',
+            },
             { name: 'twitter:description', content: SITE_DESCRIPTION },
             { name: 'twitter:image', content: SOCIAL_IMAGE_URL },
-          ]} >
-
-            <link rel="canonical" href={SITE_URL} />
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
-            <link rel="apple-touch-icon" sizes="180x180" href={faviconApple} />
-            <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
-            <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
-            <meta name="theme-color" content={isDarkMode ? '#0f1712' : '#00c200'} />
-          </Helmet>
-        <a className="skip-link" href="#main-content">Skip to main content</a>
-        <Header isDarkMode={isDarkMode} onToggleTheme={this.toggleTheme} />
-        <div
-          id="main-content"
-          tabIndex="-1"
-          className="layout-main"
+          ]}
         >
+          <link rel="canonical" href={SITE_URL} />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="anonymous"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:ital,wght@0,400;1,400&display=swap"
+            rel="stylesheet"
+          />
+          <link rel="apple-touch-icon" sizes="180x180" href={faviconApple} />
+          <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
+          <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
+          <meta
+            name="theme-color"
+            content={isDarkMode ? '#0f1712' : '#00c200'}
+          />
+        </Helmet>
+        <a className="skip-link" href="#main-content">
+          Skip to main content
+        </a>
+        <Header isDarkMode={isDarkMode} onToggleTheme={this.toggleTheme} />
+        <div id="main-content" tabIndex="-1" className="layout-main">
           {children}
         </div>
         <Footer />

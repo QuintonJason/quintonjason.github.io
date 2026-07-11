@@ -1,126 +1,134 @@
-import React from "react";
-import { Link } from "gatsby";
-import Helmet from "react-helmet";
+import React from 'react'
+import { Link } from 'gatsby'
+import Helmet from 'react-helmet'
 
 const featuredWork = [
   {
-    id: "pine-design-system",
-    title: "Pine Design System",
+    id: 'pine-design-system',
+    title: 'Pine Design System',
     description:
       "Kajabi's multi-platform design system powering consistent, accessible product experiences across 6 product teams and 40+ engineers. Pine includes web components, design tokens, accessibility standards, governance, migration tooling, documentation, and shared developer workflows.",
-    meta: "Kajabi Design System",
-    url: "/work/pine-design-system/",
+    meta: 'Kajabi Design System',
+    url: '/work/pine-design-system/',
     tags: [
-      "Design Systems",
-      "Web Components",
-      "Design Tokens",
-      "Accessibility",
-      "Governance",
-      "Developer Experience"
-    ]
+      'Design Systems',
+      'Web Components',
+      'Design Tokens',
+      'Accessibility',
+      'Governance',
+      'Developer Experience',
+    ],
   },
   {
-    id: "pine-mcp",
-    title: "Pine MCP",
+    id: 'pine-mcp',
+    title: 'Pine MCP',
     description:
-      "An MCP integration that exposes Pine design system knowledge to AI assistants, helping generated code follow established components, tokens, accessibility requirements, and implementation standards.",
-    meta: "AI-Assisted Development",
-    url: "/work/pine-mcp/",
+      'Supplies AI assistants with current Pine component contracts, accessibility rules, semantic tokens, and layout guidance, moving recurring design-system corrections from review time to generation time.',
+    meta: 'AI-Assisted Development',
+    url: '/work/pine-mcp/',
     tags: [
-      "AI-Assisted Development",
-      "MCP",
-      "Design Systems",
-      "Developer Experience",
-      "Frontend Architecture"
-    ]
+      'AI-Assisted Development',
+      'MCP',
+      'Design Systems',
+      'Developer Experience',
+      'Frontend Architecture',
+    ],
   },
   {
-    id: "learn-quintonjason",
-    title: "Learn.QuintonJason.com",
+    id: 'learn-quintonjason',
+    title: 'Learn.QuintonJason.com',
     description:
-      "An interactive learning platform built to support university-level web design and frontend development instruction. The site turns course material into a structured online experience covering HTML, CSS, JavaScript, accessibility, responsive design, UX, and modern frontend workflows.",
-    meta: "Teaching and Educational UX",
-    url: "http://learn.quintonjason.com/",
+      'An interactive learning platform built to support university-level web design and frontend development instruction. The site turns course material into a structured online experience covering HTML, CSS, JavaScript, accessibility, responsive design, UX, and modern frontend workflows.',
+    meta: 'Teaching and Educational UX',
+    url: 'http://learn.quintonjason.com/',
     tags: [
-      "Teaching",
-      "Frontend Development",
-      "Educational UX",
-      "Accessibility",
-      "Information Architecture",
-      "JavaScript",
-      "HTML",
-      "CSS"
-    ]
-  }
-];
+      'Teaching',
+      'Frontend Development',
+      'Educational UX',
+      'Accessibility',
+      'Information Architecture',
+      'JavaScript',
+      'HTML',
+      'CSS',
+    ],
+  },
+]
 
 const proofSignals = [
   {
-    value: "40+",
-    label: "engineers supported"
+    value: '40+',
+    label: 'engineers supported',
   },
   {
-    value: "6",
-    label: "product teams"
+    value: '6',
+    label: 'product teams',
   },
   {
-    value: "40",
-    label: "components"
+    value: '40',
+    label: 'components',
   },
   {
-    value: "4-repo",
-    label: "design system architecture"
+    value: '4-repo',
+    label: 'design system architecture',
   },
   {
-    value: "MCP",
-    label: "enabled AI workflow"
+    value: 'MCP',
+    label: 'enabled AI workflow',
   },
   {
-    value: "Diff-gated",
-    label: "migration enforcement"
-  }
-];
+    value: 'Diff-gated',
+    label: 'migration enforcement',
+  },
+]
 
 const featuredWriting = [
   {
-    title: "Teaching AI Our Design System",
-    source: "Medium",
-    url: "https://medium.com/@quintonjasonjr/teaching-ai-our-design-system-d9788fe96c8e"
+    title: 'Teaching AI Our Design System',
+    source: 'Medium',
+    url:
+      'https://medium.com/@quintonjasonjr/teaching-ai-our-design-system-d9788fe96c8e',
   },
   {
-    title: "My Job Is a Claude Skill. Now What.",
-    source: "Medium",
-    url: "https://medium.com/@quintonjasonjr/my-job-is-a-claude-skill-now-what-ec00daf0de21"
+    title: 'My Job Is a Claude Skill. Now What.',
+    source: 'Medium',
+    url:
+      'https://medium.com/@quintonjasonjr/my-job-is-a-claude-skill-now-what-ec00daf0de21',
   },
   {
     title: "Bots Be Lying and We're Still Shipping",
-    source: "Medium",
-    url: "https://medium.com/@quintonjasonjr/bots-be-lying-and-were-still-shipping-6276468129b8"
+    source: 'Medium',
+    url:
+      'https://medium.com/@quintonjasonjr/bots-be-lying-and-were-still-shipping-6276468129b8',
   },
   {
-    title: "The Design System Team Did Real Work. Nobody Could See It.",
-    source: "Design Systems Collective",
+    title: 'The Design System Team Did Real Work. Nobody Could See It.',
+    source: 'Design Systems Collective',
     url:
-      "https://www.designsystemscollective.com/the-design-system-team-did-real-work-nobody-could-see-it-dbf4087394f1"
-  }
-];
+      'https://www.designsystemscollective.com/the-design-system-team-did-real-work-nobody-could-see-it-dbf4087394f1',
+  },
+]
 
-const isExternal = url => /^https?:\/\//.test(url);
+const isExternal = url => /^https?:\/\//.test(url)
 
 const ActionLink = ({ to, children, className }) =>
-  to.indexOf("#") === 0 ? (
+  to.indexOf('#') === 0 ? (
     <a href={to} className={className}>
       {children}
     </a>
   ) : isExternal(to) ? (
-    <a href={to} className={className} target="_blank" rel="noopener noreferrer">
+    <a
+      href={to}
+      className={className}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       {children}
     </a>
   ) : (
     <Link to={to} className={className}>
       {children}
     </Link>
-  );
+  )
 
 const Index = () => (
   <main className="home">
@@ -128,10 +136,10 @@ const Index = () => (
       title="Quinton Jason | Senior Design Engineer"
       meta={[
         {
-          name: "description",
+          name: 'description',
           content:
-            "Quinton Jason is a Senior Design Engineer specializing in design systems, frontend architecture, accessibility, and AI-native product development."
-        }
+            'Quinton Jason is a Senior Design Engineer specializing in design systems, frontend architecture, accessibility, and AI-native product development.',
+        },
       ]}
     />
     <section className="home-hero">
@@ -198,17 +206,15 @@ const Index = () => (
               <h3>{item.title}</h3>
               <p>{item.description}</p>
               <ul className="tag-list">
-                {item.tags.map(tag => (
-                  <li key={tag}>{tag}</li>
-                ))}
+                {item.tags.map(tag => <li key={tag}>{tag}</li>)}
               </ul>
               <div className="work-entry__links">
                 <ActionLink to={item.url}>
-                  {item.title === "Pine MCP"
-                    ? "Read about Pine MCP"
-                    : item.title === "Learn.QuintonJason.com"
-                    ? "View learning platform"
-                    : "View Pine case study"}
+                  {item.title === 'Pine MCP'
+                    ? 'Read about Pine MCP'
+                    : item.title === 'Learn.QuintonJason.com'
+                      ? 'View learning platform'
+                      : 'View Pine case study'}
                 </ActionLink>
               </div>
             </article>
@@ -256,7 +262,9 @@ const Index = () => (
       <div className="container">
         <div className="section-heading">
           <p className="section-heading__eyebrow">Featured Writing</p>
-          <h2>Design systems, AI-assisted development, and frontend quality.</h2>
+          <h2>
+            Design systems, AI-assisted development, and frontend quality.
+          </h2>
           <p>
             Recent essays on how system knowledge, governance, and standards
             need to show up inside modern product development workflows.
@@ -289,7 +297,8 @@ const Index = () => (
         <p>
           I also teach web design and frontend development at Louisiana State
           University, where I help students build foundations in HTML, CSS,
-          JavaScript, accessibility, UX, responsive design, and systems thinking.
+          JavaScript, accessibility, UX, responsive design, and systems
+          thinking.
         </p>
         <a
           href="https://design.lsu.edu/faculty/jason-quinton/"
@@ -322,6 +331,6 @@ const Index = () => (
       </div>
     </section>
   </main>
-);
+)
 
-export default Index;
+export default Index

@@ -1,4 +1,4 @@
-import Typography from "typography";
+import Typography from 'typography'
 
 const typography = new Typography({
   baseFontSize: '24px',
@@ -7,4 +7,4 @@ const typography = new Typography({
   bodyFontFamily: ['Open-sans', 'sans-serif'],
 })
 
-export default typography;
+export default typography

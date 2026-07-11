@@ -1,9 +1,9 @@
-import React from "react";
-import { Link } from "gatsby";
+import React from 'react'
+import { Link } from 'gatsby'
 
-import IgPostList from "../components/igPostList";
+import IgPostList from '../components/igPostList'
 
-import Helmet from "react-helmet";
+import Helmet from 'react-helmet'
 
 const IgPosts = props => {
   return (
@@ -12,10 +12,10 @@ const IgPosts = props => {
         title="Calligraphy | Quinton Jason"
         meta={[
           {
-            name: "description",
+            name: 'description',
             content:
-              "A creative archive of calligraphy practice from Quinton Jason."
-          }
+              'A creative archive of calligraphy practice from Quinton Jason.',
+          },
         ]}
       />
       <div className="archive-intro">
@@ -28,7 +28,7 @@ const IgPosts = props => {
       </div>
       <IgPostList />
     </main>
-  );
-};
+  )
+}
 
-export default IgPosts;
+export default IgPosts

@@ -1,37 +1,37 @@
-import React from "react";
-import { Link } from "gatsby";
-import Helmet from "react-helmet";
+import React from 'react'
+import { Link } from 'gatsby'
+import Helmet from 'react-helmet'
 
 const projectDetails = [
-  { label: "Company", value: "Kajabi" },
-  { label: "Role", value: "Senior UX Developer" },
-  { label: "Team", value: "Design Systems" },
-  { label: "Timeline", value: "2025 to 2026" },
-  { label: "Platform", value: "Kajabi Admin" }
-];
+  { label: 'Company', value: 'Kajabi' },
+  { label: 'Role', value: 'Senior UX Developer' },
+  { label: 'Team', value: 'Design Systems' },
+  { label: 'Timeline', value: '2025 to 2026' },
+  { label: 'Platform', value: 'Kajabi Admin' },
+]
 
 const impactItems = [
-  "Dark mode support across Kajabi Admin",
-  "A shared theme contract for Rails, React, Pine, Sage, and embedded surfaces",
-  "A migration path away from hardcoded color values",
-  "A reusable pattern for iframe-based editor theming",
-  "A foundation for future theme capabilities"
-];
+  'Dark mode support across Kajabi Admin',
+  'A shared theme contract for Rails, React, Pine, Sage, and embedded surfaces',
+  'A migration path away from hardcoded color values',
+  'A reusable pattern for iframe-based editor theming',
+  'A foundation for future theme capabilities',
+]
 
 const themeSurfaces = [
-  "Rails views",
-  "React applications",
-  "Pine components",
-  "Sage and legacy UI",
-  "TinyMCE iframes"
-];
+  'Rails views',
+  'React applications',
+  'Pine components',
+  'Sage and legacy UI',
+  'TinyMCE iframes',
+]
 
 const rolloutItems = [
-  "Released behind a feature flag",
-  "Persisted creator theme preferences across sessions",
-  "Protected preferences during account masquerading workflows",
-  "Created space for validation before broad rollout"
-];
+  'Released behind a feature flag',
+  'Persisted creator theme preferences across sessions',
+  'Protected preferences during account masquerading workflows',
+  'Created space for validation before broad rollout',
+]
 
 const EvidenceSlot = ({ title, demonstrates, matters, supports }) => (
   <aside className="future-evidence" aria-label={`Future evidence: ${title}`}>
@@ -52,7 +52,7 @@ const EvidenceSlot = ({ title, demonstrates, matters, supports }) => (
       </div>
     </dl>
   </aside>
-);
+)
 
 const EvidencePair = ({ title, caption, images }) => (
   <figure className="evidence-pair">
@@ -69,13 +69,14 @@ const EvidencePair = ({ title, caption, images }) => (
       {caption}
     </figcaption>
   </figure>
-);
+)
 
 const RolloutDiagram = () => (
   <figure className="rollout-diagram">
     <figcaption>
       <strong>Rollout and preference model</strong>
-      Dark mode shipped through separated release, preference, session, and render concerns.
+      Dark mode shipped through separated release, preference, session, and
+      render concerns.
     </figcaption>
     <ol aria-label="Dark mode rollout flow">
       <li>
@@ -91,16 +92,21 @@ const RolloutDiagram = () => (
       <li>
         <span>3</span>
         <strong>Session context</strong>
-        <p>Respect workflows like masquerading without overwriting creator state.</p>
+        <p>
+          Respect workflows like masquerading without overwriting creator state.
+        </p>
       </li>
       <li>
         <span>4</span>
         <strong>Theme render</strong>
-        <p>Apply the root theme contract across app, design system, and embedded surfaces.</p>
+        <p>
+          Apply the root theme contract across app, design system, and embedded
+          surfaces.
+        </p>
       </li>
     </ol>
   </figure>
-);
+)
 
 const ThemeContractDiagram = () => (
   <figure className="theme-contract-diagram">
@@ -134,7 +140,7 @@ const ThemeContractDiagram = () => (
       </li>
     </ul>
   </figure>
-);
+)
 
 const DarkModeSection = ({
   eyebrow,
@@ -144,16 +150,16 @@ const DarkModeSection = ({
   evidence,
   visual,
   customEvidence,
-  layout = "media-right",
-  spotlight = false
+  layout = 'media-right',
+  spotlight = false,
 }) => {
   const classes = [
-    "evidence-section",
+    'evidence-section',
     `evidence-section--${layout}`,
-    spotlight ? "evidence-section--spotlight" : ""
+    spotlight ? 'evidence-section--spotlight' : '',
   ]
     .filter(Boolean)
-    .join(" ");
+    .join(' ')
 
   return (
     <section className={classes}>
@@ -163,10 +169,15 @@ const DarkModeSection = ({
         {lead && <p className="evidence-section__lead">{lead}</p>}
         {children}
       </div>
-      {customEvidence || (visual ? <EvidencePair {...visual} /> : evidence && <EvidenceSlot {...evidence} />)}
+      {customEvidence ||
+        (visual ? (
+          <EvidencePair {...visual} />
+        ) : (
+          evidence && <EvidenceSlot {...evidence} />
+        ))}
     </section>
-  );
-};
+  )
+}
 
 const KajabiAdminDarkMode = () => (
   <main className="case-study-page">
@@ -174,10 +185,10 @@ const KajabiAdminDarkMode = () => (
       title="Dark Mode for Kajabi Admin | Quinton Jason"
       meta={[
         {
-          name: "description",
+          name: 'description',
           content:
-            "A case study about dark mode as design system infrastructure for Kajabi Admin, including semantic tokens, theme architecture, legacy compatibility, TinyMCE iframe theming, and rollout strategy."
-        }
+            'A case study about dark mode as design system infrastructure for Kajabi Admin, including semantic tokens, theme architecture, legacy compatibility, TinyMCE iframe theming, and rollout strategy.',
+        },
       ]}
     />
 
@@ -234,27 +245,27 @@ const KajabiAdminDarkMode = () => (
             lead="A second theme made disconnected color decisions visible. Hardcoded values, legacy components, embedded editors, and third-party assumptions all became part of the same systems problem."
             layout="media-full"
             visual={{
-              title: "Admin dashboard in light and dark mode.",
+              title: 'Admin dashboard in light and dark mode.',
               caption:
-                " The paired view shows dark mode affecting product navigation, analytics cards, charts, empty states, CTAs, and supporting surfaces together.",
+                ' The paired view shows dark mode affecting product navigation, analytics cards, charts, empty states, CTAs, and supporting surfaces together.',
               images: [
                 {
-                  label: "Light",
-                  src: "/images/dark-mode-case-study/admin-light.png",
-                  alt: "Kajabi Admin dashboard in light mode with navigation, analytics cards, and promotional cards."
+                  label: 'Light',
+                  src: '/images/dark-mode-case-study/admin-light.png',
+                  alt:
+                    'Kajabi Admin dashboard in light mode with navigation, analytics cards, and promotional cards.',
                 },
                 {
-                  label: "Dark",
-                  src: "/images/dark-mode-case-study/admin-dark.png",
-                  alt: "Kajabi Admin dashboard in dark mode with the same navigation, analytics cards, and promotional cards."
-                }
-              ]
+                  label: 'Dark',
+                  src: '/images/dark-mode-case-study/admin-dark.png',
+                  alt:
+                    'Kajabi Admin dashboard in dark mode with the same navigation, analytics cards, and promotional cards.',
+                },
+              ],
             }}
           >
             <ul className="outcome-list">
-              {impactItems.map(item => (
-                <li key={item}>{item}</li>
-              ))}
+              {impactItems.map(item => <li key={item}>{item}</li>)}
             </ul>
           </DarkModeSection>
 
@@ -272,9 +283,7 @@ const KajabiAdminDarkMode = () => (
               </pre>
             </article>
             <ul className="tool-list">
-              {themeSurfaces.map(item => (
-                <li key={item}>{item}</li>
-              ))}
+              {themeSurfaces.map(item => <li key={item}>{item}</li>)}
             </ul>
             <p>
               Independent theme management would have created competing sources
@@ -298,7 +307,9 @@ const KajabiAdminDarkMode = () => (
             <div className="code-comparison">
               <article className="code-card">
                 <h3>Before</h3>
-                <p>Hardcoded values made theme behavior a local styling problem.</p>
+                <p>
+                  Hardcoded values made theme behavior a local styling problem.
+                </p>
                 <pre>
                   <code>{`background: #ffffff;
 color: #222222;`}</code>
@@ -322,35 +333,49 @@ color: var(--pine-color-text);`}</code>
             layout="media-full"
             spotlight
             visual={{
-              title: "A transitional product surface in both themes.",
+              title: 'A transitional product surface in both themes.',
               caption:
-                " This view is useful because it shows real migration conditions: form controls, status chips, rich text editing, cards, and legacy-era surfaces participating in the same theme.",
+                ' This view is useful because it shows real migration conditions: form controls, status chips, rich text editing, cards, and legacy-era surfaces participating in the same theme.',
               images: [
                 {
-                  label: "Light",
-                  src: "/images/dark-mode-case-study/sage-and-pine-light.png",
-                  alt: "Kajabi offer details page in light mode showing forms, status cards, and TinyMCE editor."
+                  label: 'Light',
+                  src: '/images/dark-mode-case-study/sage-and-pine-light.png',
+                  alt:
+                    'Kajabi offer details page in light mode showing forms, status cards, and TinyMCE editor.',
                 },
                 {
-                  label: "Dark",
-                  src: "/images/dark-mode-case-study/sage-and-pine-dark.png",
-                  alt: "Kajabi offer details page in dark mode showing forms, status cards, and TinyMCE editor."
-                }
-              ]
+                  label: 'Dark',
+                  src: '/images/dark-mode-case-study/sage-and-pine-dark.png',
+                  alt:
+                    'Kajabi offer details page in dark mode showing forms, status cards, and TinyMCE editor.',
+                },
+              ],
             }}
           >
-            <div className="system-diagram system-diagram--split" aria-label="Legacy compatibility model">
+            <div
+              className="system-diagram system-diagram--split"
+              aria-label="Legacy compatibility model"
+            >
               <div>
                 <strong>Legacy surface</strong>
-                <p>Rails, Sage, older color systems, and inherited product styles.</p>
+                <p>
+                  Rails, Sage, older color systems, and inherited product
+                  styles.
+                </p>
               </div>
               <div>
                 <strong>Compatibility layer</strong>
-                <p>Mapping and migration patterns connected old surfaces to theme intent.</p>
+                <p>
+                  Mapping and migration patterns connected old surfaces to theme
+                  intent.
+                </p>
               </div>
               <div>
                 <strong>Pine theme contract</strong>
-                <p>Semantic tokens and shared theme state enabled consistent behavior.</p>
+                <p>
+                  Semantic tokens and shared theme state enabled consistent
+                  behavior.
+                </p>
               </div>
             </div>
             <p>
@@ -367,35 +392,46 @@ color: var(--pine-color-text);`}</code>
             layout="media-right"
             spotlight
             visual={{
-              title: "TinyMCE editor content in light and dark mode.",
+              title: 'TinyMCE editor content in light and dark mode.',
               caption:
-                " The editor proves the iframe problem: toolbar chrome, editable content, borders, and text colors all needed to respond even though the editor runs in a separate document.",
+                ' The editor proves the iframe problem: toolbar chrome, editable content, borders, and text colors all needed to respond even though the editor runs in a separate document.',
               images: [
                 {
-                  label: "Light",
-                  src: "/images/dark-mode-case-study/tinymce-light.png",
-                  alt: "TinyMCE editor in light mode with toolbar and editable content."
+                  label: 'Light',
+                  src: '/images/dark-mode-case-study/tinymce-light.png',
+                  alt:
+                    'TinyMCE editor in light mode with toolbar and editable content.',
                 },
                 {
-                  label: "Dark",
-                  src: "/images/dark-mode-case-study/tinymce-dark.png",
-                  alt: "TinyMCE editor in dark mode with toolbar and editable content."
-                }
-              ]
+                  label: 'Dark',
+                  src: '/images/dark-mode-case-study/tinymce-dark.png',
+                  alt:
+                    'TinyMCE editor in dark mode with toolbar and editable content.',
+                },
+              ],
             }}
           >
             <dl className="decision-list">
               <div>
                 <dt>Problem</dt>
-                <dd>Iframes cannot automatically access the parent document's theme state or CSS variables.</dd>
+                <dd>
+                  Iframes cannot automatically access the parent document's
+                  theme state or CSS variables.
+                </dd>
               </div>
               <div>
                 <dt>Decision</dt>
-                <dd>Mirror theme state into the editor environment and maintain dedicated editor styles.</dd>
+                <dd>
+                  Mirror theme state into the editor environment and maintain
+                  dedicated editor styles.
+                </dd>
               </div>
               <div>
                 <dt>Outcome</dt>
-                <dd>The pattern became reusable for embedded experiences that need to participate in platform theming.</dd>
+                <dd>
+                  The pattern became reusable for embedded experiences that need
+                  to participate in platform theming.
+                </dd>
               </div>
             </dl>
           </DarkModeSection>
@@ -408,9 +444,7 @@ color: var(--pine-color-text);`}</code>
             customEvidence={<RolloutDiagram />}
           >
             <ul className="outcome-list">
-              {rolloutItems.map(item => (
-                <li key={item}>{item}</li>
-              ))}
+              {rolloutItems.map(item => <li key={item}>{item}</li>)}
             </ul>
           </DarkModeSection>
 
@@ -426,9 +460,7 @@ color: var(--pine-color-text);`}</code>
               </p>
             </div>
             <ul className="outcome-list outcome-list--evidence">
-              {impactItems.map(item => (
-                <li key={item}>{item}</li>
-              ))}
+              {impactItems.map(item => <li key={item}>{item}</li>)}
             </ul>
           </section>
 
@@ -442,7 +474,9 @@ color: var(--pine-color-text);`}</code>
               platform.
             </p>
             <blockquote>
-              <p>Dark mode did not create the technical debt. It revealed it.</p>
+              <p>
+                Dark mode did not create the technical debt. It revealed it.
+              </p>
             </blockquote>
             <p>
               Most people will not think about semantic tokens, theme contracts,
@@ -461,6 +495,6 @@ color: var(--pine-color-text);`}</code>
       </div>
     </section>
   </main>
-);
+)
 
-export default KajabiAdminDarkMode;
+export default KajabiAdminDarkMode
